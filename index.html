@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/main.css" />
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://web.cdn.openinstall.io/openinstall.js"></script>
+    <script src="https://kit.fontawesome.com/78e6f741f4.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <body>
+        <div id="app" class="all_body">
+            <!-- header -->
+            <div class="header">
+                <div class="img">
+                    <img src="/img/logo.png" alt="" />
+                </div>
+                <div class="burger_list">
+                    <div class="menu">
+                    </div>
+                </div>
+                <ul class="menu_list">
+                    <li>Game
+                        <a href="#sign"></a>
+                    </li>
+                    <li>Dining
+                        <a href="#dining"></a>
+                    </li>
+                    <li>Blog
+                        <a href="#blog"></a>
+                    </li>
+                    <li>Testimonial
+                        <a href="#testimonial"></a>
+                    </li>
+                    <li>Message
+                        <a href="#message"></a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>Game
+                        <a href="#sign"></a>
+                    </li>
+                    <li>Dining
+                        <a href="#dining"></a>
+                    </li>
+                    <li>Blog
+                        <a href="#blog"></a>
+                    </li>
+                    <li>Testimonial
+                        <a href="#testimonial"></a>
+                    </li>
+                    <li>Message
+                        <a href="#message"></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Sign -->
+            <div class="sign" id="sign">
+                <h2>Gambling is Always</h2>
+                <h2>Win-Win Situation</h2>
+                <h3>Come and visit us!!</h3>
+                <h3>Book online or call (022)123-4567</h3>
+                <div class="play">PLAY NOW
+                    <a href="#sign"></a>
+                </div>
+            </div>
+            <!-- introduce -->
+            <div class="introduce">
+                <h2>All Games Here!</h2>
+                <p>
+                    If you love to play casino games, Here is your place to get lucky! Game On.
+                </p>
+                <div class="img">
+                    <img src="/img/line_01.png" alt="" />
+                </div>
+            </div>
+            <!-- gamble -->
+            <div class="gamble">
+                <div class="roulette">
+                    <div class="roulette_item">
+                        <div class="roulette_txt">
+                            <h2>Roulette</h2>
+                            <p>
+                                Roulette originated in Europe, which is a common game in casinos. The game is played by the dealer who spins the roulette. When the roulette is stationary, the number of balls falling within this range is considered the winning prize. The numbers on the
+                                roulette are separated by red and black. The numbers are not in numerical order.
+                            </p>
+                            <img src="/img/line_02.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="roulette_img"></div>
+                </div>
+
+                <div class="slot">
+                    <div class="slot_img"></div>
+                    <div class="slot_item">
+                        <div class="slot_txt">
+                            <h2>Slot</h2>
+                            <p>
+                                Often seen in casinos or entertainment venues. The game is to put the "slots" into the machine, and then different patterns will randomly appear on the screen of the machine. If there is a connection with the same or a specific same pattern at the time
+                                of stopping, the odds will be won.
+                            </p>
+                            <img src="/img/line_03.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- dining -->
+            <div class="dining" id="dining">
+                <div class="dining_txt">
+                    <h2>Dining</h2>
+                    <p>
+                        If you love to play cards, The Gardens is your place to get lucky! Game On.
+                    </p>
+                    <img src="/img/line_04.png" alt="" />
+                </div>
+            </div>
+            <!-- dining_list -->
+            <div class="dining_list">
+                <ul>
+                    <li class="dining_list_item">
+                        <img src="/img/dining_01.jpg" alt="" />
+                    </li>
+                    <li class="dining_list_item">
+                        <img src="/img/dining_02.jpg" alt="" />
+                    </li>
+                    <li class="dining_list_item">
+                        <img src="/img/dining_03.jpg" alt="" />
+                    </li>
+                    <li class="dining_list_item">
+                        <img src="/img/dining_04.jpg" alt="" />
+                    </li>
+                </ul>
+            </div>
+            <!-- blog -->
+            <div class="blog" id="blog">
+                <div class="blog_txt">
+                    <h2>Blog</h2>
+                    <p>
+                        Play your favorite games, and enjoy the company of the friendliest players around.
+                    </p>
+                    <img src="/img/line_05.png" alt="" />
+                </div>
+            </div>
+            <!-- blog_pic -->
+            <div class="blog_pic">
+                <div class="blog_bingo">
+                </div>
+                <div class="blog_item">
+                    <div class="blog_baccarat">
+                        <div class="img">
+                            <img src="/img/play_02.jpg" alt="" />
+                        </div>
+                        <div class="txt">
+                            <h2>Learning Baccarat</h2>
+                            <p>
+                                In Baccarat each player has three options: Player, Tie, and Banker.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog_six">
+                        <div class="img">
+                            <img src="/img/play_03.jpg" alt="" />
+                        </div>
+                        <div class="txt">
+                            <h2>Playin' the Big Six</h2>
+                            <p>
+                                This game is played by placing your bet on one of 6 symbols on the game table.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- testimonial -->
+            <div class="testimonial" id="testimonial">
+                <div class="title">
+                    <h2>Testimonial</h2>
+                    <div class="title_pic">
+                        <img src="/img/line_06.png" alt="" />
+                    </div>
+                </div>
+                <div class="number_list">
+                    <ul class="number_item" id="number_item">
+                        <li class="number_introduce">
+                            <div class="number_pic">
+                                <img src="/img/avatar_01.jpg" alt="" />
+                            </div>
+                            <div class="number_txt">
+                                "I have played at Superior for about 6 years and find the support staff amazing. Payouts are really fast, I always recommend the casino to all my friends. Love everything about the casino!"
+                            </div>
+                        </li>
+                        <li class="number_introduce">
+                            <div class="number_pic">
+                                <img src="/img/avatar_02.jpg" alt="" />
+                            </div>
+                            <div class="number_txt">
+                                "One of the things that I probably enjoy even more than eating one of their more-than-perfect desserts are their steaks. Real meat, peppered and cooked well and awesome…"
+                            </div>
+                        </li>
+                        <li class="number_introduce">
+                            <div class="number_pic">
+                                <img src="/img/avatar_03.jpg" alt="" />
+                            </div>
+                            <div class="number_txt">
+                                "Though I am a local resident, this is not why I’m a regular visitor of this restaurant. The real reason for it is just how beautifully cooked all the dishes are and how good the prices are!"
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- message -->
+            <div class="message" id="message">
+                <div class="business">
+                    <div class="title">
+                        <img src="/img/logo.png" alt="" />
+                    </div>
+                    <p>
+                        24 hours a day, 7 days a week - Escape to The Gardens to Get Your Game On! Grab a cocktail, a snack, or a delicious meal from our international.
+                    </p>
+                </div>
+                <div class="contacts">
+                    <div class="title">Contacts</div>
+                    <p>6087 Richmond hwy, Alexandria, VA</p>
+                    <p>123 456 7891</p>
+                    <p>info@demolink.org</p>
+                </div>
+                <div class="opening">
+                    <div class="title">Opening Hours</div>
+                    <p>Mo-Fr 11:00-00:00,</p>
+                    <p>Sa-Su 15:00-00:00</p>
+                </div>
+            </div>
+            <!-- toTop -->
+            <a href="#" id="to_top" class="to_top to_top_nav">
+                <i class="far fa-arrow-alt-circle-up"></i>
+            </a>
+
+            <!-- footer -->
+            <div class="footer">
+                <p>
+                    © 2019 WinWin. All Rights Reserved. Terms of use and Privacy Policy
+                </p>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        const {
+            createApp,
+            ref,
+            onMounted,
+            moumted
+        } = Vue;
+
+        createApp({
+            setup() {
+                $(window).scroll(showMenu);
+
+                $(function() {
+                    $(".burger_list").on("click", function() {
+                        $(".menu_list").toggleClass("on");
+                    });
+                });
+                const widthOutput = document.querySelector("#menu_list");
+
+                function reportWindowSize() {
+
+                    if (window.innerWidth > 1023) {
+                        console.log(window.innerWidth);
+                        $(".menu_list").removeClass("on");
+                    } else {}
+                }
+
+                window.onresize = reportWindowSize;
+
+                function showMenu() {
+                    if ($(window).scrollTop() > 200) {
+                        $(".to_top").addClass("to_top_nav");
+                        $(".roulette_item").addClass("roulette_item_nav");
+                        $(".roulette_img").addClass("roulette_img_nav");
+                    } else {
+                        $(".to_top").removeClass("to_top_nav");
+                        $(".roulette_item").removeClass("roulette_item_nav");
+                        $(".roulette_img").removeClass("roulette_img_nav");
+                    }
+                    if ($(window).scrollTop() > 450) {
+                        $(".slot_img").addClass("slot_img_nav");
+                        $(".slot_item").addClass("slot_item_nav");
+                    } else {
+                        $(".slot_img").removeClass("slot_img_nav");
+                        $(".slot_item").removeClass("slot_item_nav");
+                    }
+                    if ($(window).scrollTop() > 1800) {
+                        $(".dining_list_item").addClass("dining_list_nav");
+                    } else {
+                        $(".dining_list_item").removeClass("dining_list_nav");
+                    }
+                }
+
+                $(document).ready(function() {
+                    $('.number_item').slick({
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        autoplay: true,
+                        autoplaySpeed: 2000,
+                        variableWidth: true,
+                        dots: true,
+                        pauseOnFocus: false
+                    });
+                });
+                onMounted(() => {
+
+                });
+
+                return {};
+            },
+        }).mount("#app");
+    </script>
+
+</html>

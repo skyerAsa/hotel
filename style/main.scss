@@ -1,0 +1,866 @@
+@import "reset";
+@import "method";
+.all_body {
+  overflow: hidden;
+}
+html,
+body {
+  scroll-behavior: smooth;
+}
+// header
+.header {
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #000;
+  @include rwd(870) {
+    justify-content: space-between;
+    padding: 10px;
+  }
+  ul {
+    display: flex;
+    @include rwd(870) {
+      display: none;
+    }
+    li {
+      height: 120px;
+      padding: 50px 23px;
+      box-sizing: border-box;
+      position: relative;
+      color: #fff;
+      cursor: pointer;
+      a{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        position: absolute;
+        @include pos(tl,0)
+      }
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+      }
+      &::before {
+        content: "";
+        width: 0px;
+        height: 4px;
+        position: absolute;
+        background-color: #4535b3;
+        transition: 0.5s;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 2;
+        @include rwd(870) {
+          display: none;
+        }
+      }
+    }
+  }
+  .burger_list {
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+    transition: 0.5s;
+    background-color: #fff;
+    border: transparent;
+    display: none;
+    @include rwd(870) {
+      display: block;
+    }
+    &:hover {
+      width: 30px;
+      height: 30px;
+      .menu {
+        margin-left: 8px;
+      }
+    }
+    .menu {
+      width: 15px;
+      height: 3px;
+      margin-left: 5px;
+      background-color: #000;
+      position: absolute;
+      top: 50%;
+      
+      &::before,
+      &::after {
+        content: "";
+        width: 15px;
+        height: 3px;
+        left: 0;
+        background-color: #000;
+        position: absolute;
+      }
+      &::before {
+        top: -6px;
+      }
+      &::after {
+        top: 6px;
+      }
+    }
+  }
+  .menu_list {
+    width: 300px;
+    background-color: rgba(78, 65, 59, 0.7);
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    right: 1%;
+    top: 8%;
+    z-index: 2;
+    transition: 0.5s;
+    transform: rotateX(90deg);
+    transform-origin: top;
+    &.on {
+      transition: 0.5s;
+      transform: rotateX(0);
+    }
+    @include rwd(870) {
+      display: flex;
+    }
+    li {
+      height: auto;
+      padding: 20px;
+      &:hover {
+        background-color: #4535b3;
+      }
+    }
+  }
+}
+
+// sign
+.sign {
+  padding: 200px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 22px;
+  background-image: url(/img/bg_01.jpg);
+  background-size: cover;
+  @include rwd(870) {
+    padding: 30px;
+    font-size: 18px;
+  }
+  h2 {
+    font-size: 65px;
+    padding: 10px 0;
+    @include rwd(870) {
+      font-size: 36px;
+    }
+    & + h2 {
+      padding-top: 50px;
+      @include rwd(870){
+        padding: 0;
+        margin: 0 0 30px;
+      }
+    }
+  }
+  h3 {
+    padding-top: 30px;
+    @include rwd(870){
+      padding: 0;
+    }
+    & + h3 {
+      padding-top: 0;
+    }
+  }
+  .play {
+    width: 150px;
+    height: 40px;
+    margin-top: 40px;
+    font-size: 15px;
+    background-color: #4535b3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    a{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      position: absolute;
+      @include pos(tl,0)
+    }
+    &:hover {
+      color: #4535b3;
+      background-color: #fff;
+    }
+    // @keyframes hh {
+    //   // 25% {
+    //   //   transform: translateY(-25%);
+    //   // }
+    //   // 50% {
+    //   //   transform: translateY(25%);
+    //   // }
+    //   // 75% {
+    //   //   transform: translateY(0%);
+    //   // }
+    //   // 100% {
+    //   //   transform: translateY(25%);
+    //   // }
+    // }
+    animation: hh 1.5s cubic-bezier(0.55, 0.06, 0.68, 0.19) infinite;
+  }
+}
+
+// introduce
+.introduce {
+  padding: 100px 0;
+  background-color: #000;
+  text-align: center;
+  @include rwd(870) {
+    padding: 30px;
+  }
+  h2 {
+    color: #fff;
+    font-size: 55px;
+    @include rwd(870) {
+      font-size: 36px;
+    }
+  }
+  p {
+    margin: 30px 0;
+    color: #fff;
+    font-size: 18px;
+  }
+  .img {
+    max-width: 660px;
+    margin: auto;
+  }
+}
+
+//gamble
+.gamble {
+  .roulette {
+    height: 460px;
+    display: flex;
+    background-color: #000;
+    overflow: hidden;
+    @include rwd(870) {
+      height: auto;
+      display: block;
+    }
+    .roulette_item {
+      width: 50%;
+      background-image: url(/img/bg_02.jpg);
+      transform: translateX(-100%);
+      @include rwd(870) {
+        width: 100%;
+      }
+      .roulette_txt {
+        width: 100%;
+        height: 460px;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+        @include rwd(599){
+          height: 500px;
+
+        }
+        h2 {
+          font-size: 55px;
+        }
+        p {
+          margin: 30px 0;
+          line-height: 25px;
+          font-size: 18px;
+        }
+        img {
+          max-width: 310px;
+        }
+      }
+    }
+    .roulette_item_nav {
+      transition: 1s;
+      transform: translateX(0%);
+    }
+  }
+  .roulette_img {
+    height: 460px;
+    width: 50%;
+    transform: translateX(100%);
+    background-image: url(/img/bg_03.jpg);
+    background-position: center;
+    position: relative;
+    background-size: 100% 100%;
+    transition: 0.5s;
+    @include rwd(870) {
+      width: 100%;
+    }
+    &::before {
+      content: "PLAY NOW";
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 44px;
+      position: absolute;
+      background-color: rgba(69, 53, 179, 0.5);
+      opacity: 0;
+      cursor: pointer;
+    }
+    &:hover {
+      background-size: 120% 120%;
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+  .roulette_img_nav {
+    transition: 1s;
+    transform: translateX(0%);
+  }
+  .slot {
+    display: flex;
+    background-color: #000;
+    overflow: hidden;
+    @include rwd(870) {
+      display: block;
+    }
+    .slot_img {
+      height: 460px;
+      width: 50%;
+      background-image: url(/img/bg_04.jpg);
+      background-position: center;
+      display: flex;
+      align-items: center;
+      position: relative;
+      background-size: 100% 100%;
+      transition: 0.5s;
+      transform: translateX(-100%);
+      @include rwd(870) {
+        width: 100%;
+        transform: translateY(100%);
+      }
+      &::before {
+        content: "PLAY NOW";
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 44px;
+        position: absolute;
+        background-color: rgba(69, 53, 179, 0.5);
+        opacity: 0;
+        cursor: pointer;
+      }
+      &:hover {
+        background-size: 120% 120%;
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+    .slot_img_nav {
+      transition: 0.7s;
+      transform: translateX(0%);
+      @include rwd(870) {
+        transform: translate(0%, 100%);
+      }
+    }
+    .slot_item {
+      width: 50%;
+      color: #fff;
+      background-color: #000;
+      transform: translateX(100%);
+      @include rwd(870) {
+        width: 100%;
+      }
+      .slot_txt {
+        width: 100%;
+        height: 460px;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        h2 {
+          font-size: 55px;
+        }
+        p {
+          margin: 30px 0;
+          line-height: 25px;
+          font-size: 18px;
+        }
+        img {
+          max-width: 310px;
+        }
+      }
+    }
+    .slot_item_nav {
+      transition: 1s;
+      transform: translateX(0%);
+      @include rwd(870) {
+        transform: translate(0%, -100%);
+      }
+    }
+  }
+}
+
+// dining
+.dining {
+  padding: 100px 0;
+  color: #fff;
+  background-image: url(/img/bg_05.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 55px;
+  text-align: center;
+  @include rwd(870) {
+    padding: 30px;
+    font-size: 36px;
+  }
+  .dining_txt {
+    p {
+      font-size: 18px;
+      margin: 30px 0;
+    }
+    img {
+      max-width: 310px;
+    }
+  }
+}
+
+// dining_list
+.dining_list {
+  background-color: #000;
+  ul {
+    display: flex;
+    background-color: #000;
+    margin-bottom: 0;
+    @include rwd(870) {
+      flex-wrap: wrap;
+    }
+    li {
+      transform: rotateY(90deg);
+      @include rwd(870) {
+        width: calc(100% / 2);
+      }
+      @include rwd(599) {
+        width: 100%;
+      }
+      &:first-child {
+        position: relative;
+        cursor: pointer;
+        &::before {
+          content: "Desserts";
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          position: absolute;
+          background-color: rgba(69, 53, 179, 0.5);
+          opacity: 0;
+          transition: 0.5s;
+        }
+        @keyframes ww {
+          from {
+            transform: rotateY(90deg);
+          }
+          to {
+            transform: rotateY(0deg);
+          }
+        }
+        animation: ww 0.5s forwards;
+        &:hover {
+          &::before {
+            opacity: 1;
+            font-size: 48px;
+          }
+        }
+      }
+      &:nth-child(2) {
+        position: relative;
+        cursor: pointer;
+        &::before {
+          content: "Drinks";
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          position: absolute;
+          background-color: rgba(69, 53, 179, 0.5);
+          opacity: 0;
+          transition: 0.5s;
+        }
+        &:hover {
+          &::before {
+            opacity: 1;
+            font-size: 48px;
+          }
+        }
+        @keyframes ww {
+          from {
+            transform: rotateY(90deg);
+          }
+          to {
+            transform: rotateY(0deg);
+          }
+        }
+        animation: ww 0.5s 1s forwards;
+      }
+      &:nth-child(3) {
+        position: relative;
+        cursor: pointer;
+        &::before {
+          content: "Main Courses";
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          position: absolute;
+          background-color: rgba(69, 53, 179, 0.5);
+          opacity: 0;
+          transition: 0.5s;
+        }
+        &:hover {
+          &::before {
+            opacity: 1;
+            font-size: 48px;
+          }
+        }
+        @keyframes ww {
+          from {
+            transform: rotateY(90deg);
+          }
+          to {
+            transform: rotateY(0deg);
+          }
+        }
+        animation: ww 1s 1.5s forwards;
+      }
+      &:nth-child(4) {
+        position: relative;
+        cursor: pointer;
+        &::before {
+          content: "Starts";
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          position: absolute;
+          background-color: rgba(69, 53, 179, 0.5);
+          opacity: 0;
+          transition: 0.5s;
+        }
+        &:hover {
+          &::before {
+            opacity: 1;
+            font-size: 48px;
+          }
+        }
+        @keyframes ww {
+          from {
+            transform: rotateY(90deg);
+          }
+          to {
+            transform: rotateY(0deg);
+          }
+        }
+        animation: ww 1s 2s forwards;
+      }
+    }
+  }
+  .dining_list_nav {
+    display: block;
+  }
+}
+
+// blog
+.blog {
+  padding: 100px 0;
+  color: #fff;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 40px;
+  text-align: center;
+  @include rwd(870) {
+    padding: 30px;
+    font-size: 36px;
+  }
+  .blog_txt {
+    p {
+      font-size: 18px;
+      margin: 30px 0;
+    }
+    img {
+      max-width: 310px;
+    }
+  }
+}
+
+// blog_pic
+.blog_pic {
+  padding: 20px 20px 100px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  @include rwd(870) {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .blog_bingo {
+    width: 400px;
+    height: 420px;
+    background-image: url(/img/play_01.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    position: relative;
+    cursor: pointer;
+    @include rwd(870) {
+      width: 600px;
+      height: 300px;
+      margin: 0 0 20px 0;
+    }
+    @include rwd(700) {
+      width: 100%;
+      height: 300px;
+      margin: 0 0 20px 0;
+    }
+    &::before {
+      content: "What's a Bingo Game";
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      position: absolute;
+      background-color: rgba(69, 53, 179, 0.5);
+      opacity: 0;
+      transition: 0.5s;
+    }
+    img {
+      height: 100%;
+    }
+    &:hover {
+      &::before {
+        opacity: 1;
+        font-size: 36px;
+      }
+    }
+  }
+  .blog_item {
+    width: 600px;
+    height: 420px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include rwd(870){
+      padding-left: 0;
+    }
+    @include rwd(700) {
+      width: auto;
+    }
+  }
+  .blog_baccarat,
+  .blog_six {
+    display: flex;
+    background-color: #fff;
+    img {
+      width: 200px;
+      height: 200px;
+    }
+    .txt {
+      padding-left: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 25px;
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+// testimonial
+.testimonial {
+  background-image: url(../img/bg_06.jpg);
+  color: #fff;
+  .title {
+    padding: 20px;
+    h2 {
+      padding-bottom: 10px;
+      text-align: center;
+      font-size: 40px;
+    }
+    .title_pic {
+      max-width: 310px;
+      margin: 0 auto;
+    }
+  }
+  .number_list {
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    ul {
+      button {
+        &::before {
+          width: 15px;
+          height: 15px;
+          margin-right: 30px;
+          border-radius: 50%;
+          background-color: rgb(255, 255, 255, 0.5);
+          color: transparent;
+        }
+      }
+      .number_introduce {
+        max-width: 600px;
+        height: 500px;
+        padding: 20px;
+        margin: auto;
+        font-size: 22px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-shrink: 0;
+        @include rwd(599){
+          max-width: 400px;
+        }
+        @include rwd(400){
+          max-width: 300px;
+        }
+        .number_pic {
+          width: 120px;
+          height: 120px;
+          margin: 50px;
+          border-radius: 50%;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+  .test_circle {
+    padding-bottom: 30px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+
+    .circle {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: rgba($color: rgb(255, 255, 255), $alpha: 0.5);
+      & + .circle {
+        margin-left: 20px;
+      }
+    }
+    .number_color {
+      background-color: rgba(69, 53, 179);
+    }
+  }
+}
+
+// message
+.message {
+  padding: 50px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  @include rwd(870) {
+    flex-direction: column;
+  }
+  .business {
+    width: calc(100% / 4);
+    padding: 20px;
+    @include rwd(870) {
+      width: 100%;
+    }
+    .title {
+      width: 175px;
+      margin-bottom: 20px;
+    }
+  }
+  .contacts {
+    width: calc(100% / 4);
+    padding: 20px;
+    @include rwd(870) {
+      width: 100%;
+    }
+    .title {
+      margin-bottom: 20px;
+      font-size: 35px;
+    }
+  }
+  .opening {
+    width: calc(100% / 4);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    @include rwd(870) {
+      width: 100%;
+    }
+    .title {
+      margin-bottom: 20px;
+      font-size: 35px;
+    }
+  }
+}
+// to_top
+.to_top {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 2%;
+  bottom: 1%;
+  background-color: transparent;
+  color: #858585;
+  font-weight: bolder;
+  z-index: 4;
+  i {
+    font-size: 36px;
+  }
+  &:hover {
+    color: #fff;
+  }
+}
+
+.to_top_nav {
+  display: flex;
+}
+// footer
+.footer {
+  padding: 30px;
+  background-color: #121313;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
