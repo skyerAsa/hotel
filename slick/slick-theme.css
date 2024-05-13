@@ -91,7 +91,9 @@
 }
 
 .slick-dots {
-  bottom: 0;
+  position: absolute;
+  top: 30%;
+  left: 20%;
   list-style: none;
   display: flex;
   justify-content: center;
@@ -104,7 +106,7 @@
   display: inline-block;
   height: 20px;
   width: 20px;
-  margin: 0 20px;
+  margin: 0 10px;
   padding: 0;
   cursor: pointer;
 }
@@ -138,10 +140,10 @@
   font-size: 6px;
   line-height: 20px;
   text-align: center;
-  color: black;
+  color: rgba(0, 0, 0, 0.5);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 .slick-dots li.slick-active button:before {
-  background-color: rgb(69, 53, 179);
+  color: #fff;
 }/*# sourceMappingURL=slick-theme.css.map */

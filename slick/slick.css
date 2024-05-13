@@ -12,7 +12,6 @@
 }
 
 .slick-list {
-  max-width: 600px;
   padding: 0;
   margin: auto;
   position: relative;
@@ -43,18 +42,12 @@
 }
 
 .slick-track {
-  max-width: 600px;
   position: relative;
   left: 0;
   top: 0;
   margin-left: auto;
   margin-right: auto;
   display: flex;
-}
-@media screen and (max-width: 400px) {
-  .slick-track {
-    max-width: 300px;
-  }
 }
 .slick-track:before, .slick-track:after {
   content: "";
