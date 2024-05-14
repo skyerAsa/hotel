@@ -865,20 +865,20 @@ body {
     padding-right: 20px;
     .room_list {
       display: flex;
-      transition: 0.5s;
       .clous {
         padding: 0 5px;
         flex: 1;
         position: relative;
         overflow: hidden;
-        transition: all 0.5s;
+        transition: all 0.2s linear;
         .open_clous {
           position: absolute;
           width: calc(100% - 30px);
           height: calc(100% - 20px);
           top: 0;
           margin: 10px;
-          display: none;
+          display: flex;
+          opacity: 0;
           flex-direction: column;
           justify-content: center;
           background: linear-gradient(
@@ -888,7 +888,6 @@ body {
           );
           text-align: center;
           color: #fff;
-          transition: 1s;
           .clous_title {
             padding-bottom: 20px;
             font-size: 18px;
@@ -930,9 +929,9 @@ body {
         }
         &:hover {
           flex: 2.5;
-          transition: 1s;
           .open_clous {
-            display: flex;
+            opacity: 1;
+            transition: all 0.5s 0.2s linear;
           }
           .img {
             position: relative;
@@ -967,14 +966,15 @@ body {
         padding: 0 5px;
         position: relative;
         flex: 1;
-        transition: all 0.5s;
+        transition: all 0.2s linear;
         .open_collection {
           position: absolute;
           width: calc(100% - 30px);
           height: calc(100% - 20px);
           top: 0;
           margin: 10px;
-          display: none;
+          display: flex;
+          opacity: 0;
           flex-direction: column;
           justify-content: center;
           background: linear-gradient(
@@ -1026,8 +1026,8 @@ body {
         &:hover {
           flex: 2.5;
           .open_collection {
-            display: flex;
-
+            opacity: 1;
+            transition: all 0.5s 0.2s linear;
           }
           .img {
             position: relative;
@@ -1063,14 +1063,15 @@ body {
         flex: 1;
         position: relative;
         overflow: hidden;
-        transition: all 0.5s;
+        transition: all 0.2s linear;
         .open_mountain {
           position: absolute;
           width: calc(100% - 30px);
           height: calc(100% - 20px);
           top: 0;
           margin: 10px;
-          display: none;
+          display: flex;
+          opacity: 0;
           flex-direction: column;
           justify-content: center;
           background: linear-gradient(
@@ -1121,9 +1122,9 @@ body {
         }
         &:hover {
           flex: 2.5;
-          transition: 1s;
           .open_mountain {
-            display: flex;
+            opacity: 1;
+            transition: all 0.5s 0.2s linear;
           }
           .img {
             position: relative;
@@ -1159,14 +1160,15 @@ body {
         flex: 1;
         position: relative;
         overflow: hidden;
-        transition: all 0.5s;
+        transition: all 0.2s linear;
         .open_morioka {
           position: absolute;
           width: calc(100% - 30px);
           height: calc(100% - 20px);
           top: 0;
           margin: 10px;
-          display: none;
+          display: flex;
+          opacity: 0;
           flex-direction: column;
           justify-content: center;
           background: linear-gradient(
@@ -1217,9 +1219,9 @@ body {
         }
         &:hover {
           flex: 2.5;
-          transition:1s;
           .open_morioka {
-            display: flex;
+            opacity: 1;
+            transition: all 0.5s 0.2s linear;
           }
           .img {
             position: relative;
@@ -1255,14 +1257,15 @@ body {
         flex: 1;
         position: relative;
         overflow: hidden;
-        transition: all 0.5s;
+        transition: all 0.2s linear;
         .open_reflection {
           position: absolute;
           width: calc(100% - 30px);
           height: calc(100% - 20px);
           top: 0;
           margin: 10px;
-          display: none;
+          display: flex;
+          opacity: 0;
           flex-direction: column;
           justify-content: center;
           background: linear-gradient(
@@ -1313,9 +1316,9 @@ body {
         }
         &:hover {
           flex: 2.5;
-          transition: 1s;
           .open_reflection {
-            display: flex;
+            opacity: 1;
+            transition: all 0.5s 0.2s linear;
           }
           .img {
             position: relative;
@@ -1351,14 +1354,15 @@ body {
         flex: 1;
         position: relative;
         overflow: hidden;
-        transition: all 0.5s;
+        transition: all 0.2s linear;
         .open_linshan {
           position: absolute;
           width: calc(100% - 30px);
           height: calc(100% - 20px);
           top: 0;
           margin: 10px;
-          display: none;
+          display: flex;
+          opacity: 0;
           flex-direction: column;
           justify-content: center;
           background: linear-gradient(
@@ -1409,9 +1413,9 @@ body {
         }
         &:hover {
           flex: 2.5;
-          transition: 0.5s;
           .open_linshan {
-            display: flex;
+            opacity: 1;
+            transition: all 0.5s 0.2s linear;
           }
           .img {
             position: relative;
