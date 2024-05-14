@@ -1061,7 +1061,7 @@ body {
 }
 .rooms .wrap .room_list .clous:hover {
   flex: 2.5;
-  transition: 0.5s;
+  transition: 1s;
 }
 .rooms .wrap .room_list .clous:hover .open_clous {
   display: flex;
@@ -1150,7 +1150,7 @@ body {
 }
 .rooms .wrap .room_list .collection:hover {
   flex: 2.5;
-  transition: 0.5s;
+  transition: 1s;
 }
 .rooms .wrap .room_list .collection:hover .open_collection {
   display: flex;
@@ -1240,7 +1240,7 @@ body {
 }
 .rooms .wrap .room_list .mountain:hover {
   flex: 2.5;
-  transition: 0.5s;
+  transition: 1s;
 }
 .rooms .wrap .room_list .mountain:hover .open_mountain {
   display: flex;
@@ -1330,7 +1330,7 @@ body {
 }
 .rooms .wrap .room_list .morioka:hover {
   flex: 2.5;
-  transition: 0.5s;
+  transition: 1s;
 }
 .rooms .wrap .room_list .morioka:hover .open_morioka {
   display: flex;
@@ -1420,7 +1420,7 @@ body {
 }
 .rooms .wrap .room_list .reflection:hover {
   flex: 2.5;
-  transition: 0.5s;
+  transition: 1s;
 }
 .rooms .wrap .room_list .reflection:hover .open_reflection {
   display: flex;
