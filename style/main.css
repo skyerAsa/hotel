@@ -962,7 +962,6 @@ body {
   margin: 0 auto;
   padding: 105px 140px 50px;
   margin: 0 30px;
-  overflow: hidden;
 }
 .rooms .title {
   display: flex;
@@ -1003,12 +1002,14 @@ body {
 }
 .rooms .wrap .room_list {
   display: flex;
+  transition: 0.5s;
 }
 .rooms .wrap .room_list .clous {
   padding: 0 5px;
   flex: 1;
   position: relative;
   overflow: hidden;
+  transition: all 0.5s;
 }
 .rooms .wrap .room_list .clous .open_clous {
   position: absolute;
@@ -1022,6 +1023,7 @@ body {
   background: linear-gradient(to bottom, rgba(59, 175, 219, 0.5) 0%, rgba(54, 175, 101, 0.5) 100%);
   text-align: center;
   color: #fff;
+  transition: 1s;
 }
 .rooms .wrap .room_list .clous .open_clous .clous_title {
   padding-bottom: 20px;
@@ -1098,6 +1100,7 @@ body {
   padding: 0 5px;
   position: relative;
   flex: 1;
+  transition: all 0.5s;
 }
 .rooms .wrap .room_list .collection .open_collection {
   position: absolute;
@@ -1150,7 +1153,6 @@ body {
 }
 .rooms .wrap .room_list .collection:hover {
   flex: 2.5;
-  transition: 1s;
 }
 .rooms .wrap .room_list .collection:hover .open_collection {
   display: flex;
@@ -1188,6 +1190,7 @@ body {
   flex: 1;
   position: relative;
   overflow: hidden;
+  transition: all 0.5s;
 }
 .rooms .wrap .room_list .mountain .open_mountain {
   position: absolute;
@@ -1278,6 +1281,7 @@ body {
   flex: 1;
   position: relative;
   overflow: hidden;
+  transition: all 0.5s;
 }
 .rooms .wrap .room_list .morioka .open_morioka {
   position: absolute;
@@ -1368,6 +1372,7 @@ body {
   flex: 1;
   position: relative;
   overflow: hidden;
+  transition: all 0.5s;
 }
 .rooms .wrap .room_list .reflection .open_reflection {
   position: absolute;
@@ -1458,6 +1463,7 @@ body {
   flex: 1;
   position: relative;
   overflow: hidden;
+  transition: all 0.5s;
 }
 .rooms .wrap .room_list .linshan .open_linshan {
   position: absolute;
