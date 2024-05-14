@@ -158,7 +158,7 @@ body {
             transform: translateY(0%);
           }
         }
-        animation: hh 1s forwards;
+        animation: hh 1s 2s forwards;
       }
       h2 {
         top: 50%;
@@ -451,6 +451,7 @@ body {
   }
   h3 {
     letter-spacing: 2.5px;
+    padding-top: 20px;
   }
   .field_bg {
     width: 100%;
@@ -623,10 +624,209 @@ body {
 
 // Events
 .events {
-  padding: 0 140px;
-  .item {
-    display: flex;
+  padding: 100px 140px 150px;
+  .content {
+    .slick-list {
+      overflow: initial;
+    }
+    li {
+      max-width: 1500px;
+      max-height: 600px;
+      &:nth-child(2) {
+        transform: translateX(-100%);
+      }
+      &:nth-child(3) {
+        transform: translateX(-200%);
+      }
+      .img {
+        margin-left: 100px;
+        overflow: hidden;
+        &:hover {
+          img {
+            transition: 0.5s;
+            transform: scale(1.2);
+          }
+        }
+        img {
+          border-radius: 10px;
+        }
+      }
+      .item {
+        margin-left: 100px;
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        .title {
+          display: flex;
+          padding-bottom: 50px;
+          border-right: 1px solid rgba($color: #000000, $alpha: 0.2);
+          h2 {
+            font-size: 55px;
+            letter-spacing: 2.5px;
+          }
+          p {
+            width: 150px;
+            padding-left: 20px;
+            display: flex;
+            align-items: center;
+            flex: 1;
+            position: relative;
+            font-size: 20px;
+            letter-spacing: 2px;
+            color: #63bedf;
+            &::before {
+              content: "";
+              width: 60%;
+              position: absolute;
+              bottom: 20%;
+              height: 1px;
+              background-color: #63bedf;
+            }
+          }
+        }
+        .txt {
+          width: 35%;
+          p {
+            padding-top: 16px;
+          }
+          .language {
+            display: flex;
+            font-size: 22px;
+            p {
+              font-size: 18px;
+              padding: 7px 0 0 15px;
+            }
+          }
+        }
+        .event_about {
+          padding-top: 20px;
+          position: relative;
+          .arrow {
+            width: 60px;
+            height: 1px;
+            background-color: #191919;
+            position: absolute;
+            top: 37%;
+            right: -20%;
+            &::before {
+              content: "";
+              width: 1px;
+              height: 15px;
+              position: absolute;
+              right: 3px;
+              bottom: -1px;
+              background-color: #191919;
+              transform: rotate(135deg);
+            }
+          }
+          &:hover {
+            transition: 1s;
+            button {
+              color: #36af63;
+              border-color: #36af63;
+            }
+            .arrow {
+              background-color: #36af63;
+              @keyframes aa {
+                from {
+                  right: -20%;
+                }
+                to {
+                  right: -40%;
+                }
+              }
+              animation: aa 1s;
+              &::before {
+                background-color: #36af63;
+              }
+            }
+          }
+          button {
+            height: 40px;
+            position: relative;
+            padding: 10px;
+            background-color: #fff;
+            min-width: 165px;
+            border: 1px solid #191919;
+            border-radius: 50px;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-align: center;
+            color: #191919;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .slick-dots {
+      width: 20%;
+      justify-content: space-around;
+      top: auto;
+      left: 15%;
+      bottom: -70px;
+      .slick-active {
+        &::after {
+          color: #36af63;
+          border-top: 1px solid #36af63;
+          border-bottom: 1px solid #36af63;
+        }
+      }
+      li {
+        margin: 0 30px;
+      }
+      li:first-child {
+        &::after {
+          content: "牽手";
+          width: 40px;
+          font-size: 18px;
+          display: flex;
+          flex-direction: row;
+          position: absolute;
+          top: 0;
+          left: 20px;
+          transition: 0.5s;
+        }
+      }
+      li:nth-child(2) {
+        &::after {
+          content: "歡聚";
+          width: 40px;
+          font-size: 18px;
+          display: flex;
+          flex-direction: row;
+          position: absolute;
+          top: 0;
+          left: 20px;
+          transition: 0.5s;
+        }
+      }
+      li:nth-child(3) {
+        &::after {
+          content: "同事";
+          width: 40px;
+          font-size: 18px;
+          display: flex;
+          flex-direction: row;
+          position: absolute;
+          top: 0;
+          left: 20px;
+          transition: 0.5s;
+        }
+      }
+    }
   }
+}
+
+// Rooms
+.rooms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 105px 140px 50px;
+  margin: 0 30px;
+  overflow: hidden;
   .title {
     display: flex;
     h2 {
@@ -650,6 +850,649 @@ body {
         bottom: 20%;
         height: 1px;
         background-color: #63bedf;
+      }
+    }
+  }
+  h3 {
+    letter-spacing: 2.5px;
+    padding: 20px 0 50px;
+  }
+  .wrap {
+    width: 100%;
+    max-width: 1540px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    .room_list {
+      display: flex;
+      .clous {
+        padding: 0 5px;
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+        .open_clous {
+          position: absolute;
+          width: calc(100% - 30px);
+          height: calc(100% - 20px);
+          top: 0;
+          margin: 10px;
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          background: linear-gradient(
+            to bottom,
+            rgba(59, 175, 219, 0.5) 0%,
+            rgba(54, 175, 101, 0.5) 100%
+          );
+          text-align: center;
+          color: #fff;
+          .clous_title {
+            padding-bottom: 20px;
+            font-size: 18px;
+            font-weight: bolder;
+            position: relative;
+            &::after {
+              content: "";
+              width: 20px;
+              height: 1px;
+              background-color: #fff;
+              position: absolute;
+              bottom: 10%;
+              left: 48%;
+            }
+          }
+          .number {
+            width: 60px;
+            margin: 20px auto 0;
+            border-left: 1px solid #fff;
+            border-right: 1px solid #fff;
+          }
+          .txt {
+            margin-top: 30px;
+            letter-spacing: 2.5px;
+            p {
+              & + p {
+                padding-top: 5px;
+              }
+            }
+          }
+          .more {
+            position: absolute;
+            bottom: 5%;
+            left: 40%;
+            span {
+              padding-left: 10px;
+            }
+          }
+        }
+        &:hover {
+          flex: 2.5;
+          transition: 0.5s;
+          .open_clous {
+            display: flex;
+          }
+          .img {
+            position: relative;
+            &::before {
+              display: none;
+            }
+          }
+        }
+        .img {
+          position: relative;
+          &::before {
+            content: "采霞";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            writing-mode: vertical-lr;
+            color: #fff;
+            font-weight: bolder;
+            font-size: 18px;
+          }
+          img {
+            height: 510px;
+            border-radius: 15px;
+            overflow: hidden;
+            object-fit: cover;
+          }
+        }
+      }
+      .collection {
+        padding: 0 5px;
+        position: relative;
+        flex: 1;
+        .open_collection {
+          position: absolute;
+          width: calc(100% - 30px);
+          height: calc(100% - 20px);
+          top: 0;
+          margin: 10px;
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          background: linear-gradient(
+            to bottom,
+            rgba(59, 175, 219, 0.5) 0%,
+            rgba(54, 175, 101, 0.5) 100%
+          );
+          text-align: center;
+          color: #fff;
+          .collection_title {
+            padding-bottom: 20px;
+            font-size: 18px;
+            font-weight: bolder;
+            position: relative;
+            &::after {
+              content: "";
+              width: 20px;
+              height: 1px;
+              background-color: #fff;
+              position: absolute;
+              bottom: 10%;
+              left: 48%;
+            }
+          }
+          .number {
+            width: 60px;
+            margin: 20px auto 0;
+            border-left: 1px solid #fff;
+            border-right: 1px solid #fff;
+          }
+          .txt {
+            margin-top: 30px;
+            letter-spacing: 2.5px;
+            p {
+              & + p {
+                padding-top: 5px;
+              }
+            }
+          }
+          .more {
+            position: absolute;
+            bottom: 5%;
+            left: 40%;
+            span {
+              padding-left: 10px;
+            }
+          }
+        }
+        &:hover {
+          flex: 2.5;
+          transition: 0.5s;
+          .open_collection {
+            display: flex;
+          }
+          .img {
+            position: relative;
+            &::before {
+              display: none;
+            }
+          }
+        }
+        .img {
+          position: relative;
+          &::before {
+            content: "山采";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            writing-mode: vertical-lr;
+            color: #fff;
+            font-weight: bolder;
+            font-size: 18px;
+          }
+          img {
+            height: 510px;
+            border-radius: 15px;
+            overflow: hidden;
+            object-fit: cover;
+          }
+        }
+      }
+      .mountain {
+        padding: 0 5px;
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+        .open_mountain {
+          position: absolute;
+          width: calc(100% - 30px);
+          height: calc(100% - 20px);
+          top: 0;
+          margin: 10px;
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          background: linear-gradient(
+            to bottom,
+            rgba(59, 175, 219, 0.5) 0%,
+            rgba(54, 175, 101, 0.5) 100%
+          );
+          text-align: center;
+          color: #fff;
+          .mountain_title {
+            padding-bottom: 20px;
+            font-size: 18px;
+            font-weight: bolder;
+            position: relative;
+            &::after {
+              content: "";
+              width: 20px;
+              height: 1px;
+              background-color: #fff;
+              position: absolute;
+              bottom: 10%;
+              left: 48%;
+            }
+          }
+          .number {
+            width: 60px;
+            margin: 20px auto 0;
+            border-left: 1px solid #fff;
+            border-right: 1px solid #fff;
+          }
+          .txt {
+            margin-top: 30px;
+            letter-spacing: 2.5px;
+            p {
+              & + p {
+                padding-top: 5px;
+              }
+            }
+          }
+          .more {
+            position: absolute;
+            bottom: 5%;
+            left: 40%;
+            span {
+              padding-left: 10px;
+            }
+          }
+        }
+        &:hover {
+          flex: 2.5;
+          transition: 0.5s;
+          .open_mountain {
+            display: flex;
+          }
+          .img {
+            position: relative;
+            &::before {
+              display: none;
+            }
+          }
+        }
+        .img {
+          position: relative;
+          &::before {
+            content: "遼山";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            writing-mode: vertical-lr;
+            color: #fff;
+            font-weight: bolder;
+            font-size: 18px;
+          }
+          img {
+            height: 510px;
+            border-radius: 15px;
+            overflow: hidden;
+            object-fit: cover;
+          }
+        }
+      }
+      .morioka {
+        padding: 0 5px;
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+        .open_morioka {
+          position: absolute;
+          width: calc(100% - 30px);
+          height: calc(100% - 20px);
+          top: 0;
+          margin: 10px;
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          background: linear-gradient(
+            to bottom,
+            rgba(59, 175, 219, 0.5) 0%,
+            rgba(54, 175, 101, 0.5) 100%
+          );
+          text-align: center;
+          color: #fff;
+          .morioka_title {
+            padding-bottom: 20px;
+            font-size: 18px;
+            font-weight: bolder;
+            position: relative;
+            &::after {
+              content: "";
+              width: 20px;
+              height: 1px;
+              background-color: #fff;
+              position: absolute;
+              bottom: 10%;
+              left: 48%;
+            }
+          }
+          .number {
+            width: 60px;
+            margin: 20px auto 0;
+            border-left: 1px solid #fff;
+            border-right: 1px solid #fff;
+          }
+          .txt {
+            margin-top: 30px;
+            letter-spacing: 2.5px;
+            p {
+              & + p {
+                padding-top: 5px;
+              }
+            }
+          }
+          .more {
+            position: absolute;
+            bottom: 5%;
+            left: 40%;
+            span {
+              padding-left: 10px;
+            }
+          }
+        }
+        &:hover {
+          flex: 2.5;
+          transition: 0.5s;
+          .open_morioka {
+            display: flex;
+          }
+          .img {
+            position: relative;
+            &::before {
+              display: none;
+            }
+          }
+        }
+        .img {
+          position: relative;
+          &::before {
+            content: "森丘";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            writing-mode: vertical-lr;
+            color: #fff;
+            font-weight: bolder;
+            font-size: 18px;
+          }
+          img {
+            height: 510px;
+            border-radius: 15px;
+            overflow: hidden;
+            object-fit: cover;
+          }
+        }
+      }
+      .reflection {
+        padding: 0 5px;
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+        .open_reflection {
+          position: absolute;
+          width: calc(100% - 30px);
+          height: calc(100% - 20px);
+          top: 0;
+          margin: 10px;
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          background: linear-gradient(
+            to bottom,
+            rgba(59, 175, 219, 0.5) 0%,
+            rgba(54, 175, 101, 0.5) 100%
+          );
+          text-align: center;
+          color: #fff;
+          .reflection_title {
+            padding-bottom: 20px;
+            font-size: 18px;
+            font-weight: bolder;
+            position: relative;
+            &::after {
+              content: "";
+              width: 20px;
+              height: 1px;
+              background-color: #fff;
+              position: absolute;
+              bottom: 10%;
+              left: 48%;
+            }
+          }
+          .number {
+            width: 60px;
+            margin: 20px auto 0;
+            border-left: 1px solid #fff;
+            border-right: 1px solid #fff;
+          }
+          .txt {
+            margin-top: 30px;
+            letter-spacing: 2.5px;
+            p {
+              & + p {
+                padding-top: 5px;
+              }
+            }
+          }
+          .more {
+            position: absolute;
+            bottom: 5%;
+            left: 40%;
+            span {
+              padding-left: 10px;
+            }
+          }
+        }
+        &:hover {
+          flex: 2.5;
+          transition: 0.5s;
+          .open_reflection {
+            display: flex;
+          }
+          .img {
+            position: relative;
+            &::before {
+              display: none;
+            }
+          }
+        }
+        .img {
+          position: relative;
+          &::before {
+            content: "綠映";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            writing-mode: vertical-lr;
+            color: #fff;
+            font-weight: bolder;
+            font-size: 18px;
+          }
+          img {
+            height: 510px;
+            border-radius: 15px;
+            overflow: hidden;
+            object-fit: cover;
+          }
+        }
+      }
+      .linshan {
+        padding: 0 5px;
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+        .open_linshan {
+          position: absolute;
+          width: calc(100% - 30px);
+          height: calc(100% - 20px);
+          top: 0;
+          margin: 10px;
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          background: linear-gradient(
+            to bottom,
+            rgba(59, 175, 219, 0.5) 0%,
+            rgba(54, 175, 101, 0.5) 100%
+          );
+          text-align: center;
+          color: #fff;
+          .linshan_title {
+            padding-bottom: 20px;
+            font-size: 18px;
+            font-weight: bolder;
+            position: relative;
+            &::after {
+              content: "";
+              width: 20px;
+              height: 1px;
+              background-color: #fff;
+              position: absolute;
+              bottom: 10%;
+              left: 48%;
+            }
+          }
+          .number {
+            width: 60px;
+            margin: 20px auto 0;
+            border-left: 1px solid #fff;
+            border-right: 1px solid #fff;
+          }
+          .txt {
+            margin-top: 30px;
+            letter-spacing: 2.5px;
+            p {
+              & + p {
+                padding-top: 5px;
+              }
+            }
+          }
+          .more {
+            position: absolute;
+            bottom: 5%;
+            left: 40%;
+            span {
+              padding-left: 10px;
+            }
+          }
+        }
+        &:hover {
+          flex: 2.5;
+          transition: 0.5s;
+          .open_linshan {
+            display: flex;
+          }
+          .img {
+            position: relative;
+            &::before {
+              display: none;
+            }
+          }
+        }
+        .img {
+          position: relative;
+          &::before {
+            content: "臨山";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            writing-mode: vertical-lr;
+            color: #fff;
+            font-weight: bolder;
+            font-size: 18px;
+          }
+          img {
+            height: 510px;
+            border-radius: 15px;
+            overflow: hidden;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+  .rooms_about {
+    position: relative;
+    bottom: 15%;
+    margin-top: 50px;
+    &:hover {
+      transition: 1s;
+      button {
+        color: #36af63;
+        border-color: #36af63;
+      }
+      .arrow {
+        background-color: #36af63;
+        @keyframes aa {
+          from {
+            right: -20%;
+          }
+          to {
+            right: -40%;
+          }
+        }
+        animation: aa 1s;
+        &::before {
+          background-color: #36af63;
+        }
+      }
+    }
+    button {
+      height: 40px;
+      position: relative;
+      padding: 10px;
+      background-color: #fff;
+      min-width: 165px;
+      border: 1px solid #191919;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-align: center;
+      color: #191919;
+      cursor: pointer;
+    }
+    .arrow {
+      width: 60px;
+      height: 1px;
+      background-color: #191919;
+      position: absolute;
+      right: -35px;
+      top: 50%;
+      &::before {
+        content: "";
+        width: 1px;
+        height: 15px;
+        position: absolute;
+        right: 3px;
+        bottom: -1px;
+        background-color: #191919;
+        transform: rotate(135deg);
       }
     }
   }

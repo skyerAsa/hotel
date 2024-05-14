@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body,
 div,
@@ -306,7 +307,7 @@ body {
   left: 7%;
   transform: translateY(20%);
   opacity: 0;
-  animation: hh 1s forwards;
+  animation: hh 1s 2s forwards;
 }
 @keyframes hh {
   from {
@@ -605,6 +606,7 @@ body {
 }
 .field h3 {
   letter-spacing: 2.5px;
+  padding-top: 20px;
 }
 .field .field_bg {
   width: 100%;
@@ -771,19 +773,205 @@ body {
 }
 
 .events {
-  padding: 0 140px;
+  padding: 100px 140px 150px;
 }
-.events .item {
+.events .content .slick-list {
+  overflow: initial;
+}
+.events .content li {
+  max-width: 1500px;
+  max-height: 600px;
+}
+.events .content li:nth-child(2) {
+  transform: translateX(-100%);
+}
+.events .content li:nth-child(3) {
+  transform: translateX(-200%);
+}
+.events .content li .img {
+  margin-left: 100px;
+  overflow: hidden;
+}
+.events .content li .img:hover img {
+  transition: 0.5s;
+  transform: scale(1.2);
+}
+.events .content li .img img {
+  border-radius: 10px;
+}
+.events .content li .item {
+  margin-left: 100px;
+  padding-top: 20px;
   display: flex;
+  justify-content: space-evenly;
 }
-.events .title {
+.events .content li .item .title {
   display: flex;
+  padding-bottom: 50px;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
 }
-.events .title h2 {
+.events .content li .item .title h2 {
   font-size: 55px;
   letter-spacing: 2.5px;
 }
-.events .title p {
+.events .content li .item .title p {
+  width: 150px;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  position: relative;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #63bedf;
+}
+.events .content li .item .title p::before {
+  content: "";
+  width: 60%;
+  position: absolute;
+  bottom: 20%;
+  height: 1px;
+  background-color: #63bedf;
+}
+.events .content li .item .txt {
+  width: 35%;
+}
+.events .content li .item .txt p {
+  padding-top: 16px;
+}
+.events .content li .item .txt .language {
+  display: flex;
+  font-size: 22px;
+}
+.events .content li .item .txt .language p {
+  font-size: 18px;
+  padding: 7px 0 0 15px;
+}
+.events .content li .item .event_about {
+  padding-top: 20px;
+  position: relative;
+}
+.events .content li .item .event_about .arrow {
+  width: 60px;
+  height: 1px;
+  background-color: #191919;
+  position: absolute;
+  top: 37%;
+  right: -20%;
+}
+.events .content li .item .event_about .arrow::before {
+  content: "";
+  width: 1px;
+  height: 15px;
+  position: absolute;
+  right: 3px;
+  bottom: -1px;
+  background-color: #191919;
+  transform: rotate(135deg);
+}
+.events .content li .item .event_about:hover {
+  transition: 1s;
+}
+.events .content li .item .event_about:hover button {
+  color: #36af63;
+  border-color: #36af63;
+}
+.events .content li .item .event_about:hover .arrow {
+  background-color: #36af63;
+  animation: aa 1s;
+}
+@keyframes aa {
+  from {
+    right: -20%;
+  }
+  to {
+    right: -40%;
+  }
+}
+.events .content li .item .event_about:hover .arrow::before {
+  background-color: #36af63;
+}
+.events .content li .item .event_about button {
+  height: 40px;
+  position: relative;
+  padding: 10px;
+  background-color: #fff;
+  min-width: 165px;
+  border: 1px solid #191919;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #191919;
+  cursor: pointer;
+}
+.events .content .slick-dots {
+  width: 20%;
+  justify-content: space-around;
+  top: auto;
+  left: 15%;
+  bottom: -70px;
+}
+.events .content .slick-dots .slick-active::after {
+  color: #36af63;
+  border-top: 1px solid #36af63;
+  border-bottom: 1px solid #36af63;
+}
+.events .content .slick-dots li {
+  margin: 0 30px;
+}
+.events .content .slick-dots li:first-child::after {
+  content: "牽手";
+  width: 40px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  transition: 0.5s;
+}
+.events .content .slick-dots li:nth-child(2)::after {
+  content: "歡聚";
+  width: 40px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  transition: 0.5s;
+}
+.events .content .slick-dots li:nth-child(3)::after {
+  content: "同事";
+  width: 40px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  transition: 0.5s;
+}
+
+.rooms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 105px 140px 50px;
+  margin: 0 30px;
+  overflow: hidden;
+}
+.rooms .title {
+  display: flex;
+}
+.rooms .title h2 {
+  font-size: 55px;
+  letter-spacing: 2.5px;
+}
+.rooms .title p {
   width: 100px;
   padding-left: 20px;
   display: flex;
@@ -794,11 +982,624 @@ body {
   letter-spacing: 2px;
   color: #63bedf;
 }
-.events .title p::before {
+.rooms .title p::before {
   content: "";
   width: 100%;
   position: absolute;
   bottom: 20%;
   height: 1px;
   background-color: #63bedf;
+}
+.rooms h3 {
+  letter-spacing: 2.5px;
+  padding: 20px 0 50px;
+}
+.rooms .wrap {
+  width: 100%;
+  max-width: 1540px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.rooms .wrap .room_list {
+  display: flex;
+}
+.rooms .wrap .room_list .clous {
+  padding: 0 5px;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.rooms .wrap .room_list .clous .open_clous {
+  position: absolute;
+  width: calc(100% - 30px);
+  height: calc(100% - 20px);
+  top: 0;
+  margin: 10px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgba(59, 175, 219, 0.5) 0%, rgba(54, 175, 101, 0.5) 100%);
+  text-align: center;
+  color: #fff;
+}
+.rooms .wrap .room_list .clous .open_clous .clous_title {
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-weight: bolder;
+  position: relative;
+}
+.rooms .wrap .room_list .clous .open_clous .clous_title::after {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 10%;
+  left: 48%;
+}
+.rooms .wrap .room_list .clous .open_clous .number {
+  width: 60px;
+  margin: 20px auto 0;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+.rooms .wrap .room_list .clous .open_clous .txt {
+  margin-top: 30px;
+  letter-spacing: 2.5px;
+}
+.rooms .wrap .room_list .clous .open_clous .txt p + p {
+  padding-top: 5px;
+}
+.rooms .wrap .room_list .clous .open_clous .more {
+  position: absolute;
+  bottom: 5%;
+  left: 40%;
+}
+.rooms .wrap .room_list .clous .open_clous .more span {
+  padding-left: 10px;
+}
+.rooms .wrap .room_list .clous:hover {
+  flex: 2.5;
+  transition: 0.5s;
+}
+.rooms .wrap .room_list .clous:hover .open_clous {
+  display: flex;
+}
+.rooms .wrap .room_list .clous:hover .img {
+  position: relative;
+}
+.rooms .wrap .room_list .clous:hover .img::before {
+  display: none;
+}
+.rooms .wrap .room_list .clous .img {
+  position: relative;
+}
+.rooms .wrap .room_list .clous .img::before {
+  content: "采霞";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  writing-mode: vertical-lr;
+  color: #fff;
+  font-weight: bolder;
+  font-size: 18px;
+}
+.rooms .wrap .room_list .clous .img img {
+  height: 510px;
+  border-radius: 15px;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.rooms .wrap .room_list .collection {
+  padding: 0 5px;
+  position: relative;
+  flex: 1;
+}
+.rooms .wrap .room_list .collection .open_collection {
+  position: absolute;
+  width: calc(100% - 30px);
+  height: calc(100% - 20px);
+  top: 0;
+  margin: 10px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgba(59, 175, 219, 0.5) 0%, rgba(54, 175, 101, 0.5) 100%);
+  text-align: center;
+  color: #fff;
+}
+.rooms .wrap .room_list .collection .open_collection .collection_title {
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-weight: bolder;
+  position: relative;
+}
+.rooms .wrap .room_list .collection .open_collection .collection_title::after {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 10%;
+  left: 48%;
+}
+.rooms .wrap .room_list .collection .open_collection .number {
+  width: 60px;
+  margin: 20px auto 0;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+.rooms .wrap .room_list .collection .open_collection .txt {
+  margin-top: 30px;
+  letter-spacing: 2.5px;
+}
+.rooms .wrap .room_list .collection .open_collection .txt p + p {
+  padding-top: 5px;
+}
+.rooms .wrap .room_list .collection .open_collection .more {
+  position: absolute;
+  bottom: 5%;
+  left: 40%;
+}
+.rooms .wrap .room_list .collection .open_collection .more span {
+  padding-left: 10px;
+}
+.rooms .wrap .room_list .collection:hover {
+  flex: 2.5;
+  transition: 0.5s;
+}
+.rooms .wrap .room_list .collection:hover .open_collection {
+  display: flex;
+}
+.rooms .wrap .room_list .collection:hover .img {
+  position: relative;
+}
+.rooms .wrap .room_list .collection:hover .img::before {
+  display: none;
+}
+.rooms .wrap .room_list .collection .img {
+  position: relative;
+}
+.rooms .wrap .room_list .collection .img::before {
+  content: "山采";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  writing-mode: vertical-lr;
+  color: #fff;
+  font-weight: bolder;
+  font-size: 18px;
+}
+.rooms .wrap .room_list .collection .img img {
+  height: 510px;
+  border-radius: 15px;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.rooms .wrap .room_list .mountain {
+  padding: 0 5px;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.rooms .wrap .room_list .mountain .open_mountain {
+  position: absolute;
+  width: calc(100% - 30px);
+  height: calc(100% - 20px);
+  top: 0;
+  margin: 10px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgba(59, 175, 219, 0.5) 0%, rgba(54, 175, 101, 0.5) 100%);
+  text-align: center;
+  color: #fff;
+}
+.rooms .wrap .room_list .mountain .open_mountain .mountain_title {
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-weight: bolder;
+  position: relative;
+}
+.rooms .wrap .room_list .mountain .open_mountain .mountain_title::after {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 10%;
+  left: 48%;
+}
+.rooms .wrap .room_list .mountain .open_mountain .number {
+  width: 60px;
+  margin: 20px auto 0;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+.rooms .wrap .room_list .mountain .open_mountain .txt {
+  margin-top: 30px;
+  letter-spacing: 2.5px;
+}
+.rooms .wrap .room_list .mountain .open_mountain .txt p + p {
+  padding-top: 5px;
+}
+.rooms .wrap .room_list .mountain .open_mountain .more {
+  position: absolute;
+  bottom: 5%;
+  left: 40%;
+}
+.rooms .wrap .room_list .mountain .open_mountain .more span {
+  padding-left: 10px;
+}
+.rooms .wrap .room_list .mountain:hover {
+  flex: 2.5;
+  transition: 0.5s;
+}
+.rooms .wrap .room_list .mountain:hover .open_mountain {
+  display: flex;
+}
+.rooms .wrap .room_list .mountain:hover .img {
+  position: relative;
+}
+.rooms .wrap .room_list .mountain:hover .img::before {
+  display: none;
+}
+.rooms .wrap .room_list .mountain .img {
+  position: relative;
+}
+.rooms .wrap .room_list .mountain .img::before {
+  content: "遼山";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  writing-mode: vertical-lr;
+  color: #fff;
+  font-weight: bolder;
+  font-size: 18px;
+}
+.rooms .wrap .room_list .mountain .img img {
+  height: 510px;
+  border-radius: 15px;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.rooms .wrap .room_list .morioka {
+  padding: 0 5px;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.rooms .wrap .room_list .morioka .open_morioka {
+  position: absolute;
+  width: calc(100% - 30px);
+  height: calc(100% - 20px);
+  top: 0;
+  margin: 10px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgba(59, 175, 219, 0.5) 0%, rgba(54, 175, 101, 0.5) 100%);
+  text-align: center;
+  color: #fff;
+}
+.rooms .wrap .room_list .morioka .open_morioka .morioka_title {
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-weight: bolder;
+  position: relative;
+}
+.rooms .wrap .room_list .morioka .open_morioka .morioka_title::after {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 10%;
+  left: 48%;
+}
+.rooms .wrap .room_list .morioka .open_morioka .number {
+  width: 60px;
+  margin: 20px auto 0;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+.rooms .wrap .room_list .morioka .open_morioka .txt {
+  margin-top: 30px;
+  letter-spacing: 2.5px;
+}
+.rooms .wrap .room_list .morioka .open_morioka .txt p + p {
+  padding-top: 5px;
+}
+.rooms .wrap .room_list .morioka .open_morioka .more {
+  position: absolute;
+  bottom: 5%;
+  left: 40%;
+}
+.rooms .wrap .room_list .morioka .open_morioka .more span {
+  padding-left: 10px;
+}
+.rooms .wrap .room_list .morioka:hover {
+  flex: 2.5;
+  transition: 0.5s;
+}
+.rooms .wrap .room_list .morioka:hover .open_morioka {
+  display: flex;
+}
+.rooms .wrap .room_list .morioka:hover .img {
+  position: relative;
+}
+.rooms .wrap .room_list .morioka:hover .img::before {
+  display: none;
+}
+.rooms .wrap .room_list .morioka .img {
+  position: relative;
+}
+.rooms .wrap .room_list .morioka .img::before {
+  content: "森丘";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  writing-mode: vertical-lr;
+  color: #fff;
+  font-weight: bolder;
+  font-size: 18px;
+}
+.rooms .wrap .room_list .morioka .img img {
+  height: 510px;
+  border-radius: 15px;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.rooms .wrap .room_list .reflection {
+  padding: 0 5px;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.rooms .wrap .room_list .reflection .open_reflection {
+  position: absolute;
+  width: calc(100% - 30px);
+  height: calc(100% - 20px);
+  top: 0;
+  margin: 10px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgba(59, 175, 219, 0.5) 0%, rgba(54, 175, 101, 0.5) 100%);
+  text-align: center;
+  color: #fff;
+}
+.rooms .wrap .room_list .reflection .open_reflection .reflection_title {
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-weight: bolder;
+  position: relative;
+}
+.rooms .wrap .room_list .reflection .open_reflection .reflection_title::after {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 10%;
+  left: 48%;
+}
+.rooms .wrap .room_list .reflection .open_reflection .number {
+  width: 60px;
+  margin: 20px auto 0;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+.rooms .wrap .room_list .reflection .open_reflection .txt {
+  margin-top: 30px;
+  letter-spacing: 2.5px;
+}
+.rooms .wrap .room_list .reflection .open_reflection .txt p + p {
+  padding-top: 5px;
+}
+.rooms .wrap .room_list .reflection .open_reflection .more {
+  position: absolute;
+  bottom: 5%;
+  left: 40%;
+}
+.rooms .wrap .room_list .reflection .open_reflection .more span {
+  padding-left: 10px;
+}
+.rooms .wrap .room_list .reflection:hover {
+  flex: 2.5;
+  transition: 0.5s;
+}
+.rooms .wrap .room_list .reflection:hover .open_reflection {
+  display: flex;
+}
+.rooms .wrap .room_list .reflection:hover .img {
+  position: relative;
+}
+.rooms .wrap .room_list .reflection:hover .img::before {
+  display: none;
+}
+.rooms .wrap .room_list .reflection .img {
+  position: relative;
+}
+.rooms .wrap .room_list .reflection .img::before {
+  content: "綠映";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  writing-mode: vertical-lr;
+  color: #fff;
+  font-weight: bolder;
+  font-size: 18px;
+}
+.rooms .wrap .room_list .reflection .img img {
+  height: 510px;
+  border-radius: 15px;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.rooms .wrap .room_list .linshan {
+  padding: 0 5px;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.rooms .wrap .room_list .linshan .open_linshan {
+  position: absolute;
+  width: calc(100% - 30px);
+  height: calc(100% - 20px);
+  top: 0;
+  margin: 10px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgba(59, 175, 219, 0.5) 0%, rgba(54, 175, 101, 0.5) 100%);
+  text-align: center;
+  color: #fff;
+}
+.rooms .wrap .room_list .linshan .open_linshan .linshan_title {
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-weight: bolder;
+  position: relative;
+}
+.rooms .wrap .room_list .linshan .open_linshan .linshan_title::after {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 10%;
+  left: 48%;
+}
+.rooms .wrap .room_list .linshan .open_linshan .number {
+  width: 60px;
+  margin: 20px auto 0;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+.rooms .wrap .room_list .linshan .open_linshan .txt {
+  margin-top: 30px;
+  letter-spacing: 2.5px;
+}
+.rooms .wrap .room_list .linshan .open_linshan .txt p + p {
+  padding-top: 5px;
+}
+.rooms .wrap .room_list .linshan .open_linshan .more {
+  position: absolute;
+  bottom: 5%;
+  left: 40%;
+}
+.rooms .wrap .room_list .linshan .open_linshan .more span {
+  padding-left: 10px;
+}
+.rooms .wrap .room_list .linshan:hover {
+  flex: 2.5;
+  transition: 0.5s;
+}
+.rooms .wrap .room_list .linshan:hover .open_linshan {
+  display: flex;
+}
+.rooms .wrap .room_list .linshan:hover .img {
+  position: relative;
+}
+.rooms .wrap .room_list .linshan:hover .img::before {
+  display: none;
+}
+.rooms .wrap .room_list .linshan .img {
+  position: relative;
+}
+.rooms .wrap .room_list .linshan .img::before {
+  content: "臨山";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  writing-mode: vertical-lr;
+  color: #fff;
+  font-weight: bolder;
+  font-size: 18px;
+}
+.rooms .wrap .room_list .linshan .img img {
+  height: 510px;
+  border-radius: 15px;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.rooms .rooms_about {
+  position: relative;
+  bottom: 15%;
+  margin-top: 50px;
+}
+.rooms .rooms_about:hover {
+  transition: 1s;
+}
+.rooms .rooms_about:hover button {
+  color: #36af63;
+  border-color: #36af63;
+}
+.rooms .rooms_about:hover .arrow {
+  background-color: #36af63;
+  animation: aa 1s;
+}
+@keyframes aa {
+  from {
+    right: -20%;
+  }
+  to {
+    right: -40%;
+  }
+}
+.rooms .rooms_about:hover .arrow::before {
+  background-color: #36af63;
+}
+.rooms .rooms_about button {
+  height: 40px;
+  position: relative;
+  padding: 10px;
+  background-color: #fff;
+  min-width: 165px;
+  border: 1px solid #191919;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #191919;
+  cursor: pointer;
+}
+.rooms .rooms_about .arrow {
+  width: 60px;
+  height: 1px;
+  background-color: #191919;
+  position: absolute;
+  right: -35px;
+  top: 50%;
+}
+.rooms .rooms_about .arrow::before {
+  content: "";
+  width: 1px;
+  height: 15px;
+  position: absolute;
+  right: 3px;
+  bottom: -1px;
+  background-color: #191919;
+  transform: rotate(135deg);
 }/*# sourceMappingURL=main.css.map */
