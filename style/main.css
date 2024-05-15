@@ -282,6 +282,13 @@ body {
 .hd_bg {
   position: relative;
 }
+.hd_bg .header_bg .slick-slide {
+  display: none;
+}
+.hd_bg .header_bg .slick-active {
+  transition: 0.5s;
+  display: block;
+}
 .hd_bg .header_bg li {
   height: 100%;
 }
@@ -307,17 +314,7 @@ body {
   left: 7%;
   transform: translateY(20%);
   opacity: 0;
-  animation: hh 1s 2s forwards;
-}
-@keyframes hh {
-  from {
-    opacity: 0;
-    transform: translateY(20%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0%);
-  }
+  animation: hh 1s forwards;
 }
 .hd_bg .header_bg li h2 {
   top: 50%;
@@ -325,7 +322,7 @@ body {
   font-size: 23px;
   transform: translateY(50%);
   opacity: 0;
-  animation: hh 1s 1s forwards;
+  animation: hh 0.5s 1s forwards;
 }
 @keyframes hh {
   from {
@@ -345,21 +342,6 @@ body {
   padding-right: 50px;
   left: -120px;
   border: 1px solid #fff;
-}
-.hd_bg .header_bg li:nth-child(2) {
-  transform: translateX(-100%);
-}
-.hd_bg .header_bg li:nth-child(3) {
-  transform: translateX(-200%);
-}
-.hd_bg .header_bg li:nth-child(3) p {
-  left: 11%;
-}
-.hd_bg .header_bg li:nth-child(3) h1 {
-  left: 11%;
-}
-.hd_bg .header_bg li:nth-child(3) h2 {
-  left: 14%;
 }
 .hd_bg .hd_news {
   max-width: 536px;
@@ -1605,6 +1587,209 @@ body {
   top: 50%;
 }
 .rooms .rooms_about .arrow::before {
+  content: "";
+  width: 1px;
+  height: 15px;
+  position: absolute;
+  right: 3px;
+  bottom: -1px;
+  background-color: #191919;
+  transform: rotate(135deg);
+}
+
+.dining {
+  padding: 50px 140px;
+  display: flex;
+}
+.dining .wrap {
+  width: 100%;
+  max-width: 1540px;
+  padding: 0 20px;
+}
+.dining ul {
+  display: flex;
+}
+.dining ul .slick-prev,
+.dining ul .slick-next {
+  display: flex;
+  width: 65px;
+  height: 65px;
+  border: 1px solid rgba(48, 48, 48, 0.2);
+  border-radius: 100%;
+  cursor: pointer;
+  color: #191919;
+  pointer-events: fill;
+  z-index: 2;
+}
+.dining ul .slick-prev::before,
+.dining ul .slick-next::before {
+  color: #191919;
+}
+.dining ul .slick-prev:hover::after,
+.dining ul .slick-next:hover::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: calc(100% + 1px);
+  height: calc(100% + 1px);
+  border-top: 2px solid #353535;
+  border-radius: 100%;
+  animation: vv 3s infinite;
+}
+.dining ul .slick-prev {
+  right: 0;
+  left: 93%;
+  transform: rotate(90deg);
+}
+.dining ul .slick-prev::before {
+  font-size: 24px;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  content: "<";
+}
+.dining ul .slick-next {
+  transform: rotate(90deg);
+  right: 2.5%;
+  top: 58%;
+}
+.dining ul .slick-next::before {
+  font-size: 24px;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  content: ">";
+}
+.dining ul li {
+  width: 100%;
+  padding: 0 35px 20px 35px;
+}
+.dining ul li .txt {
+  padding-right: 30px;
+  font-size: 24px;
+}
+.dining ul li .img img {
+  border-radius: 20px;
+}
+.dining ul li .img p {
+  border-left: 1px solid #b2b2b2;
+  margin-top: 30px;
+  padding-left: 20px;
+}
+.dining ul li .img .team {
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+}
+.dining ul li .img .team .img img {
+  width: 35px;
+  height: 17px;
+}
+.dining ul li .img .team p {
+  margin: 0 0 0 20px;
+}
+.dining ul .slick-slide {
+  width: 600px;
+  display: flex;
+}
+.dining ul .slick-list {
+  padding: 55px 20px 20px 35px;
+  margin: 0;
+  width: calc(100% - 300px);
+  overflow: hidden;
+}
+.dining ul .slick-track .slick-active {
+  transition: 1s;
+  transform: translateY(0);
+}
+.dining ul .slick-track .slick-current {
+  transition: 1s;
+  transform: translateY(10%);
+}
+.dining .title {
+  position: relative;
+  right: 10%;
+  display: flex;
+}
+.dining .title p {
+  margin-right: 25px;
+  padding-bottom: 15px;
+  font-weight: bolder;
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #63bedf;
+}
+.dining .title p::before {
+  content: "";
+  height: 90px;
+  width: 0px;
+  display: flex;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  border: 1px solid #63bedf;
+}
+.dining .title h2 {
+  font-size: 55px;
+  letter-spacing: 5px;
+  writing-mode: vertical-rl;
+}
+.dining .title .dining_about {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.dining .title .dining_about:hover {
+  transition: 1s;
+}
+.dining .title .dining_about:hover button {
+  color: #36af63;
+  border-color: #36af63;
+}
+.dining .title .dining_about:hover .arrow {
+  background-color: #36af63;
+  animation: aa 1s;
+}
+@keyframes aa {
+  from {
+    right: -20%;
+  }
+  to {
+    right: -40%;
+  }
+}
+.dining .title .dining_about:hover .arrow::before {
+  background-color: #36af63;
+}
+.dining .title .dining_about button {
+  height: 40px;
+  position: relative;
+  padding: 10px;
+  background-color: #fff;
+  min-width: 165px;
+  border: 1px solid #191919;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #191919;
+  cursor: pointer;
+}
+.dining .title .dining_about .arrow {
+  width: 60px;
+  height: 1px;
+  background-color: #191919;
+  position: absolute;
+  right: -35px;
+  top: 50%;
+}
+.dining .title .dining_about .arrow::before {
   content: "";
   width: 1px;
   height: 15px;

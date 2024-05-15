@@ -148,7 +148,7 @@
                         </li>
                         <li>
                             <div class="img">
-                                <img src="img/_DSC91332__24A15HpkgB.jpg" alt="">
+                                <img src="img/DSC91332__24A15HpkgB.jpg" alt="">
                             </div>
                             <h2>森饗廳</h2>
                             <p>映入森林與陽光，木質韻味的自然系大廳。</p>
@@ -356,8 +356,74 @@
                     <div class="arrow"></div>
                 </div>
             </div>
+            <!-- Dining -->
+            <div class="dining">
+                <div class="wrap">
+                    <ul class="dining_list">
+                        <li>
+                            <div class="txt">
+                                <div class="number">01</div>
+                                <h2>舞牛森晚宴</h2>
+                            </div>
+                            <div class="img">
+                                <img src="img/DSC025562__24A23JsIiN.jpg" alt="">
+                                <p>共享式牛奶主題餐，拉近彼此來增添濃濃的幸福感。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="txt">
+                                <div class="number">02</div>
+                                <h2>陽光朝食</h2>
+                            </div>
+                            <div class="img">
+                                <img src="img/DSC00452__24A15GmGR6.jpg" alt="">
+                                <p>在自然陽光下享用健康的牧場早餐。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="txt">
+                                <div class="number">03</div>
+                                <h2>牛奶之家</h2>
+                            </div>
+                            <div class="img">
+                                <img src="img/DSC00172__24A158mdjp.jpg" alt="">
+                                <p>鮮奶、起司，與餐桌最短的距離。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="txt">
+                                <div class="number">04</div>
+                                <h2>牧場野宴</h2>
+                            </div>
+                            <div class="img">
+                                <img src="img/DSC96312__24A15XpXlT.jpg" alt="">
 
+                                <div class="team">
+                                    <div class="img">
+                                        <img src="img/people1__23K06Mc4Bm.png" alt="">
+                                        <h2>團體</h2>
+                                    </div>
+                                    <p>庭園式鄉村野炊料理，當地當令食材結合客家元素，來場酪農饗宴吧。</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
 
+                </div>
+                <div class="title">
+                    <p>饗宴</p>
+                    <h2>DINING</h2>
+                    <div class="dining_about">
+                        <button>更多餐飲</button>
+                        <div class="arrow"></div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- footer -->
+            <div class="footer">
+
+            </div>
         </div>
     </body>
 
@@ -446,6 +512,17 @@
                         fade: true,
                         variableWidth: true,
                         dots: true,
+                        pauseOnFocus: false,
+                    });
+                });
+                $(document).ready(function() {
+                    $('.dining_list').slick({
+                        infinite: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        autoplay: true,
+
+                        variableWidth: true,
                         pauseOnFocus: false,
                     });
                 });
