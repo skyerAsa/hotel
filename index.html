@@ -26,6 +26,7 @@
             <div class="header">
                 <div class="img">
                     <img src="img/logo.png" alt="">
+                    <a href="/"></a>
                 </div>
                 <div class="burger">
                     <div class="menu">
@@ -36,6 +37,10 @@
                     <div class="language_box">
                         <h2>Language</h2>
                         <p>></p>
+                        <ul class="language_list">
+                            <li>繁</li>
+                            <li>EN</li>
+                        </ul>
                     </div>
                     <div class="message_box">
                         <img src="img/mail.png" alt="">
@@ -446,6 +451,7 @@
                         <div class="go_top">
                             <div class="line"></div>
                             <h2>PAGE TOP</h2>
+                            <a href="#"></a>
                         </div>
                         <div class="left_box">
                             <div class="img">
@@ -519,8 +525,11 @@
                 $(window).scroll(showMenu);
 
                 $(function() {
-                    $(".burger_list").on("click", function() {
-                        $(".menu_list").toggleClass("on");
+                    $(".burger").on("click", function() {
+                        $(".menu").toggleClass("on");
+                    });
+                    $(".language_box").on("click", function() {
+                        $(".language_list").toggleClass("on");
                     });
                 });
                 const widthOutput = document.querySelector("#menu_list");
