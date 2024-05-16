@@ -278,6 +278,36 @@ body {
   align-items: center;
   writing-mode: vertical-lr;
 }
+.header.on .img {
+  transition: 0.5s;
+  filter: contrast(100%) brightness(1);
+}
+.header.on .menu {
+  transition: 0.5s;
+  background-color: #000;
+}
+.header.on .menu::before, .header.on .menu::after {
+  transition: 0.5s;
+  background-color: #000;
+}
+.header.on .menu p {
+  transition: 0.5s;
+  color: #000;
+}
+.header.on .language_box {
+  transition: 0.5s;
+  color: #000;
+  border: 1px solid #000;
+}
+.header.on .message_box {
+  transition: 0.5s;
+  color: #000;
+  border: 1px solid #000;
+}
+.header.on .message_box img {
+  transition: 0.5s;
+  filter: contrast(100%) brightness(1);
+}
 
 .hd_bg {
   position: relative;
@@ -375,7 +405,6 @@ body {
 .hd_bg .hd_news .item .title {
   padding-bottom: 10px;
   position: relative;
-  transition: all 0.5s;
 }
 .hd_bg .hd_news .item .title::after {
   content: "";
@@ -385,11 +414,11 @@ body {
   bottom: 10%;
   left: 0;
   background-color: #fff;
+  transition: all 0.5s 0.5s linear;
 }
 .hd_bg .hd_news .item .txt {
   display: flex;
   position: relative;
-  transition: all 0.5;
 }
 .hd_bg .hd_news .item .txt::after {
   content: "";
@@ -399,17 +428,18 @@ body {
   bottom: 10%;
   left: 0;
   background-color: #fff;
+  transition: all 0.5s linear;
 }
 .hd_bg .hd_news .item span {
   padding-left: 10px;
 }
 .hd_bg .hd_news .item:hover .title::after {
   width: 100%;
-  transition: 0.5s;
+  transition: all 0.5s linear;
 }
 .hd_bg .hd_news .item:hover .txt::after {
   width: 30%;
-  transition: 0.5s 0.5s;
+  transition: all 0.5s 0.5s linear;
 }
 .hd_bg .scoll {
   position: absolute;
@@ -1943,10 +1973,19 @@ body {
 }
 .footer .footer_box .wrap .left_box .img {
   max-width: 259px;
+  cursor: pointer;
+  position: relative;
+}
+.footer .footer_box .wrap .left_box .img a {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .footer .footer_box .wrap .left_box .title {
   font-size: 24px;
   padding-top: 36px;
+  letter-spacing: 2.5px;
 }
 .footer .footer_box .wrap .left_box .title h2 {
   font-weight: bolder;
@@ -1966,9 +2005,17 @@ body {
 }
 .footer .footer_box .wrap .left_box .txt .writer h3 {
   padding-right: 5px;
+  cursor: pointer;
+}
+.footer .footer_box .wrap .left_box .txt .writer h3:hover {
+  color: #63bedf;
 }
 .footer .footer_box .wrap .left_box .txt .writer span {
   padding-left: 5px;
+  cursor: pointer;
+}
+.footer .footer_box .wrap .left_box .txt .writer span:hover {
+  color: #63bedf;
 }
 .footer .footer_box .wrap .middle_box {
   padding: 0 20px 0 134px;
@@ -1980,17 +2027,46 @@ body {
   letter-spacing: 4px;
   color: #191919;
 }
+.footer .footer_box .wrap .middle_box .address p,
+.footer .footer_box .wrap .middle_box .tel p,
+.footer .footer_box .wrap .middle_box .email p {
+  position: relative;
+  cursor: pointer;
+}
+.footer .footer_box .wrap .middle_box .address p::after,
+.footer .footer_box .wrap .middle_box .tel p::after,
+.footer .footer_box .wrap .middle_box .email p::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #191919;
+}
+.footer .footer_box .wrap .middle_box .address p:hover::after,
+.footer .footer_box .wrap .middle_box .tel p:hover::after,
+.footer .footer_box .wrap .middle_box .email p:hover::after {
+  transition: 0.5s;
+  width: 100%;
+}
 .footer .footer_box .wrap .middle_box .message {
   display: flex;
   padding: 6px 0;
 }
 .footer .footer_box .wrap .middle_box .message p {
-  padding-left: 20px;
+  margin-left: 20px;
 }
 .footer .footer_box .wrap .middle_box .message .img i {
   width: 30px;
   height: 40px;
   padding-left: 10px;
+}
+.footer .footer_box .wrap .middle_box .message .img i:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  opacity: 0.5;
 }
 .footer .footer_box .wrap .right_box .title {
   padding-bottom: 22px;
@@ -2008,4 +2084,19 @@ body {
 .footer .footer_box .wrap .right_box ul li {
   padding-bottom: 25px;
   width: 50%;
+  cursor: pointer;
+  position: relative;
+}
+.footer .footer_box .wrap .right_box ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #191919;
+}
+.footer .footer_box .wrap .right_box ul li:hover::after {
+  transition: 0.5s;
+  width: 30%;
 }/*# sourceMappingURL=main.css.map */

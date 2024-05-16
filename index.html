@@ -450,6 +450,7 @@
                         <div class="left_box">
                             <div class="img">
                                 <img src="img/logo_m.png" alt="">
+                                <a href="/"></a>
                             </div>
                             <div class="title">
                                 <h2>舞牛森度假飯店</h2>
@@ -463,11 +464,11 @@
                         </div>
                         <div class="middle_box">
                             <div class="title">CONTACT</div>
-                            <div class="message">
+                            <div class="message address">
                                 <h2>ADD.</h2>
                                 <p>苗栗縣通霄鎮南和里165-5號</p>
                             </div>
-                            <div class="message">
+                            <div class="message tel">
                                 <h2>TEL.</h2>
                                 <p>037-783-899</p>
                             </div>
@@ -475,7 +476,7 @@
                                 <h2>FAX.</h2>
                                 <p>037-783-288</p>
                             </div>
-                            <div class="message">
+                            <div class="message email">
                                 <h2>EMAIL.</h2>
                                 <p>service@woodland.com.tw</p>
                             </div>
@@ -526,35 +527,20 @@
 
                 function reportWindowSize() {
 
-                    if (window.innerWidth > 1023) {
+                    if (window.innerWidth > 50) {
                         console.log(window.innerWidth);
-                        $(".menu_list").removeClass("on");
+                        $(".header").addClass("on");
                     } else {}
                 }
 
                 window.onresize = reportWindowSize;
 
                 function showMenu() {
-                    if ($(window).scrollTop() > 200) {
-                        $(".to_top").addClass("to_top_nav");
-                        $(".roulette_item").addClass("roulette_item_nav");
-                        $(".roulette_img").addClass("roulette_img_nav");
+                    if ($(window).scrollTop() > 150) {
+                        $(".header").addClass("on");
+                       
                     } else {
-                        $(".to_top").removeClass("to_top_nav");
-                        $(".roulette_item").removeClass("roulette_item_nav");
-                        $(".roulette_img").removeClass("roulette_img_nav");
-                    }
-                    if ($(window).scrollTop() > 450) {
-                        $(".slot_img").addClass("slot_img_nav");
-                        $(".slot_item").addClass("slot_item_nav");
-                    } else {
-                        $(".slot_img").removeClass("slot_img_nav");
-                        $(".slot_item").removeClass("slot_item_nav");
-                    }
-                    if ($(window).scrollTop() > 1800) {
-                        $(".dining_list_item").addClass("dining_list_nav");
-                    } else {
-                        $(".dining_list_item").removeClass("dining_list_nav");
+                        $(".header").removeClass("on");
                     }
                 }
 

@@ -118,6 +118,39 @@ body {
       writing-mode: vertical-lr;
     }
   }
+  &.on {
+    .img {
+      transition: 0.5s;
+      filter: contrast(100%) brightness(1);
+    }
+    .menu {
+      transition: 0.5s;
+      background-color: #000;
+      &::before,
+      &::after {
+        transition: 0.5s;
+        background-color: #000;
+      }
+      p {
+        transition: 0.5s;
+        color: #000;
+      }
+    }
+    .language_box {
+      transition: 0.5s;
+      color: #000;
+      border: 1px solid #000;
+    }
+    .message_box {
+      transition: 0.5s;
+      color: #000;
+      border: 1px solid #000;
+      img {
+        transition: 0.5s;
+        filter: contrast(100%) brightness(1);
+      }
+    }
+  }
 }
 
 // hd_bg
@@ -216,7 +249,7 @@ body {
       .title {
         padding-bottom: 10px;
         position: relative;
-        transition: all 0.5s;
+
         &::after {
           content: "";
           width: 0%;
@@ -225,12 +258,13 @@ body {
           bottom: 10%;
           left: 0;
           background-color: #fff;
+          transition: all 0.5s 0.5s linear;
         }
       }
       .txt {
         display: flex;
         position: relative;
-        transition: all 0.5;
+        
         &::after {
           content: "";
           width: 0%;
@@ -239,6 +273,7 @@ body {
           bottom: 10%;
           left: 0;
           background-color: #fff;
+          transition: all 0.5s  linear;
         }
       }
       span {
@@ -248,13 +283,13 @@ body {
         .title {
           &::after {
             width: 100%;
-            transition: 0.5s;
+            transition: all 0.5s  linear;
           }
         }
         .txt {
           &::after {
             width: 30%;
-            transition: 0.5s 0.5s;
+            transition: all 0.5s 0.5s linear;
           }
         }
       }
@@ -1827,21 +1862,21 @@ body {
           background-color: rgba($color: #000000, $alpha: 0.5);
           overflow: hidden;
           position: relative;
-          &::before{
-            content: '';
+          &::before {
+            content: "";
             width: 100%;
             height: 100%;
             position: absolute;
             background-color: #000000;
             @keyframes bb {
-              from{
-                transform:translateY(100%);
+              from {
+                transform: translateY(100%);
               }
-              to{
+              to {
                 transform: translateY(-100%);
               }
             }
-            animation:bb 2s infinite linear;
+            animation: bb 2s infinite linear;
           }
         }
         h2 {
@@ -1854,10 +1889,19 @@ body {
       .left_box {
         .img {
           max-width: 259px;
+          cursor: pointer;
+          position: relative;
+          a {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
         }
         .title {
           font-size: 24px;
           padding-top: 36px;
+          letter-spacing: 2.5px;
           h2 {
             font-weight: bolder;
           }
@@ -1875,9 +1919,17 @@ body {
             display: flex;
             h3 {
               padding-right: 5px;
+              cursor: pointer;
+              &:hover {
+                color: #63bedf;
+              }
             }
             span {
               padding-left: 5px;
+              cursor: pointer;
+              &:hover {
+                color: #63bedf;
+              }
             }
           }
         }
@@ -1891,17 +1943,46 @@ body {
           letter-spacing: 4px;
           color: #191919;
         }
+        .address,
+        .tel,
+        .email {
+          p {
+            position: relative;
+            cursor: pointer;
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: -2px;
+              left: 0;
+              display: block;
+              width: 0;
+              height: 1px;
+              background: #191919;
+            }
+            &:hover {
+              &::after {
+                transition: 0.5s;
+                width: 100%;
+              }
+            }
+          }
+        }
         .message {
           display: flex;
           padding: 6px 0;
           p {
-            padding-left: 20px;
+            margin-left: 20px;
           }
           .img {
             i {
               width: 30px;
               height: 40px;
               padding-left: 10px;
+              &:hover {
+                cursor: pointer;
+                transition: 0.5s;
+                opacity: 0.5;
+              }
             }
           }
         }
@@ -1922,6 +2003,23 @@ body {
           li {
             padding-bottom: 25px;
             width: 50%;
+            cursor: pointer;
+            position: relative;
+            &::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              display: block;
+              width: 0;
+              height: 1px;
+              background: #191919;
+            }
+            &:hover {
+              &::after {
+                transition: 0.5s;
+                width: 30%;
+              }
+            }
           }
         }
       }
