@@ -223,7 +223,7 @@ body {
       display: none;
     }
     .slick-active {
-      transition: 0.5s;
+      transition: 0.5s linear;
       display: block;
     }
     li {

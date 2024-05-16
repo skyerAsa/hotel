@@ -377,7 +377,7 @@ body {
   display: none;
 }
 .hd_bg .header_bg .slick-active {
-  transition: 0.5s;
+  transition: 0.5s linear;
   display: block;
 }
 .hd_bg .header_bg li {
