@@ -180,7 +180,7 @@
             <h3>WOODLAND</h3>
             <h3>DISCOVERIMG</h3>
             <div class="img">
-                <img src="img/2__24A07m2MdF.jpg" alt="">
+                <img class="scroll_img" src="img/2__24A07m2MdF.jpg" alt="">
             </div>
             <ul>
                 <li>
@@ -608,7 +608,6 @@
                 function reportWindowSize() {
 
                     if (window.innerWidth > 50) {
-                        console.log(window.innerWidth);
                         $(".header").addClass("on");
                     } else {}
                 }
@@ -624,6 +623,63 @@
                     }
                 }
 
+                function scroll(fn) {
+                    var beforeScrollTop = $(this).scrollTop(),
+                        fn = fn || function() {};
+                    window.addEventListener("scroll", function() {
+                        var afterScrollTop = $(this).scrollTop(),
+                            delta = afterScrollTop - beforeScrollTop;
+                        if (delta > 0) {
+                            $(".scroll_img").addClass("down");
+                            $(".scroll_img").removeClass("on");
+                        }
+                        if (delta < 0) {
+                            $(".scroll_img").addClass("on");
+                            $(".scroll_img").removeClass("down");
+                        }
+               
+                        if (delta === 0) return false;
+                        fn(delta > 0 ? "down" : "up");
+                        beforeScrollTop = afterScrollTop;
+                    }, false);
+
+                }
+
+                function fn(direction) {
+                    console.log(direction); //down or up   
+                };
+                window.onscroll = function() {
+                        scroll(fn);
+                    }
+                    // let lastKnownScrollPosition = 0;
+                    // let ticking = false;
+
+                // function doSomething(scrollPos) {
+                //     // 依據捲動位置進行某些操作
+                //     console.log(scrollPos)
+                //     if( 800 > scrollPos > 400 ){
+                //         $(".scroll_img").addClass("on");
+                //     } 
+                //     if(scrollPos >1900){
+                //         $(".scroll_img").removeClass("on");
+                //     }
+                //     if(scrollPos > 800 ){
+
+                //     }
+                // }
+
+                // document.addEventListener("scroll", function(e) {
+                //     lastKnownScrollPosition = window.scrollY;
+
+                //     if (!ticking) {
+                //         window.requestAnimationFrame(function() {
+                //             doSomething(lastKnownScrollPosition);
+                //             ticking = false;
+                //         });
+
+                //         ticking = true;
+                //     }
+                // });
                 $(document).ready(function() {
                     $('.header_bg').slick({
                         slidesToShow: 1,
