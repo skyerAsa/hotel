@@ -176,13 +176,16 @@
         </div>
         <!-- brand -->
         <div class="brand">
-            <h2 class="brand_title">品牌介紹</h2>
-            <h3>WOODLAND</h3>
-            <h3>DISCOVERIMG</h3>
-            <div class="img">
+            <div class="brand_txt">
+                <h2 class="brand_title">品牌介紹</h2>
+                <h3>WOODLAND</h3>
+                <h3>DISCOVERIMG</h3>
+            </div>
+          
+            <div class="brand_img">
                 <img class="scroll_img" src="img/2__24A07m2MdF.jpg" alt="">
             </div>
-            <ul>
+            <ul class="brand_list">
                 <li>
                     <h2>自然</h2>
                     <p>懷抱自然淨心靈</p>
@@ -620,6 +623,17 @@
 
                     } else {
                         $(".header").removeClass("on");
+                    }
+                    if ($(window).scrollTop() > 400) {
+                        $(".brand_txt").addClass("on");
+                        $(".brand_list").addClass("on");
+                        $(".brand_img").addClass("on");
+                        brand_img
+                    } else {
+                        $(".brand_txt").removeClass("on");
+                        $(".brand_list").removeClass("on");
+                        $(".brand_img").removeClass("on");
+                        
                     }
                 }
 

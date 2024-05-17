@@ -365,21 +365,19 @@ body {
       display: none;
     }
     .slick-active {
-      
       transition: 0.5s linear;
       display: block;
-
     }
     li {
       height: 100%;
       img {
         width: 50%;
         @keyframes ii {
-          from{
+          from {
             transform: scale(1.05);
             transform-origin: center center;
           }
-          to{
+          to {
             transform: scale(1);
             transform-origin: center center;
           }
@@ -435,7 +433,7 @@ body {
           border: 1px solid #fff;
         }
       }
-      .txt{
+      .txt {
         max-width: 1720px;
         padding: 68px 19% 20px 160px;
         z-index: 2;
@@ -449,17 +447,16 @@ body {
         bottom: 0;
       }
     }
-    &.go_down{
+    &.go_down {
       @keyframes gg {
-        from{
+        from {
           opacity: 0;
           transform: translateY(-5%);
         }
-        to{
+        to {
           opacity: 1;
           transform: translateY(0);
         }
-        
       }
       animation: gg 5s forwards;
     }
@@ -680,70 +677,96 @@ body {
   padding: 165px 0 50px;
   justify-content: center;
   position: relative;
-  h2,
-  h3 {
-    writing-mode: vertical-lr;
-  }
-  .brand_title {
-    margin-right: 25px;
-    padding-bottom: 15px;
-    position: relative;
-    display: inline-block;
-    font-size: 20px;
-    font-weight: 300;
-    letter-spacing: 2px;
-    color: #63bedf;
-    &::before {
-      content: "";
-      height: 90px;
-      width: 0px;
-      display: flex;
-      position: absolute;
-      bottom: 65%;
-      left: 50%;
-      border: 1px solid #63bedf;
+  .brand_txt {
+    display: flex;
+    h2,
+    h3 {
+      writing-mode: vertical-lr;
+    }
+    .brand_title {
+      margin-right: 25px;
+      padding-bottom: 15px;
+      position: relative;
+      display: inline-block;
+      font-size: 20px;
+      font-weight: 300;
+      letter-spacing: 2px;
+      color: #63bedf;
+      &::before {
+        content: "";
+        height: 90px;
+        width: 0px;
+        display: flex;
+        position: absolute;
+        bottom: 65%;
+        left: 50%;
+        border: 1px solid #63bedf;
+      }
+    }
+    h3 {
+      font-size: 55px;
+    }
+    &.on {
+      @keyframes mm {
+        from{
+          opacity: 0;
+          transform: translateX(-30px);
+        }
+        to{
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      animation: mm 1s linear;
     }
   }
-  h3 {
-    font-size: 55px;
-  }
-  .img {
+  .brand_img {
     position: relative;
     margin: 0 30px;
     height: 570px;
     width: 570px;
     clip-path: circle(50% at 50% 50%);
     overflow: hidden;
-    &
     img {
       width: 100%;
-    height: 110%;
+      height: 110%;
       object-fit: cover;
-      &.down{
+      &.down {
         @keyframes jj {
-          from{
-           transform: matrix(1, 0, 0, 1, 0, -16);;
+          from {
+            transform: matrix(1, 0, 0, 1, 0, -16);
           }
-          to{
-            transform: matrix(1, 0, 0, 1, 0, -50);;
+          to {
+            transform: matrix(1, 0, 0, 1, 0, -50);
           }
         }
         animation: jj 10s forwards linear;
       }
-      &.on{
+      &.on {
         @keyframes kk {
-          from{
-            transform: matrix(1, 0, 0, 1, 0, -50);;
+          from {
+            transform: matrix(1, 0, 0, 1, 0, -50);
           }
-          to{
-            transform: matrix(1, 0, 0, 1, 0, -16);;
+          to {
+            transform: matrix(1, 0, 0, 1, 0, -16);
           }
         }
         animation: kk 10s forwards linear;
       }
     }
+    &.on{
+      @keyframes tt {
+        from{
+          clip-path: circle(25% at 50% 50%);
+        }
+        to{
+          clip-path: circle(50% at 50% 50%);
+        }
+      }
+      animation:  tt 1s linear;
+    }
   }
-  ul {
+  .brand_list {
     display: flex;
     position: relative;
     li {
@@ -751,17 +774,30 @@ body {
       flex-direction: column;
       justify-content: center;
       font-size: 18px;
+      
       & + li {
         padding-left: 10px;
       }
       h2 {
         padding-bottom: 18px;
         font-weight: bolder;
+        writing-mode: vertical-lr;
       }
       p {
         writing-mode: vertical-lr;
         letter-spacing: 5.5px;
       }
+    }
+    &.on{
+      @keyframes nn {
+        from{
+          transform: translateX(20px);
+        }
+        to{
+          transform: translateX(0);
+        }
+      }
+    animation: nn 1s linear;
     }
   }
   .brand_about {

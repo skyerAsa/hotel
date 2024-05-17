@@ -812,11 +812,14 @@ body:has(.menu_bg.on) {
   justify-content: center;
   position: relative;
 }
-.brand h2,
-.brand h3 {
+.brand .brand_txt {
+  display: flex;
+}
+.brand .brand_txt h2,
+.brand .brand_txt h3 {
   writing-mode: vertical-lr;
 }
-.brand .brand_title {
+.brand .brand_txt .brand_title {
   margin-right: 25px;
   padding-bottom: 15px;
   position: relative;
@@ -826,7 +829,7 @@ body:has(.menu_bg.on) {
   letter-spacing: 2px;
   color: #63bedf;
 }
-.brand .brand_title::before {
+.brand .brand_txt .brand_title::before {
   content: "";
   height: 90px;
   width: 0px;
@@ -836,10 +839,23 @@ body:has(.menu_bg.on) {
   left: 50%;
   border: 1px solid #63bedf;
 }
-.brand h3 {
+.brand .brand_txt h3 {
   font-size: 55px;
 }
-.brand .img {
+.brand .brand_txt.on {
+  animation: mm 1s linear;
+}
+@keyframes mm {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.brand .brand_img {
   position: relative;
   margin: 0 30px;
   height: 570px;
@@ -848,13 +864,13 @@ body:has(.menu_bg.on) {
           clip-path: circle(50% at 50% 50%);
   overflow: hidden;
 }
-.brand .img img {
+.brand .brand_img img {
   width: 100%;
   height: 110%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.brand .img img.down {
+.brand .brand_img img.down {
   animation: jj 10s forwards linear;
 }
 @keyframes jj {
@@ -865,7 +881,7 @@ body:has(.menu_bg.on) {
     transform: matrix(1, 0, 0, 1, 0, -50);
   }
 }
-.brand .img img.on {
+.brand .brand_img img.on {
   animation: kk 10s forwards linear;
 }
 @keyframes kk {
@@ -876,26 +892,51 @@ body:has(.menu_bg.on) {
     transform: matrix(1, 0, 0, 1, 0, -16);
   }
 }
-.brand ul {
+.brand .brand_img.on {
+  animation: tt 1s linear;
+}
+@keyframes tt {
+  from {
+    -webkit-clip-path: circle(25% at 50% 50%);
+            clip-path: circle(25% at 50% 50%);
+  }
+  to {
+    -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+  }
+}
+.brand .brand_list {
   display: flex;
   position: relative;
 }
-.brand ul li {
+.brand .brand_list li {
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-size: 18px;
 }
-.brand ul li + li {
+.brand .brand_list li + li {
   padding-left: 10px;
 }
-.brand ul li h2 {
+.brand .brand_list li h2 {
   padding-bottom: 18px;
   font-weight: bolder;
+  writing-mode: vertical-lr;
 }
-.brand ul li p {
+.brand .brand_list li p {
   writing-mode: vertical-lr;
   letter-spacing: 5.5px;
+}
+.brand .brand_list.on {
+  animation: nn 1s linear;
+}
+@keyframes nn {
+  from {
+    transform: translateX(20px);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 .brand .brand_about {
   position: absolute;
