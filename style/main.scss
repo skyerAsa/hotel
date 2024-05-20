@@ -7,7 +7,6 @@
 html,
 body {
   scroll-behavior: smooth;
-  overflow-x: hidden;
   &:has(.menu_bg.on) {
     overflow-y: hidden;
   }
@@ -21,10 +20,23 @@ body {
   left: 0;
   transition: all 1s linear;
   background-color: #fff;
-  opacity: 0;
+  opacity: 1;
+  display: none;
   overflow-y: hidden;
+  z-index: 6;
+  .img {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    img {
+      width: 150px;
+      height: 100px;
+    }
+  }
   &.on {
-    z-index: 6;
+    display: block;
     @keyframes pp {
       from {
         opacity: 0;
@@ -33,12 +45,12 @@ body {
         opacity: 1;
       }
     }
-    animation: pp 0.5s linear;
+    animation: pp 2s linear;
     .img {
       display: flex;
       align-items: center;
       justify-content: center;
-      opacity: 0;
+      opacity: 1;
       @keyframes ll {
         from {
           opacity: 0;
@@ -50,17 +62,6 @@ body {
         }
       }
       animation: ll 0.5s linear;
-    }
-  }
-  .img {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    img {
-      width: 150px;
-      height: 100px;
     }
   }
 }
@@ -205,7 +206,7 @@ body {
 }
 
 .start_ad {
-  display: none;
+  // display: none;
   &.on {
     display: block;
   }

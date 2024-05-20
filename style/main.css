@@ -173,7 +173,6 @@ img {
 html,
 body {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 html:has(.menu_bg.on),
 body:has(.menu_bg.on) {
@@ -188,12 +187,25 @@ body:has(.menu_bg.on) {
   left: 0;
   transition: all 1s linear;
   background-color: #fff;
-  opacity: 0;
+  opacity: 1;
+  display: none;
   overflow-y: hidden;
+  z-index: 6;
+}
+.start_bg .img {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+.start_bg .img img {
+  width: 150px;
+  height: 100px;
 }
 .start_bg.on {
-  z-index: 6;
-  animation: pp 0.5s linear;
+  display: block;
+  animation: pp 2s linear;
 }
 @keyframes pp {
   from {
@@ -207,7 +219,7 @@ body:has(.menu_bg.on) {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
+  opacity: 1;
   animation: ll 0.5s linear;
 }
 @keyframes ll {
@@ -219,17 +231,6 @@ body:has(.menu_bg.on) {
     opacity: 1;
     transform: translateY(0px);
   }
-}
-.start_bg .img {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-}
-.start_bg .img img {
-  width: 150px;
-  height: 100px;
 }
 
 .menu_bg {
@@ -365,9 +366,6 @@ body:has(.menu_bg.on) {
   z-index: 2;
 }
 
-.start_ad {
-  display: none;
-}
 .start_ad.on {
   display: block;
 }
