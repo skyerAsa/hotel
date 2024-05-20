@@ -173,10 +173,63 @@ img {
 html,
 body {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 html:has(.menu_bg.on),
 body:has(.menu_bg.on) {
   overflow-y: hidden;
+}
+
+.start_bg {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 1s linear;
+  background-color: #fff;
+  opacity: 0;
+  overflow-y: hidden;
+}
+.start_bg.on {
+  z-index: 6;
+  animation: pp 0.5s linear;
+}
+@keyframes pp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.start_bg.on .img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation: ll 0.5s linear;
+}
+@keyframes ll {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.start_bg .img {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+.start_bg .img img {
+  width: 150px;
+  height: 100px;
 }
 
 .menu_bg {
@@ -185,7 +238,7 @@ body:has(.menu_bg.on) {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 4;
   transform: translateX(-100%);
   transition: all 1s linear;
   background-image: url(../img/menu_bg__23K07p125u.jpg);
@@ -312,6 +365,55 @@ body:has(.menu_bg.on) {
   z-index: 2;
 }
 
+.start_ad {
+  display: none;
+}
+.start_ad.on {
+  display: block;
+}
+.start_ad.off {
+  display: none;
+}
+.start_ad .mask {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 5;
+}
+.start_ad .inner {
+  width: 700px;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  color: #63bedf;
+}
+.start_ad .inner .txt h2 {
+  font-weight: bolder;
+}
+.start_ad .inner .inner_close {
+  width: 30px;
+  height: 30px;
+  background-color: #63bedf;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+.start_ad .inner .inner_close h1 {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
 .header {
   width: 140px;
   height: 100vh;
@@ -321,7 +423,7 @@ body:has(.menu_bg.on) {
   justify-content: space-between;
   position: fixed;
   border-right: 1px solid #b2b2b2;
-  z-index: 3;
+  z-index: 20;
 }
 .header .img {
   width: 70px;
@@ -509,6 +611,7 @@ body:has(.menu_bg.on) {
 
 .hd_bg {
   position: relative;
+  z-index: 2;
 }
 .hd_bg .header_bg .slick-slide {
   display: none;

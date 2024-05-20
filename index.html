@@ -112,6 +112,27 @@
                     </div>
                 </div>
             </div>
+            <div class="start_bg">
+                <div class="img">
+                    <img src="/img/logo_cow.png" alt="">
+                </div>
+            </div>
+            <div class="start_ad">
+                <div class="mask"></div>
+                    <div class="inner">
+                        <div class="inner_close">
+                            <h1>X</h1>
+                        </div>
+                        <div class="txt">
+                        <h2>全新房型試營運!</h2>
+                        <h2>嘗鮮價熱賣中</h2>
+                    </div>
+                    <div class="img">
+                        <img src="img/ww.jpg" alt="">
+                    </div>
+                    </div>
+                
+            </div>
         </div>
         <!-- hd_bg -->
         <div class="hd_bg">
@@ -181,7 +202,7 @@
                 <h3>WOODLAND</h3>
                 <h3>DISCOVERIMG</h3>
             </div>
-          
+
             <div class="brand_img">
                 <img class="scroll_img" src="img/2__24A07m2MdF.jpg" alt="">
             </div>
@@ -605,6 +626,9 @@
                     $(".language_box").on("click", function() {
                         $(".language_list").toggleClass("on");
                     });
+                    $(".inner_close").on("click", function() {
+                        $(".start_ad").toggleClass("off");
+                    });
                 });
                 const widthOutput = document.querySelector("#menu_list");
 
@@ -628,72 +652,52 @@
                         $(".brand_txt").addClass("on");
                         $(".brand_list").addClass("on");
                         $(".brand_img").addClass("on");
-                        brand_img
+
                     } else {
                         $(".brand_txt").removeClass("on");
                         $(".brand_list").removeClass("on");
                         $(".brand_img").removeClass("on");
-                        
+
                     }
                 }
 
-                function scroll(fn) {
-                    var beforeScrollTop = $(this).scrollTop(),
-                        fn = fn || function() {};
-                    window.addEventListener("scroll", function() {
-                        var afterScrollTop = $(this).scrollTop(),
-                            delta = afterScrollTop - beforeScrollTop;
-                        if (delta > 0) {
-                            $(".scroll_img").addClass("down");
-                            $(".scroll_img").removeClass("on");
-                        }
-                        if (delta < 0) {
-                            $(".scroll_img").addClass("on");
-                            $(".scroll_img").removeClass("down");
-                        }
-               
-                        if (delta === 0) return false;
-                        fn(delta > 0 ? "down" : "up");
-                        beforeScrollTop = afterScrollTop;
-                    }, false);
-
+                function DoOne(key, method) {
+                    var v = getCookie(key);
+                    if (!v) {
+                        method("do something");
+                        //获取第二天凌晨到当前时间的秒数
+                        var tim_sec = 24 * 60 * 60 - (new Date().getHours() * 60 * 60 + new Date().getMinutes() * 60 + new Date().getSeconds());
+                        setCookie(key, "1", tim_sec);
+                    }
                 }
 
-                function fn(direction) {
-                    console.log(direction); //down or up   
-                };
-                window.onscroll = function() {
-                        scroll(fn);
+                function dosome(msg) {
+                    $(".start_bg").addClass("on");
+                    $(".start_ad").addClass("on");
+                }
+                //写cookies 
+                function setCookie(name, value, second) {
+                    if (!second) {
+                        second = 7 * 24 * 60 * 60; //默认7天
                     }
-                    // let lastKnownScrollPosition = 0;
-                    // let ticking = false;
-
-                // function doSomething(scrollPos) {
-                //     // 依據捲動位置進行某些操作
-                //     console.log(scrollPos)
-                //     if( 800 > scrollPos > 400 ){
-                //         $(".scroll_img").addClass("on");
-                //     } 
-                //     if(scrollPos >1900){
-                //         $(".scroll_img").removeClass("on");
-                //     }
-                //     if(scrollPos > 800 ){
-
-                //     }
-                // }
-
-                // document.addEventListener("scroll", function(e) {
-                //     lastKnownScrollPosition = window.scrollY;
-
-                //     if (!ticking) {
-                //         window.requestAnimationFrame(function() {
-                //             doSomething(lastKnownScrollPosition);
-                //             ticking = false;
-                //         });
-
-                //         ticking = true;
-                //     }
-                // });
+                    var exp = new Date();
+                    exp.setTime(exp.getTime() + second * 1000);
+                    document.cookie = name + "=" + encodeURI(value) + ";expires=" + exp.toGMTString() + ";path=/";
+                }
+                //读取cookies 
+                function getCookie(name) {
+                    if (document.cookie.length > 0) {
+                        c_start = document.cookie.indexOf(name + "="); //获取字符串的起点
+                        if (c_start != -1) {
+                            c_start = c_start + name.length + 1; //获取值的起点
+                            c_end = document.cookie.indexOf(";", c_start); //获取结尾处
+                            if (c_end == -1) c_end = document.cookie.length; //如果是最后一个，结尾就是cookie字符串的结尾
+                            return decodeURI(document.cookie.substring(c_start, c_end)); //截取字符串返回
+                        }
+                    }
+                    return "";
+                }
+                DoOne("key", dosome)
                 $(document).ready(function() {
                     $('.header_bg').slick({
                         slidesToShow: 1,
