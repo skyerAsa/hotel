@@ -13,9 +13,6 @@ body {
   &:has(.start_ad.on) {
     overflow-y: hidden;
   }
-  &:has(.start_ad.of) {
-    overflow-y: auto;
-  }
 }
 
 .start_bg {

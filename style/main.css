@@ -182,10 +182,6 @@ html:has(.start_ad.on),
 body:has(.start_ad.on) {
   overflow-y: hidden;
 }
-html:has(.start_ad.of),
-body:has(.start_ad.of) {
-  overflow-y: auto;
-}
 
 .start_bg {
   width: 100%;
