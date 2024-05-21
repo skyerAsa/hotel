@@ -13,6 +13,9 @@ body {
   &:has(.start_ad.on) {
     overflow-y: hidden;
   }
+  &:has(.start_ad.of) {
+    overflow-y: auto;
+  }
 }
 
 .start_bg {
@@ -1434,7 +1437,9 @@ body {
             transform: translateY(0);
           }
         }
-        animation: aaa 0.5s linear forwards;
+        &.on{
+            animation: aaa 0.5s linear forwards;
+        }
         .open_clous {
           position: absolute;
           width: calc(100% - 30px);
@@ -1533,7 +1538,7 @@ body {
         transition: all 0.2s linear;
         opacity: 0;
         object-fit: cover;
-        animation: aaa 0.5s 0.5s linear forwards;
+        &.on{animation: aaa 0.5s 0.5s linear forwards;}
         .open_collection {
           position: absolute;
           width: calc(100% - 30px);
@@ -1633,7 +1638,10 @@ body {
         transition: all 0.2s linear;
         opacity: 0;
         object-fit: cover;
-        animation: aaa 0.5s 0.8s linear forwards;
+        &.on{
+            animation: aaa 0.5s 0.8s linear forwards;
+        }
+        
         .open_mountain {
           position: absolute;
           width: calc(100% - 30px);
@@ -1733,7 +1741,10 @@ body {
         transition: all 0.2s linear;
         opacity: 0;
         object-fit: cover;
-        animation: aaa 0.5s 1.2s linear forwards;
+        &.on{
+            animation: aaa 0.5s 1.2s linear forwards;
+        }
+        
         .open_morioka {
           position: absolute;
           width: calc(100% - 30px);
@@ -1833,7 +1844,10 @@ body {
         transition: all 0.2s linear;
         opacity: 0;
         object-fit: cover;
-        animation: aaa 0.5s 1.5s linear forwards;
+        &.on{
+            animation: aaa 0.5s 1.5s linear forwards;
+        }
+       
         .open_reflection {
           position: absolute;
           width: calc(100% - 30px);
@@ -1933,7 +1947,10 @@ body {
         transition: all 0.2s linear;
         opacity: 0;
         object-fit: cover;
-        animation: aaa 0.5s 1.7s linear forwards;
+        &.on{
+            animation: aaa 0.5s 1.7s linear forwards;
+        }
+        
         .open_linshan {
           position: absolute;
           width: calc(100% - 30px);

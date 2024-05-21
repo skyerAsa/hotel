@@ -182,6 +182,10 @@ html:has(.start_ad.on),
 body:has(.start_ad.on) {
   overflow-y: hidden;
 }
+html:has(.start_ad.of),
+body:has(.start_ad.of) {
+  overflow-y: auto;
+}
 
 .start_bg {
   width: 100%;
@@ -1544,7 +1548,6 @@ body:has(.start_ad.on) {
   opacity: 0;
   -o-object-fit: cover;
      object-fit: cover;
-  animation: aaa 0.5s linear forwards;
 }
 @keyframes aaa {
   from {
@@ -1555,6 +1558,9 @@ body:has(.start_ad.on) {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.rooms .wrap .room_list .clous.on {
+  animation: aaa 0.5s linear forwards;
 }
 .rooms .wrap .room_list .clous .open_clous {
   position: absolute;
@@ -1649,6 +1655,8 @@ body:has(.start_ad.on) {
   opacity: 0;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.rooms .wrap .room_list .collection.on {
   animation: aaa 0.5s 0.5s linear forwards;
 }
 .rooms .wrap .room_list .collection .open_collection {
@@ -1745,6 +1753,8 @@ body:has(.start_ad.on) {
   opacity: 0;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.rooms .wrap .room_list .mountain.on {
   animation: aaa 0.5s 0.8s linear forwards;
 }
 .rooms .wrap .room_list .mountain .open_mountain {
@@ -1841,6 +1851,8 @@ body:has(.start_ad.on) {
   opacity: 0;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.rooms .wrap .room_list .morioka.on {
   animation: aaa 0.5s 1.2s linear forwards;
 }
 .rooms .wrap .room_list .morioka .open_morioka {
@@ -1937,6 +1949,8 @@ body:has(.start_ad.on) {
   opacity: 0;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.rooms .wrap .room_list .reflection.on {
   animation: aaa 0.5s 1.5s linear forwards;
 }
 .rooms .wrap .room_list .reflection .open_reflection {
@@ -2033,6 +2047,8 @@ body:has(.start_ad.on) {
   opacity: 0;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.rooms .wrap .room_list .linshan.on {
   animation: aaa 0.5s 1.7s linear forwards;
 }
 .rooms .wrap .room_list .linshan .open_linshan {

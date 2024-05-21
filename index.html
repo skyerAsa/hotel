@@ -630,6 +630,7 @@
                     });
                     $(".inner_close").on("click", function() {
                         $(".start_ad").toggleClass("off");
+                        $(".start_ad").removeClass("on");
                     });
                 });
                 const widthOutput = document.querySelector("#menu_list");
@@ -684,10 +685,22 @@
                     if ($(window).scrollTop() > 3000) {
                         $(".rooms_title").addClass("on");
                         $(".rooms_about").addClass("on");
+                        $(".clous").addClass("on");
+                        $(".collection").addClass("on");
+                        $(".mountain").addClass("on");
+                        $(".morioka").addClass("on");
+                        $(".reflection").addClass("on");
+                        $(".linshan").addClass("on");
                         
                     } else {
                         $(".rooms_title").removeClass("on");
                         $(".rooms_about").removeClass("on");
+                        $(".clous").removeClass("on");
+                        $(".collection").removeClass("on");
+                        $(".mountain").removeClass("on");
+                        $(".morioka").removeClass("on");
+                        $(".reflection").removeClass("on");
+                        $(".linshan").removeClass("on");
                     }
                 }
 
