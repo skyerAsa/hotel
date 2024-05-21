@@ -187,10 +187,9 @@ body:has(.menu_bg.on) {
   left: 0;
   transition: all 1s linear;
   background-color: #fff;
-  opacity: 1;
+  opacity: 0;
   display: none;
   overflow-y: hidden;
-  z-index: 6;
 }
 .start_bg .img {
   height: 100vh;
@@ -201,17 +200,19 @@ body:has(.menu_bg.on) {
 }
 .start_bg .img img {
   width: 150px;
-  height: 100px;
+  height: 150px;
 }
 .start_bg.on {
   display: block;
-  animation: pp 2s linear;
+  animation: pp 3s linear;
 }
 @keyframes pp {
   from {
+    z-index: 999;
     opacity: 0;
   }
   to {
+    z-index: 999;
     opacity: 1;
   }
 }
@@ -407,12 +408,20 @@ body:has(.menu_bg.on) {
   top: 0;
   cursor: pointer;
 }
-.start_ad .inner .inner_close h1 {
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
+.start_ad .inner .inner_close::before, .start_ad .inner .inner_close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  width: 25px;
+  height: 1px;
+  background-color: #fff;
+}
+.start_ad .inner .inner_close::before {
+  transform: rotate(-45deg);
+}
+.start_ad .inner .inner_close::after {
+  transform: rotate(45deg);
 }
 
 .header {
