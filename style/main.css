@@ -782,6 +782,9 @@ body:has(.start_ad.on) {
   background-color: #fff;
   transition: all 0.5s linear;
 }
+.hd_bg .hd_news .item .txt h3, .hd_bg .hd_news .item .txt span {
+  padding-bottom: 5px;
+}
 .hd_bg .hd_news .item span {
   padding-left: 10px;
 }
