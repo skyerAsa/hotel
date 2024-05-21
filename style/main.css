@@ -178,6 +178,10 @@ html:has(.menu_bg.on),
 body:has(.menu_bg.on) {
   overflow-y: hidden;
 }
+html:has(.start_ad.on),
+body:has(.start_ad.on) {
+  overflow-y: hidden;
+}
 
 .start_bg {
   width: 100%;

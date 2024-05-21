@@ -10,6 +10,9 @@ body {
   &:has(.menu_bg.on) {
     overflow-y: hidden;
   }
+  &:has(.start_ad.on) {
+    overflow-y: hidden;
+  }
 }
 
 .start_bg {
@@ -2093,7 +2096,6 @@ body {
       color: #191919;
       pointer-events: fill;
       z-index: 2;
-      
       &::before {
         color: #191919;
       }
@@ -2180,7 +2182,7 @@ body {
       overflow: hidden;
     }
     .slick-track {
-        animation: ll 1s linear;
+      animation: ll 1s linear;
       .slick-active {
         transition: 1s;
         transform: translateY(0);
@@ -2189,25 +2191,23 @@ body {
         transition: 1s;
         transform: translateY(10%);
       }
-      
     }
-
   }
   .title {
     position: relative;
     right: 10%;
     display: flex;
     @keyframes bbb {
-        from{
-            opacity: 0;
-            transform: translateX(30px);
-        }
-        to{
-            opacity: 1;
-            transform: translateX(0);
-        }
+      from {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
-    animation: bbb 1s ;
+    animation: bbb 1s;
     p {
       margin-right: 25px;
       padding-bottom: 15px;
@@ -2323,14 +2323,14 @@ body {
         cursor: pointer;
         opacity: 0;
         @keyframes ddd {
-            from{
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to{
-                opacity: 1;
-                transform: translateY(0);
-            }
+          from {
+            opacity: 0;
+            transform: translateY(-30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
         animation: ddd 0.5s 1.5s linear forwards;
         .line {
@@ -2417,14 +2417,14 @@ body {
           }
         }
         @keyframes ccc {
-            from{
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-            to{
-                opacity: 1;
-                transform: translateX(0);
-            }
+          from {
+            opacity: 0;
+            transform: translateX(-30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
         }
         animation: ccc 0.5s linear forwards;
       }
