@@ -1111,6 +1111,7 @@ body:has(.menu_bg.on) {
   padding: 105px 140px 50px;
   margin: 0 30px;
   overflow: hidden;
+  animation: ll 2s linear;
 }
 .field .title {
   display: flex;
@@ -1299,6 +1300,7 @@ body:has(.menu_bg.on) {
 
 .events {
   padding: 100px 140px 150px;
+  animation: ll 2s linear;
 }
 .events .content .slick-list {
   overflow: initial;
@@ -1482,6 +1484,7 @@ body:has(.menu_bg.on) {
 }
 .rooms .title {
   display: flex;
+  animation: ll 2s linear;
 }
 .rooms .title h2 {
   font-size: 55px;
@@ -1526,6 +1529,20 @@ body:has(.menu_bg.on) {
   position: relative;
   overflow: hidden;
   transition: all 0.2s linear;
+  opacity: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  animation: aaa 0.5s linear forwards;
+}
+@keyframes aaa {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .rooms .wrap .room_list .clous .open_clous {
   position: absolute;
@@ -1617,6 +1634,10 @@ body:has(.menu_bg.on) {
   position: relative;
   flex: 1;
   transition: all 0.2s linear;
+  opacity: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  animation: aaa 0.5s 0.5s linear forwards;
 }
 .rooms .wrap .room_list .collection .open_collection {
   position: absolute;
@@ -1709,6 +1730,10 @@ body:has(.menu_bg.on) {
   position: relative;
   overflow: hidden;
   transition: all 0.2s linear;
+  opacity: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  animation: aaa 0.5s 0.8s linear forwards;
 }
 .rooms .wrap .room_list .mountain .open_mountain {
   position: absolute;
@@ -1801,6 +1826,10 @@ body:has(.menu_bg.on) {
   position: relative;
   overflow: hidden;
   transition: all 0.2s linear;
+  opacity: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  animation: aaa 0.5s 1.2s linear forwards;
 }
 .rooms .wrap .room_list .morioka .open_morioka {
   position: absolute;
@@ -1893,6 +1922,10 @@ body:has(.menu_bg.on) {
   position: relative;
   overflow: hidden;
   transition: all 0.2s linear;
+  opacity: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  animation: aaa 0.5s 1.5s linear forwards;
 }
 .rooms .wrap .room_list .reflection .open_reflection {
   position: absolute;
@@ -1985,6 +2018,10 @@ body:has(.menu_bg.on) {
   position: relative;
   overflow: hidden;
   transition: all 0.2s linear;
+  opacity: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  animation: aaa 0.5s 1.7s linear forwards;
 }
 .rooms .wrap .room_list .linshan .open_linshan {
   position: absolute;
@@ -2075,6 +2112,7 @@ body:has(.menu_bg.on) {
   position: relative;
   bottom: 15%;
   margin-top: 50px;
+  animation: ll 2s linear;
 }
 .rooms .rooms_about:hover {
   transition: 1s;
@@ -2228,6 +2266,9 @@ body:has(.menu_bg.on) {
   width: calc(100% - 300px);
   overflow: hidden;
 }
+.dining ul .slick-track {
+  animation: ll 1s linear;
+}
 .dining ul .slick-track .slick-active {
   transition: 1s;
   transform: translateY(0);
@@ -2240,6 +2281,17 @@ body:has(.menu_bg.on) {
   position: relative;
   right: 10%;
   display: flex;
+  animation: bbb 1s;
+}
+@keyframes bbb {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 .dining .title p {
   margin-right: 25px;
@@ -2354,6 +2406,18 @@ body:has(.menu_bg.on) {
   display: flex;
   align-items: flex-end;
   cursor: pointer;
+  opacity: 0;
+  animation: ddd 0.5s 1.5s linear forwards;
+}
+@keyframes ddd {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .footer .footer_box .wrap .go_top .line {
   width: 1px;
@@ -2388,6 +2452,10 @@ body:has(.menu_bg.on) {
   position: absolute;
   width: 100%;
   height: 100%;
+}
+.footer .footer_box .wrap .left_box {
+  opacity: 0;
+  animation: ccc 0.5s linear forwards;
 }
 .footer .footer_box .wrap .left_box .img {
   max-width: 259px;
@@ -2435,8 +2503,19 @@ body:has(.menu_bg.on) {
 .footer .footer_box .wrap .left_box .txt .writer span:hover {
   color: #63bedf;
 }
+@keyframes ccc {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 .footer .footer_box .wrap .middle_box {
   padding: 0 20px 0 134px;
+  animation: ccc 0.5s 0.5s linear forwards;
 }
 .footer .footer_box .wrap .middle_box .title {
   padding-bottom: 22px;
@@ -2485,6 +2564,9 @@ body:has(.menu_bg.on) {
   cursor: pointer;
   transition: 0.5s;
   opacity: 0.5;
+}
+.footer .footer_box .wrap .right_box {
+  animation: ccc 0.5s 1s linear forwards;
 }
 .footer .footer_box .wrap .right_box .title {
   padding-bottom: 22px;

@@ -23,7 +23,6 @@ body {
   opacity: 0;
   display: none;
   overflow-y: hidden;
-
   .img {
     height: 100vh;
     display: flex;
@@ -36,7 +35,6 @@ body {
     }
   }
   &.on {
-
     display: block;
     @keyframes pp {
       from {
@@ -979,6 +977,7 @@ body {
   padding: 105px 140px 50px;
   margin: 0 30px;
   overflow: hidden;
+  animation: ll 2s linear;
   .title {
     display: flex;
     h2 {
@@ -1173,6 +1172,7 @@ body {
 // Events
 .events {
   padding: 100px 140px 150px;
+  animation: ll 2s linear;
   .content {
     .slick-list {
       overflow: initial;
@@ -1366,9 +1366,9 @@ body {
   margin: 0 auto;
   padding: 105px 140px 50px;
   margin: 0 30px;
-  // overflow: hidden;
   .title {
     display: flex;
+    animation: ll 2s linear;
     h2 {
       font-size: 55px;
       letter-spacing: 2.5px;
@@ -1411,6 +1411,19 @@ body {
         position: relative;
         overflow: hidden;
         transition: all 0.2s linear;
+        opacity: 0;
+        object-fit: cover;
+        @keyframes aaa {
+          from {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        animation: aaa 0.5s linear forwards;
         .open_clous {
           position: absolute;
           width: calc(100% - 30px);
@@ -1507,6 +1520,9 @@ body {
         position: relative;
         flex: 1;
         transition: all 0.2s linear;
+        opacity: 0;
+        object-fit: cover;
+        animation: aaa 0.5s 0.5s linear forwards;
         .open_collection {
           position: absolute;
           width: calc(100% - 30px);
@@ -1604,6 +1620,9 @@ body {
         position: relative;
         overflow: hidden;
         transition: all 0.2s linear;
+        opacity: 0;
+        object-fit: cover;
+        animation: aaa 0.5s 0.8s linear forwards;
         .open_mountain {
           position: absolute;
           width: calc(100% - 30px);
@@ -1701,6 +1720,9 @@ body {
         position: relative;
         overflow: hidden;
         transition: all 0.2s linear;
+        opacity: 0;
+        object-fit: cover;
+        animation: aaa 0.5s 1.2s linear forwards;
         .open_morioka {
           position: absolute;
           width: calc(100% - 30px);
@@ -1798,6 +1820,9 @@ body {
         position: relative;
         overflow: hidden;
         transition: all 0.2s linear;
+        opacity: 0;
+        object-fit: cover;
+        animation: aaa 0.5s 1.5s linear forwards;
         .open_reflection {
           position: absolute;
           width: calc(100% - 30px);
@@ -1895,6 +1920,9 @@ body {
         position: relative;
         overflow: hidden;
         transition: all 0.2s linear;
+        opacity: 0;
+        object-fit: cover;
+        animation: aaa 0.5s 1.7s linear forwards;
         .open_linshan {
           position: absolute;
           width: calc(100% - 30px);
@@ -1992,6 +2020,7 @@ body {
     position: relative;
     bottom: 15%;
     margin-top: 50px;
+    animation: ll 2s linear;
     &:hover {
       transition: 1s;
       button {
@@ -2064,6 +2093,7 @@ body {
       color: #191919;
       pointer-events: fill;
       z-index: 2;
+      
       &::before {
         color: #191919;
       }
@@ -2150,6 +2180,7 @@ body {
       overflow: hidden;
     }
     .slick-track {
+        animation: ll 1s linear;
       .slick-active {
         transition: 1s;
         transform: translateY(0);
@@ -2158,12 +2189,25 @@ body {
         transition: 1s;
         transform: translateY(10%);
       }
+      
     }
+
   }
   .title {
     position: relative;
     right: 10%;
     display: flex;
+    @keyframes bbb {
+        from{
+            opacity: 0;
+            transform: translateX(30px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    animation: bbb 1s ;
     p {
       margin-right: 25px;
       padding-bottom: 15px;
@@ -2277,6 +2321,18 @@ body {
         display: flex;
         align-items: flex-end;
         cursor: pointer;
+        opacity: 0;
+        @keyframes ddd {
+            from{
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        animation: ddd 0.5s 1.5s linear forwards;
         .line {
           width: 1px;
           height: 200px;
@@ -2313,6 +2369,7 @@ body {
         }
       }
       .left_box {
+        opacity: 0;
         .img {
           max-width: 259px;
           cursor: pointer;
@@ -2359,9 +2416,21 @@ body {
             }
           }
         }
+        @keyframes ccc {
+            from{
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to{
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        animation: ccc 0.5s linear forwards;
       }
       .middle_box {
         padding: 0 20px 0 134px;
+        animation: ccc 0.5s 0.5s linear forwards;
         .title {
           padding-bottom: 22px;
           font-size: 25px;
@@ -2414,6 +2483,7 @@ body {
         }
       }
       .right_box {
+        animation: ccc 0.5s 1s linear forwards;
         .title {
           padding-bottom: 22px;
           font-size: 25px;
