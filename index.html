@@ -360,7 +360,7 @@
             </div>
             <!-- Rooms -->
             <div6 class="rooms">
-                <div class="title">
+                <div class="rooms_title">
                     <h2>ROOMS</h2>
                     <p>棲家</p>
                 </div>
@@ -638,7 +638,7 @@
 
                     if (window.innerWidth > 50) {
                         $(".header").addClass("on");
-                    } else {}
+                    } 
                 }
                 window.onresize = reportWindowSize;
 
@@ -670,7 +670,24 @@
                         $(".brand_txt").removeClass("on");
                         $(".brand_list").removeClass("on");
                         $(".brand_img").removeClass("on");
-
+                    }
+                    if ($(window).scrollTop() > 1000) {
+                        $(".field").addClass("on");
+                    } else {
+                        $(".field").removeClass("on");
+                    }
+                    if ($(window).scrollTop() > 2500) {
+                        $(".events").addClass("on");
+                    } else {
+                        $(".events").removeClass("on");
+                    }
+                    if ($(window).scrollTop() > 3000) {
+                        $(".rooms_title").addClass("on");
+                        $(".rooms_about").addClass("on");
+                        
+                    } else {
+                        $(".rooms_title").removeClass("on");
+                        $(".rooms_about").removeClass("on");
                     }
                 }
 

@@ -48,7 +48,7 @@ body {
         opacity: 1;
       }
     }
-    animation: pp 3s ;
+    animation: pp 3s;
     .img {
       display: flex;
       align-items: center;
@@ -979,7 +979,9 @@ body {
   padding: 105px 140px 50px;
   margin: 0 30px;
   overflow: hidden;
-  animation: ll 2s linear;
+  &.on {
+    animation: ll 2s linear;
+  }
   .title {
     display: flex;
     h2 {
@@ -1174,7 +1176,9 @@ body {
 // Events
 .events {
   padding: 100px 140px 150px;
-  animation: ll 2s linear;
+  &.on {
+    animation: ll 2s linear;
+  }
   .content {
     .slick-list {
       overflow: initial;
@@ -1368,9 +1372,11 @@ body {
   margin: 0 auto;
   padding: 105px 140px 50px;
   margin: 0 30px;
-  .title {
+  .rooms_title {
     display: flex;
-    animation: ll 2s linear;
+    &.on {
+      animation: ll 2s linear;
+    }
     h2 {
       font-size: 55px;
       letter-spacing: 2.5px;
@@ -2022,7 +2028,9 @@ body {
     position: relative;
     bottom: 15%;
     margin-top: 50px;
-    animation: ll 2s linear;
+    &.on {
+      animation: ll 2s linear;
+    }
     &:hover {
       transition: 1s;
       button {

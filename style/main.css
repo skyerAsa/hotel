@@ -1114,6 +1114,8 @@ body:has(.start_ad.on) {
   padding: 105px 140px 50px;
   margin: 0 30px;
   overflow: hidden;
+}
+.field.on {
   animation: ll 2s linear;
 }
 .field .title {
@@ -1303,6 +1305,8 @@ body:has(.start_ad.on) {
 
 .events {
   padding: 100px 140px 150px;
+}
+.events.on {
   animation: ll 2s linear;
 }
 .events .content .slick-list {
@@ -1485,15 +1489,17 @@ body:has(.start_ad.on) {
   padding: 105px 140px 50px;
   margin: 0 30px;
 }
-.rooms .title {
+.rooms .rooms_title {
   display: flex;
+}
+.rooms .rooms_title.on {
   animation: ll 2s linear;
 }
-.rooms .title h2 {
+.rooms .rooms_title h2 {
   font-size: 55px;
   letter-spacing: 2.5px;
 }
-.rooms .title p {
+.rooms .rooms_title p {
   width: 100px;
   padding-left: 20px;
   display: flex;
@@ -1504,7 +1510,7 @@ body:has(.start_ad.on) {
   letter-spacing: 2px;
   color: #63bedf;
 }
-.rooms .title p::before {
+.rooms .rooms_title p::before {
   content: "";
   width: 100%;
   position: absolute;
@@ -2115,6 +2121,8 @@ body:has(.start_ad.on) {
   position: relative;
   bottom: 15%;
   margin-top: 50px;
+}
+.rooms .rooms_about.on {
   animation: ll 2s linear;
 }
 .rooms .rooms_about:hover {
