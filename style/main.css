@@ -758,7 +758,7 @@ body:has(.start_ad.on) {
 }
 .header_m .burger .menu::before, .header_m .burger .menu::after {
   content: "";
-  width: 40px;
+  width: 35px;
   height: 2px;
   right: 0;
   bottom: 0;
