@@ -48,7 +48,7 @@ body {
         opacity: 1;
       }
     }
-    animation: pp 3s;
+    animation: pp 3s linear;
     .img {
       display: flex;
       align-items: center;
@@ -80,6 +80,10 @@ body {
   transition: all 1s linear;
   background-image: url(../img/menu_bg__23K07p125u.jpg);
   background-size: cover;
+  display: none;
+  &.on {
+    display: block;
+  }
   .wrap {
     height: 100%;
     position: relative;
@@ -268,6 +272,86 @@ body {
   }
 }
 
+.label_list {
+  height: 100%;
+  position: fixed;
+  top: 30%;
+  right: 2%;
+  flex: 1;
+  z-index: 1;
+  display: none;
+  &.on {
+    display: block;
+    @include rwd(1180) {
+      display: none;
+    }
+  }
+  li {
+    width: 40px;
+    height: 40px;
+    padding: 0 60px;
+    display: flex;
+    position: relative;
+    transition: all 0.2s linear;
+    &.on {
+      height: 90px;
+      &::before {
+        height: 90px;
+        background-color: #36af63;
+      }
+      h2 {
+        opacity: 1;
+      }
+    }
+    &:hover {
+      height: 90px;
+      &::before {
+        height: 90px;
+        background-color: #36af63;
+      }
+      h2 {
+        @keyframes ggg {
+          from {
+            opacity: 0;
+            left: 40px;
+          }
+          to {
+            opacity: 1;
+            left: 25px;
+          }
+        }
+        animation: ggg 0.5s linear forwards;
+      }
+    }
+    &::before {
+      content: "";
+      width: 2px;
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      transition: 0.2s linear;
+      background-color: #b2b2b2;
+    }
+    & + li {
+      margin-top: 10px;
+    }
+    h2 {
+      opacity: 0;
+      writing-mode: vertical-lr;
+      position: absolute;
+      left: 25px;
+      color: #36af63;
+      white-space: nowrap;
+      letter-spacing: 2.5px;
+    }
+    a {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+  }
+}
+
 // header
 .header {
   width: 140px;
@@ -279,6 +363,9 @@ body {
   position: fixed;
   border-right: 1px solid #b2b2b2;
   z-index: 20;
+  @include rwd(1180) {
+    display: none;
+  }
   .img {
     width: 70px;
     padding-top: 18%;
@@ -298,6 +385,7 @@ body {
     position: relative;
     left: 50%;
     margin-bottom: 60px;
+    cursor: pointer;
     &:hover {
       .menu {
         &::before,
@@ -474,11 +562,99 @@ body {
   }
 }
 
+.header_m {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  .img {
+    width: 150px;
+    filter: contrast(0) brightness(10);
+    position: relative;
+    margin: 20px 0 0 20px;
+    a {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .burger {
+    width: 24px;
+    height: 43px;
+    position: relative;
+    top: 52%;
+    right: 4%;
+    margin-bottom: 60px;
+    cursor: pointer;
+    &:hover {
+      .menu {
+        &::before,
+        &::after {
+          transition: 0.5s;
+          height: 43px;
+        }
+      }
+    }
+    .menu {
+      width: 43px;
+      height: 2px;
+      background-color: #fff;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      &::before,
+      &::after {
+        content: "";
+        width: 40px;
+        height: 2px;
+        left: 0;
+        bottom: 0;
+        background-color: #fff;
+        position: absolute;
+        display: flex;
+        font-size: 12px;
+      }
+      &::before {
+        top: -10px;
+      }
+      &::after {
+        top: 10px;
+      }
+      &.on {
+        width: 0;
+        &::before,
+        &::after {
+          height: 43px;
+          left: 0;
+        }
+        &::before {
+          transform: rotate(30deg);
+        }
+        &::after {
+          transform: rotate(150deg);
+        }
+      }
+    }
+    p {
+      color: #fff;
+      padding-right: 20px;
+      font-size: 12px;
+    }
+  }
+}
+
 // hd_bg
 .hd_bg {
   position: relative;
   z-index: 2;
   .header_bg {
+    .slick-track {
+      max-width: 200%;
+    }
     .slick-slide {
       display: none;
     }
@@ -525,10 +701,9 @@ body {
         animation: hh 1s forwards;
       }
       h2 {
-        top: 50%;
+        top: 60%;
         left: 10%;
         font-size: 23px;
-        transform: translateY(50%);
         opacity: 0;
         @keyframes hh {
           from {
@@ -591,6 +766,10 @@ body {
     top: 1%;
     border: 1px solid #fff;
     border-radius: 20px 0 0 20px;
+    @include rwd(1180) {
+      top: auto;
+      bottom: 2%;
+    }
     h2 {
       max-width: 110px;
       width: 100%;
@@ -633,8 +812,9 @@ body {
           background-color: #fff;
           transition: all 0.5s linear;
         }
-        h3,span{
-            padding-bottom: 5px;
+        h3,
+        span {
+          padding-bottom: 5px;
         }
       }
       span {
@@ -661,6 +841,9 @@ body {
     right: 3%;
     bottom: 3%;
     color: #fff;
+    @include rwd(1180) {
+      display: none;
+    }
     h2 {
       position: absolute;
       right: 3%;
@@ -709,6 +892,21 @@ body {
     text-align: center;
     color: #fff;
     z-index: 1;
+    display: none;
+    &.on {
+      display: block;
+    }
+    &.off {
+      @keyframes uuu {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(100%);
+        }
+      }
+      animation: uuu 1s linear forwards;
+    }
     .wrap {
       padding: 0 20px;
       p {
@@ -798,30 +996,57 @@ body {
   padding: 165px 0 50px;
   justify-content: center;
   position: relative;
+  @include rwd(1180) {
+    display: block;
+  }
   .brand_txt {
     display: flex;
+    padding-right: 60px;
+    @include rwd(1180) {
+      flex-direction: column;
+      margin-bottom: 150px;
+      padding-right: 0;
+    }
     h2,
     h3 {
       writing-mode: vertical-lr;
+      @include rwd(1180) {
+        writing-mode: inherit;
+        text-align: center;
+      }
     }
     .brand_title {
+      width: 100%;
       margin-right: 25px;
       padding-bottom: 15px;
+      padding-top: 30px;
       position: relative;
       display: inline-block;
       font-size: 20px;
       font-weight: 300;
       letter-spacing: 2px;
       color: #63bedf;
+      font-size: 20px;
+      font-weight: bolder;
+      @include rwd(1180) {
+        margin-right: 0;
+        transform: translateY(300%);
+      }
       &::before {
         content: "";
         height: 90px;
-        width: 0px;
+        width: 1px;
         display: flex;
         position: absolute;
         bottom: 65%;
         left: 50%;
-        border: 1px solid #63bedf;
+        background-color: #63bedf;
+        @include rwd(1180) {
+          width: 90px;
+          height: 1px;
+          top: 0;
+          left: 46%;
+        }
       }
     }
     h3 {
@@ -844,35 +1069,56 @@ body {
   .brand_img {
     position: relative;
     margin: 0 30px;
-    height: 570px;
     width: 570px;
     clip-path: circle(50% at 50% 50%);
     overflow: hidden;
+    aspect-ratio: 1 / 1;
+    @include rwd(1180) {
+      margin: 0 auto;
+    }
     img {
       width: 100%;
       height: 110%;
       object-fit: cover;
-      &.down {
-        @keyframes jj {
-          from {
-            transform: matrix(1, 0, 0, 1, 0, -16);
-          }
-          to {
-            transform: matrix(1, 0, 0, 1, 0, -50);
-          }
+      transform: matrix(1, 0, 0, 1, 0, -50);
+      .scroll_img {
+        width: 100%;
+        height: 300%;
+        object-fit: cover;
+        &.on {
+          animation: kk 10s forwards linear;
         }
-        animation: jj 10s forwards linear;
       }
       &.on {
-        @keyframes kk {
-          from {
-            transform: matrix(1, 0, 0, 1, 0, -50);
-          }
-          to {
-            transform: matrix(1, 0, 0, 1, 0, -16);
-          }
-        }
-        animation: kk 10s forwards linear;
+        transform: matrix(1, 0, 0, 1, 0, -45);
+        transition: transform 2s;
+      }
+      &.aa {
+        transform: matrix(1, 0, 0, 1, 0, -40);
+      }
+      &.bb {
+        transform: matrix(1, 0, 0, 1, 0, -35);
+      }
+      &.cc {
+        transform: matrix(1, 0, 0, 1, 0, -30);
+      }
+      &.dd {
+        transform: matrix(1, 0, 0, 1, 0, -25);
+      }
+      &.ee {
+        transform: matrix(1, 0, 0, 1, 0, -20);
+      }
+      &.ff {
+        transform: matrix(1, 0, 0, 1, 0, -15);
+      }
+      &.gg {
+        transform: matrix(1, 0, 0, 1, 0, -10);
+      }
+      &.hh {
+        transform: matrix(1, 0, 0, 1, 0, -5);
+      }
+      &.ii {
+        transform: matrix(1, 0, 0, 1, 0, 0);
       }
     }
     &.on {
@@ -890,22 +1136,41 @@ body {
   .brand_list {
     display: flex;
     position: relative;
+    padding-left: 50px;
+    @include rwd(1180) {
+      flex-direction: column-reverse;
+      padding-top: 30px;
+    }
     li {
       display: flex;
       flex-direction: column;
       justify-content: center;
       font-size: 18px;
+      @include rwd(1180) {
+        margin: 0 auto;
+        flex-direction: row;
+      }
       & + li {
         padding-left: 10px;
+        @include rwd(1180) {
+          padding-left: 0;
+        }
       }
       h2 {
         padding-bottom: 18px;
         font-weight: bolder;
         writing-mode: vertical-lr;
+        @include rwd(1180) {
+          writing-mode: initial;
+          padding-right: 20px;
+        }
       }
       p {
         writing-mode: vertical-lr;
         letter-spacing: 5.5px;
+        @include rwd(1180) {
+          writing-mode: initial;
+        }
       }
     }
     &.on {
@@ -923,6 +1188,10 @@ body {
   .brand_about {
     position: absolute;
     bottom: 15%;
+    @include rwd(1180) {
+      left: 44%;
+      bottom: -100px;
+    }
     &:hover {
       transition: 1s;
       button {
@@ -978,10 +1247,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
   padding: 105px 140px 50px;
   margin: 0 30px;
   overflow: hidden;
+  @include rwd(1180) {
+    padding: 105px 0 50px;
+    margin: 0 auto;
+  }
   &.on {
     animation: ll 2s linear;
   }
@@ -1036,6 +1308,12 @@ body {
     }
     .slick-list {
       overflow: initial;
+      position: relative;
+      .slick-track {
+        @include rwd(1180) {
+          max-width: 1000%;
+        }
+      }
     }
     li {
       margin: 0 50px 0 80px;
@@ -1054,10 +1332,17 @@ body {
       p {
         padding-top: 10px;
       }
+      @include rwd(1180) {
+        padding-left: 125px;
+        margin: 0;
+      }
     }
     .slick-slide {
       max-width: 920px;
       height: 550px;
+      @include rwd(1180) {
+        height: auto;
+      }
       &:hover {
         .img {
           img {
@@ -1067,8 +1352,19 @@ body {
         }
       }
       .img {
-        border-radius: 30px;
         overflow: hidden;
+        @include rwd(1180) {
+          padding-left: 10px;
+          border-radius: 30px;
+        }
+        img {
+          @include rwd(1180) {
+            width: 100%;
+            border-radius: 30px;
+            min-width: 608px;
+            min-height: 414px;
+          }
+        }
       }
     }
     .slick-prev,
@@ -1081,7 +1377,7 @@ body {
       cursor: pointer;
       color: #191919;
       pointer-events: fill;
-      // z-index: 2;
+      z-index: 2;
       &::before {
         color: #191919;
         z-index: 0;
@@ -1111,6 +1407,10 @@ body {
         left: 40%;
         content: "<";
       }
+      @include rwd(1180) {
+        left: 4%;
+        top: 40%;
+      }
     }
     .slick-next {
       &::before {
@@ -1121,6 +1421,10 @@ body {
         content: ">";
       }
       right: -10%;
+      @include rwd(1180) {
+        right: 11%;
+        top: 40%;
+      }
     }
   }
   .field_about {
@@ -1173,18 +1477,33 @@ body {
         transform: rotate(135deg);
       }
     }
+    @include rwd(1180) {
+      right: 2%;
+    }
   }
 }
 
 // Events
 .events {
   padding: 100px 140px 150px;
+  @include rwd(1180) {
+    padding: 100px 0 150px;
+    position: relative;
+  }
   &.on {
     animation: ll 2s linear;
   }
   .content {
     .slick-list {
       overflow: initial;
+      @include rwd(1180) {
+        position: relative;
+      }
+      .slick-track {
+        @include rwd(1180) {
+          max-width: 300%;
+        }
+      }
     }
     li {
       max-width: 1500px;
@@ -1198,14 +1517,17 @@ body {
       .img {
         margin-left: 100px;
         overflow: hidden;
+        border-radius: 20px;
+        @include rwd(1180) {
+          margin: 20px;
+          position: relative;
+          top: 110px;
+        }
         &:hover {
           img {
             transition: 0.5s;
             transform: scale(1.2);
           }
-        }
-        img {
-          border-radius: 10px;
         }
       }
       .item {
@@ -1217,6 +1539,11 @@ body {
           display: flex;
           padding-bottom: 50px;
           border-right: 1px solid rgba($color: #000000, $alpha: 0.2);
+          @include rwd(1180) {
+            border-right: 0px;
+            position: absolute;
+            top: 0;
+          }
           h2 {
             font-size: 55px;
             letter-spacing: 2.5px;
@@ -1243,12 +1570,24 @@ body {
         }
         .txt {
           width: 35%;
+          @include rwd(1180) {
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            position: relative;
+            top: 110px;
+            letter-spacing: 3px;
+            line-height: 2;
+          }
           p {
             padding-top: 16px;
           }
           .language {
             display: flex;
             font-size: 22px;
+            @include rwd(1180) {
+              justify-content: center;
+            }
             p {
               font-size: 18px;
               padding: 7px 0 0 15px;
@@ -1258,6 +1597,10 @@ body {
         .event_about {
           padding-top: 20px;
           position: relative;
+          @include rwd(1180) {
+            position: absolute;
+            bottom: -35%;
+          }
           .arrow {
             width: 60px;
             height: 1px;
@@ -1265,6 +1608,9 @@ body {
             position: absolute;
             top: 37%;
             right: -20%;
+            @include rwd(1180) {
+              top: 65%;
+            }
             &::before {
               content: "";
               width: 1px;
@@ -1314,6 +1660,11 @@ body {
       top: auto;
       left: 15%;
       bottom: -70px;
+      @include rwd(1180) {
+        position: absolute;
+        top: 80px;
+        left: 40%;
+      }
       .slick-active {
         &::after {
           color: #36af63;
@@ -1375,6 +1726,10 @@ body {
   margin: 0 auto;
   padding: 105px 140px 50px;
   margin: 0 30px;
+  @include rwd(1180) {
+    padding: 105px 0px 50px;
+    margin: 0 20px;
+  }
   .rooms_title {
     display: flex;
     &.on {
@@ -1407,15 +1762,23 @@ body {
   h3 {
     letter-spacing: 2.5px;
     padding: 20px 0 50px;
+    &.on {
+      animation: ll 2s linear;
+    }
   }
   .wrap {
     width: 100%;
     max-width: 1540px;
     margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0 20px;
+    @include rwd(1180) {
+      padding: 0;
+    }
     .room_list {
       display: flex;
+      @include rwd(1180) {
+        display: none;
+      }
       .clous {
         padding: 0 5px;
         flex: 1;
@@ -1434,8 +1797,8 @@ body {
             transform: translateY(0);
           }
         }
-        &.on{
-            animation: aaa 0.5s linear forwards;
+        &.on {
+          animation: aaa 0.5s linear forwards;
         }
         .open_clous {
           position: absolute;
@@ -1535,7 +1898,9 @@ body {
         transition: all 0.2s linear;
         opacity: 0;
         object-fit: cover;
-        &.on{animation: aaa 0.5s 0.5s linear forwards;}
+        &.on {
+          animation: aaa 0.5s 0.5s linear forwards;
+        }
         .open_collection {
           position: absolute;
           width: calc(100% - 30px);
@@ -1635,10 +2000,9 @@ body {
         transition: all 0.2s linear;
         opacity: 0;
         object-fit: cover;
-        &.on{
-            animation: aaa 0.5s 0.8s linear forwards;
+        &.on {
+          animation: aaa 0.5s 0.8s linear forwards;
         }
-        
         .open_mountain {
           position: absolute;
           width: calc(100% - 30px);
@@ -1738,10 +2102,9 @@ body {
         transition: all 0.2s linear;
         opacity: 0;
         object-fit: cover;
-        &.on{
-            animation: aaa 0.5s 1.2s linear forwards;
+        &.on {
+          animation: aaa 0.5s 1.2s linear forwards;
         }
-        
         .open_morioka {
           position: absolute;
           width: calc(100% - 30px);
@@ -1841,10 +2204,9 @@ body {
         transition: all 0.2s linear;
         opacity: 0;
         object-fit: cover;
-        &.on{
-            animation: aaa 0.5s 1.5s linear forwards;
+        &.on {
+          animation: aaa 0.5s 1.5s linear forwards;
         }
-       
         .open_reflection {
           position: absolute;
           width: calc(100% - 30px);
@@ -1944,10 +2306,9 @@ body {
         transition: all 0.2s linear;
         opacity: 0;
         object-fit: cover;
-        &.on{
-            animation: aaa 0.5s 1.7s linear forwards;
+        &.on {
+          animation: aaa 0.5s 1.7s linear forwards;
         }
-        
         .open_linshan {
           position: absolute;
           width: calc(100% - 30px);
@@ -2040,6 +2401,90 @@ body {
         }
       }
     }
+    .room_list_carousel {
+      display: none;
+      @include rwd(1180) {
+        display: block;
+      }
+      .slick-track {
+        @include rwd(1180) {
+          max-width: 1200%;
+        }
+      }
+      .clous,
+      .collection,
+      .mountain,
+      .morioka,
+      .reflection,
+      .linshan {
+        width: 550px;
+        margin-left: 12px;
+        .img {
+          border-radius: 30px;
+          overflow: hidden;
+          cursor: pointer;
+          img {
+            border-radius: 30px;
+          }
+          &:hover {
+            img {
+              transform: scale(1.1);
+              transition: 0.5s linear;
+            }
+          }
+        }
+        .title {
+          padding: 20px 0;
+          font-size: 18px;
+          font-weight: bolder;
+          position: relative;
+          text-align: center;
+          &::after {
+            content: "";
+            width: 15px;
+            height: 1px;
+            background-color: rgba($color: #000000, $alpha: 0.2);
+            position: absolute;
+            bottom: 10%;
+            left: 48%;
+          }
+        }
+        .number {
+          width: 60px;
+          text-align: center;
+          margin: 20px auto 0;
+          color: #191919;
+          border-left: 1px solid #353535;
+          border-right: 1px solid #353535;
+        }
+        .txt {
+          margin-top: 30px;
+          letter-spacing: 2.5px;
+          text-align: center;
+          color: #191919;
+          p {
+            & + p {
+              padding-top: 5px;
+            }
+          }
+        }
+        .more {
+          text-align: center;
+          padding-top: 20px;
+          letter-spacing: 3px;
+          h2 {
+            font-weight: bolder;
+          }
+          span {
+            font-weight: bolder;
+            padding-left: 10px;
+          }
+        }
+      }
+      &.on {
+        animation: ll 2s linear;
+      }
+    }
   }
   .rooms_about {
     position: relative;
@@ -2102,6 +2547,42 @@ body {
 .dining {
   padding: 50px 140px;
   display: flex;
+  position: relative;
+  @include rwd(1180) {
+    display: block;
+    padding: 50px 0;
+  }
+  .dining_title_m {
+    width: 100%;
+    justify-content: center;
+    display: none;
+    @include rwd(1180) {
+      display: flex;
+    }
+    p {
+      position: relative;
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      letter-spacing: 2px;
+      color: #63bedf;
+      &::before {
+        content: "";
+        height: 1px;
+        width: 90px;
+        display: flex;
+        position: absolute;
+        align-items: center;
+        bottom: 20%;
+        background-color: #63bedf;
+      }
+    }
+    h2 {
+      padding-right: 20px;
+      font-size: 55px;
+      letter-spacing: 5px;
+    }
+  }
   .wrap {
     width: 100%;
     max-width: 1540px;
@@ -2109,6 +2590,9 @@ body {
   }
   ul {
     display: flex;
+    .slick-track {
+      max-width: 600%;
+    }
     .slick-prev,
     .slick-next {
       display: flex;
@@ -2143,6 +2627,11 @@ body {
       right: 0;
       left: 93%;
       transform: rotate(90deg);
+      @include rwd(1180) {
+        left: 46%;
+        top: 100%;
+        transform: rotate(0deg);
+      }
       &::before {
         font-size: 24px;
         position: absolute;
@@ -2153,8 +2642,14 @@ body {
     }
     .slick-next {
       transform: rotate(90deg);
-      right: 2.5%;
+      right: 0;
+      left: 93%;
       top: 58%;
+      @include rwd(1180) {
+        left: 51%;
+        top: 100%;
+        transform: rotate(0deg);
+      }
       &::before {
         font-size: 24px;
         position: absolute;
@@ -2166,13 +2661,107 @@ body {
     li {
       width: 100%;
       padding: 0 35px 50px 35px;
+      display: flex;
       .txt {
         padding-right: 30px;
         font-size: 24px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        &:has(.dining_link:hover) {
+          .number {
+            color: #36af63;
+          }
+        }
+        .number {
+          position: relative;
+          &::before {
+            content: "";
+            width: 20px;
+            height: 1px;
+            position: absolute;
+            left: 20%;
+            bottom: 0;
+            background-color: rgba($color: #000000, $alpha: 0.2);
+          }
+          &:hover {
+            color: #36af63;
+          }
+        }
+        h2 {
+          padding-top: 20px;
+          font-weight: bolder;
+          writing-mode: vertical-lr;
+          cursor: pointer;
+          &:hover {
+            color: #36af63;
+            .number {
+              color: #36af63;
+            }
+          }
+        }
       }
       .img {
-        img {
+        position: relative;
+        &:hover {
+          .dining_more {
+            @keyframes eee {
+              from {
+                opacity: 0;
+                height: 70%;
+                width: 85%;
+              }
+              to {
+                opacity: 1;
+                height: 80%;
+                width: 92%;
+              }
+            }
+            animation: eee 0.5s linear forwards;
+          }
+        }
+        .img_item {
           border-radius: 20px;
+          max-width: 515px;
+          aspect-ratio: 13 / 14;
+          overflow: hidden;
+          img {
+            border-radius: 20px;
+          }
+        }
+        .dining_more {
+          width: 92%;
+          height: 70%;
+          position: absolute;
+          border-radius: 20px;
+          top: 45%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          opacity: 0;
+          transition: all 0.5s linear;
+          background: linear-gradient(
+            to bottom,
+            rgba(59, 175, 219, 0.5) 0%,
+            rgba(54, 175, 101, 0.5) 100%
+          );
+          img {
+            width: 140px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            filter: contrast(0) brightness(10);
+          }
+          h3 {
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            color: #fff;
+            transform: translate(-50%, -50%);
+            span {
+              padding-left: 10px;
+            }
+          }
         }
         p {
           border-left: 1px solid #b2b2b2;
@@ -2196,14 +2785,18 @@ body {
       }
     }
     .slick-slide {
-      width: 600px;
+      width: 100%;
+      max-width: 550px;
       display: flex;
     }
     .slick-list {
       padding: 55px 20px 20px 35px;
       margin: 0;
-      width: calc(100% - 300px);
+      width: 75%;
       overflow: hidden;
+      @include rwd(1180) {
+        width: 100%;
+      }
     }
     .slick-track {
       animation: ll 1s linear;
@@ -2217,10 +2810,13 @@ body {
       }
     }
   }
-  .title {
+  .dining_title {
     position: relative;
     right: 10%;
     display: flex;
+    @include rwd(1180) {
+      display: none;
+    }
     @keyframes bbb {
       from {
         opacity: 0;
@@ -2231,7 +2827,9 @@ body {
         transform: translateX(0);
       }
     }
-    animation: bbb 1s;
+    &.on {
+      animation: bbb 2s linear forwards;
+    }
     p {
       margin-right: 25px;
       padding-bottom: 15px;
@@ -2318,11 +2916,75 @@ body {
       }
     }
   }
+  .dining_about_m {
+    padding-top: 100px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    &:hover {
+      transition: 1s;
+      button {
+        color: #36af63;
+        border-color: #36af63;
+      }
+      .arrow {
+        background-color: #36af63;
+        @keyframes jjj {
+          from {
+            left: 55%;
+          }
+          to {
+            left: 57%;
+          }
+        }
+        animation: jjj 1s forwards;
+        &::before {
+          background-color: #36af63;
+        }
+      }
+    }
+    button {
+      height: 40px;
+      position: relative;
+      padding: 10px;
+      background-color: #fff;
+      min-width: 165px;
+      border: 1px solid #191919;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-align: center;
+      color: #191919;
+      cursor: pointer;
+    }
+    .arrow {
+      width: 60px;
+      height: 1px;
+      background-color: #191919;
+      position: absolute;
+      left: 55%;
+      top: 87%;
+      &::before {
+        content: "";
+        width: 1px;
+        height: 15px;
+        position: absolute;
+        right: 3px;
+        bottom: -1px;
+        background-color: #191919;
+        transform: rotate(135deg);
+      }
+    }
+  }
 }
 
 // footer
 .footer {
   padding: 85px 50px 50px 140px;
+  @include rwd(1180) {
+    padding: 85px 50px 80px 0;
+  }
   .footer_box {
     width: 100%;
     width: 100%;
@@ -2346,6 +3008,9 @@ body {
         align-items: flex-end;
         cursor: pointer;
         opacity: 0;
+        @include rwd(1180) {
+          right: 2%;
+        }
         @keyframes ddd {
           from {
             opacity: 0;
@@ -2356,7 +3021,9 @@ body {
             transform: translateY(0);
           }
         }
-        animation: ddd 0.5s 1.5s linear forwards;
+        &.on {
+          animation: ddd 1s 2s linear forwards;
+        }
         .line {
           width: 1px;
           height: 200px;
@@ -2450,11 +3117,16 @@ body {
             transform: translateX(0);
           }
         }
-        animation: ccc 0.5s linear forwards;
+        animation: ccc 1s linear forwards;
       }
       .middle_box {
         padding: 0 20px 0 134px;
-        animation: ccc 0.5s 0.5s linear forwards;
+        @include rwd(1180) {
+          padding: 0 20px;
+        }
+        &.on {
+          animation: ccc 1s 0.5s linear forwards;
+        }
         .title {
           padding-bottom: 22px;
           font-size: 25px;
@@ -2507,13 +3179,16 @@ body {
         }
       }
       .right_box {
-        animation: ccc 0.5s 1s linear forwards;
+        &.on {
+          animation: ccc 1s 1.5s linear forwards;
+        }
         .title {
           padding-bottom: 22px;
           font-size: 25px;
           font-weight: 500;
           letter-spacing: 4px;
           color: #191919;
+          white-space: nowrap;
         }
         ul {
           display: flex;
