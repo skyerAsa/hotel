@@ -1500,6 +1500,9 @@ body {
     display: flex;
     justify-content: center;
     overflow: hidden;
+    @include rwd(600){
+      justify-content: inherit;
+    }
   }
   .field_list {
     max-width: 920px;
@@ -1527,6 +1530,9 @@ body {
         }
         @include rwd(850) {
           max-width: 1300%;
+        }
+        @include rwd(600) {
+          max-width: 700%;
         }
       }
     }
@@ -1575,6 +1581,9 @@ body {
         @include rwd(1180) {
           margin-left: 50px;
           border-radius: 30px;
+        }
+        @include rwd(600){
+          margin: 0 40px;
         }
         img {
           @include rwd(1180) {

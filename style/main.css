@@ -1704,6 +1704,11 @@ body:has(.start_ad.on) {
   justify-content: center;
   overflow: hidden;
 }
+@media screen and (max-width: 600px) {
+  .field .field_bg {
+    justify-content: inherit;
+  }
+}
 .field .field_list {
   max-width: 920px;
   position: relative;
@@ -1738,6 +1743,11 @@ body:has(.start_ad.on) {
 @media screen and (max-width: 850px) {
   .field .field_list .slick-list .slick-track {
     max-width: 1300%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .field .field_list .slick-list .slick-track {
+    max-width: 700%;
   }
 }
 .field .field_list li {
@@ -1792,6 +1802,11 @@ body:has(.start_ad.on) {
   .field .field_list .slick-slide .img {
     margin-left: 50px;
     border-radius: 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .field .field_list .slick-slide .img {
+    margin: 0 40px;
   }
 }
 @media screen and (max-width: 1180px) {
