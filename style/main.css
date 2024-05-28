@@ -1740,11 +1740,6 @@ body:has(.start_ad.on) {
     max-width: 1200%;
   }
 }
-@media screen and (max-width: 850px) {
-  .field .field_list .slick-list .slick-track {
-    max-width: 1300%;
-  }
-}
 @media screen and (max-width: 600px) {
   .field .field_list .slick-list .slick-track {
     max-width: 700%;
@@ -1771,12 +1766,12 @@ body:has(.start_ad.on) {
 @media screen and (max-width: 1180px) {
   .field .field_list li {
     padding-left: 125px;
-    margin: 0;
+    margin: 0 auto;
   }
 }
 @media screen and (max-width: 960px) {
   .field .field_list li {
-    padding-left: 0;
+    padding-left: 20px;
   }
 }
 .field .field_list .slick-slide {
@@ -1797,6 +1792,7 @@ body:has(.start_ad.on) {
 }
 .field .field_list .slick-slide .img {
   overflow: hidden;
+  border-radius: 20px;
 }
 @media screen and (max-width: 1180px) {
   .field .field_list .slick-slide .img {
@@ -1961,6 +1957,11 @@ body:has(.start_ad.on) {
     position: relative;
   }
 }
+@media screen and (max-width: 599px) {
+  .events .content .slick-list {
+    max-width: none;
+  }
+}
 .events .content .slick-list .slick-track {
   max-width: 300%;
 }
@@ -2061,6 +2062,9 @@ body:has(.start_ad.on) {
   font-size: 18px;
   padding: 7px 0 0 15px;
 }
+.events .content li .item .txt .event_txt {
+  margin-bottom: 20px;
+}
 .events .content li .item .event_about {
   padding-top: 20px;
   position: relative;
@@ -2069,6 +2073,12 @@ body:has(.start_ad.on) {
   .events .content li .item .event_about {
     position: absolute;
     bottom: -35%;
+  }
+}
+@media screen and (max-width: 737px) {
+  .events .content li .item .event_about {
+    position: absolute;
+    bottom: -40%;
   }
 }
 .events .content li .item .event_about .arrow {
@@ -2135,6 +2145,11 @@ body:has(.start_ad.on) {
     position: absolute;
     top: 80px;
     left: 40%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .events .content .slick-dots {
+    left: 30%;
   }
 }
 .events .content .slick-dots .slick-active::after {
