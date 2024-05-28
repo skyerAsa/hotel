@@ -18,12 +18,12 @@ body {
 .start_bg {
   width: 100%;
   height: 100vh;
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   background-color: #fff;
   opacity: 0;
-  display: none;
   overflow-y: hidden;
   .img {
     height: 100vh;
@@ -197,6 +197,8 @@ body {
         flex-direction: column;
       }
       ul {
+        width: 100%;
+        max-width: 880px;
         padding-top: 3px;
         padding-left: 160px;
         position: absolute;
@@ -204,8 +206,6 @@ body {
         left: 10%;
         display: flex;
         flex-wrap: wrap;
-        max-width: 880px;
-        width: 100%;
         z-index: 3;
         color: #fff;
         @include rwd(1180) {
@@ -219,8 +219,8 @@ body {
           flex-direction: column;
         }
         li {
-          padding: 0 20px 62px 0;
           width: 50%;
+          padding: 0 20px 62px 0;
           font-size: 19px;
           position: relative;
           @include rwd(1180) {
@@ -228,9 +228,9 @@ body {
           }
           &::after {
             content: "";
-            position: absolute;
             width: 15%;
             height: 1px;
+            position: absolute;
             background-color: #fff;
             transition: all 0.5s linear;
           }
@@ -269,16 +269,16 @@ body {
         color: #fff;
         letter-spacing: 0.8px;
         @include rwd(1180) {
-          position: relative;
           padding-left: 0;
+          position: relative;
           left: 0;
           top: -5%;
         }
         @include rwd(840) {
-          left: auto;
-          right: auto;
           padding-left: 10px;
           display: flex;
+          left: auto;
+          right: auto;
           flex-direction: column;
         }
         .address,
@@ -289,12 +289,12 @@ body {
             cursor: pointer;
             &::after {
               content: "";
+              height: 1px;
+              width: 0;
               position: absolute;
               bottom: -2px;
               left: 0;
               display: block;
-              width: 0;
-              height: 1px;
               background: #fff;
               transition: all 0.5s linear;
             }
@@ -306,8 +306,8 @@ body {
           }
         }
         .message {
-          display: flex;
           padding: 6px 0;
+          display: flex;
           h2 {
             width: 50px;
           }
@@ -339,9 +339,9 @@ body {
   }
   &::before {
     content: "";
-    position: fixed;
     width: 100%;
     height: 100%;
+    position: fixed;
     top: 0;
     left: 0;
     background: linear-gradient(
@@ -396,11 +396,11 @@ body {
       &::before,
       &::after {
         content: "";
+        width: 25px;
+        height: 1px;
         position: absolute;
         top: 50%;
         right: 10%;
-        width: 25px;
-        height: 1px;
         background-color: #fff;
       }
       &::before {
@@ -514,25 +514,25 @@ body {
     filter: contrast(0) brightness(10);
     position: relative;
     a {
-      position: absolute;
-      left: 0;
       width: 100%;
       height: 100%;
+      position: absolute;
+      left: 0;
     }
   }
   .burger {
     width: 24px;
     height: 43px;
+    margin-bottom: 60px;
     position: relative;
     left: 50%;
-    margin-bottom: 60px;
     cursor: pointer;
     &:hover {
       .menu {
         &::before,
         &::after {
-          transition: 0.5s;
           height: 43px;
+          transition: 0.5s;
         }
       }
     }
@@ -578,8 +578,8 @@ body {
       }
     }
     p {
-      color: #fff;
       padding-right: 20px;
+      color: #fff;
       font-size: 12px;
     }
   }
@@ -715,23 +715,23 @@ body {
   }
   .img {
     width: 150px;
+    margin: 20px 0 0 20px;
     filter: contrast(0) brightness(10);
     position: relative;
-    margin: 20px 0 0 20px;
     a {
-      position: absolute;
-      left: 0;
       width: 100%;
       height: 100%;
+      position: absolute;
+      left: 0;
     }
   }
   .burger {
     width: 24px;
     height: 43px;
+    margin-bottom: 60px;
     position: relative;
     top: 52%;
     right: 4%;
-    margin-bottom: 60px;
     @include rwd(840) {
       right: 6%;
     }
@@ -786,8 +786,8 @@ body {
       }
     }
     p {
-      color: #fff;
       padding-right: 20px;
+      color: #fff;    
       font-size: 12px;
       position: absolute;
       bottom: -30px;
@@ -889,19 +889,34 @@ body {
         animation: hh 1s forwards;
         @include rwd(1180) {
           font-size: 64px;
+          left: 7%;
+        }
+        @include rwd(960) {
+          font-size: 45px;
+          left: 1%;
         }
       }
       h2 {
         top: 50%;
-        left: 11%;
+        left: 1%;
         font-size: 23px;
         opacity: 0;
+        display: flex;
+        align-items: center;
         @include rwd(1600) {
           top: 55%;
         }
         @include rwd(1180) {
           top: 60%;
-          left: 20%;
+        }
+        @include rwd(960) {
+          font-size: 15px;
+          top: 51%;
+        }
+        @include rwd(400) {
+          flex-direction: column;
+          justify-content: center;
+          align-items: initial;
         }
         @keyframes hh {
           from {
@@ -914,23 +929,14 @@ body {
           }
         }
         animation: hh 0.5s 1s forwards;
-        &::before {
-          content: "";
-          position: absolute;
-          top: 50%;
-          width: 50px;
-          padding-right: 50px;
-          left: -120px;
-          border: 1px solid #fff;
-        }
       }
       .txt {
-        max-width: 1720px;
-        padding: 68px 19% 20px 160px;
-        z-index: 2;
         width: 100%;
         height: 100%;
         margin: auto;
+        max-width: 1720px;
+        padding: 68px 19% 20px 160px;
+        z-index: 2;
         position: absolute;
         top: 0;
         left: 0;
@@ -954,8 +960,7 @@ body {
   }
   .hd_news {
     max-width: 536px;
-    width: 100%;
-    padding: 14px 0;
+    padding: 5px 0;
     display: flex;
     align-items: center;
     position: absolute;
@@ -972,6 +977,7 @@ body {
       max-width: 110px;
       width: 100%;
       height: 70px;
+      padding: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -980,9 +986,10 @@ body {
       border-right: 1px solid #fff;
     }
     .item {
+      padding: 0 10px;
       display: flex;
       flex-direction: column;
-      padding: 6px 50px 8px 23px;
+      white-space: nowrap;
       .title {
         padding-bottom: 10px;
         position: relative;
@@ -1000,6 +1007,7 @@ body {
       .txt {
         display: flex;
         position: relative;
+        font-size: 14px;
         &::after {
           content: "";
           width: 0%;
@@ -1013,6 +1021,9 @@ body {
         h3,
         span {
           padding-bottom: 5px;
+        }
+        @include rwd(600) {
+          font-size: 12px;
         }
       }
       span {
@@ -1059,13 +1070,13 @@ body {
       border-radius: 100%;
       &::before {
         content: "";
+        width: calc(100% + 1px);
+        height: calc(100% + 1px);
         position: absolute;
         top: -1px;
         left: 0;
         z-index: 1;
         display: block;
-        width: calc(100% + 1px);
-        height: calc(100% + 1px);
         border-top: 2px solid #63bedf;
         border-radius: 100%;
         @keyframes vv {
@@ -1080,9 +1091,9 @@ body {
   .remind {
     width: 100%;
     max-width: 760px;
+    padding: 30px 0;
     background-color: rgba(0, 0, 0, 0.8);
     box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
-    padding: 30px 0;
     position: fixed;
     bottom: 0;
     right: 0;
@@ -1114,16 +1125,16 @@ body {
       }
     }
     .hd_about {
+      margin-top: 25px;
       position: relative;
       display: flex;
       justify-content: center;
-      margin-top: 25px;
       button {
         height: 40px;
-        position: relative;
-        padding: 10px;
-        background-color: transparent;
         min-width: 165px;
+        padding: 10px;
+        position: relative;
+        background-color: transparent;
         border: 1px solid #fff;
         border-radius: 50px;
         font-size: 15px;
@@ -1190,21 +1201,21 @@ body {
 
 // brand
 .brand {
-  display: flex;
   padding: 165px 0 50px;
+  display: flex;
   justify-content: center;
   position: relative;
   @include rwd(1180) {
-    display: block;
     padding: 0 0 50px;
+    display: block;
   }
   .brand_txt {
-    display: flex;
     padding-right: 60px;
+    display: flex;
     @include rwd(1180) {
-      flex-direction: column;
       margin-bottom: 150px;
       padding-right: 0;
+      flex-direction: column;
     }
     h2,
     h3 {
@@ -1246,10 +1257,19 @@ body {
           top: 0;
           left: 46%;
         }
+        @include rwd(400) {
+          width: 90px;
+          height: 1px;
+          top: 0;
+          left: 40%;
+        }
       }
     }
     h3 {
       font-size: 55px;
+      @include rwd(400) {
+        font-size: 40px;
+      }
     }
     &.on {
       @keyframes mm {
@@ -1337,12 +1357,13 @@ body {
     }
   }
   .brand_list {
+    padding-left: 50px;
     display: flex;
     position: relative;
-    padding-left: 50px;
+    
     @include rwd(1180) {
-      flex-direction: column-reverse;
       padding-top: 30px;
+      flex-direction: column-reverse;
     }
     li {
       display: flex;
@@ -1414,10 +1435,10 @@ body {
     }
     button {
       height: 40px;
-      position: relative;
-      padding: 10px;
-      background-color: #fff;
       min-width: 165px;
+      padding: 10px;
+      position: relative;
+      background-color: #fff;
       border: 1px solid #191919;
       border-radius: 50px;
       font-size: 15px;
@@ -1450,11 +1471,11 @@ body {
 
 // field
 .field {
+  padding: 105px 140px 50px;
+  margin: 0 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 105px 140px 50px;
-  margin: 0 30px;
   overflow: hidden;
   @include rwd(1180) {
     padding: 105px 0 50px;
@@ -1468,6 +1489,9 @@ body {
     h2 {
       font-size: 55px;
       letter-spacing: 2.5px;
+      @include rwd(499) {
+        font-size: 40px;
+      }
     }
     p {
       width: 100px;
@@ -1479,6 +1503,9 @@ body {
       font-size: 20px;
       letter-spacing: 2px;
       color: #63bedf;
+      @include rwd(499) {
+        font-size: 15px;
+      }
       &::before {
         content: "";
         width: 100%;
@@ -1500,7 +1527,7 @@ body {
     display: flex;
     justify-content: center;
     overflow: hidden;
-    @include rwd(600){
+    @include rwd(600) {
       justify-content: inherit;
     }
   }
@@ -1528,11 +1555,17 @@ body {
         @include rwd(960) {
           max-width: 1200%;
         }
-        // @include rwd(850) {
-        //   max-width: 1300%;
-        // }
+        @include rwd(800) {
+          max-width: 1100%;
+        }
+        @include rwd(700) {
+          max-width: 1000%;
+        }
         @include rwd(600) {
-          max-width: 700%;
+          max-width: 800%;
+        }
+        @include rwd(400) {
+          max-width: 900%;
         }
       }
     }
@@ -1554,15 +1587,33 @@ body {
         padding-top: 10px;
       }
       @include rwd(1180) {
-        padding-left: 125px;
         margin: 0 auto;
-        
+        padding-left: 125px;
       }
       @include rwd(960) {
         padding-left: 20px;
       }
-      @include rwd(815) {
-
+      @include rwd(800) {
+        padding-left: 80px;
+      }
+      @include rwd(700) {
+        padding-left: 150px;
+      }
+      @include rwd(600) {
+        padding-left: 0px;
+        margin: 0 30px 0 0;
+      }
+      @include rwd(550) {
+        margin: 0 60px 0 0;
+      }
+      @include rwd(510) {
+        margin: 0 90px 0 0;
+      }
+      @include rwd(400) {
+        margin: 0 170px 0 0;
+      }
+      @include rwd(370) {
+        margin: 0 250px 0 0;
       }
     }
     .slick-slide {
@@ -1587,7 +1638,7 @@ body {
           margin-left: 50px;
           border-radius: 30px;
         }
-        @include rwd(600){
+        @include rwd(600) {
           margin: 0 40px;
         }
         img {
@@ -1600,9 +1651,9 @@ body {
     }
     .slick-prev,
     .slick-next {
-      display: flex;
       width: 65px;
       height: 65px;
+      display: flex;
       border: 1px solid rgba(48, 48, 48, 0.2);
       border-radius: 100%;
       cursor: pointer;
@@ -1619,13 +1670,13 @@ body {
       &:hover {
         &::after {
           content: "";
+          width: calc(100% + 1px);
+          height: calc(100% + 1px);
           position: absolute;
           top: -1px;
           left: 0;
           z-index: 1;
           display: block;
-          width: calc(100% + 1px);
-          height: calc(100% + 1px);
           border-top: 2px solid #353535;
           border-radius: 100%;
           animation: vv 1s infinite linear;
@@ -1647,14 +1698,14 @@ body {
       }
     }
     .slick-next {
+      right: -10%;
       &::before {
+        content: ">";
         font-size: 24px;
         position: absolute;
         top: 30%;
-        left: 40%;
-        content: ">";
-      }
-      right: -10%;
+        left: 40%; 
+      }     
       @include rwd(1180) {
         right: 11%;
         top: 40%;
@@ -1680,10 +1731,10 @@ body {
     }
     button {
       height: 40px;
-      position: relative;
-      padding: 10px;
-      background-color: #fff;
       min-width: 165px;
+      padding: 10px;
+      position: relative;
+      background-color: #fff;  
       border: 1px solid #191919;
       border-radius: 50px;
       font-size: 15px;
@@ -1782,6 +1833,9 @@ body {
           h2 {
             font-size: 55px;
             letter-spacing: 2.5px;
+            @include rwd(499) {
+              font-size: 40px;
+            }
           }
           p {
             width: 150px;
@@ -1793,6 +1847,9 @@ body {
             font-size: 20px;
             letter-spacing: 2px;
             color: #63bedf;
+            @include rwd(499) {
+              font-size: 15px;
+            }
             &::before {
               content: "";
               width: 60%;
@@ -1813,6 +1870,9 @@ body {
             top: 110px;
             letter-spacing: 3px;
             line-height: 2;
+            @include rwd(400) {
+              left: -48px;
+            }
           }
           p {
             padding-top: 16px;
@@ -1824,12 +1884,9 @@ body {
               justify-content: center;
             }
             p {
-              font-size: 18px;
               padding: 7px 0 0 15px;
+              font-size: 18px;            
             }
-          }
-          .event_txt{
-            margin-bottom: 20px;
           }
         }
         .event_about {
@@ -1840,10 +1897,14 @@ body {
             bottom: -35%;
           }
           @include rwd(737) {
-            position: absolute;
             bottom: -40%;
           }
-
+          @include rwd(500) {
+            bottom: -60%;
+          }
+          @include rwd(400) {
+            left: 30%;
+          }
           .arrow {
             width: 60px;
             height: 1px;
@@ -1881,10 +1942,10 @@ body {
           }
           button {
             height: 40px;
-            position: relative;
-            padding: 10px;
-            background-color: #fff;
             min-width: 165px;
+            padding: 10px;
+            position: relative;
+            background-color: #fff;
             border: 1px solid #191919;
             border-radius: 50px;
             font-size: 15px;
@@ -1903,6 +1964,10 @@ body {
       top: auto;
       left: 15%;
       bottom: -70px;
+      @include rwd(1600) {
+        position: absolute;
+        bottom: 10px;
+      }
       @include rwd(1180) {
         position: absolute;
         top: 80px;
@@ -1910,6 +1975,9 @@ body {
       }
       @include rwd(700) {
         left: 30%;
+      }
+      @include rwd(400) {
+        left: 10%;
       }
       .slick-active {
         &::after {
@@ -1967,11 +2035,10 @@ body {
 // Rooms
 .rooms {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
   padding: 105px 140px 50px;
   margin: 0 30px;
+  flex-direction: column;
+  align-items: center;
   @include rwd(1180) {
     padding: 105px 0px 50px;
     margin: 0 20px;
@@ -1984,6 +2051,9 @@ body {
     h2 {
       font-size: 55px;
       letter-spacing: 2.5px;
+      @include rwd(499) {
+        font-size: 40px;
+      }
     }
     p {
       width: 100px;
@@ -1995,19 +2065,22 @@ body {
       font-size: 20px;
       letter-spacing: 2px;
       color: #63bedf;
+      @include rwd(499) {
+        font-size: 15px;
+      }
       &::before {
         content: "";
         width: 100%;
-        position: absolute;
-        bottom: 20%;
         height: 1px;
+        position: absolute;
+        bottom: 20%;       
         background-color: #63bedf;
       }
     }
   }
   h3 {
-    letter-spacing: 2.5px;
     padding: 20px 0 50px;
+    letter-spacing: 2.5px;
     &.on {
       animation: ll 2s linear;
     }
@@ -2047,11 +2120,11 @@ body {
           animation: aaa 0.5s linear forwards;
         }
         .open_clous {
-          position: absolute;
           width: calc(100% - 30px);
           height: calc(100% - 20px);
-          top: 0;
           margin: 10px;
+          position: absolute;
+          top: 0;
           display: flex;
           opacity: 0;
           flex-direction: column;
@@ -2148,11 +2221,11 @@ body {
           animation: aaa 0.5s 0.5s linear forwards;
         }
         .open_collection {
-          position: absolute;
           width: calc(100% - 30px);
           height: calc(100% - 20px);
-          top: 0;
           margin: 10px;
+          position: absolute;   
+          top: 0;    
           display: flex;
           opacity: 0;
           flex-direction: column;
@@ -2250,11 +2323,11 @@ body {
           animation: aaa 0.5s 0.8s linear forwards;
         }
         .open_mountain {
-          position: absolute;
           width: calc(100% - 30px);
           height: calc(100% - 20px);
-          top: 0;
           margin: 10px;
+          position: absolute;
+          top: 0;
           display: flex;
           opacity: 0;
           flex-direction: column;
@@ -2352,11 +2425,11 @@ body {
           animation: aaa 0.5s 1.2s linear forwards;
         }
         .open_morioka {
-          position: absolute;
           width: calc(100% - 30px);
           height: calc(100% - 20px);
-          top: 0;
           margin: 10px;
+          position: absolute;
+          top: 0;
           display: flex;
           opacity: 0;
           flex-direction: column;
@@ -2454,11 +2527,11 @@ body {
           animation: aaa 0.5s 1.5s linear forwards;
         }
         .open_reflection {
-          position: absolute;
           width: calc(100% - 30px);
           height: calc(100% - 20px);
-          top: 0;
           margin: 10px;
+          position: absolute;
+          top: 0;
           display: flex;
           opacity: 0;
           flex-direction: column;
@@ -2556,11 +2629,11 @@ body {
           animation: aaa 0.5s 1.7s linear forwards;
         }
         .open_linshan {
-          position: absolute;
           width: calc(100% - 30px);
           height: calc(100% - 20px);
-          top: 0;
           margin: 10px;
+          position: absolute;
+          top: 0;
           display: flex;
           opacity: 0;
           flex-direction: column;
@@ -2700,8 +2773,8 @@ body {
         }
         .number {
           width: 60px;
-          text-align: center;
           margin: 20px auto 0;
+          text-align: center;
           color: #191919;
           border-left: 1px solid #353535;
           border-right: 1px solid #353535;
@@ -2725,8 +2798,8 @@ body {
             font-weight: bolder;
           }
           span {
-            font-weight: bolder;
             padding-left: 10px;
+            font-weight: bolder;           
           }
         }
       }
@@ -2736,9 +2809,9 @@ body {
     }
   }
   .rooms_about {
+    margin-top: 50px;
     position: relative;
     bottom: 15%;
-    margin-top: 50px;
     &.on {
       animation: ll 2s linear;
     }
@@ -2758,10 +2831,10 @@ body {
     }
     button {
       height: 40px;
-      position: relative;
-      padding: 10px;
-      background-color: #fff;
       min-width: 165px;
+      padding: 10px;
+      position: relative;
+      background-color: #fff;
       border: 1px solid #191919;
       border-radius: 50px;
       font-size: 15px;
@@ -2798,13 +2871,13 @@ body {
   display: flex;
   position: relative;
   @include rwd(1180) {
-    display: block;
     padding: 50px 0;
+    display: block;
   }
   .dining_title_m {
     width: 100%;
-    justify-content: center;
     display: none;
+    justify-content: center;
     @include rwd(1180) {
       display: flex;
     }
@@ -2815,6 +2888,9 @@ body {
       font-size: 20px;
       letter-spacing: 2px;
       color: #63bedf;
+      @include rwd(499) {
+        font-size: 15px;
+      }
       &::before {
         content: "";
         height: 1px;
@@ -2830,19 +2906,32 @@ body {
       padding-right: 20px;
       font-size: 55px;
       letter-spacing: 5px;
+      @include rwd(499) {
+        font-size: 40px;
+      }
     }
   }
   .wrap {
     width: 100%;
     max-width: 1540px;
     padding: 0 20px;
+    @include rwd(400) {
+      padding: 0;
+    }
   }
   ul {
     display: flex;
+    margin-left: 50px;
+    @include rwd(960) {
+      margin-left: 0;
+    }
     .slick-track {
       max-width: 500%;
       @include rwd(960) {
         max-width: 1000%;
+      }
+      @include rwd(600) {
+        max-width: 1100%;
       }
     }
     .slick-slide {
@@ -2850,9 +2939,9 @@ body {
     }
     .slick-prev,
     .slick-next {
-      display: flex;
       width: 65px;
       height: 65px;
+      display: flex;
       border: 1px solid rgba(48, 48, 48, 0.2);
       border-radius: 100%;
       cursor: pointer;
@@ -2865,13 +2954,13 @@ body {
       &:hover {
         &::after {
           content: "";
+          width: calc(100% + 1px);
+          height: calc(100% + 1px);
           position: absolute;
           top: -1px;
           left: 0;
           z-index: 1;
           display: block;
-          width: calc(100% + 1px);
-          height: calc(100% + 1px);
           border-top: 2px solid #353535;
           border-radius: 100%;
           animation: vv 1s infinite linear;
@@ -2918,11 +3007,11 @@ body {
         left: 50%;
       }
       &::before {
+        content: ">";
         font-size: 24px;
         position: absolute;
         top: 30%;
         left: 40%;
-        content: ">";
       }
     }
     li {
@@ -2935,12 +3024,25 @@ body {
       @include rwd(750) {
         padding-left: 50px;
       }
+      @include rwd(700) {
+        padding: 0;
+        padding-left: 50px;
+        margin-left: 50px;
+      }
+      @include rwd(600) {
+        padding-left: 0px;
+        margin-left: 35px;
+      }
       .txt {
         padding-right: 30px;
         font-size: 24px;
         text-align: center;
         display: flex;
         flex-direction: column;
+        @include rwd(400) {
+          margin-right: 20px;
+          padding: 0;
+        }
         &:has(.dining_link:hover) {
           .number {
             color: #36af63;
@@ -2980,14 +3082,14 @@ body {
           .dining_more {
             @keyframes eee {
               from {
-                opacity: 0;
                 height: 70%;
                 width: 85%;
+                opacity: 0;
               }
               to {
-                opacity: 1;
                 height: 80%;
                 width: 92%;
+                opacity: 1;
               }
             }
             animation: eee 0.5s linear forwards;
@@ -3002,8 +3104,8 @@ body {
           }
         }
         .dining_more {
-          width: 92%;
-          height: 70%;
+          width: calc(100% - 20px);
+          height: calc(100% - 20px);
           position: absolute;
           border-radius: 20px;
           top: 45%;
@@ -3036,14 +3138,14 @@ body {
           }
         }
         p {
-          border-left: 1px solid #b2b2b2;
-          margin-top: 30px;
           padding-left: 20px;
+          margin-top: 30px;
+          border-left: 1px solid #b2b2b2;
         }
         .team {
+          padding-top: 30px;
           display: flex;
           align-items: center;
-          padding-top: 30px;
           .img {
             img {
               width: 35px;
@@ -3068,15 +3170,21 @@ body {
       }
     }
     .slick-list {
+      width: 75%;
       padding: 55px 20px 20px 35px;
       margin: 0;
-      width: 75%;
       overflow: hidden;
+      @include rwd(1400) {
+        width: 90%;
+      }
       @include rwd(1180) {
         width: 100%;
       }
       @include rwd(599) {
         max-width: 1400px;
+      }
+      @include rwd(400) {
+        padding: 30px 0 0 0;
       }
     }
     .slick-track {
@@ -3088,6 +3196,9 @@ body {
       .slick-current {
         transition: 1s;
         transform: translateY(10%);
+        @include rwd(980) {
+          transform: translateY(0);
+        }
       }
     }
   }
@@ -3135,6 +3246,9 @@ body {
       font-size: 55px;
       letter-spacing: 5px;
       writing-mode: vertical-rl;
+      @include rwd(499) {
+        font-size: 40px;
+      }
     }
     .dining_about {
       position: absolute;
@@ -3164,10 +3278,10 @@ body {
       }
       button {
         height: 40px;
-        position: relative;
-        padding: 10px;
-        background-color: #fff;
         min-width: 165px;
+        padding: 10px;
+        position: relative;
+        background-color: #fff;
         border: 1px solid #191919;
         border-radius: 50px;
         font-size: 15px;
@@ -3236,14 +3350,25 @@ body {
           }
           animation: nnn 1s forwards;
         }
+        @include rwd(400) {
+          @keyframes mmm {
+            from {
+              left: 65%;
+            }
+            to {
+              left: 70%;
+            }
+          }
+          animation: mmm 1s forwards;
+        }
       }
     }
     button {
       height: 40px;
-      position: relative;
-      padding: 10px;
-      background-color: #fff;
       min-width: 165px;
+      padding: 10px;
+      position: relative; 
+      background-color: #fff;
       border: 1px solid #191919;
       border-radius: 50px;
       font-size: 15px;
@@ -3273,6 +3398,9 @@ body {
       @include rwd(740) {
         left: 58%;
       }
+      @include rwd(400) {
+        left: 65%;
+      }
     }
   }
 }
@@ -3285,6 +3413,9 @@ body {
   }
   @include rwd(960) {
     padding-left: 20px;
+  }
+  @include rwd(400) {
+    padding-right: 10px;
   }
   .footer_box {
     width: 100%;
@@ -3299,6 +3430,9 @@ body {
     @include rwd(960) {
       border-radius: 15px;
     }
+    @include rwd(400) {
+      padding: 130px 0 90px 10px;
+    }
     .wrap {
       width: 100%;
       max-width: 1200px;
@@ -3312,6 +3446,9 @@ body {
         flex-direction: column;
         align-items: center;
       }
+      @include rwd(400) {
+        display: block;
+      }
       .go_top {
         position: absolute;
         top: -10%;
@@ -3322,6 +3459,9 @@ body {
         opacity: 0;
         @include rwd(1180) {
           right: 2%;
+        }
+        @include rwd(400) {
+          opacity: 1;
         }
         @keyframes ddd {
           from {
@@ -3360,15 +3500,15 @@ body {
           }
         }
         h2 {
+          padding-left: 20px;
           writing-mode: vertical-lr;
           font-size: 18px;
-          letter-spacing: 2.5px;
-          padding-left: 20px;
+          letter-spacing: 2.5px;     
         }
         a {
-          position: absolute;
           width: 100%;
           height: 100%;
+          position: absolute;
         }
       }
       .left_box {
@@ -3378,23 +3518,23 @@ body {
           cursor: pointer;
           position: relative;
           a {
-            position: absolute;
-            left: 0;
             width: 100%;
             height: 100%;
+            position: absolute;
+            left: 0;
           }
         }
         .title {
-          font-size: 24px;
           padding-top: 36px;
+          font-size: 24px;
           letter-spacing: 2.5px;
           h2 {
             font-weight: bolder;
           }
         }
         p {
-          font-size: 14px;
           padding-top: 18px;
+          font-size: 14px;
           color: #191919;
         }
         .txt {
@@ -3417,6 +3557,9 @@ body {
                 color: #63bedf;
               }
             }
+          }
+          @include rwd(960) {
+            display: none;
           }
         }
         @keyframes ccc {
@@ -3457,12 +3600,12 @@ body {
             cursor: pointer;
             &::after {
               content: "";
+              width: 0;
+              height: 1px;
               position: absolute;
               bottom: -2px;
               left: 0;
               display: block;
-              width: 0;
-              height: 1px;
               background: #191919;
               transition: all 0.5s linear;
             }
@@ -3474,8 +3617,8 @@ body {
           }
         }
         .message {
-          display: flex;
           padding: 6px 0;
+          display: flex;
           p {
             margin-left: 20px;
           }
@@ -3512,22 +3655,22 @@ body {
           white-space: nowrap;
         }
         ul {
-          display: flex;
-          flex-wrap: wrap;
-          max-width: 285px;
           width: 100%;
+          max-width: 285px;
+          display: flex;
+          flex-wrap: wrap; 
           li {
-            padding-bottom: 25px;
             width: 50%;
+            padding-bottom: 25px;
             cursor: pointer;
             position: relative;
             &::after {
               content: "";
+              width: 0;
+              height: 1px;
               position: absolute;
               left: 0;
               display: block;
-              width: 0;
-              height: 1px;
               background: #191919;
               transition: all 0.5s linear;
             }
