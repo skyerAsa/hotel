@@ -681,6 +681,7 @@ body {
                         padding-right: 10px;
                     }
                     .slide_need {
+                      cursor: pointer;
                         transform: rotate(0);
                         z-index: 2;
                         &.off {

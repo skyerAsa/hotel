@@ -869,6 +869,7 @@ body:has(.privacy_option.on) {
   padding-right: 10px;
 }
 .privacy_option .wrap .txt .need .need_txt .slide_need {
+  cursor: pointer;
   transform: rotate(0);
   z-index: 2;
 }
