@@ -12,6 +12,9 @@ body {
     }
     &:has(.start_ad.on) {
         overflow-y: hidden;
+        @include rwd(540){
+          overflow-y: auto;
+        }
     }
     &:has(.privacy_option.on) {
         overflow-y: hidden;
@@ -42,6 +45,7 @@ body {
     }
     &.on {
         display: block;
+        
         @keyframes pp {
             from {
                 z-index: 999;
@@ -80,6 +84,11 @@ body {
     }
     &.off {
         display: none;
+    }
+    @include rwd(540){
+      &.on{
+        display: none;
+      }
     }
     .mask {
         width: 100%;
@@ -517,16 +526,16 @@ body {
     position: fixed;
     z-index: 21;
     display: none;
-    &.on{
-      display: block;
+    &.on {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .wrap {
         max-width: 700px;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         background-color: #fff;
+        // margin: 0 20px;
         .privacy_close {
             width: 30px;
             height: 30px;
@@ -565,10 +574,16 @@ body {
                 position: relative;
                 display: flex;
                 justify-content: center;
+                @include rwd(540) {
+                    flex-direction: column;
+                }
                 .cookies,
                 .all_allow {
                     width: 50%;
                     position: relative;
+                    @include rwd(540) {
+                        width: 100%;
+                    }
                 }
                 button {
                     height: 40px;
@@ -585,6 +600,11 @@ body {
                     text-align: center;
                     color: #000;
                     cursor: pointer;
+                    @include rwd(540) {
+                        width: 100%;
+                        position: relative;
+                        margin-bottom: 10px;
+                    }
                 }
                 .arrow {
                     width: 60px;
@@ -593,6 +613,11 @@ body {
                     position: absolute;
                     right: 15%;
                     bottom: -20px;
+                    @include rwd(540) {
+                        right: 1%;
+                        bottom: auto;
+                        top: 21px;
+                    }
                     &::before {
                         content: "";
                         width: 1px;
@@ -649,88 +674,85 @@ body {
                         font-weight: bolder;
                     }
                 }
-
-                .need_txt{
-                  display: flex;
-                  p {
-                    color: #63bedf;
-                    padding-right: 10px;
+                .need_txt {
+                    display: flex;
+                    p {
+                        color: #63bedf;
+                        padding-right: 10px;
+                    }
+                    .slide_need {
+                        transform: rotate(0);
+                        z-index: 2;
+                        &.off {
+                            transform: rotate(90deg);
+                        }
+                    }
                 }
-                .slide_need{
-                  transform: rotate(0);
-          z-index: 2;
-                  &.off{
-                    transform: rotate(90deg);
-                  }
-                }
-                }
-              
             }
             .manage_txt {
                 background-color: #e1e1e1;
                 padding: 18px 15px;
                 font-size: 15px;
                 line-height: 1.35;
-                transition:all 1s linear;
-              &.off{
-transform: translateY(-20%);
-opacity: 0;
-              }
-            }
-            .choose{
-              padding-top: 20px;
-              transition:all 1s linear;
-              &.on{
-                transform:translateY(-100%);
-              }
-              &:hover {
-                button {
-                    color: #36af63;
-                    border-color: #36af63;
+                transition: all 1s linear;
+                &.off {
+                    transform: translateY(-20%);
+                    opacity: 0;
                 }
-                .arrow {
-                  transition: left 0.5s;
-                  left: 160px;
-                    background-color: #36af63;
-                    &::before {
+            }
+            .choose {
+                padding-top: 20px;
+                transition: all 1s linear;
+                &.on {
+                    transform: translateY(-100%);
+                }
+                &:hover {
+                    button {
+                        color: #36af63;
+                        border-color: #36af63;
+                    }
+                    .arrow {
+                        transition: left 0.5s;
+                        left: 160px;
                         background-color: #36af63;
+                        &::before {
+                            background-color: #36af63;
+                        }
                     }
                 }
-            }
-              button {
-                height: 40px;
-                min-width: 180px;
-                padding: 10px;
-                position: relative;
-                background-color: transparent;
-                border: 1px solid #000;
-                border-radius: 50px;
-                font-size: 15px;
-                font-weight: 400;
-                letter-spacing: 1px;
-                text-align: center;
-                color: #000;
-                cursor: pointer;
-                
-            }
-            .arrow {
-                width: 60px;
-                height: 1px;
-                background-color: #000;
-                position: relative;
-                left: 135px;
-                top: -18px;
-                &::before {
-                    content: "";
-                    width: 1px;
-                    height: 15px;
-                    position: absolute;
-                    right: 3px;
-                    bottom: -1px;
-                    background-color: #000;
-                    transform: rotate(135deg);
+                button {
+                    height: 40px;
+                    min-width: 180px;
+                    padding: 10px;
+                    position: relative;
+                    background-color: transparent;
+                    border: 1px solid #000;
+                    border-radius: 50px;
+                    font-size: 15px;
+                    font-weight: 400;
+                    letter-spacing: 1px;
+                    text-align: center;
+                    color: #000;
+                    cursor: pointer;
                 }
-            }
+                .arrow {
+                    width: 60px;
+                    height: 1px;
+                    background-color: #000;
+                    position: relative;
+                    left: 135px;
+                    top: -18px;
+                    &::before {
+                        content: "";
+                        width: 1px;
+                        height: 15px;
+                        position: absolute;
+                        right: 3px;
+                        bottom: -1px;
+                        background-color: #000;
+                        transform: rotate(135deg);
+                    }
+                }
             }
         }
     }
@@ -1380,6 +1402,9 @@ opacity: 0;
             position: relative;
             display: flex;
             justify-content: center;
+            @include rwd(540) {
+                flex-direction: column;
+            }
             button {
                 height: 40px;
                 min-width: 165px;
@@ -1394,6 +1419,9 @@ opacity: 0;
                 text-align: center;
                 color: #fff;
                 cursor: pointer;
+                @include rwd(540) {
+                    width: 90%;
+                }
             }
             .arrow {
                 width: 60px;
@@ -1402,6 +1430,9 @@ opacity: 0;
                 position: relative;
                 left: 135px;
                 top: -18px;
+                @include rwd(540) {
+                    left: 85%;
+                }
                 &::before {
                     content: "";
                     width: 1px;
@@ -1421,7 +1452,7 @@ opacity: 0;
                     }
                     .arrow {
                         transition: left 0.5s;
-                        left: 160px;
+                        left: 90%;
                         background-color: #36af63;
                         &::before {
                             background-color: #36af63;
@@ -1431,6 +1462,9 @@ opacity: 0;
             }
             .all_allow {
                 padding-left: 100px;
+                @include rwd(540) {
+                    padding-left: 0;
+                }
                 &:hover {
                     button {
                         color: #36af63;
@@ -1438,7 +1472,7 @@ opacity: 0;
                     }
                     .arrow {
                         transition: left 0.5s;
-                        left: 160px;
+                        left: 90%;
                         background-color: #36af63;
                         &::before {
                             background-color: #36af63;
@@ -1816,6 +1850,9 @@ opacity: 0;
                 }
                 @include rwd(400) {
                     max-width: 900%;
+                }
+                @include rwd(350) {
+                    max-width: 800%;
                 }
             }
         }
@@ -3156,9 +3193,6 @@ opacity: 0;
             @include rwd(960) {
                 max-width: 1000%;
             }
-            @include rwd(600) {
-                max-width: 1100%;
-            }
         }
         .slick-slide {
             max-width: 900px;
@@ -3665,8 +3699,8 @@ opacity: 0;
                 justify-content: center;
             }
             @include rwd(840) {
+                flex-wrap: nowrap;
                 flex-direction: column;
-                align-items: center;
             }
             @include rwd(400) {
                 display: block;

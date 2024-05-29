@@ -25,7 +25,6 @@
 
     <body>
         <div id="app" class="all_body">
-
             <!-- header -->
             <div class="header">
                 <div class="img">
@@ -201,7 +200,7 @@
             <!-- label_list -->
             <div class="label_list">
                 <ul>
-                    <li class="ligo_brand">
+                    <li class="logo_brand">
                         <h2>品牌介紹</h2>
                         <a href="#brand"></a>
                     </li>
@@ -865,6 +864,7 @@
                     $(".burger").on("click", function() {
                         $(".menu").toggleClass("on");
                         $(".menu_bg").toggleClass("on");
+                        $(".header").removeClass("on");
                     });
                     $(".language_box").on("click", function() {
                         $(".language_list").toggleClass("on");
@@ -902,8 +902,8 @@
 
                 function reportWindowSize() {
 
-                    if (window.innerWidth > 50) {
-                        $(".header").addClass("on");
+                    if (window.innerWidth < 500) {
+                        $(".start_ad").removeClass("on");
                     }
                 }
                 window.onresize = reportWindowSize;
@@ -920,13 +920,13 @@
                 }
 
                 function showMenu() {
-                    if ($(window).scrollTop() > 150) {
+                    if ($(window).scrollTop() > 300) {
                         $(".header").addClass("on");
 
                     } else {
                         $(".header").removeClass("on");
                     }
-                    if ($(window).scrollTop() > 150) {
+                    if ($(window).scrollTop() > 300) {
                         $(".header_m").addClass("on");
 
                     } else {
@@ -937,21 +937,21 @@
                         $(".brand_list").addClass("on");
                         $(".brand_img").addClass("on");
                         $(".label_list").addClass("on");
-                        $(".ligo_brand").addClass("on");
+                        $(".logo_brand").addClass("on");
                     } else {
                         $(".brand_txt").removeClass("on");
                         $(".brand_list").removeClass("on");
                         $(".brand_img").removeClass("on");
                         $(".label_list").removeClass("on");
-                        $(".ligo_brand").removeClass("on");
+                        $(".logo_brand").removeClass("on");
                     }
 
                     if ($(window).scrollTop() > 650) {
                         $(".label_list").addClass("on");
-                        $(".ligo_brand").addClass("on");
+                        $(".logo_brand").addClass("on");
                     } else {
                         $(".label_list").removeClass("on");
-                        $(".ligo_brand").removeClass("on");
+                        $(".logo_brand").removeClass("on");
                     }
 
                     if ($(window).scrollTop() > 1300) {
@@ -962,7 +962,7 @@
 
                     if ($(window).scrollTop() > 1500) {
                         $(".environment").addClass("on");
-                        $(".ligo_brand").removeClass("on");
+                        $(".logo_brand").removeClass("on");
                         $(".serve").removeClass("on");
                     } else {
                         $(".environment").removeClass("on");
@@ -972,7 +972,7 @@
                         $(".events").addClass("on");
                         $(".serve").addClass("on");
                         $(".environment").removeClass("on");
-                        $(".ligo_brand").removeClass("on");
+                        $(".logo_brand").removeClass("on");
                     } else {
                         $(".events").removeClass("on");
                     }
@@ -1004,7 +1004,7 @@
                         $(".stay").addClass("on");
                         $(".serve").removeClass("on");
                         $(".environment").removeClass("on");
-                        $(".ligo_brand").removeClass("on");
+                        $(".logo_brand").removeClass("on");
                     } else {
                         $(".stay").removeClass("on");
                     }
@@ -1019,7 +1019,7 @@
                         $(".stay").removeClass("on");
                         $(".serve").removeClass("on");
                         $(".environment").removeClass("on");
-                        $(".ligo_brand").removeClass("on");
+                        $(".logo_brand").removeClass("on");
                     } else {
                         $(".food").removeClass("on");
                     }
@@ -1041,7 +1041,7 @@
                         $(".stay").removeClass("on");
                         $(".serve").removeClass("on");
                         $(".environment").removeClass("on");
-                        $(".ligo_brand").removeClass("on");
+                        $(".logo_brand").removeClass("on");
                     } else {
                         $(".activity").removeClass("on");
                     }
