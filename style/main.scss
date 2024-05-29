@@ -172,7 +172,7 @@ body {
     .wrap {
         height: 100%;
         position: relative;
-        .header_box {
+        .menu_box {
             position: absolute;
             right: 2%;
             top: 10%;
@@ -865,8 +865,8 @@ body {
             position: relative;
             cursor: pointer;
             &:hover {
-                border: 1px solid rgba($color: #fff, $alpha: 0.5);
-                color: rgba($color: #fff, $alpha: 0.5);
+                border: 1px solid rgba($color: #000, $alpha: 0.5);
+                color: rgba($color: #000, $alpha: 0.5);
             }
             p {
                 padding-top: 20px;
