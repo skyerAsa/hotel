@@ -64,6 +64,7 @@
                     </div>
                 </div>
             </div>
+            <!-- menu_bg -->
             <div class="menu_bg">
                 <div class="wrap">
                     <div class="header_box">
@@ -138,6 +139,45 @@
                     </div>
                 </div>
             </div>
+            <!-- privacy_option -->
+            <div class="privacy_option">
+                <div class="wrap">
+                    <div class="privacy_close">
+                    </div>
+                    <div class="txt">
+                        <h2>隱私權偏好設定中心</h2>
+                        <p>依據歐盟施行的個人資料保護法，我們致力於保護您的個人資料並提供您對個人資料的掌握。 </p>
+                        <p>按一下「全部接受」，代表您允許我們置放 Cookie 來提升您在本網站上的使用體驗、協助我們分析網站效能和使用狀況，以及讓我們投放相關聯的行銷內容。您可以在下方管理 Cookie 設定。 按一下「確認」即代表您同意採用目前的設定。</p>
+                        <div class="privacy_about">
+                            <div class="cookies">
+                                <button>管理Cookies</button>
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="all_allow">
+                                <button class="all_allow_button">全部接受</button>
+                                <div class="arrow"></div>
+                            </div>
+                        </div>
+                        <h2 class="manage">管理同意設定</h2>
+                        <div class="need">
+                            <h3><span>必要的</span>Cookie</h3>
+                            <div class="need_txt">
+                            <p>一律啟用<div class="slide_need">></div></p>
+                        </div>
+                        </div>
+                        <div class="manage_txt">
+                            <p>
+                                網站運行離不開這些 Cookie 且您不能在系統中將其關閉。通常僅根據您所做出的操作（即服務請求）來設置這些 Cookie，如設置隱私偏好、登錄或填充表格。您可以將您的瀏覽器設置為阻止或向您提示這些 Cookie，但可能會導致某些網站功能無法工作。
+                            </p>
+                        </div>
+                        <div class="choose">
+                            <button class="confirm_choose">確認選擇</button>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- start_bg -->
             <div class="start_bg">
                 <div class="img">
                     <img src="img/logo.png" alt="">
@@ -158,6 +198,7 @@
                 </div>
 
             </div>
+            <!-- label_list -->
             <div class="label_list">
                 <ul>
                     <li class="ligo_brand">
@@ -408,7 +449,7 @@
                                     <h2>同事</h2>
                                     <p>Conference</p>
                                 </div>
-                                <p >離開辦公室、辦公桌，接近自然也能辦公事。</p>
+                                <p>離開辦公室、辦公桌，接近自然也能辦公事。</p>
                             </div>
                             <div class="event_about">
                                 <button>了解更多</button>
@@ -831,9 +872,30 @@
                     $(".inner_close").on("click", function() {
                         $(".start_ad").toggleClass("off");
                         $(".start_ad").removeClass("on");
+
                     });
-                    $(".all_allow_button").on("click", function() {
+                    $(".privacy_close").on("click", function() {
+                        $(".privacy_option").removeClass("on");
+                    });
+                    $(".choose").on("click", function() {
+                        $(".privacy_option").removeClass("on");
                         $(".remind").toggleClass("off");
+                    });
+                    
+                    $(".all_allow_button").on("click", function() {
+                        $(".privacy_option").removeClass("on");
+                        $(".remind").toggleClass("off");
+                    });
+                    $(".language_box").on("click", function() {
+                        $(".language_list").toggleClass("on");
+                    });
+                    $(".hd_about").on("click", function() {
+                        $(".privacy_option").toggleClass("on");
+                    });
+                    $(".slide_need").on("click", function() {
+                        $(".slide_need").toggleClass("off");
+                        $(".manage_txt").toggleClass("off");
+                        $(".choose").toggleClass("on");
                     });
                 });
                 const widthOutput = document.querySelector("#menu_list");
@@ -905,7 +967,7 @@
                     } else {
                         $(".environment").removeClass("on");
                     }
-                    
+
                     if ($(window).scrollTop() > 2500) {
                         $(".events").addClass("on");
                         $(".serve").addClass("on");
@@ -952,7 +1014,7 @@
                         $(".dining_title").removeClass("on");
                     }
 
-                    if ($(window).scrollTop() > 4500) {
+                    if ($(window).scrollTop() > 4000) {
                         $(".food").addClass("on");
                         $(".stay").removeClass("on");
                         $(".serve").removeClass("on");
@@ -962,7 +1024,7 @@
                         $(".food").removeClass("on");
                     }
 
-                    if ($(window).scrollTop() > 5000) {
+                    if ($(window).scrollTop() > 4700) {
                         $(".left_box").addClass("on");
                         $(".middle_box").addClass("on");
                         $(".right_box").addClass("on");
@@ -973,7 +1035,7 @@
                         $(".right_box").removeClass("on");
                         $(".go_top").removeClass("on")
                     }
-                    if ($(window).scrollTop() > 5000) {
+                    if ($(window).scrollTop() > 4700) {
                         $(".activity").addClass("on");
                         $(".food").removeClass("on");
                         $(".stay").removeClass("on");
@@ -985,52 +1047,52 @@
                     }
 
 
-                    if ($(window).scrollTop() > 500) {
+                    if ($(window).scrollTop() > 250) {
                         $(".scroll_img").addClass("on");
                     } else {
                         $(".scroll_img").removeClass("on");
                     }
-                    if ($(window).scrollTop() > 650) {
+                    if ($(window).scrollTop() > 250) {
                         $(".scroll_img").addClass("aa");
                     } else {
                         $(".scroll_img").removeClass("aa");
                     }
-                    if ($(window).scrollTop() > 800) {
+                    if ($(window).scrollTop() > 300) {
                         $(".scroll_img").addClass("bb");
                     } else {
                         $(".scroll_img").removeClass("bb");
                     }
-                    if ($(window).scrollTop() > 950) {
+                    if ($(window).scrollTop() > 450) {
                         $(".scroll_img").addClass("cc");
                     } else {
                         $(".scroll_img").removeClass("cc");
                     }
-                    if ($(window).scrollTop() > 1100) {
+                    if ($(window).scrollTop() > 600) {
                         $(".scroll_img").addClass("dd");
                     } else {
                         $(".scroll_img").removeClass("dd");
                     }
-                    if ($(window).scrollTop() > 1250) {
+                    if ($(window).scrollTop() > 750) {
                         $(".scroll_img").addClass("ee");
                     } else {
                         $(".scroll_img").removeClass("ee");
                     }
-                    if ($(window).scrollTop() > 1400) {
+                    if ($(window).scrollTop() > 900) {
                         $(".scroll_img").addClass("ff");
                     } else {
                         $(".scroll_img").removeClass("ff");
                     }
-                    if ($(window).scrollTop() > 1550) {
+                    if ($(window).scrollTop() > 1050) {
                         $(".scroll_img").addClass("gg");
                     } else {
                         $(".scroll_img").removeClass("gg");
                     }
-                    if ($(window).scrollTop() > 1700) {
+                    if ($(window).scrollTop() > 1200) {
                         $(".scroll_img").addClass("hh");
                     } else {
                         $(".scroll_img").removeClass("hh");
                     }
-                    if ($(window).scrollTop() > 1850) {
+                    if ($(window).scrollTop() > 1350) {
                         $(".scroll_img").addClass("ii");
                     } else {
                         $(".scroll_img").removeClass("ii");
