@@ -217,12 +217,12 @@ body:has(.privacy_option.on) {
 }
 .start_bg.on {
   display: block;
-  animation: pp 3s linear;
+  animation: pp 2s linear;
 }
 @keyframes pp {
   from {
     z-index: 999;
-    opacity: 0;
+    opacity: 1;
   }
   to {
     z-index: 999;

@@ -49,14 +49,14 @@ body {
         @keyframes pp {
             from {
                 z-index: 999;
-                opacity: 0;
+                opacity: 1;
             }
             to {
                 z-index: 999;
                 opacity: 1;
             }
         }
-        animation: pp 3s linear;
+        animation: pp 2s linear;
         .img {
             display: flex;
             align-items: center;
