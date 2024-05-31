@@ -64,6 +64,8 @@
                 </div>
             </div>
             <!-- menu_bg -->
+            <div class="menu_black">
+            </div>
             <div class="menu_bg">
                 <div class="wrap">
                     <div class="menu_box">
@@ -81,7 +83,7 @@
                         </div>
                     </div>
                     <div class="menu_bg_list">
-                        <ul>
+                        <ul class="menu_item">
                             <li>
                                 <h2>Hotel Introduction</h2>
                                 <p>飯店簡介</p>
@@ -108,36 +110,39 @@
                             </li>
                         </ul>
                         <div class="top_box">
-                            <div class="message address">
-                                <h2>ADD.</h2>
-                                <p>苗栗縣通霄鎮南和里165-5號</p>
+                            <div class="top_menu">
+                                <div class="message address">
+                                    <h2>ADD.</h2>
+                                    <p>苗栗縣通霄鎮南和里165-5號</p>
+                                </div>
+                                <div class="message tel">
+                                    <h2>TEL.</h2>
+                                    <p>037-783-899</p>
+                                </div>
+                                <div class="message">
+                                    <h2>FAX.</h2>
+                                    <p>037-783-288</p>
+                                </div>
+                                <div class="message email">
+                                    <h2>EMAIL.</h2>
+                                    <p>service@woodland.com.tw</p>
+                                </div>
                             </div>
-                            <div class="message tel">
-                                <h2>TEL.</h2>
-                                <p>037-783-899</p>
-                            </div>
-                            <div class="message">
-                                <h2>FAX.</h2>
-                                <p>037-783-288</p>
-                            </div>
-                            <div class="message email">
-                                <h2>EMAIL.</h2>
-                                <p>service@woodland.com.tw</p>
-                            </div>
-                            <div class="message">
+                            <div class="message menu_link">
                                 <div class="img">
                                     <i class="fa fa-facebook-square"></i>
                                     <i class="fa fa-instagram"></i>
                                     <i class="fa-brands fa-line"></i>
                                 </div>
                             </div>
-                            <div class="message ">
+                            <div class="message menu_footer">
                                 <p>Copyright © 2024 舞牛森度假飯店 All Rights Reserved.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <!-- privacy_option -->
             <div class="privacy_option">
                 <div class="wrap">
@@ -161,8 +166,10 @@
                         <div class="need">
                             <h3><span>必要的</span>Cookie</h3>
                             <div class="need_txt">
-                            <p>一律啟用<div class="slide_need">></div></p>
-                        </div>
+                                <p>一律啟用
+                                    <div class="slide_need">></div>
+                                </p>
+                            </div>
                         </div>
                         <div class="manage_txt">
                             <p>
@@ -696,7 +703,7 @@
                             </div>
                             <div class="img">
                                 <div class="img_item">
-                                    <img src="img/DSC025562__24A23JsIiN.jpg" alt="">
+                                    <img src="img/DSC0422502-HDR__24E19u7iOR.jpg" alt="">
                                 </div>
                                 <div class="dining_more">
                                     <img src="img/logo_cow.png" alt="">
@@ -865,6 +872,12 @@
                         $(".menu").toggleClass("on");
                         $(".menu_bg").toggleClass("on");
                         $(".header").removeClass("on");
+                        $(".menu_black").toggleClass("on");
+                        $(".menu_item").toggleClass("on");
+                        $(".top_menu").toggleClass("on");
+                        $(".menu_link").toggleClass("on");
+                        $(".menu_footer").toggleClass("on");
+
                     });
                     $(".language_box").on("click", function() {
                         $(".language_list").toggleClass("on");
@@ -881,12 +894,12 @@
                         $(".privacy_option").removeClass("on");
                         $(".remind").toggleClass("off");
                     });
-                    
+
                     $(".all_allow_button").on("click", function() {
                         $(".privacy_option").removeClass("on");
                         $(".remind").toggleClass("off");
                     });
-                    $(".hd_about").on("click", function() {
+                    $(".cookies").on("click", function() {
                         $(".privacy_option").toggleClass("on");
                     });
                     $(".slide_need").on("click", function() {
@@ -965,7 +978,7 @@
                         $(".serve").addClass("on");
                         $(".environment").removeClass("on");
                         $(".logo_brand").removeClass("on");
-                    } 
+                    }
                     if ($(window).scrollTop() > 3000) {
                         $(".rooms_title").addClass("on");
                         $(".rooms_about").addClass("on");
@@ -989,7 +1002,7 @@
                     }
                     if ($(window).scrollTop() > 4000) {
                         $(".dining_title").addClass("on");
-                    } 
+                    }
 
                     if ($(window).scrollTop() > 4000) {
                         $(".food").addClass("on");
