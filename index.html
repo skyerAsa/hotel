@@ -38,8 +38,11 @@
                 </div>
                 <div class="header_box">
                     <div class="language_box">
-                        <h2>Language</h2>
-                        <p>></p>
+                        <div class="language_txt">
+                            <h2>Language</h2>
+                            <p>></p>
+                        </div>
+
                         <ul class="language_list">
                             <li>繁</li>
                             <li>EN</li>
@@ -70,8 +73,11 @@
                 <div class="wrap">
                     <div class="menu_box">
                         <div class="language_box">
-                            <h2>Language</h2>
-                            <p>></p>
+                            <div class="language_txt">
+                                <h2>Language</h2>
+                                <p>></p>
+                            </div>
+
                             <ul class="language_list">
                                 <li>繁</li>
                                 <li>EN</li>
@@ -208,26 +214,32 @@
             <div class="label_list">
                 <ul>
                     <li class="logo_brand">
+                        <div class="line"></div>
                         <h2>品牌介紹</h2>
                         <a href="#brand"></a>
                     </li>
                     <li class="environment">
+                        <div class="line"></div>
                         <h2>環境介紹</h2>
                         <a href="#field"></a>
                     </li>
                     <li class="serve">
+                        <div class="line"></div>
                         <h2>服務與措施</h2>
                         <a href="#events"></a>
                     </li>
                     <li class="stay">
+                        <div class="line"></div>
                         <h2>住宿介紹</h2>
                         <a href="#rooms"></a>
                     </li>
                     <li class="food">
+                        <div class="line"></div>
                         <h2>餐飲介紹</h2>
                         <a href="#dining"></a>
                     </li>
                     <li class="activity">
+                        <div class="line"></div>
                         <h2>訊息與活動</h2>
                         <a href="#footer"></a>
                     </li>
@@ -276,7 +288,9 @@
 
                 <div class="scoll">
                     <h2>Scroll to Discover</h2>
-                    <div class="circle"></div>
+                    <div class="circle">
+                        <a href="#brand"></a>
+                    </div>
                 </div>
                 <div class="hd_news">
                     <h2>NEWS</h2>
@@ -808,30 +822,32 @@
                         </div>
                         <div class="middle_box">
                             <div class="title">CONTACT</div>
-                            <div class="message address">
-                                <h2>ADD.</h2>
-                                <p>苗栗縣通霄鎮南和里165-5號</p>
-                            </div>
-                            <div class="message tel">
-                                <h2>TEL.</h2>
-                                <p>037-783-899</p>
-                            </div>
-                            <div class="message">
-                                <h2>FAX.</h2>
-                                <p>037-783-288</p>
-                            </div>
-                            <div class="message email">
-                                <h2>EMAIL.</h2>
-                                <p>service@woodland.com.tw</p>
-                            </div>
-                            <div class="message">
-                                <h2>SNS.</h2>
-                                <div class="img">
-                                    <i class="fa fa-facebook-square"></i>
-                                    <i class="fa fa-instagram"></i>
-                                    <i class="fa-brands fa-line"></i>
-                                </div>
-                            </div>
+                            <ul>
+                                <li class="message address">
+                                    <h2>ADD.</h2>
+                                    <p>苗栗縣通霄鎮南和里165-5號</p>
+                                </li>
+                                <li class="message tel">
+                                    <h2>TEL.</h2>
+                                    <p>037-783-899</p>
+                                </li>
+                                <li class="message">
+                                    <h2>FAX.</h2>
+                                    <p>037-783-288</p>
+                                </li>
+                                <li class="message email">
+                                    <h2>EMAIL.</h2>
+                                    <p>service@woodland.com.tw</p>
+                                </li>
+                                <li class="message">
+                                    <h2>SNS.</h2>
+                                    <div class="img">
+                                        <i class="fa fa-facebook-square"></i>
+                                        <i class="fa fa-instagram"></i>
+                                        <i class="fa-brands fa-line"></i>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                         <div class="right_box">
                             <div class="title">SITE CONTENTS</div>
@@ -880,6 +896,7 @@
 
                     });
                     $(".language_box").on("click", function() {
+
                         $(".language_list").toggleClass("on");
                     });
                     $(".inner_close").on("click", function() {
