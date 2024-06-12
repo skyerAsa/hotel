@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://web.cdn.openinstall.io/openinstall.js"></script>
+    <script
+      src="https://kit.fontawesome.com/64fccb9e01.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="
+    https://cdn.jsdelivr.net/npm/jquery.session@1.0.0/jquery.session.min.js
+    "></script>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div class="headerpage"></div>
+    <!-- introduction_bg -->
+    <div class="introduction_bg">
+      <div class="img">
+        <img src="img/DSC036922__24A22XbgjX.jpg" alt="" />
+        <div class="title">
+          <h2>飯店簡介</h2>
+          <h1>INTRODUCTION</h1>
+          <h1>HOTEL</h1>
+        </div>
+
+        <div class="txt">
+          <a href="/">
+            <i class="fa fa-home"></i>
+            <p>首頁</p>
+          </a>
+          <span>飯店簡介</span>
+          <span>品牌介紹</span>
+        </div>
+      </div>
+    </div>
+    <!-- main -->
+    <div class="introduction_main">
+      <div class="title">品牌介紹</div>
+      <h2>沉浸於森林草原中</h2>
+      <div class="txt">
+        <span>「舞牛森」是飛牛牧場的2.0，</span>
+        <span>牛群不僅飛起來，而且還能舞動，創造更多的可能性。</span>
+        <span>我們希望未來牧場的環境越來越好，生物樣態愈來愈多元，</span>
+        <span>成為美麗的森林牧場。</span>
+        <p>新的視野與感受，悄然而生。</p>
+      </div>
+      <h2>創造復興活力的棲家領域</h2>
+      <div class="txt_item">
+        <span
+          >在遠離塵囂的深山叢林中，藏匿著一座寧靜而奇幻的度假飯店，宛如人間仙境的一角。</span
+        >
+        <span
+          >這片神秘的森林環境彷彿是大自然的擁抱，樹林間鳥語花香，微風拂過，帶來悠然的寧靜。</span
+        >
+        <span>這裡是淨化身心靈、尋找內在平靜的理想之地。</span>
+        <span
+          >踏入舞牛森，首先映入眼簾的是翠綠的樹影，這裡的建築融入自然，採用環保材料，與周遭的自然環境融為一體。</span
+        >
+        <span
+          >擁有舒適寬敞的客房，每一扇窗戶都是一幅自然畫卷，讓您在入眠前能夠欣賞到星空閃爍的美景。</span
+        >
+        <span
+          >在這裡，食材的選用更是講究，主打低距食材，確保每一道菜餚都是來自當地的新鮮食材，保留了自然的原始風味。</span
+        >
+        <span
+          >舞牛森的廚師團隊專業而用心，將當季的食材巧妙搭配，打造出一道道色香味俱佳的健康料理。</span
+        >
+        <span
+          >無論是清爽的沙拉還是濃郁的湯品，每一口都是對身體的呵護，為您帶來美好的味蕾饗宴。</span
+        >
+        <span
+          >晨間，在森林中漫步，聆聽大自然的聲音，感受清新的空氣，讓自己沉浸在大自然的懷抱中。</span
+        >
+        <span>讓您在寧靜的環境中，找回內在的平靜，達到身心靈的和諧。</span>
+        <span>而當夜幕降臨，舞牛森的燈光柔和，星空璀璨。</span>
+        <span
+          >在露天的庭院中，點燃一盞燈籠，細細品味一杯香濃的茶，感受自然界的神秘魅力。</span
+        >
+        <span
+          >或者，您也可以在舒適的休息區中，閱讀一本書籍，享受片刻的寧靜和放鬆。</span
+        >
+      </div>
+    </div>
+    <!-- footer -->
+    <div class="footerpage"></div>
+  </body>
+</html>
+<script>
+  $(function () {
+    $(".headerpage").load("header.html");
+    $(".footerpage").load("footer.html");
+  });
+</script>
+<style lang="scss" scoped>
+  .introduction_bg {
+    padding-left: 140px;
+    position: relative;
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: black;
+      opacity: 0.2;
+    }
+    .title {
+      position: absolute;
+      top: 15%;
+      left: 45%;
+      writing-mode: vertical-lr;
+      color: #fff;
+      h2 {
+        font-size: 20px;
+        position: relative;
+        &::after {
+          content: "";
+          height: 100px;
+          width: 1px;
+          margin-top: 20px;
+          background-color: #fff;
+          position: absolute;
+          left: 50%;
+        }
+      }
+      h1 {
+        font-size: 55px;
+      }
+    }
+    .txt {
+      position: absolute;
+      top: 30%;
+      right: 2%;
+      display: flex;
+      flex-direction: column;
+      color: #fff;
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      p {
+        padding-top: 10px;
+        writing-mode: vertical-lr;
+      }
+      span {
+        writing-mode: vertical-lr;
+        position: relative;
+        margin-top: 30px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: -17px;
+          left: 10px;
+          width: 4px;
+          height: 4px;
+          border-radius: 100%;
+          background: #fff;
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  .introduction_main {
+    padding-left: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .title {
+      margin: 80px 0 100px;
+      color: #36af63;
+      position: relative;
+      letter-spacing: 3.5px;
+      font-size: 18px;
+      &::before,
+      &::after {
+        content: "";
+        width: 86px;
+        height: 1px;
+        position: absolute;
+        left: 0;
+        background-color: #36af63;
+      }
+      &::before {
+        top: -3px;
+      }
+      &::after {
+        bottom: 0;
+      }
+    }
+    h2 {
+      padding-bottom: 20px;
+      font-size: 36px;
+      line-height: 1.5;
+      margin: initial;
+      font-weight: bold;
+      position: relative;
+    }
+    .txt{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      font-size: 18px;
+      line-height: 150%;
+      p{
+        padding: 30px 0;
+      }
+    }
+    .txt_item{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      font-size: 14px;
+      line-height: 150%;
+    }
+  }
+</style>

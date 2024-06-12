@@ -6,16 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style/main.css" />
-
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
-
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://web.cdn.openinstall.io/openinstall.js"></script>
     <script src="https://kit.fontawesome.com/64fccb9e01.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
@@ -28,10 +25,9 @@
             <!-- header -->
             <div class="header">
                 <div class="hd_img">
-
-                    <a href="/"> <img src="img/logo.png" alt=""></a>
+                    <a href="/"> <img src="img/logo.png" alt="" /></a>
                 </div>
-                <div class="burger">
+                <div class="burger" id="burger">
                     <div class="menu">
                         <p>MENU</p>
                     </div>
@@ -49,16 +45,14 @@
                         </ul>
                     </div>
                     <div class="message_box">
-                        <img src="img/mail.png" alt="">
+                        <img class="message_img" src="img/mail.png" alt="" />
                         <h2>聯絡我們</h2>
                     </div>
                 </div>
-
             </div>
             <div class="header_m">
-
                 <div class="hd_m_img">
-                    <a href="/"> <img src="img/logo_m.png" alt=""></a>
+                    <a href="/"> <img src="img/logo_m.png" alt="" /></a>
                 </div>
                 <div class="burger">
                     <div class="menu">
@@ -66,6 +60,7 @@
                     </div>
                 </div>
             </div>
+
             <!-- menu_bg -->
             <div class="menu_black">
             </div>
@@ -86,7 +81,7 @@
                                 </ul>
                             </div>
                             <div class="message_box">
-                                <img src="img/mail.png" alt="">
+                                <img class="message_img" src="img/mail.png" alt="">
                                 <h2>聯絡我們</h2>
                             </div>
                         </div>
@@ -799,77 +794,7 @@
                 </div>
             </div>
             <!-- footer -->
-            <div class="footer" id="footer">
-                <div class="footer_box">
-                    <div class="wrap">
-                        <div class="go_top">
-                            <div class="line"></div>
-                            <h2>PAGE TOP</h2>
-                            <a href="#"></a>
-                        </div>
-                        <div class="left_box">
-                            <div class="left_box_img">
-
-                                <a href="/"> <img src="img/logo_m.png" alt=""></a>
-                            </div>
-                            <div class="title">
-                                <h2>舞牛森度假飯店</h2>
-                            </div>
-                            <p>苗栗縣旅館090號</p>
-                            <div class="txt">
-                                <p>Copyright © 2024 舞牛森度假飯店 All Rights Reserved.</p>
-                                <div class="writer">
-                                    <h3>Design</h3> by <span>iBest</span></div>
-                            </div>
-                        </div>
-                        <div class="middle_box">
-                            <div class="title">CONTACT</div>
-                            <ul>
-                                <li class="message address">
-                                    <h2>ADD.</h2>
-                                    <p>苗栗縣通霄鎮南和里165-5號</p>
-                                </li>
-                                <li class="message tel">
-                                    <h2>TEL.</h2>
-                                    <p>037-783-899</p>
-                                </li>
-                                <li class="message">
-                                    <h2>FAX.</h2>
-                                    <p>037-783-288</p>
-                                </li>
-                                <li class="message email">
-                                    <h2>EMAIL.</h2>
-                                    <p>service@woodland.com.tw</p>
-                                </li>
-                                <li class="message">
-                                    <h2>SNS.</h2>
-                                    <div class="middle_box_img">
-                                        <i class="fa fa-facebook-square"></i>
-                                        <i class="fa fa-instagram"></i>
-                                        <i class="fa-brands fa-line"></i>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="right_box">
-                            <div class="title">SITE CONTENTS</div>
-                            <ul>
-                                <li>飯店簡介</li>
-                                <li>服務設施</li>
-                                <li>客房介紹</li>
-                                <li>交通位置</li>
-                                <li>新訊與活動</li>
-                                <li>聯絡我們</li>
-                            </ul>
-                            <div class="txt">
-                                <p>Copyright © 2024 舞牛森度假飯店 All Rights Reserved.</p>
-                                <div class="writer">
-                                    <h3>Design</h3> by <span>iBest</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="footerpage"></div>
         </div>
     </body>
 
@@ -886,6 +811,12 @@
                 $(window).scroll(showMenu);
 
                 $(function() {
+                    $(".footerpage").load("footer.html");
+                    $(".inner_close").on("click", function() {
+                        $(".start_ad").toggleClass("off");
+                        $(".start_ad").removeClass("on");
+
+                    });
                     $(".burger").on("click", function() {
                         $(".menu").toggleClass("on");
                         $(".menu_bg").toggleClass("on");
@@ -899,14 +830,22 @@
                         $(".m_bg").toggleClass("on");
                     });
                     $(".language_box").on("click", function() {
-
                         $(".language_list").toggleClass("on");
                     });
-                    $(".inner_close").on("click", function() {
-                        $(".start_ad").toggleClass("off");
-                        $(".start_ad").removeClass("on");
+                    $(window).scroll(showMenu);
 
-                    });
+                    function showMenu() {
+                        if ($(window).scrollTop() > 200) {
+                            $(".header").addClass("on");
+                        } else {
+                            $(".header").removeClass("on");
+                        }
+                        if ($(window).scrollTop() > 200) {
+                            $(".header_m").addClass("on");
+                        } else {
+                            $(".header_m").removeClass("on");
+                        }
+                    }
                     $(".privacy_close").on("click", function() {
                         $(".privacy_option").removeClass("on");
                     });
@@ -950,18 +889,6 @@
                 }
 
                 function showMenu() {
-                    if ($(window).scrollTop() > 300) {
-                        $(".header").addClass("on");
-
-                    } else {
-                        $(".header").removeClass("on");
-                    }
-                    if ($(window).scrollTop() > 300) {
-                        $(".header_m").addClass("on");
-
-                    } else {
-                        $(".header_m").removeClass("on");
-                    }
                     if ($(window).scrollTop() > 400) {
                         $(".brand_txt").addClass("on");
                         $(".brand_list").addClass("on");
