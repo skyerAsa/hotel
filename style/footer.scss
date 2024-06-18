@@ -1,3 +1,5 @@
+@import "reset";
+@import "method";
 // footer
 .footer {
     padding: 85px 50px 50px 140px;
@@ -70,7 +72,7 @@
           &.on {
             animation: ddd 1s 2s linear forwards;
           }
-          .line {
+          .to_top_line {
             width: 1px;
             height: 200px;
             background-color: rgba($color: #000000, $alpha: 0.2);

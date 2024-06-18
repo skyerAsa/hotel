@@ -165,18 +165,18 @@ img {
   vertical-align: middle;
 }
 
-.introduction_bg {
+.latest_bg {
   padding-left: 140px;
   position: relative;
   overflow: hidden;
 }
 @media screen and (max-width: 1180px) {
-  .introduction_bg {
+  .latest_bg {
     padding-left: 0;
     margin-top: 80px;
   }
 }
-.introduction_bg::before {
+.latest_bg::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -184,21 +184,21 @@ img {
   background-color: black;
   opacity: 0.2;
 }
-.introduction_bg img {
+.latest_bg img {
   height: 640px;
 }
-.introduction_bg .title {
+.latest_bg .title {
   position: absolute;
   top: 15%;
   left: 45%;
   writing-mode: vertical-lr;
   color: #fff;
 }
-.introduction_bg .title h2 {
+.latest_bg .title h2 {
   font-size: 20px;
   position: relative;
 }
-.introduction_bg .title h2::after {
+.latest_bg .title h2::after {
   content: "";
   height: 100px;
   width: 1px;
@@ -207,10 +207,10 @@ img {
   position: absolute;
   left: 50%;
 }
-.introduction_bg .title h1 {
+.latest_bg .title h1 {
   font-size: 55px;
 }
-.introduction_bg .txt {
+.latest_bg .txt {
   position: absolute;
   top: 30%;
   right: 2%;
@@ -219,25 +219,25 @@ img {
   color: #fff;
 }
 @media screen and (max-width: 840px) {
-  .introduction_bg .txt {
+  .latest_bg .txt {
     display: none;
   }
 }
-.introduction_bg .txt a {
+.latest_bg .txt a {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.introduction_bg .txt p {
+.latest_bg .txt p {
   padding-top: 10px;
   writing-mode: vertical-lr;
 }
-.introduction_bg .txt span {
+.latest_bg .txt span {
   writing-mode: vertical-lr;
   position: relative;
   margin-top: 30px;
 }
-.introduction_bg .txt span::before {
+.latest_bg .txt span::before {
   content: "";
   position: absolute;
   top: -17px;
@@ -247,65 +247,4 @@ img {
   border-radius: 100%;
   background: #fff;
   z-index: 1;
-}
-
-.introduction_main {
-  padding-left: 140px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-@media screen and (max-width: 1180px) {
-  .introduction_main {
-    padding-left: 0;
-  }
-}
-.introduction_main .title {
-  margin: 80px 0 100px;
-  color: #36af63;
-  position: relative;
-  letter-spacing: 3.5px;
-  font-size: 18px;
-}
-.introduction_main .title::before, .introduction_main .title::after {
-  content: "";
-  width: 86px;
-  height: 1px;
-  position: absolute;
-  left: 0;
-  background-color: #36af63;
-}
-.introduction_main .title::before {
-  top: -3px;
-}
-.introduction_main .title::after {
-  bottom: 0;
-}
-.introduction_main h2 {
-  padding-bottom: 20px;
-  font-size: 36px;
-  line-height: 1.5;
-  margin: initial;
-  font-weight: bold;
-  position: relative;
-}
-.introduction_main .txt {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  font-size: 18px;
-  line-height: 150%;
-}
-.introduction_main .txt p {
-  padding: 30px 0;
-}
-.introduction_main .txt_item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  font-size: 14px;
-  line-height: 150%;
-}/*# sourceMappingURL=introduction.css.map */
+}/*# sourceMappingURL=latest.css.map */

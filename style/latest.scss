@@ -1,6 +1,6 @@
 @import "reset";
 @import "method";
-.introduction_bg {
+.latest_bg {
   padding-left: 140px;
   position: relative;
   overflow: hidden;
@@ -30,7 +30,7 @@
       position: relative;
       &::after {
         content: "";
-        height: 100px;
+        height: 100px; 
         width: 1px;
         margin-top: 20px;
         background-color: #fff;
@@ -50,8 +50,8 @@
     flex-direction: column;
     color: #fff;
     @include rwd(840){
-      display: none;
-  }
+        display: none;
+    }
     a {
       display: flex;
       flex-direction: column;
@@ -80,62 +80,3 @@
   }
 }
 
-.introduction_main {
-  padding-left: 140px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  @include rwd(1180) {
-    padding-left: 0;
-  }
-  .title {
-    margin: 80px 0 100px;
-    color: #36af63;
-    position: relative;
-    letter-spacing: 3.5px;
-    font-size: 18px;
-    &::before,
-    &::after {
-      content: "";
-      width: 86px;
-      height: 1px;
-      position: absolute;
-      left: 0;
-      background-color: #36af63;
-    }
-    &::before {
-      top: -3px;
-    }
-    &::after {
-      bottom: 0;
-    }
-  }
-  h2 {
-    padding-bottom: 20px;
-    font-size: 36px;
-    line-height: 1.5;
-    margin: initial;
-    font-weight: bold;
-    position: relative;
-  }
-  .txt {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    font-size: 18px;
-    line-height: 150%;
-    p {
-      padding: 30px 0;
-    }
-  }
-  .txt_item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    font-size: 14px;
-    line-height: 150%;
-  }
-}

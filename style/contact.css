@@ -1,0 +1,375 @@
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th {
+  font-weight: normal;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+*:hover,
+*:focus,
+*:active {
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button,
+input[type=button],
+input[type=text],
+input[type=number],
+textarea {
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+input::-ms-reveal {
+  display: none;
+}
+
+input[type=password]::-webkit-textfield-decoration-container {
+  visibility: hidden;
+}
+
+.nofloat:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ::-webkit-scrollbar{ 
+	width:10px;
+	height: 10px;
+	background-color:#f1f1f1;
+} */
+::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border: 3px #f1f1f1 solid;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: background 0.5s linear;
+  transition: background 0.5s linear;
+}
+
+*:hover::-webkit-scrollbar-thumb {
+  background-color: #a9a9a9;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #f1f1f1;
+}
+
+img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.contact_bg {
+  padding-left: 140px;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (max-width: 1180px) {
+  .contact_bg {
+    padding-left: 0;
+    margin-top: 80px;
+  }
+}
+.contact_bg::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: black;
+  opacity: 0.2;
+}
+.contact_bg img {
+  height: 640px;
+}
+.contact_bg .title {
+  position: absolute;
+  top: 15%;
+  left: 45%;
+  writing-mode: vertical-lr;
+  color: #fff;
+}
+.contact_bg .title h2 {
+  font-size: 20px;
+  position: relative;
+}
+.contact_bg .title h2::after {
+  content: "";
+  height: 100px;
+  width: 1px;
+  margin-top: 20px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+}
+.contact_bg .title h1 {
+  font-size: 55px;
+}
+.contact_bg .txt {
+  position: absolute;
+  top: 30%;
+  right: 2%;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+@media screen and (max-width: 840px) {
+  .contact_bg .txt {
+    display: none;
+  }
+}
+.contact_bg .txt a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact_bg .txt p {
+  padding-top: 10px;
+  writing-mode: vertical-lr;
+}
+.contact_bg .txt span {
+  writing-mode: vertical-lr;
+  position: relative;
+  margin-top: 30px;
+}
+.contact_bg .txt span::before {
+  content: "";
+  position: absolute;
+  top: -17px;
+  left: 10px;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background: #fff;
+  z-index: 1;
+}
+
+.qustion_all {
+  padding: 50px 200px 0 200px;
+}
+.qustion_all .qustion_item .line {
+  width: 100%;
+  height: 1px;
+  background-color: #737373;
+  margin: 30px 0 50px;
+}
+.qustion_all .qustion_form h2 {
+  padding-bottom: 10px;
+}
+.qustion_all .qustion_form select {
+  width: 100%;
+  height: 45px;
+  border-radius: 10px;
+  color: #737373;
+  font-size: 16px;
+}
+.qustion_all .qustion_form .qustion_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.qustion_all .qustion_form .qustion_list p {
+  padding: 20px 0 10px;
+}
+.qustion_all .qustion_form .qustion_list .gender,
+.qustion_all .qustion_form .qustion_list .email,
+.qustion_all .qustion_form .qustion_list .phone,
+.qustion_all .qustion_form .qustion_list .telephone {
+  width: 50%;
+}
+.qustion_all .qustion_form .qustion_list .gender input,
+.qustion_all .qustion_form .qustion_list .email input,
+.qustion_all .qustion_form .qustion_list .phone input,
+.qustion_all .qustion_form .qustion_list .telephone input {
+  width: 100%;
+  height: 45px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  color: #737373;
+  font-weight: 500;
+}
+.qustion_all .qustion_form .qustion_list .gender h3,
+.qustion_all .qustion_form .qustion_list .email h3,
+.qustion_all .qustion_form .qustion_list .phone h3,
+.qustion_all .qustion_form .qustion_list .telephone h3 {
+  color: #999;
+  font-size: 15px;
+  line-height: 1.5;
+  letter-spacing: 0.02rem;
+  margin-top: 10px;
+}
+.qustion_all .qustion_form .qustion_list .gender .choose input,
+.qustion_all .qustion_form .qustion_list .email .choose input,
+.qustion_all .qustion_form .qustion_list .phone .choose input,
+.qustion_all .qustion_form .qustion_list .telephone .choose input {
+  width: auto;
+  height: auto;
+}
+.qustion_all .qustion_form .qustion_list .gender,
+.qustion_all .qustion_form .qustion_list .phone {
+  padding-right: 15px;
+}
+.qustion_all .qustion_form .item p {
+  padding: 20px 0 10px;
+}
+.qustion_all .qustion_form .item input {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  color: #737373;
+  font-weight: 500;
+}
+.qustion_all .contact_about {
+  padding-top: 50px;
+}
+.qustion_all .contact_about:hover button {
+  color: #36af63;
+  border-color: #36af63;
+}
+.qustion_all .contact_about:hover .arrow {
+  background-color: #36af63;
+  transform: translateX(20px);
+  transition: transform 0.5s linear;
+}
+.qustion_all .contact_about:hover .arrow::before {
+  background-color: #36af63;
+}
+.qustion_all .contact_about button {
+  height: 40px;
+  min-width: 165px;
+  padding: 10px;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #191919;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #191919;
+  cursor: pointer;
+}
+.qustion_all .contact_about .arrow {
+  width: 60px;
+  height: 1px;
+  background-color: #191919;
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  transition: transform 0.5s linear;
+}
+.qustion_all .contact_about .arrow::before {
+  content: "";
+  width: 1px;
+  height: 15px;
+  position: absolute;
+  right: 3px;
+  bottom: -1px;
+  background-color: #191919;
+  transform: rotate(135deg);
+}/*# sourceMappingURL=contact.css.map */
