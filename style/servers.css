@@ -497,4 +497,317 @@ img {
 .page_list_tag a.is_active:hover {
   background-color: #36af63;
   border: 1px solid #36af63;
+}
+
+.farm {
+  padding: 0 140px 0 180px;
+}
+.farm .title {
+  padding: 60px 0 12px;
+  font-size: 24px;
+  font-weight: bolder;
+  border-bottom: 1px solid #c8c8c8;
+}
+.farm .about_field h2 {
+  padding: 15px 10px;
+  margin: 50px 0;
+  background-color: #63bedf;
+  color: #fff;
+  text-align: center;
+}
+.farm .about_field .txt {
+  text-align: center;
+  color: #404040;
+}
+.farm .about_field .farm_img img {
+  margin: 25px 0;
+}
+
+.canopy {
+  padding: 0 140px 0 180px;
+}
+.canopy .title {
+  padding: 60px 0 12px;
+  font-size: 24px;
+  font-weight: bolder;
+  border-bottom: 1px solid #c8c8c8;
+}
+.canopy .about_field h2 {
+  padding: 15px 10px;
+  margin: 50px 0;
+  background-color: #63bedf;
+  color: #fff;
+  text-align: center;
+}
+.canopy .about_field .txt {
+  text-align: center;
+  color: #404040;
+}
+.canopy .about_field .canopy_img img {
+  margin: 25px 0;
+}
+
+.sky {
+  padding: 0 140px 0 180px;
+}
+.sky .title {
+  padding: 60px 0 12px;
+  font-size: 24px;
+  font-weight: bolder;
+  border-bottom: 1px solid #c8c8c8;
+}
+.sky .about_field h2 {
+  padding: 15px 10px;
+  margin: 50px 0;
+  background-color: #63bedf;
+  color: #fff;
+  text-align: center;
+}
+.sky .about_field .txt {
+  text-align: center;
+  color: #404040;
+}
+.sky .about_field .sky_img img {
+  margin: 25px 0;
+}
+
+.garden {
+  padding: 0 140px 0 180px;
+}
+.garden .title {
+  padding: 60px 0 12px;
+  font-size: 24px;
+  font-weight: bolder;
+  border-bottom: 1px solid #c8c8c8;
+}
+.garden .about_field h2 {
+  padding: 15px 10px;
+  margin: 50px 0;
+  background-color: #63bedf;
+  color: #fff;
+  text-align: center;
+}
+.garden .about_field .txt {
+  text-align: center;
+  color: #404040;
+}
+.garden .about_field .garden_img img {
+  margin: 25px 0;
+}
+
+.restaurant {
+  padding: 0 140px 0 180px;
+}
+.restaurant .title {
+  padding: 60px 0 12px;
+  font-size: 24px;
+  font-weight: bolder;
+  border-bottom: 1px solid #c8c8c8;
+}
+.restaurant .about_field h2 {
+  padding: 15px 10px;
+  margin: 50px 0;
+  background-color: #63bedf;
+  color: #fff;
+  text-align: center;
+}
+.restaurant .about_field .txt {
+  text-align: center;
+  color: #404040;
+}
+.restaurant .restaurant_img img {
+  margin: 25px 0;
+}
+
+.dairy {
+  padding: 0 140px 0 180px;
+}
+.dairy .title {
+  padding: 60px 0 12px;
+  font-size: 24px;
+  font-weight: bolder;
+  border-bottom: 1px solid #c8c8c8;
+}
+.dairy .about_field h2 {
+  padding: 15px 10px;
+  margin: 50px 0;
+  background-color: #63bedf;
+  color: #fff;
+  text-align: center;
+}
+.dairy .about_field .txt {
+  text-align: center;
+  color: #404040;
+}
+.dairy .about_field .dairy_img {
+  display: flex;
+}
+.dairy .about_field .dairy_img img {
+  width: 40%;
+  margin: 25px 10px;
+}
+
+.hold {
+  padding: 0 140px 0 180px;
+}
+.hold .title {
+  padding: 60px 0 12px;
+  font-size: 24px;
+  font-weight: bolder;
+  border-bottom: 1px solid #c8c8c8;
+}
+.hold h3 {
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #404040;
+}
+.hold .about_field h2 {
+  padding: 15px 10px;
+  margin: 50px 0;
+  background-color: #63bedf;
+  color: #fff;
+  text-align: center;
+  border: 1px solid #63bedf;
+}
+.hold .about_field .txt {
+  text-align: center;
+  color: #404040;
+}
+.hold .about_field .hold_img img {
+  margin: 25px 0;
+}
+.hold .about_field .hold_contact {
+  width: 20%;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.hold .about_field .hold_contact:hover h2 {
+  transition: 0.5s;
+  background-color: #fff;
+  color: #63bedf;
+}
+.hold .about_field .hold_contact h2 {
+  padding: 10px;
+}
+
+.gathering {
+  padding: 0 140px 0 180px;
+}
+.gathering .title {
+  padding: 60px 0 12px;
+  font-size: 24px;
+  font-weight: bolder;
+  border-bottom: 1px solid #c8c8c8;
+}
+.gathering h3 {
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #404040;
+}
+.gathering .about_field h2 {
+  padding: 15px 10px;
+  margin: 50px 0;
+  background-color: #63bedf;
+  color: #fff;
+  text-align: center;
+}
+.gathering .about_field .txt {
+  text-align: center;
+  color: #404040;
+}
+.gathering .about_field .gathering_img img {
+  margin: 25px 0;
+}
+.gathering .about_field .gathering_contact {
+  width: 20%;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.gathering .about_field .gathering_contact:hover h2 {
+  transition: 0.5s;
+  background-color: #fff;
+  color: #63bedf;
+}
+.gathering .about_field .gathering_contact h2 {
+  padding: 10px;
+}
+
+.colleague {
+  padding: 0 140px 0 180px;
+}
+.colleague .title {
+  padding: 60px 0 12px;
+  font-size: 24px;
+  font-weight: bolder;
+  border-bottom: 1px solid #c8c8c8;
+}
+.colleague h3 {
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #404040;
+}
+.colleague .about_field h2 {
+  padding: 15px 10px;
+  margin: 50px 0;
+  background-color: #63bedf;
+  color: #fff;
+  text-align: center;
+}
+.colleague .about_field .txt {
+  text-align: center;
+  color: #404040;
+}
+.colleague .about_field .colleague_img img {
+  margin: 25px 0;
+}
+.colleague .about_field .colleague_contact {
+  width: 20%;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.colleague .about_field .colleague_contact:hover h2 {
+  transition: 0.5s;
+  background-color: #fff;
+  color: #63bedf;
+}
+.colleague .about_field .colleague_contact h2 {
+  padding: 10px;
+}
+
+.picnic {
+  padding: 0 140px 0 180px;
+}
+.picnic .title {
+  padding: 60px 0 12px;
+  font-size: 24px;
+  font-weight: bolder;
+  border-bottom: 1px solid #c8c8c8;
+}
+.picnic h3 {
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #404040;
+}
+.picnic .about_field h2 {
+  padding: 15px 10px;
+  margin: 50px 0;
+  background-color: #63bedf;
+  color: #fff;
+  text-align: center;
+  border: 1px solid #63bedf;
+}
+.picnic .about_field .txt {
+  text-align: center;
+  color: #404040;
+}
+.picnic .about_field .picnic_img {
+  width: 40%;
+  display: flex;
+}
+.picnic .about_field .picnic_img img {
+  margin: 25px 10px;
 }/*# sourceMappingURL=servers.css.map */

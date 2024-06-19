@@ -277,7 +277,6 @@
         font-size: 20px;
         padding-top: 30px;
         letter-spacing: 3px;
-
         p {
           font-weight: bold;
           cursor: pointer;
@@ -286,7 +285,7 @@
             transition: 0.5s;
           }
         }
-        h3{
+        h3 {
           padding-top: 20px;
           font-size: 15px;
           line-height: 1.8;
@@ -337,6 +336,371 @@
       &:hover {
         background-color: #36af63;
         border: 1px solid #36af63;
+      }
+    }
+  }
+}
+
+// farm
+.farm {
+  padding: 0 140px 0 180px;
+  .title {
+    padding: 60px 0 12px;
+    font-size: 24px;
+    font-weight: bolder;
+    border-bottom: 1px solid #c8c8c8;
+  }
+  .about_field {
+    h2 {
+      padding: 15px 10px;
+      margin: 50px 0;
+      background-color: #63bedf;
+      color: #fff;
+      text-align: center;
+    }
+    .txt {
+      text-align: center;
+      color: #404040;
+    }
+    .farm_img {
+      img {
+        margin: 25px 0;
+      }
+    }
+  }
+}
+
+// canopy
+.canopy {
+  padding: 0 140px 0 180px;
+  .title {
+    padding: 60px 0 12px;
+    font-size: 24px;
+    font-weight: bolder;
+    border-bottom: 1px solid #c8c8c8;
+  }
+  .about_field {
+    h2 {
+      padding: 15px 10px;
+      margin: 50px 0;
+      background-color: #63bedf;
+      color: #fff;
+      text-align: center;
+    }
+    .txt {
+      text-align: center;
+      color: #404040;
+    }
+    .canopy_img {
+      img {
+        margin: 25px 0;
+      }
+    }
+  }
+}
+
+// sky
+.sky {
+  padding: 0 140px 0 180px;
+  .title {
+    padding: 60px 0 12px;
+    font-size: 24px;
+    font-weight: bolder;
+    border-bottom: 1px solid #c8c8c8;
+  }
+  .about_field {
+    h2 {
+      padding: 15px 10px;
+      margin: 50px 0;
+      background-color: #63bedf;
+      color: #fff;
+      text-align: center;
+    }
+    .txt {
+      text-align: center;
+      color: #404040;
+    }
+    .sky_img {
+      img {
+        margin: 25px 0;
+      }
+    }
+  }
+}
+
+// garden
+.garden {
+  padding: 0 140px 0 180px;
+  .title {
+    padding: 60px 0 12px;
+    font-size: 24px;
+    font-weight: bolder;
+    border-bottom: 1px solid #c8c8c8;
+  }
+  .about_field {
+    h2 {
+      padding: 15px 10px;
+      margin: 50px 0;
+      background-color: #63bedf;
+      color: #fff;
+      text-align: center;
+    }
+    .txt {
+      text-align: center;
+      color: #404040;
+    }
+    .garden_img {
+      img {
+        margin: 25px 0;
+      }
+    }
+  }
+}
+
+// restaurant
+.restaurant {
+  padding: 0 140px 0 180px;
+  .title {
+    padding: 60px 0 12px;
+    font-size: 24px;
+    font-weight: bolder;
+    border-bottom: 1px solid #c8c8c8;
+  }
+  .about_field {
+    h2 {
+      padding: 15px 10px;
+      margin: 50px 0;
+      background-color: #63bedf;
+      color: #fff;
+      text-align: center;
+    }
+    .txt {
+      text-align: center;
+      color: #404040;
+    }
+  }
+  .restaurant_img {
+    img {
+      margin: 25px 0;
+    }
+  }
+}
+
+// dairy
+.dairy {
+  padding: 0 140px 0 180px;
+  .title {
+    padding: 60px 0 12px;
+    font-size: 24px;
+    font-weight: bolder;
+    border-bottom: 1px solid #c8c8c8;
+  }
+  .about_field {
+    h2 {
+      padding: 15px 10px;
+      margin: 50px 0;
+      background-color: #63bedf;
+      color: #fff;
+      text-align: center;
+    }
+    .txt {
+      text-align: center;
+      color: #404040;
+    }
+    .dairy_img {
+      display: flex;
+      img {
+        width: 40%;
+        margin: 25px 10px;
+      }
+    }
+  }
+}
+
+// hold
+.hold {
+  padding: 0 140px 0 180px;
+  .title {
+    padding: 60px 0 12px;
+    font-size: 24px;
+    font-weight: bolder;
+    border-bottom: 1px solid #c8c8c8;
+  }
+  h3 {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #404040;
+  }
+  .about_field {
+    h2 {
+      padding: 15px 10px;
+      margin: 50px 0;
+      background-color: #63bedf;
+      color: #fff;
+      text-align: center;
+      border: 1px solid #63bedf;
+    }
+    .txt {
+      text-align: center;
+      color: #404040;
+    }
+    .hold_img {
+      img {
+        margin: 25px 0;
+      }
+    }
+    .hold_contact {
+      width: 20%;
+      margin: 0 auto;
+      cursor: pointer;
+      &:hover {
+        h2 {
+          transition: 0.5s;
+          background-color: #fff;
+          color: #63bedf;
+        }
+      }
+      h2 {
+        padding: 10px;
+      }
+    }
+  }
+}
+
+// gathering
+.gathering {
+  padding: 0 140px 0 180px;
+  .title {
+    padding: 60px 0 12px;
+    font-size: 24px;
+    font-weight: bolder;
+    border-bottom: 1px solid #c8c8c8;
+  }
+  h3 {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #404040;
+  }
+  .about_field {
+    h2 {
+      padding: 15px 10px;
+      margin: 50px 0;
+      background-color: #63bedf;
+      color: #fff;
+      text-align: center;
+    }
+    .txt {
+      text-align: center;
+      color: #404040;
+    }
+    .gathering_img {
+      img {
+        margin: 25px 0;
+      }
+    }
+    .gathering_contact {
+      width: 20%;
+      margin: 0 auto;
+      cursor: pointer;
+      &:hover {
+        h2 {
+          transition: 0.5s;
+          background-color: #fff;
+          color: #63bedf;
+        }
+      }
+      h2 {
+        padding: 10px;
+      }
+    }
+  }
+}
+
+// colleague
+.colleague {
+  padding: 0 140px 0 180px;
+  .title {
+    padding: 60px 0 12px;
+    font-size: 24px;
+    font-weight: bolder;
+    border-bottom: 1px solid #c8c8c8;
+  }
+  h3 {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #404040;
+  }
+  .about_field {
+    h2 {
+      padding: 15px 10px;
+      margin: 50px 0;
+      background-color: #63bedf;
+      color: #fff;
+      text-align: center;
+    }
+    .txt {
+      text-align: center;
+      color: #404040;
+    }
+    .colleague_img {
+      img {
+        margin: 25px 0;
+      }
+    }
+    .colleague_contact {
+      width: 20%;
+      margin: 0 auto;
+      cursor: pointer;
+      &:hover {
+        h2 {
+          transition: 0.5s;
+          background-color: #fff;
+          color: #63bedf;
+        }
+      }
+      h2 {
+        padding: 10px;
+      }
+    }
+  }
+}
+
+// picnic
+.picnic {
+  padding: 0 140px 0 180px;
+  .title {
+    padding: 60px 0 12px;
+    font-size: 24px;
+    font-weight: bolder;
+    border-bottom: 1px solid #c8c8c8;
+  }
+  h3 {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #404040;
+  }
+  .about_field {
+    h2 {
+      padding: 15px 10px;
+      margin: 50px 0;
+      background-color: #63bedf;
+      color: #fff;
+      text-align: center;
+      border: 1px solid #63bedf;
+    }
+    .txt {
+      text-align: center;
+      color: #404040;
+    }
+    .picnic_img {
+      width: 40%;
+      display: flex;
+      img {
+        margin: 25px 10px;
       }
     }
   }
