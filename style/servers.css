@@ -228,6 +228,9 @@ img {
   flex-direction: column;
   align-items: center;
 }
+.servers_bg .txt a:hover {
+  color: #63bedf;
+}
 .servers_bg .txt p {
   padding-top: 10px;
   writing-mode: vertical-lr;
@@ -254,6 +257,11 @@ img {
   justify-content: center;
   color: #404040;
   padding: 100px 0;
+}
+@media screen and (max-width: 1024px) {
+  .list_tags {
+    display: none;
+  }
 }
 .list_tags p {
   margin: 0 20px;
@@ -373,8 +381,55 @@ img {
   bottom: 0;
 }
 
+.tags_list {
+  width: 95%;
+  background-color: #63bedf;
+  color: #fff;
+  padding: 10px;
+  margin: 100px 20px;
+  border-radius: 10px;
+  position: relative;
+}
+.tags_list .tag_txt {
+  display: flex;
+  justify-content: space-between;
+}
+.tags_list .tag_txt p {
+  transform: rotate(90deg);
+}
+
+.list_tags_m {
+  width: 100%;
+  color: #000;
+  display: none;
+  background-color: #fff;
+  border-radius: 10px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 2;
+}
+.list_tags_m.on {
+  display: block;
+}
+.list_tags_m h2 {
+  color: #63bedf;
+  padding: 20px 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.list_tags_m p {
+  padding: 20px 10px;
+  border-top: 1px solid #c8c8c8;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
 .facility_item {
   padding-left: 140px;
+}
+@media screen and (max-width: 1080px) {
+  .facility_item {
+    padding: 0 20px;
+  }
 }
 .facility_item .wrap {
   width: 100%;
@@ -386,6 +441,11 @@ img {
 .facility_item .wrap .facility_list {
   width: 50%;
   padding: 0 15px 50px;
+}
+@media screen and (max-width: 960px) {
+  .facility_item .wrap .facility_list {
+    width: 100%;
+  }
 }
 .facility_item .wrap .facility_list .facility_img {
   position: relative;
@@ -508,16 +568,30 @@ img {
   font-weight: bolder;
   border-bottom: 1px solid #c8c8c8;
 }
+.farm h3 {
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #404040;
+  font-weight: bold;
+}
 .farm .about_field h2 {
   padding: 15px 10px;
   margin: 50px 0;
   background-color: #63bedf;
   color: #fff;
   text-align: center;
+  border: 1px solid #63bedf;
+  cursor: pointer;
 }
 .farm .about_field .txt {
   text-align: center;
   color: #404040;
+  font-weight: bold;
+}
+.farm .about_field .txt a:hover {
+  transition: 0.5s;
+  color: #63bedf;
 }
 .farm .about_field .farm_img img {
   margin: 25px 0;
@@ -532,16 +606,30 @@ img {
   font-weight: bolder;
   border-bottom: 1px solid #c8c8c8;
 }
+.canopy h3 {
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #404040;
+  font-weight: bold;
+}
 .canopy .about_field h2 {
   padding: 15px 10px;
   margin: 50px 0;
   background-color: #63bedf;
   color: #fff;
   text-align: center;
+  border: 1px solid #63bedf;
+  cursor: pointer;
 }
 .canopy .about_field .txt {
   text-align: center;
   color: #404040;
+  font-weight: bold;
+}
+.canopy .about_field .txt a:hover {
+  transition: 0.5s;
+  color: #63bedf;
 }
 .canopy .about_field .canopy_img img {
   margin: 25px 0;
@@ -556,16 +644,30 @@ img {
   font-weight: bolder;
   border-bottom: 1px solid #c8c8c8;
 }
+.sky h3 {
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #404040;
+  font-weight: bold;
+}
 .sky .about_field h2 {
   padding: 15px 10px;
   margin: 50px 0;
   background-color: #63bedf;
   color: #fff;
   text-align: center;
+  border: 1px solid #63bedf;
+  cursor: pointer;
 }
 .sky .about_field .txt {
   text-align: center;
   color: #404040;
+  font-weight: bold;
+}
+.sky .about_field .txt a:hover {
+  transition: 0.5s;
+  color: #63bedf;
 }
 .sky .about_field .sky_img img {
   margin: 25px 0;
@@ -580,16 +682,30 @@ img {
   font-weight: bolder;
   border-bottom: 1px solid #c8c8c8;
 }
+.garden h3 {
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #404040;
+  font-weight: bold;
+}
 .garden .about_field h2 {
   padding: 15px 10px;
   margin: 50px 0;
   background-color: #63bedf;
   color: #fff;
   text-align: center;
+  border: 1px solid #63bedf;
+  cursor: pointer;
 }
 .garden .about_field .txt {
   text-align: center;
   color: #404040;
+  font-weight: bold;
+}
+.garden .about_field .txt a:hover {
+  transition: 0.5s;
+  color: #63bedf;
 }
 .garden .about_field .garden_img img {
   margin: 25px 0;
@@ -604,16 +720,30 @@ img {
   font-weight: bolder;
   border-bottom: 1px solid #c8c8c8;
 }
+.restaurant h3 {
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #404040;
+  font-weight: bold;
+}
 .restaurant .about_field h2 {
   padding: 15px 10px;
   margin: 50px 0;
   background-color: #63bedf;
   color: #fff;
   text-align: center;
+  border: 1px solid #63bedf;
+  cursor: pointer;
 }
 .restaurant .about_field .txt {
   text-align: center;
   color: #404040;
+  font-weight: bold;
+}
+.restaurant .about_field .txt a:hover {
+  transition: 0.5s;
+  color: #63bedf;
 }
 .restaurant .restaurant_img img {
   margin: 25px 0;
@@ -628,16 +758,30 @@ img {
   font-weight: bolder;
   border-bottom: 1px solid #c8c8c8;
 }
+.dairy h3 {
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #404040;
+  font-weight: bold;
+}
 .dairy .about_field h2 {
   padding: 15px 10px;
   margin: 50px 0;
   background-color: #63bedf;
   color: #fff;
   text-align: center;
+  border: 1px solid #63bedf;
+  cursor: pointer;
 }
 .dairy .about_field .txt {
   text-align: center;
   color: #404040;
+  font-weight: bold;
+}
+.dairy .about_field .txt a:hover {
+  transition: 0.5s;
+  color: #63bedf;
 }
 .dairy .about_field .dairy_img {
   display: flex;
@@ -661,6 +805,7 @@ img {
   line-height: 1.6;
   font-size: 18px;
   color: #404040;
+  font-weight: bold;
 }
 .hold .about_field h2 {
   padding: 15px 10px;
@@ -669,10 +814,16 @@ img {
   color: #fff;
   text-align: center;
   border: 1px solid #63bedf;
+  cursor: pointer;
 }
 .hold .about_field .txt {
   text-align: center;
   color: #404040;
+  font-weight: bold;
+}
+.hold .about_field .txt a:hover {
+  transition: 0.5s;
+  color: #63bedf;
 }
 .hold .about_field .hold_img img {
   margin: 25px 0;
@@ -705,6 +856,7 @@ img {
   line-height: 1.6;
   font-size: 18px;
   color: #404040;
+  font-weight: bold;
 }
 .gathering .about_field h2 {
   padding: 15px 10px;
@@ -712,10 +864,17 @@ img {
   background-color: #63bedf;
   color: #fff;
   text-align: center;
+  border: 1px solid #63bedf;
+  cursor: pointer;
 }
 .gathering .about_field .txt {
   text-align: center;
   color: #404040;
+  font-weight: bold;
+}
+.gathering .about_field .txt a:hover {
+  transition: 0.5s;
+  color: #63bedf;
 }
 .gathering .about_field .gathering_img img {
   margin: 25px 0;
@@ -748,6 +907,7 @@ img {
   line-height: 1.6;
   font-size: 18px;
   color: #404040;
+  font-weight: bold;
 }
 .colleague .about_field h2 {
   padding: 15px 10px;
@@ -755,10 +915,17 @@ img {
   background-color: #63bedf;
   color: #fff;
   text-align: center;
+  border: 1px solid #63bedf;
+  cursor: pointer;
 }
 .colleague .about_field .txt {
   text-align: center;
   color: #404040;
+  font-weight: bold;
+}
+.colleague .about_field .txt a:hover {
+  transition: 0.5s;
+  color: #63bedf;
 }
 .colleague .about_field .colleague_img img {
   margin: 25px 0;
@@ -791,6 +958,7 @@ img {
   line-height: 1.6;
   font-size: 18px;
   color: #404040;
+  font-weight: bold;
 }
 .picnic .about_field h2 {
   padding: 15px 10px;
@@ -799,15 +967,147 @@ img {
   color: #fff;
   text-align: center;
   border: 1px solid #63bedf;
+  cursor: pointer;
 }
 .picnic .about_field .txt {
   text-align: center;
   color: #404040;
+  font-weight: bold;
+}
+.picnic .about_field .txt a:hover {
+  transition: 0.5s;
+  color: #63bedf;
 }
 .picnic .about_field .picnic_img {
   width: 40%;
   display: flex;
 }
 .picnic .about_field .picnic_img img {
+  margin: 25px 10px;
+}
+
+.milk {
+  padding: 0 140px 0 180px;
+}
+.milk .title {
+  padding: 60px 0 12px;
+  font-size: 24px;
+  font-weight: bolder;
+  border-bottom: 1px solid #c8c8c8;
+}
+.milk h3 {
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #404040;
+  font-weight: bold;
+}
+.milk .about_field h2 {
+  padding: 15px 10px;
+  margin: 50px 0;
+  background-color: #63bedf;
+  color: #fff;
+  text-align: center;
+  border: 1px solid #63bedf;
+  cursor: pointer;
+}
+.milk .about_field .txt {
+  text-align: center;
+  color: #404040;
+  font-weight: bold;
+}
+.milk .about_field .txt a:hover {
+  transition: 0.5s;
+  color: #63bedf;
+}
+.milk .about_field .milk_img {
+  width: 40%;
+  display: flex;
+}
+.milk .about_field .milk_img img {
+  margin: 25px 10px;
+}
+
+.sun {
+  padding: 0 140px 0 180px;
+}
+.sun .title {
+  padding: 60px 0 12px;
+  font-size: 24px;
+  font-weight: bolder;
+  border-bottom: 1px solid #c8c8c8;
+}
+.sun h3 {
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #404040;
+  font-weight: bold;
+}
+.sun .about_field h2 {
+  padding: 15px 10px;
+  margin: 50px 0;
+  background-color: #63bedf;
+  color: #fff;
+  text-align: center;
+  border: 1px solid #63bedf;
+  cursor: pointer;
+}
+.sun .about_field .txt {
+  text-align: center;
+  color: #404040;
+  font-weight: bold;
+}
+.sun .about_field .txt a:hover {
+  transition: 0.5s;
+  color: #63bedf;
+}
+.sun .about_field .sun_img {
+  width: 40%;
+  display: flex;
+}
+.sun .about_field .sun_img img {
+  margin: 25px 10px;
+}
+
+.banquet {
+  padding: 0 140px 0 180px;
+}
+.banquet .title {
+  padding: 60px 0 12px;
+  font-size: 24px;
+  font-weight: bolder;
+  border-bottom: 1px solid #c8c8c8;
+}
+.banquet h3 {
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #404040;
+  font-weight: bold;
+}
+.banquet .about_field h2 {
+  padding: 15px 10px;
+  margin: 50px 0;
+  background-color: #63bedf;
+  color: #fff;
+  text-align: center;
+  border: 1px solid #63bedf;
+  cursor: pointer;
+}
+.banquet .about_field .txt {
+  text-align: center;
+  color: #404040;
+  font-weight: bold;
+}
+.banquet .about_field .txt a:hover {
+  transition: 0.5s;
+  color: #63bedf;
+}
+.banquet .about_field .banquet_img {
+  width: 40%;
+  display: flex;
+}
+.banquet .about_field .banquet_img img {
   margin: 25px 10px;
 }/*# sourceMappingURL=servers.css.map */

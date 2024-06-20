@@ -56,10 +56,26 @@
       <a ><p class="on">共樂</p></a>
       <a href="../page/dining.html"><p>饗宴</p></a>
     </div>
+    <div class="tags_list">
+      <div class="tag_txt">所有設施<p>></p></div>
+      <div class="list_tags_m">
+        <h2>所有設施</h2>
+        <a href="../page/field.html">
+          <p>環境</p>
+        </a>
+        <a href="../page/events.html">
+          <p>共樂</p>
+        </a>
+        <a href="../page/dining.html">
+          <p>饗宴</p>
+        </a>
+      </div>
+    </div>
     <!-- facility_item -->
     <div class="facility_item">
       <div class="wrap">
         <div class="facility_list">
+          <a href="facility/hold.html">
             <div class="facility_img">
               <img src="../img/img/S__71522892__24A08qQ4k9.jpg" alt="" />
             </div>
@@ -67,8 +83,10 @@
               <p>牽手</p>
               <h3>戶外婚宴</h3>
             </div>
-          </div>
-          <div class="facility_list">
+          </a>
+        </div>
+        <div class="facility_list">
+          <a href="facility/gathering.html">
             <div class="facility_img">
               <img src="../img/img/S__715229502__24A08dIBPx.jpg" alt="" />
             </div>
@@ -76,8 +94,10 @@
               <p>歡聚</p>
               <h3>專屬聚會</h3>
             </div>
-          </div>
-          <div class="facility_list">
+          </a>
+        </div>
+        <div class="facility_list">
+          <a href="facility/colleague.html">
             <div class="facility_img">
               <img src="../img/img/S__715199202__24A08wXRfG.jpg" alt="" />
             </div>
@@ -85,7 +105,8 @@
               <p>同事</p>
               <h3>企業會議</h3>
             </div>
-          </div>
+          </a>
+        </div>
       </div>
     </div>
     <!-- footer -->
@@ -96,5 +117,11 @@
   $(function () {
     $(".headerpage").load("../../layout/header.html");
     $(".footerpage").load("../../layout/footer.html");
+  });
+  $(function () {
+    $(".tags_list").on("click", function () {
+      $(".list_tags_m").toggleClass("on");
+    });
+    
   });
 </script>

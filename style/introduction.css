@@ -228,6 +228,10 @@ img {
   flex-direction: column;
   align-items: center;
 }
+.introduction_bg .txt a:hover {
+  transition: 0.5s;
+  color: #63bedf;
+}
 .introduction_bg .txt p {
   padding-top: 10px;
   writing-mode: vertical-lr;
@@ -258,7 +262,7 @@ img {
 }
 @media screen and (max-width: 1180px) {
   .introduction_main {
-    padding-left: 0;
+    padding: 0 20px;
   }
 }
 .introduction_main .title {
@@ -267,6 +271,7 @@ img {
   position: relative;
   letter-spacing: 3.5px;
   font-size: 18px;
+  z-index: 2;
 }
 .introduction_main .title::before, .introduction_main .title::after {
   content: "";
@@ -281,6 +286,43 @@ img {
 }
 .introduction_main .title::after {
   bottom: 0;
+}
+.introduction_main .title p {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .introduction_main .title {
+    width: 100%;
+    background-color: #63bedf;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+  }
+  .introduction_main .title::before, .introduction_main .title::after {
+    height: 0;
+  }
+  .introduction_main .title p {
+    transform: rotate(90deg);
+    display: block;
+  }
+}
+.introduction_main .title .title_m {
+  width: 100%;
+  position: absolute;
+  padding: 10px;
+  left: 0;
+  bottom: -43px;
+  color: #63bedf;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .introduction_main .title .title_m.on {
+    display: block;
+  }
 }
 .introduction_main h2 {
   padding-bottom: 20px;

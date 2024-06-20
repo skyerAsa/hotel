@@ -57,6 +57,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      &:hover {
+        color: #63bedf;
+      }
     }
     p {
       padding-top: 10px;
@@ -87,6 +90,9 @@
   justify-content: center;
   color: #404040;
   padding: 100px 0;
+  @include rwd(1024) {
+    display: none;
+  }
   p {
     margin: 0 20px;
     font-size: 18px;
@@ -211,9 +217,54 @@
   }
 }
 
+.tags_list {
+  width: 95%;
+  background-color: #63bedf;
+  color: #fff;
+  padding: 10px;
+  margin: 100px  20px ;
+  border-radius: 10px;
+  position: relative;
+  .tag_txt {
+    display: flex;
+    justify-content: space-between;
+    p {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.list_tags_m {
+  width: 100%;
+  color: #000;
+  display: none;
+  background-color: #fff;
+  border-radius: 10px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 2;
+  &.on{
+    display: block;
+  }
+  h2 {
+    color: #63bedf;
+    padding: 20px 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  p{
+    padding: 20px 10px ;
+    border-top: 1px solid #c8c8c8;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
 // facility_item
 .facility_item {
   padding-left: 140px;
+  @include rwd(1080) {
+    padding: 0 20px;
+  }
   .wrap {
     width: 100%;
     max-width: 1540px;
@@ -223,6 +274,9 @@
     .facility_list {
       width: 50%;
       padding: 0 15px 50px;
+      @include rwd(960){
+        width: 100%;
+      }
       .facility_img {
         position: relative;
         overflow: hidden;
@@ -350,6 +404,13 @@
     font-weight: bolder;
     border-bottom: 1px solid #c8c8c8;
   }
+  h3 {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #404040;
+    font-weight: bold;
+  }
   .about_field {
     h2 {
       padding: 15px 10px;
@@ -357,10 +418,19 @@
       background-color: #63bedf;
       color: #fff;
       text-align: center;
+      border: 1px solid #63bedf;
+      cursor: pointer;
     }
     .txt {
       text-align: center;
       color: #404040;
+      font-weight: bold;
+      a {
+        &:hover {
+          transition: 0.5s;
+          color: #63bedf;
+        }
+      }
     }
     .farm_img {
       img {
@@ -379,6 +449,13 @@
     font-weight: bolder;
     border-bottom: 1px solid #c8c8c8;
   }
+  h3 {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #404040;
+    font-weight: bold;
+  }
   .about_field {
     h2 {
       padding: 15px 10px;
@@ -386,10 +463,19 @@
       background-color: #63bedf;
       color: #fff;
       text-align: center;
+      border: 1px solid #63bedf;
+      cursor: pointer;
     }
     .txt {
       text-align: center;
       color: #404040;
+      font-weight: bold;
+      a {
+        &:hover {
+          transition: 0.5s;
+          color: #63bedf;
+        }
+      }
     }
     .canopy_img {
       img {
@@ -408,6 +494,13 @@
     font-weight: bolder;
     border-bottom: 1px solid #c8c8c8;
   }
+  h3 {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #404040;
+    font-weight: bold;
+  }
   .about_field {
     h2 {
       padding: 15px 10px;
@@ -415,10 +508,19 @@
       background-color: #63bedf;
       color: #fff;
       text-align: center;
+      border: 1px solid #63bedf;
+      cursor: pointer;
     }
     .txt {
       text-align: center;
       color: #404040;
+      font-weight: bold;
+      a {
+        &:hover {
+          transition: 0.5s;
+          color: #63bedf;
+        }
+      }
     }
     .sky_img {
       img {
@@ -437,6 +539,13 @@
     font-weight: bolder;
     border-bottom: 1px solid #c8c8c8;
   }
+  h3 {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #404040;
+    font-weight: bold;
+  }
   .about_field {
     h2 {
       padding: 15px 10px;
@@ -444,10 +553,19 @@
       background-color: #63bedf;
       color: #fff;
       text-align: center;
+      border: 1px solid #63bedf;
+      cursor: pointer;
     }
     .txt {
       text-align: center;
       color: #404040;
+      font-weight: bold;
+      a {
+        &:hover {
+          transition: 0.5s;
+          color: #63bedf;
+        }
+      }
     }
     .garden_img {
       img {
@@ -466,6 +584,13 @@
     font-weight: bolder;
     border-bottom: 1px solid #c8c8c8;
   }
+  h3 {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #404040;
+    font-weight: bold;
+  }
   .about_field {
     h2 {
       padding: 15px 10px;
@@ -473,10 +598,19 @@
       background-color: #63bedf;
       color: #fff;
       text-align: center;
+      border: 1px solid #63bedf;
+      cursor: pointer;
     }
     .txt {
       text-align: center;
       color: #404040;
+      font-weight: bold;
+      a {
+        &:hover {
+          transition: 0.5s;
+          color: #63bedf;
+        }
+      }
     }
   }
   .restaurant_img {
@@ -495,6 +629,13 @@
     font-weight: bolder;
     border-bottom: 1px solid #c8c8c8;
   }
+  h3 {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #404040;
+    font-weight: bold;
+  }
   .about_field {
     h2 {
       padding: 15px 10px;
@@ -502,10 +643,19 @@
       background-color: #63bedf;
       color: #fff;
       text-align: center;
+      border: 1px solid #63bedf;
+      cursor: pointer;
     }
     .txt {
       text-align: center;
       color: #404040;
+      font-weight: bold;
+      a {
+        &:hover {
+          transition: 0.5s;
+          color: #63bedf;
+        }
+      }
     }
     .dairy_img {
       display: flex;
@@ -531,6 +681,7 @@
     line-height: 1.6;
     font-size: 18px;
     color: #404040;
+    font-weight: bold;
   }
   .about_field {
     h2 {
@@ -540,10 +691,18 @@
       color: #fff;
       text-align: center;
       border: 1px solid #63bedf;
+      cursor: pointer;
     }
     .txt {
       text-align: center;
       color: #404040;
+      font-weight: bold;
+      a {
+        &:hover {
+          transition: 0.5s;
+          color: #63bedf;
+        }
+      }
     }
     .hold_img {
       img {
@@ -582,6 +741,7 @@
     line-height: 1.6;
     font-size: 18px;
     color: #404040;
+    font-weight: bold;
   }
   .about_field {
     h2 {
@@ -590,10 +750,19 @@
       background-color: #63bedf;
       color: #fff;
       text-align: center;
+      border: 1px solid #63bedf;
+      cursor: pointer;
     }
     .txt {
       text-align: center;
       color: #404040;
+      font-weight: bold;
+      a {
+        &:hover {
+          transition: 0.5s;
+          color: #63bedf;
+        }
+      }
     }
     .gathering_img {
       img {
@@ -632,6 +801,7 @@
     line-height: 1.6;
     font-size: 18px;
     color: #404040;
+    font-weight: bold;
   }
   .about_field {
     h2 {
@@ -640,10 +810,19 @@
       background-color: #63bedf;
       color: #fff;
       text-align: center;
+      border: 1px solid #63bedf;
+      cursor: pointer;
     }
     .txt {
       text-align: center;
       color: #404040;
+      font-weight: bold;
+      a {
+        &:hover {
+          transition: 0.5s;
+          color: #63bedf;
+        }
+      }
     }
     .colleague_img {
       img {
@@ -682,6 +861,7 @@
     line-height: 1.6;
     font-size: 18px;
     color: #404040;
+    font-weight: bold;
   }
   .about_field {
     h2 {
@@ -691,12 +871,161 @@
       color: #fff;
       text-align: center;
       border: 1px solid #63bedf;
+      cursor: pointer;
     }
     .txt {
       text-align: center;
       color: #404040;
+      font-weight: bold;
+      a {
+        &:hover {
+          transition: 0.5s;
+          color: #63bedf;
+        }
+      }
     }
     .picnic_img {
+      width: 40%;
+      display: flex;
+      img {
+        margin: 25px 10px;
+      }
+    }
+  }
+}
+
+// milk
+.milk {
+  padding: 0 140px 0 180px;
+  .title {
+    padding: 60px 0 12px;
+    font-size: 24px;
+    font-weight: bolder;
+    border-bottom: 1px solid #c8c8c8;
+  }
+  h3 {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #404040;
+    font-weight: bold;
+  }
+  .about_field {
+    h2 {
+      padding: 15px 10px;
+      margin: 50px 0;
+      background-color: #63bedf;
+      color: #fff;
+      text-align: center;
+      border: 1px solid #63bedf;
+      cursor: pointer;
+    }
+    .txt {
+      text-align: center;
+      color: #404040;
+      font-weight: bold;
+      a {
+        &:hover {
+          transition: 0.5s;
+          color: #63bedf;
+        }
+      }
+    }
+    .milk_img {
+      width: 40%;
+      display: flex;
+      img {
+        margin: 25px 10px;
+      }
+    }
+  }
+}
+
+// sun
+.sun {
+  padding: 0 140px 0 180px;
+  .title {
+    padding: 60px 0 12px;
+    font-size: 24px;
+    font-weight: bolder;
+    border-bottom: 1px solid #c8c8c8;
+  }
+  h3 {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #404040;
+    font-weight: bold;
+  }
+  .about_field {
+    h2 {
+      padding: 15px 10px;
+      margin: 50px 0;
+      background-color: #63bedf;
+      color: #fff;
+      text-align: center;
+      border: 1px solid #63bedf;
+      cursor: pointer;
+    }
+    .txt {
+      text-align: center;
+      color: #404040;
+      font-weight: bold;
+      a {
+        &:hover {
+          transition: 0.5s;
+          color: #63bedf;
+        }
+      }
+    }
+    .sun_img {
+      width: 40%;
+      display: flex;
+      img {
+        margin: 25px 10px;
+      }
+    }
+  }
+}
+
+// banquet
+.banquet {
+  padding: 0 140px 0 180px;
+  .title {
+    padding: 60px 0 12px;
+    font-size: 24px;
+    font-weight: bolder;
+    border-bottom: 1px solid #c8c8c8;
+  }
+  h3 {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #404040;
+    font-weight: bold;
+  }
+  .about_field {
+    h2 {
+      padding: 15px 10px;
+      margin: 50px 0;
+      background-color: #63bedf;
+      color: #fff;
+      text-align: center;
+      border: 1px solid #63bedf;
+      cursor: pointer;
+    }
+    .txt {
+      text-align: center;
+      color: #404040;
+      font-weight: bold;
+      a {
+        &:hover {
+          transition: 0.5s;
+          color: #63bedf;
+        }
+      }
+    }
+    .banquet_img {
       width: 40%;
       display: flex;
       img {

@@ -55,7 +55,9 @@
     </div>
     <!-- main -->
     <div class="introduction_main">
-      <div class="title">品牌介紹</div>
+      <div class="title">品牌介紹 <p>></p>
+     <div class="title_m"> <a href="introduction.html">品牌介紹</a></div>
+      </div>
       <h2>沉浸於森林草原中</h2>
       <div class="txt">
         <span>「舞牛森」是飛牛牧場的2.0，</span>
@@ -109,5 +111,11 @@
   $(function () {
     $(".headerpage").load("../layout/header.html");
     $(".footerpage").load("../layout/footer.html");
+  });
+
+  $(function () {
+    $(".title").on("click", function () {
+      $(".title_m").toggleClass("on");
+    });
   });
 </script>

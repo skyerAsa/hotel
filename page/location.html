@@ -105,4 +105,10 @@
     $(".headerpage").load("../layout/header.html");
     $(".footerpage").load("../layout/footer.html");
   });
+  $(function () {
+    $(".tags_list").on("click", function () {
+      $(".list_tags_m").toggleClass("on");
+    });
+    
+  });
 </script>

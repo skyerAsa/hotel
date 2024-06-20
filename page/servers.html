@@ -52,60 +52,98 @@
     </div>
     <div class="list_tags">
       <h2 class="on">所有設施</h2>
-      <a href="../page/field.html"><p>環境</p></a>
-      <a href="../page/events.html"><p>共樂</p></a>
-      <a href="../page/dining.html"><p>饗宴</p></a>
+      <a href="../page/field.html">
+        <p>環境</p>
+      </a>
+      <a href="../page/events.html">
+        <p>共樂</p>
+      </a>
+      <a href="../page/dining.html">
+        <p>饗宴</p>
+      </a>
+    </div>
+    <div class="tags_list">
+      <div class="tag_txt">所有設施<p>></p></div>
+      <div class="list_tags_m">
+        <h2>所有設施</h2>
+        <a href="../page/field.html">
+          <p>環境</p>
+        </a>
+        <a href="../page/events.html">
+          <p>共樂</p>
+        </a>
+        <a href="../page/dining.html">
+          <p>饗宴</p>
+        </a>
+      </div>
+    </div>
+
     </div>
     <!-- facility_item -->
     <div class="facility_item">
       <div class="wrap">
         <div class="facility_list">
-          <div class="facility_img">
-            <img src="../img/img/IMG_7660__24A22V9Hjm.jpg" alt="" />
-          </div>
-          <div class="txt">
-            <p>森林牧場</p>
-          </div>
+          <a href="facility/farm.html">
+            <div class="facility_img">
+              <img src="../img/img/IMG_7660__24A22V9Hjm.jpg" alt="" />
+            </div>
+            <div class="txt">
+              <p>森林牧場</p>
+            </div>
+          </a>
         </div>
         <div class="facility_list">
-          <div class="facility_img">
-            <img src="../img/img/DJI_054502__24A094dHg6.jpg" alt="" />
-          </div>
-          <div class="txt">
-            <p>樹冠散策</p>
-          </div>
+          <a href="facility/canopy.html">
+            <div class="facility_img">
+              <img src="../img/img/DJI_054502__24A094dHg6.jpg" alt="" />
+            </div>
+            <div class="txt">
+              <p>樹冠散策</p>
+            </div>
+          </a>
         </div>
         <div class="facility_list">
-          <div class="facility_img">
-            <img src="../img/img/IMG_184102__24A08nSfiB.jpg" alt="" />
-          </div>
-          <div class="txt">
-            <p>天空鏡子</p>
-          </div>
+          <a href="facility/sky.html">
+            <div class="facility_img">
+              <img src="../img/img/IMG_184102__24A08nSfiB.jpg" alt="" />
+            </div>
+            <div class="txt">
+              <p>天空鏡子</p>
+            </div>
+          </a>
         </div>
         <div class="facility_list">
-          <div class="facility_img">
-            <img src="../img/img/DSC037592__24A17NdiZu.jpg" alt="" />
-          </div>
-          <div class="txt">
-            <p>森之庭園</p>
-          </div>
+          <a href="facility/garden.html">
+            <div class="facility_img">
+              <img src="../img/img/DSC037592__24A17NdiZu.jpg" alt="" />
+            </div>
+            <div class="txt">
+              <p>森之庭園</p>
+            </div>
+          </a>
         </div>
         <div class="facility_list">
-          <div class="facility_img">
-            <img src="../img/img/_DSC91332__24A22Giku0.jpg" alt="" />
-          </div>
-          <div class="txt">
-            <p>森饗廳</p>
-          </div>
+          <a href="facility/restaurant.html">
+            <div class="facility_img">
+              <img src="../img/img/_DSC91332__24A22Giku0.jpg" alt="" />
+            </div>
+            <div class="txt">
+              <p>森饗廳</p>
+            </div>
+          </a>
         </div>
         <div class="facility_list">
-          <div class="facility_img">
-            <img src="../img/img/飛牛家書20180108_003963__24A22yaBfP.jpg" alt="" />
-          </div>
-          <div class="txt">
-            <p>酪農</p>
-          </div>
+          <a href="facility/dairy.html">
+            <div class="facility_img">
+              <img
+                src="../img/img/飛牛家書20180108_003963__24A22yaBfP.jpg"
+                alt=""
+              />
+            </div>
+            <div class="txt">
+              <p>酪農</p>
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -115,8 +153,12 @@
       <a class="item is_active">1</a>
       <a href="../page/servers_2.html" class="item">2</a>
       <a href="../page/servers_3.html" class="item">3</a>
-      <a href="../page/servers_2.html"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-      <a href="../page/servers_3.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+      <a href="../page/servers_2.html"
+        ><i class="fa fa-angle-right" aria-hidden="true"></i
+      ></a>
+      <a href="../page/servers_3.html"
+        ><i class="fa fa-angle-double-right" aria-hidden="true"></i
+      ></a>
     </div>
     <!-- footer -->
     <div class="footerpage"></div>
@@ -126,5 +168,11 @@
   $(function () {
     $(".headerpage").load("../layout/header.html");
     $(".footerpage").load("../layout/footer.html");
+  });
+  $(function () {
+    $(".tags_list").on("click", function () {
+      $(".list_tags_m").toggleClass("on");
+    });
+    
   });
 </script>

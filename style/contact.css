@@ -228,6 +228,10 @@ img {
   flex-direction: column;
   align-items: center;
 }
+.contact_bg .txt a:hover {
+  transition: 0.5s;
+  color: #63bedf;
+}
 .contact_bg .txt p {
   padding-top: 10px;
   writing-mode: vertical-lr;
@@ -250,7 +254,12 @@ img {
 }
 
 .qustion_all {
-  padding: 50px 200px 0 200px;
+  padding: 50px 200px 0;
+}
+@media screen and (max-width: 1180px) {
+  .qustion_all {
+    padding: 50px 20px;
+  }
 }
 .qustion_all .qustion_item .line {
   width: 100%;
@@ -280,6 +289,14 @@ img {
 .qustion_all .qustion_form .qustion_list .phone,
 .qustion_all .qustion_form .qustion_list .telephone {
   width: 50%;
+}
+@media screen and (max-width: 960px) {
+  .qustion_all .qustion_form .qustion_list .gender,
+  .qustion_all .qustion_form .qustion_list .email,
+  .qustion_all .qustion_form .qustion_list .phone,
+  .qustion_all .qustion_form .qustion_list .telephone {
+    width: 100%;
+  }
 }
 .qustion_all .qustion_form .qustion_list .gender input,
 .qustion_all .qustion_form .qustion_list .email input,
@@ -312,6 +329,12 @@ img {
 .qustion_all .qustion_form .qustion_list .gender,
 .qustion_all .qustion_form .qustion_list .phone {
   padding-right: 15px;
+}
+@media screen and (max-width: 960px) {
+  .qustion_all .qustion_form .qustion_list .gender,
+  .qustion_all .qustion_form .qustion_list .phone {
+    padding-right: 0;
+  }
 }
 .qustion_all .qustion_form .item p {
   padding: 20px 0 10px;

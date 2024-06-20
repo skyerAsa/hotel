@@ -56,6 +56,10 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      &:hover {
+        transition: 0.5s;
+        color: #63bedf;
+      }
     }
     p {
       padding-top: 10px;
@@ -81,7 +85,10 @@
 }
 
 .qustion_all {
-  padding: 50px 200px 0 200px;
+  padding: 50px 200px 0;
+  @include rwd(1180) {
+    padding: 50px 20px;
+  }
   .qustion_item {
     .line {
       width: 100%;
@@ -112,6 +119,9 @@
       .phone,
       .telephone {
         width: 50%;
+        @include rwd(960){
+          width: 100%;
+        }
         input {
           width: 100%;
           height: 45px;
@@ -120,12 +130,12 @@
           color: #737373;
           font-weight: 500;
         }
-        h3{
-            color: #999;
-            font-size: 15px;
-            line-height: 1.5;
-            letter-spacing: 0.02rem;
-            margin-top: 10px;
+        h3 {
+          color: #999;
+          font-size: 15px;
+          line-height: 1.5;
+          letter-spacing: 0.02rem;
+          margin-top: 10px;
         }
         .choose {
           input {
@@ -137,6 +147,9 @@
       .gender,
       .phone {
         padding-right: 15px;
+        @include rwd(960){
+          padding-right: 0;
+        }
       }
     }
     .item {
