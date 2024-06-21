@@ -346,6 +346,8 @@ img {
   line-height: 1.8;
   letter-spacing: 3px;
   color: #404040;
+  display: flex;
+  align-items: center;
   justify-content: center;
   position: relative;
 }
@@ -358,6 +360,9 @@ img {
 }
 .rooms_item .wrap .rooms_list .txt h3::before {
   left: 45%;
+}
+.rooms_item .wrap .rooms_list .txt h3::after {
+  right: 45%;
 }
 .rooms_item .wrap .rooms_list .txt h4 {
   font-size: 15px;

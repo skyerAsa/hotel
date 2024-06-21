@@ -177,6 +177,8 @@
           line-height: 1.8;
           letter-spacing: 3px;
           color: #404040;
+          display: flex;
+          align-items: center;
           justify-content: center;
           position: relative;
           &::before,
@@ -189,6 +191,9 @@
           }
           &::before {
             left: 45%;
+          }
+          &::after{
+            right: 45%;
           }
         }
         h4 {

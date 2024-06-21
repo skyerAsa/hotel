@@ -389,6 +389,12 @@ img {
   margin: 100px 20px;
   border-radius: 10px;
   position: relative;
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .tags_list {
+    display: block;
+  }
 }
 .tags_list .tag_txt {
   display: flex;
@@ -562,6 +568,11 @@ img {
 .farm {
   padding: 0 140px 0 180px;
 }
+@media screen and (max-width: 1180px) {
+  .farm {
+    padding: 0 20px;
+  }
+}
 .farm .title {
   padding: 60px 0 12px;
   font-size: 24px;
@@ -599,6 +610,11 @@ img {
 
 .canopy {
   padding: 0 140px 0 180px;
+}
+@media screen and (max-width: 1180px) {
+  .canopy {
+    padding: 0 20px;
+  }
 }
 .canopy .title {
   padding: 60px 0 12px;
@@ -638,6 +654,11 @@ img {
 .sky {
   padding: 0 140px 0 180px;
 }
+@media screen and (max-width: 1180px) {
+  .sky {
+    padding: 0 20px;
+  }
+}
 .sky .title {
   padding: 60px 0 12px;
   font-size: 24px;
@@ -675,6 +696,11 @@ img {
 
 .garden {
   padding: 0 140px 0 180px;
+}
+@media screen and (max-width: 1180px) {
+  .garden {
+    padding: 0 20px;
+  }
 }
 .garden .title {
   padding: 60px 0 12px;
@@ -714,6 +740,11 @@ img {
 .restaurant {
   padding: 0 140px 0 180px;
 }
+@media screen and (max-width: 1180px) {
+  .restaurant {
+    padding: 0 20px;
+  }
+}
 .restaurant .title {
   padding: 60px 0 12px;
   font-size: 24px;
@@ -751,6 +782,11 @@ img {
 
 .dairy {
   padding: 0 140px 0 180px;
+}
+@media screen and (max-width: 1180px) {
+  .dairy {
+    padding: 0 20px;
+  }
 }
 .dairy .title {
   padding: 60px 0 12px;
@@ -794,6 +830,11 @@ img {
 .hold {
   padding: 0 140px 0 180px;
 }
+@media screen and (max-width: 1180px) {
+  .hold {
+    padding: 0 20px;
+  }
+}
 .hold .title {
   padding: 60px 0 12px;
   font-size: 24px;
@@ -829,7 +870,7 @@ img {
   margin: 25px 0;
 }
 .hold .about_field .hold_contact {
-  width: 20%;
+  width: 50%;
   margin: 0 auto;
   cursor: pointer;
 }
@@ -844,6 +885,11 @@ img {
 
 .gathering {
   padding: 0 140px 0 180px;
+}
+@media screen and (max-width: 1180px) {
+  .gathering {
+    padding: 0 20px;
+  }
 }
 .gathering .title {
   padding: 60px 0 12px;
@@ -896,6 +942,11 @@ img {
 .colleague {
   padding: 0 140px 0 180px;
 }
+@media screen and (max-width: 1180px) {
+  .colleague {
+    padding: 0 20px;
+  }
+}
 .colleague .title {
   padding: 60px 0 12px;
   font-size: 24px;
@@ -947,6 +998,11 @@ img {
 .picnic {
   padding: 0 140px 0 180px;
 }
+@media screen and (max-width: 1180px) {
+  .picnic {
+    padding: 0 20px;
+  }
+}
 .picnic .title {
   padding: 60px 0 12px;
   font-size: 24px;
@@ -988,6 +1044,11 @@ img {
 
 .milk {
   padding: 0 140px 0 180px;
+}
+@media screen and (max-width: 1180px) {
+  .milk {
+    padding: 0 20px;
+  }
 }
 .milk .title {
   padding: 60px 0 12px;
@@ -1031,6 +1092,11 @@ img {
 .sun {
   padding: 0 140px 0 180px;
 }
+@media screen and (max-width: 1180px) {
+  .sun {
+    padding: 0 20px;
+  }
+}
 .sun .title {
   padding: 60px 0 12px;
   font-size: 24px;
@@ -1072,6 +1138,11 @@ img {
 
 .banquet {
   padding: 0 140px 0 180px;
+}
+@media screen and (max-width: 1180px) {
+  .banquet {
+    padding: 0 20px;
+  }
 }
 .banquet .title {
   padding: 60px 0 12px;
