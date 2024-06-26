@@ -2125,7 +2125,6 @@ body:has(.privacy_option.on) {
 .label_list.mid {
   position: absolute;
   top: 533%;
-  right: -8px;
 }
 .label_list ul {
   text-align: center;
