@@ -254,8 +254,12 @@ img {
 }
 
 .rooms_item {
-  padding-top: 50px;
-  padding-left: 140px;
+  padding: 50px 0 0 140px;
+}
+@media screen and (max-width: 1180px) {
+  .rooms_item {
+    padding-left: 0;
+  }
 }
 .rooms_item .wrap {
   width: 100%;
@@ -322,6 +326,7 @@ img {
   letter-spacing: 3px;
 }
 .rooms_item .wrap .rooms_list .txt p {
+  margin-bottom: 20px;
   font-weight: bold;
   cursor: pointer;
   position: relative;
@@ -340,35 +345,24 @@ img {
   left: 48%;
   background-color: #c8c8c8;
 }
-.rooms_item .wrap .rooms_list .txt h3 {
-  margin: 20px 0;
+.rooms_item .wrap .rooms_list .txt span {
+  padding: 0 10px;
   font-size: 15px;
   line-height: 1.8;
   letter-spacing: 3px;
   color: #404040;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
-}
-.rooms_item .wrap .rooms_list .txt h3::before, .rooms_item .wrap .rooms_list .txt h3::after {
-  content: "";
-  width: 1px;
-  height: 20px;
-  position: absolute;
-  background-color: #000;
-}
-.rooms_item .wrap .rooms_list .txt h3::before {
-  left: 45%;
-}
-.rooms_item .wrap .rooms_list .txt h3::after {
-  right: 45%;
+  border-left: 1px solid #666;
+  border-right: 1px solid #666;
 }
 .rooms_item .wrap .rooms_list .txt h4 {
   font-size: 15px;
   line-height: 1.8;
   letter-spacing: 3px;
   color: #404040;
+}
+.rooms_item .wrap .rooms_list .txt .room_content {
+  margin-top: 20px;
 }
 
 .line {
