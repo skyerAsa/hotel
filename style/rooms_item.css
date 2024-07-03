@@ -1,0 +1,1077 @@
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th {
+  font-weight: normal;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+*:hover,
+*:focus,
+*:active {
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button,
+input[type=button],
+input[type=text],
+input[type=number],
+textarea {
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+input::-ms-reveal {
+  display: none;
+}
+
+input[type=password]::-webkit-textfield-decoration-container {
+  visibility: hidden;
+}
+
+.nofloat:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ::-webkit-scrollbar{ 
+	width:10px;
+	height: 10px;
+	background-color:#f1f1f1;
+} */
+::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border: 3px #f1f1f1 solid;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: background 0.5s linear;
+  transition: background 0.5s linear;
+}
+
+*:hover::-webkit-scrollbar-thumb {
+  background-color: #a9a9a9;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #f1f1f1;
+}
+
+img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+html,
+body {
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+.all_body {
+  overflow: hidden;
+}
+
+.logo {
+  width: 1200px;
+  height: 220px;
+  padding-top: 20px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+.logo a img {
+  margin-top: 10px;
+  width: 130px;
+  height: 160px;
+}
+.logo .txt {
+  padding-top: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+}
+.logo .txt p {
+  padding-right: 5px;
+  display: flex;
+  align-items: center;
+}
+.logo .txt select {
+  padding: 5px 0;
+}
+.logo .link {
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.logo .link .website,
+.logo .link .checkout {
+  width: 96px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #97999b;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 10px 10px 0 0;
+}
+.logo .link .website img,
+.logo .link .checkout img {
+  width: 18px;
+  height: 20px;
+  margin-right: 10px;
+  margin-top: 0;
+}
+.logo .link .checkout {
+  margin-left: 10px;
+}
+
+.reservation_title {
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+}
+.reservation_title ul {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.reservation_title ul li {
+  padding: 10px 0;
+  height: 60px;
+  cursor: pointer;
+}
+.reservation_title ul li:hover .about_us,
+.reservation_title ul li:hover .reservation_rooms,
+.reservation_title ul li:hover .instruction_rooms,
+.reservation_title ul li:hover .membership_us {
+  display: flex;
+}
+.reservation_title ul li:hover .about_us a,
+.reservation_title ul li:hover .reservation_rooms a,
+.reservation_title ul li:hover .instruction_rooms a,
+.reservation_title ul li:hover .membership_us a {
+  height: 100%;
+}
+.reservation_title ul li:hover .about_us p,
+.reservation_title ul li:hover .reservation_rooms p,
+.reservation_title ul li:hover .instruction_rooms p,
+.reservation_title ul li:hover .membership_us p {
+  transition: 0.5s;
+  font-size: 18px;
+}
+.reservation_title ul li:hover .about_us p:hover,
+.reservation_title ul li:hover .reservation_rooms p:hover,
+.reservation_title ul li:hover .instruction_rooms p:hover,
+.reservation_title ul li:hover .membership_us p:hover {
+  color: #000;
+  background-color: #63bedf;
+}
+.reservation_title ul li + li {
+  margin-left: 50px;
+}
+.reservation_title ul li h2 {
+  font-size: 17px;
+  font-weight: bolder;
+}
+.reservation_title ul li p {
+  padding-top: 5px;
+  font-size: 12px;
+  text-align: center;
+}
+.reservation_title ul .about_us {
+  width: 100%;
+  height: 70px;
+  background-color: #97999b;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  animation: aa 0.5s;
+}
+@keyframes aa {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 70px;
+  }
+}
+.reservation_title ul .about_us p {
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+.reservation_title ul .reservation_rooms,
+.reservation_title ul .instruction_rooms,
+.reservation_title ul .membership_us {
+  width: 100%;
+  height: 70px;
+  background-color: #97999b;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  animation: aa 0.5s;
+}
+.reservation_title ul .reservation_rooms p,
+.reservation_title ul .instruction_rooms p,
+.reservation_title ul .membership_us p {
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+.reservation_title ul .reservation_rooms p + p,
+.reservation_title ul .instruction_rooms p + p,
+.reservation_title ul .membership_us p + p {
+  margin-left: 50px;
+}
+.reservation_title ul .reservation_rooms.on,
+.reservation_title ul .instruction_rooms.on,
+.reservation_title ul .membership_us.on {
+  display: flex;
+}
+
+.reservation_box {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  padding-bottom: 100px;
+}
+.reservation_box .reservation_left_box {
+  padding-right: 100px;
+}
+.reservation_box .reservation_left_box .reservation_left_box_title .title {
+  padding-top: 80px;
+  font-size: 12px;
+}
+.reservation_box .reservation_left_box .reservation_item {
+  width: 250px;
+  background-color: #97999b;
+  padding: 10px 0 20px;
+  margin-top: 20px;
+  position: relative;
+}
+.reservation_box .reservation_left_box .reservation_item .generally_reserve,
+.reservation_box .reservation_left_box .reservation_item .offer {
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.reservation_box .reservation_left_box .reservation_item .generally_reserve,
+.reservation_box .reservation_left_box .reservation_item .offer,
+.reservation_box .reservation_left_box .reservation_item .in_rooms,
+.reservation_box .reservation_left_box .reservation_item .reserve_rooms {
+  padding-top: 30px;
+  margin: 0 10px;
+  text-align: center;
+  border-bottom: 3px double #fff;
+  color: #fff;
+}
+.reservation_box .reservation_left_box .reservation_item .in_rooms {
+  padding-left: 20px;
+}
+.reservation_box .reservation_left_box .reservation_item .in_rooms .in_rooms_title {
+  display: flex;
+  padding-bottom: 20px;
+}
+.reservation_box .reservation_left_box .reservation_item .in_rooms .in_rooms_title i {
+  padding-right: 10px;
+}
+.reservation_box .reservation_left_box .reservation_item .in_rooms .in_rooms_date {
+  display: flex;
+  padding-bottom: 10px;
+}
+.reservation_box .reservation_left_box .reservation_item .in_rooms .in_rooms_date .in_rooms_years,
+.reservation_box .reservation_left_box .reservation_item .in_rooms .in_rooms_date .in_rooms_month,
+.reservation_box .reservation_left_box .reservation_item .in_rooms .in_rooms_date .in_rooms_day {
+  display: flex;
+}
+.reservation_box .reservation_left_box .reserve_rooms {
+  display: flex;
+  padding: 0 50px 10px 10px;
+}
+.reservation_box .reservation_left_box .rooms_find {
+  margin: 20px 10px 0;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #666;
+  color: #fff;
+  font-size: 18px;
+}
+.reservation_box .reservation_left_box .rooms_find h2 {
+  font-weight: bolder;
+}
+.reservation_box .reservation_left_box .txt {
+  width: 40px;
+  height: 70px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 30%;
+  right: -40px;
+  border-radius: 0 10px 10px 0;
+  background-color: #97999b;
+  color: #fff;
+}
+.reservation_box .reservation_left_box .txt p {
+  font-size: 24px;
+  font-weight: bolder;
+  writing-mode: vertical-lr;
+}
+.reservation_box .reservation_right_box {
+  padding: 100px 0 0 0;
+}
+.reservation_box .reservation_right_box .collect_list .collect_item .slick-list {
+  max-width: 700px;
+}
+.reservation_box .reservation_right_box .collect_list .collect_item .slick-list .slick-track {
+  max-width: 600%;
+}
+.reservation_box .reservation_right_box .collect_list .slick-dots {
+  top: auto;
+  bottom: -20px;
+}
+.reservation_box .reservation_right_box .collect_list .slick-dots li {
+  width: 30px;
+  height: 4px;
+  background-color: #63bedf;
+}
+.reservation_box .reservation_right_box .collect_list .slick-dots li button::before {
+  content: "";
+}
+.reservation_box .reservation_right_box .collect_list .slick-dots .slick-active {
+  background-color: #0689c8;
+}
+.reservation_box .reservation_right_box .collect_title p {
+  width: 100%;
+  height: 50px;
+  background-color: #97999b;
+  color: #fff;
+  font-weight: bolder;
+  padding-left: 20px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+}
+.reservation_box .reservation_right_box .collect_introduction {
+  width: 120%;
+  margin-top: 50px;
+  border-left: 8px solid #97999b;
+  display: flex;
+  justify-content: space-between;
+}
+.reservation_box .reservation_right_box .collect_introduction p {
+  padding: 10px 30px;
+  background-color: #97999b;
+  color: #fff;
+}
+.reservation_box .reservation_right_box .collect_introduction .title {
+  padding-left: 20px;
+  display: flex;
+  align-items: end;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.reservation_box .reservation_right_box .collect {
+  padding-left: 20px;
+}
+.reservation_box .reservation_right_box .collect .collect_rooms {
+  margin: 20px 0 40px 20px;
+}
+.reservation_box .reservation_right_box .collect .collect_rooms span {
+  padding: 0 10px;
+  border-left: 1px solid #97999b;
+  border-right: 1px solid #97999b;
+}
+.reservation_box .reservation_right_box .collect .collect_list {
+  line-height: 40px;
+  font-size: 15px;
+}
+.reservation_box .reservation_right_box .collect .collect_context {
+  padding-left: 20px;
+  line-height: 40px;
+  font-size: 15px;
+}
+.reservation_box .reservation_right_box .collect .collect_context ul {
+  padding-top: 30px;
+}
+.reservation_box .reservation_right_box .collect .collect_context ul li {
+  list-style: disc;
+}
+.reservation_box .reservation_right_box .collect_pricing {
+  margin-top: 50px;
+  border-left: 8px solid #97999b;
+}
+.reservation_box .reservation_right_box .collect_pricing .title {
+  padding-left: 20px;
+  display: flex;
+  align-items: end;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.reservation_box .reservation_right_box .collect_coin {
+  padding: 40px 0 0 20px;
+}
+.reservation_box .reservation_right_box .collect_order {
+  width: 120%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.reservation_box .reservation_right_box .collect_order p {
+  padding: 10px 30px;
+  background-color: #97999b;
+  color: #fff;
+}
+.reservation_box .reservation_right_box {
+  padding: 100px 0 0 0;
+}
+.reservation_box .reservation_right_box .mountain_list .mountain_item .slick-list {
+  max-width: 800px;
+}
+.reservation_box .reservation_right_box .mountain_list .mountain_item .slick-list .slick-track {
+  max-width: 500%;
+}
+.reservation_box .reservation_right_box .mountain_list .slick-dots {
+  top: auto;
+  bottom: -20px;
+}
+.reservation_box .reservation_right_box .mountain_list .slick-dots li {
+  width: 30px;
+  height: 4px;
+  background-color: #63bedf;
+}
+.reservation_box .reservation_right_box .mountain_list .slick-dots li button::before {
+  content: "";
+}
+.reservation_box .reservation_right_box .mountain_list .slick-dots .slick-active {
+  background-color: #0689c8;
+}
+.reservation_box .reservation_right_box .mountain_title p {
+  width: 100%;
+  height: 50px;
+  background-color: #97999b;
+  color: #fff;
+  font-weight: bolder;
+  padding-left: 20px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+}
+.reservation_box .reservation_right_box .mountain_introduction {
+  width: 120%;
+  margin-top: 50px;
+  border-left: 8px solid #97999b;
+  display: flex;
+  justify-content: space-between;
+}
+.reservation_box .reservation_right_box .mountain_introduction p {
+  padding: 10px 30px;
+  background-color: #97999b;
+  color: #fff;
+}
+.reservation_box .reservation_right_box .mountain_introduction .title {
+  padding-left: 20px;
+  display: flex;
+  align-items: end;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.reservation_box .reservation_right_box .mountain {
+  padding-left: 20px;
+}
+.reservation_box .reservation_right_box .mountain .mountain_rooms {
+  margin: 20px 0 40px 20px;
+}
+.reservation_box .reservation_right_box .mountain .mountain_rooms span {
+  padding: 0 10px;
+  border-left: 1px solid #97999b;
+  border-right: 1px solid #97999b;
+}
+.reservation_box .reservation_right_box .mountain .mountain_list {
+  line-height: 40px;
+  font-size: 15px;
+}
+.reservation_box .reservation_right_box .mountain .mountain_context {
+  padding-left: 20px;
+  line-height: 40px;
+  font-size: 15px;
+}
+.reservation_box .reservation_right_box .mountain .mountain_context ul {
+  padding-top: 30px;
+}
+.reservation_box .reservation_right_box .mountain .mountain_context ul li {
+  list-style: disc;
+}
+.reservation_box .reservation_right_box .mountain_pricing {
+  margin-top: 50px;
+  border-left: 8px solid #97999b;
+}
+.reservation_box .reservation_right_box .mountain_pricing .title {
+  padding-left: 20px;
+  display: flex;
+  align-items: end;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.reservation_box .reservation_right_box .mountain_coin {
+  padding: 40px 0 0 20px;
+}
+.reservation_box .reservation_right_box .mountain_order {
+  width: 120%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.reservation_box .reservation_right_box .mountain_order p {
+  padding: 10px 30px;
+  background-color: #97999b;
+  color: #fff;
+}
+.reservation_box .reservation_right_box {
+  padding: 100px 0 0 0;
+}
+.reservation_box .reservation_right_box .morioka_list .morioka_item .slick-list {
+  max-width: 800px;
+}
+.reservation_box .reservation_right_box .morioka_list .morioka_item .slick-list .slick-track {
+  max-width: 500%;
+}
+.reservation_box .reservation_right_box .morioka_list .slick-dots {
+  top: auto;
+  bottom: -20px;
+}
+.reservation_box .reservation_right_box .morioka_list .slick-dots li {
+  width: 30px;
+  height: 4px;
+  background-color: #63bedf;
+}
+.reservation_box .reservation_right_box .morioka_list .slick-dots li button::before {
+  content: "";
+}
+.reservation_box .reservation_right_box .morioka_list .slick-dots .slick-active {
+  background-color: #0689c8;
+}
+.reservation_box .reservation_right_box .morioka_title p {
+  width: 100%;
+  height: 50px;
+  background-color: #97999b;
+  color: #fff;
+  font-weight: bolder;
+  padding-left: 20px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+}
+.reservation_box .reservation_right_box .morioka_introduction {
+  width: 120%;
+  margin-top: 50px;
+  border-left: 8px solid #97999b;
+  display: flex;
+  justify-content: space-between;
+}
+.reservation_box .reservation_right_box .morioka_introduction p {
+  padding: 10px 30px;
+  background-color: #97999b;
+  color: #fff;
+}
+.reservation_box .reservation_right_box .morioka_introduction .title {
+  padding-left: 20px;
+  display: flex;
+  align-items: end;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.reservation_box .reservation_right_box .morioka {
+  padding-left: 20px;
+}
+.reservation_box .reservation_right_box .morioka .morioka_rooms {
+  margin: 20px 0 40px 20px;
+}
+.reservation_box .reservation_right_box .morioka .morioka_rooms span {
+  padding: 0 10px;
+  border-left: 1px solid #97999b;
+  border-right: 1px solid #97999b;
+}
+.reservation_box .reservation_right_box .morioka .morioka_list {
+  line-height: 40px;
+  font-size: 15px;
+}
+.reservation_box .reservation_right_box .morioka .morioka_context {
+  padding-left: 20px;
+  line-height: 40px;
+  font-size: 15px;
+}
+.reservation_box .reservation_right_box .morioka .morioka_context ul {
+  padding-top: 30px;
+}
+.reservation_box .reservation_right_box .morioka .morioka_context ul li {
+  list-style: disc;
+}
+.reservation_box .reservation_right_box .morioka_pricing {
+  margin-top: 50px;
+  border-left: 8px solid #97999b;
+}
+.reservation_box .reservation_right_box .morioka_pricing .title {
+  padding-left: 20px;
+  display: flex;
+  align-items: end;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.reservation_box .reservation_right_box .morioka_coin {
+  padding: 40px 0 0 20px;
+}
+.reservation_box .reservation_right_box .morioka_order {
+  width: 120%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.reservation_box .reservation_right_box .morioka_order p {
+  padding: 10px 30px;
+  background-color: #97999b;
+  color: #fff;
+}
+.reservation_box .reservation_right_box {
+  padding: 100px 0 0 0;
+}
+.reservation_box .reservation_right_box .reflection_list .reflection_item .slick-list {
+  max-width: 800px;
+}
+.reservation_box .reservation_right_box .reflection_list .reflection_item .slick-list .slick-track {
+  max-width: 600%;
+}
+.reservation_box .reservation_right_box .reflection_list .slick-dots {
+  top: auto;
+  bottom: -20px;
+}
+.reservation_box .reservation_right_box .reflection_list .slick-dots li {
+  width: 30px;
+  height: 4px;
+  background-color: #63bedf;
+}
+.reservation_box .reservation_right_box .reflection_list .slick-dots li button::before {
+  content: "";
+}
+.reservation_box .reservation_right_box .reflection_list .slick-dots .slick-active {
+  background-color: #0689c8;
+}
+.reservation_box .reservation_right_box .reflection_title p {
+  width: 100%;
+  height: 50px;
+  background-color: #97999b;
+  color: #fff;
+  font-weight: bolder;
+  padding-left: 20px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+}
+.reservation_box .reservation_right_box .reflection_introduction {
+  width: 120%;
+  margin-top: 50px;
+  border-left: 8px solid #97999b;
+  display: flex;
+  justify-content: space-between;
+}
+.reservation_box .reservation_right_box .reflection_introduction p {
+  padding: 10px 30px;
+  background-color: #97999b;
+  color: #fff;
+}
+.reservation_box .reservation_right_box .reflection_introduction .title {
+  padding-left: 20px;
+  display: flex;
+  align-items: end;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.reservation_box .reservation_right_box .reflection {
+  padding-left: 20px;
+}
+.reservation_box .reservation_right_box .reflection .reflection_rooms {
+  margin: 20px 0 40px 20px;
+}
+.reservation_box .reservation_right_box .reflection .reflection_rooms span {
+  padding: 0 10px;
+  border-left: 1px solid #97999b;
+  border-right: 1px solid #97999b;
+}
+.reservation_box .reservation_right_box .reflection .reflection_list {
+  line-height: 40px;
+  font-size: 15px;
+}
+.reservation_box .reservation_right_box .reflection .reflection_context {
+  padding-left: 20px;
+  line-height: 40px;
+  font-size: 15px;
+}
+.reservation_box .reservation_right_box .reflection .reflection_context ul {
+  padding-top: 30px;
+}
+.reservation_box .reservation_right_box .reflection .reflection_context ul li {
+  list-style: disc;
+}
+.reservation_box .reservation_right_box .reflection_pricing {
+  margin-top: 50px;
+  border-left: 8px solid #97999b;
+}
+.reservation_box .reservation_right_box .reflection_pricing .title {
+  padding-left: 20px;
+  display: flex;
+  align-items: end;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.reservation_box .reservation_right_box .reflection_coin {
+  padding: 40px 0 0 20px;
+}
+.reservation_box .reservation_right_box .reflection_order {
+  width: 120%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.reservation_box .reservation_right_box .reflection_order p {
+  padding: 10px 30px;
+  background-color: #97999b;
+  color: #fff;
+}
+.reservation_box .reservation_right_box {
+  padding: 100px 0 0 0;
+}
+.reservation_box .reservation_right_box .linshan_list .linshan_item .slick-list {
+  max-width: 800px;
+}
+.reservation_box .reservation_right_box .linshan_list .linshan_item .slick-list .slick-track {
+  max-width: 800%;
+}
+.reservation_box .reservation_right_box .linshan_list .slick-dots {
+  top: auto;
+  bottom: -20px;
+}
+.reservation_box .reservation_right_box .linshan_list .slick-dots li {
+  width: 30px;
+  height: 4px;
+  background-color: #63bedf;
+}
+.reservation_box .reservation_right_box .linshan_list .slick-dots li button::before {
+  content: "";
+}
+.reservation_box .reservation_right_box .linshan_list .slick-dots .slick-active {
+  background-color: #0689c8;
+}
+.reservation_box .reservation_right_box .linshan_title p {
+  width: 100%;
+  height: 50px;
+  background-color: #97999b;
+  color: #fff;
+  font-weight: bolder;
+  padding-left: 20px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+}
+.reservation_box .reservation_right_box .linshan_introduction {
+  width: 120%;
+  margin-top: 50px;
+  border-left: 8px solid #97999b;
+  display: flex;
+  justify-content: space-between;
+}
+.reservation_box .reservation_right_box .linshan_introduction p {
+  padding: 10px 30px;
+  background-color: #97999b;
+  color: #fff;
+}
+.reservation_box .reservation_right_box .linshan_introduction .title {
+  padding-left: 20px;
+  display: flex;
+  align-items: end;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.reservation_box .reservation_right_box .linshan {
+  padding-left: 20px;
+}
+.reservation_box .reservation_right_box .linshan .linshan_rooms {
+  margin: 20px 0 40px 20px;
+}
+.reservation_box .reservation_right_box .linshan .linshan_rooms span {
+  padding: 0 10px;
+  border-left: 1px solid #97999b;
+  border-right: 1px solid #97999b;
+}
+.reservation_box .reservation_right_box .linshan .linshan_list {
+  line-height: 40px;
+  font-size: 15px;
+}
+.reservation_box .reservation_right_box .linshan .linshan_context {
+  padding-left: 20px;
+  line-height: 40px;
+  font-size: 15px;
+}
+.reservation_box .reservation_right_box .linshan .linshan_context ul {
+  padding-top: 30px;
+}
+.reservation_box .reservation_right_box .linshan .linshan_context ul li {
+  list-style: disc;
+}
+.reservation_box .reservation_right_box .linshan_pricing {
+  margin-top: 50px;
+  border-left: 8px solid #97999b;
+}
+.reservation_box .reservation_right_box .linshan_pricing .title {
+  padding-left: 20px;
+  display: flex;
+  align-items: end;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.reservation_box .reservation_right_box .linshan_coin {
+  padding: 40px 0 0 20px;
+}
+.reservation_box .reservation_right_box .linshan_order {
+  width: 120%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.reservation_box .reservation_right_box .linshan_order p {
+  padding: 10px 30px;
+  background-color: #97999b;
+  color: #fff;
+}
+
+.footer {
+  background: #eeeeee;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  border-bottom: 10px solid #1a1a1a;
+  display: flex;
+  position: relative;
+}
+.footer .title {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .title .txt h2 {
+  padding: 10px 0;
+  font-weight: bolder;
+}
+.footer .title .txt p {
+  font-size: 12px;
+}
+.footer .title .img {
+  display: flex;
+  align-items: center;
+}
+
+.go_top {
+  margin-top: 5px;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 50px;
+  right: 40px;
+  display: none;
+}
+.go_top.on {
+  display: block;
+}
+
+.safe_ad {
+  width: 30%;
+  height: 60%;
+  padding: 5px;
+  margin-left: -35%;
+  margin-top: 0%;
+  position: fixed;
+  top: 20%;
+  left: 70%;
+  z-index: 10002;
+  background-color: #fff;
+  text-align: center;
+  z-index: 2;
+  display: block;
+}
+.safe_ad.on {
+  display: block;
+}
+.safe_ad .safe_title {
+  padding-top: 20px;
+}
+.safe_ad .safe_title p {
+  font-weight: bolder;
+  font-size: 28px;
+}
+.safe_ad .remind {
+  padding: 0px 10%;
+  margin: 20px 0px;
+  overflow-y: auto;
+  display: flex;
+  color: red;
+}
+.safe_ad .remind p {
+  font-size: 21px;
+  font-weight: bolder;
+  text-align: left;
+}
+.safe_ad .safe_main {
+  padding: 0px 10%;
+  margin: 20px 0px;
+  text-align: left;
+}
+.safe_ad .safe_main p {
+  font-size: 14px;
+}
+.safe_ad .safe_main a {
+  color: blue;
+}
+.safe_ad .safe_ad_main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.safe_ad .safe_close {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: #fff;
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.safe_back {
+  width: 100%;
+  height: 200vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.5;
+}
+.safe_back.on {
+  display: block;
+}/*# sourceMappingURL=rooms_item.css.map */

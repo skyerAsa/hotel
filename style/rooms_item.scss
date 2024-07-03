@@ -1,0 +1,957 @@
+@import "reset";
+@import "method";
+html,
+body {
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+.all_body {
+  overflow: hidden;
+}
+
+// logo
+.logo {
+  width: 1200px;
+  height: 220px;
+  padding-top: 20px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  a {
+    img {
+      margin-top: 10px;
+      width: 130px;
+      height: 160px;
+    }
+  }
+  .txt {
+    padding-top: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    p {
+      padding-right: 5px;
+      display: flex;
+      align-items: center;
+    }
+    select {
+      padding: 5px 0;
+    }
+  }
+  .link {
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    .website,
+    .checkout {
+      width: 96px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #97999b;
+      color: #fff;
+      font-size: 12px;
+      border-radius: 10px 10px 0 0;
+      img {
+        width: 18px;
+        height: 20px;
+        margin-right: 10px;
+        margin-top: 0;
+      }
+    }
+    .checkout {
+      margin-left: 10px;
+    }
+  }
+}
+
+// reservation_title
+.reservation_title {
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  ul {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    li {
+      padding: 10px 0;
+      height: 60px;
+      cursor: pointer;
+      &:hover {
+        .about_us,
+        .reservation_rooms,
+        .instruction_rooms,
+        .membership_us {
+          display: flex;
+          a {
+            height: 100%;
+          }
+          p {
+            transition: 0.5s;
+            font-size: 18px;
+            &:hover {
+              color: #000;
+              background-color: #63bedf;
+            }
+          }
+        }
+      }
+      & + li {
+        margin-left: 50px;
+      }
+      h2 {
+        font-size: 17px;
+        font-weight: bolder;
+      }
+      p {
+        padding-top: 5px;
+        font-size: 12px;
+        text-align: center;
+      }
+    }
+    .about_us {
+      width: 100%;
+      height: 70px;
+      background-color: #97999b;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      display: none;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translateY(100%);
+      @keyframes aa {
+        from {
+          height: 0px;
+        }
+        to {
+          height: 70px;
+        }
+      }
+      animation: aa 0.5s;
+      p {
+        height: 100%;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+      }
+    }
+    .reservation_rooms,
+    .instruction_rooms,
+    .membership_us {
+      width: 100%;
+      height: 70px;
+      background-color: #97999b;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      display: none;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translateY(100%);
+      animation: aa 0.5s;
+      p {
+        height: 100%;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        & + p {
+          margin-left: 50px;
+        }
+      }
+      &.on {
+        display: flex;
+      }
+    }
+  }
+}
+
+// reservation_box
+.reservation_box {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  padding-bottom: 100px;
+  // reservation_left_box
+  .reservation_left_box {
+    padding-right: 100px;
+    .reservation_left_box_title {
+      .title {
+        padding-top: 80px;
+        font-size: 12px;
+      }
+    }
+    .reservation_item {
+      width: 250px;
+      background-color: #97999b;
+      padding: 10px 0 20px;
+      margin-top: 20px;
+      position: relative;
+      .generally_reserve,
+      .offer {
+        padding-bottom: 10px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .generally_reserve,
+      .offer,
+      .in_rooms,
+      .reserve_rooms {
+        padding-top: 30px;
+        margin: 0 10px;
+        text-align: center;
+        border-bottom: 3px double #fff;
+        color: #fff;
+      }
+      .in_rooms {
+        padding-left: 20px;
+        .in_rooms_title {
+          display: flex;
+          padding-bottom: 20px;
+          i {
+            padding-right: 10px;
+          }
+        }
+        .in_rooms_date {
+          display: flex;
+          padding-bottom: 10px;
+          .in_rooms_years,
+          .in_rooms_month,
+          .in_rooms_day {
+            display: flex;
+          }
+        }
+      }
+    }
+    .reserve_rooms {
+      display: flex;
+      padding: 0 50px 10px 10px;
+    }
+    .rooms_find {
+      margin: 20px 10px 0;
+      padding: 20px 0;
+      text-align: center;
+      background-color: #666;
+      color: #fff;
+      font-size: 18px;
+      h2 {
+        font-weight: bolder;
+      }
+    }
+    .txt {
+      width: 40px;
+      height: 70px;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      top: 30%;
+      right: -40px;
+      border-radius: 0 10px 10px 0;
+      background-color: #97999b;
+      color: #fff;
+      p {
+        font-size: 24px;
+        font-weight: bolder;
+        writing-mode: vertical-lr;
+      }
+    }
+  }
+  // reservation_right_box collext
+  .reservation_right_box {
+    padding: 100px 0 0 0;
+    .collect_list {
+      .collect_item {
+        .slick-list {
+          max-width: 700px;
+          .slick-track {
+            max-width: 600%;
+          }
+        }
+      }
+      .slick-dots {
+        top: auto;
+        bottom: -20px;
+        li {
+          width: 30px;
+          height: 4px;
+          background-color: #63bedf;
+          button {
+            &::before {
+              content: "";
+            }
+          }
+        }
+        .slick-active {
+          background-color: #0689c8;
+        }
+      }
+    }
+    .collect_title {
+      p {
+        width: 100%;
+        height: 50px;
+        background-color: #97999b;
+        color: #fff;
+        font-weight: bolder;
+        padding-left: 20px;
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+      }
+    }
+    .collect_introduction {
+      width: 120%;
+      margin-top: 50px;
+      border-left: 8px solid #97999b;
+      display: flex;
+      justify-content: space-between;
+      p {
+        padding: 10px 30px;
+        background-color: #97999b;
+        color: #fff;
+      }
+      .title {
+        padding-left: 20px;
+        display: flex;
+        align-items: end;
+        font-size: 18px;
+        font-weight: bolder;
+      }
+    }
+    .collect {
+      padding-left: 20px;
+      .collect_rooms {
+        margin: 20px 0 40px 20px;
+        span {
+          padding: 0 10px;
+          border-left: 1px solid #97999b;
+          border-right: 1px solid #97999b;
+        }
+      }
+      .collect_list{
+        line-height: 40px;
+        font-size: 15px;
+      }
+      .collect_context{
+        padding-left: 20px;
+        line-height: 40px;
+        font-size: 15px;
+        ul{
+            padding-top: 30px;
+            li{
+                list-style: disc;
+            }
+        }
+      }
+    }
+    .collect_pricing {
+      margin-top: 50px;
+      border-left: 8px solid #97999b;
+      .title {
+        padding-left: 20px;
+        display: flex;
+        align-items: end;
+        font-size: 18px;
+        font-weight: bolder;
+      }
+    }
+    .collect_coin {
+      padding: 40px 0 0 20px;
+    }
+    .collect_order {
+      width: 120%;
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+      p {
+        padding: 10px 30px;
+        background-color: #97999b;
+        color: #fff;
+      }
+    }
+  }
+//   reservation_right_box mountain
+.reservation_right_box {
+    padding: 100px 0 0 0;
+    .mountain_list {
+      .mountain_item {
+        .slick-list {
+          max-width: 800px;
+          .slick-track {
+            max-width: 500%;
+          }
+        }
+      }
+      .slick-dots {
+        top: auto;
+        bottom: -20px;
+        li {
+          width: 30px;
+          height: 4px;
+          background-color: #63bedf;
+          button {
+            &::before {
+              content: "";
+            }
+          }
+        }
+        .slick-active {
+          background-color: #0689c8;
+        }
+      }
+    }
+    .mountain_title {
+      p {
+        width: 100%;
+        height: 50px;
+        background-color: #97999b;
+        color: #fff;
+        font-weight: bolder;
+        padding-left: 20px;
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+      }
+    }
+    .mountain_introduction {
+      width: 120%;
+      margin-top: 50px;
+      border-left: 8px solid #97999b;
+      display: flex;
+      justify-content: space-between;
+      p {
+        padding: 10px 30px;
+        background-color: #97999b;
+        color: #fff;
+      }
+      .title {
+        padding-left: 20px;
+        display: flex;
+        align-items: end;
+        font-size: 18px;
+        font-weight: bolder;
+      }
+    }
+    .mountain {
+      padding-left: 20px;
+      .mountain_rooms {
+        margin: 20px 0 40px 20px;
+        span {
+          padding: 0 10px;
+          border-left: 1px solid #97999b;
+          border-right: 1px solid #97999b;
+        }
+      }
+      .mountain_list{
+        line-height: 40px;
+        font-size: 15px;
+      }
+      .mountain_context{
+        padding-left: 20px;
+        line-height: 40px;
+        font-size: 15px;
+        ul{
+            padding-top: 30px;
+            li{
+                list-style: disc;
+            }
+        }
+      }
+    }
+    .mountain_pricing {
+      margin-top: 50px;
+      border-left: 8px solid #97999b;
+      .title {
+        padding-left: 20px;
+        display: flex;
+        align-items: end;
+        font-size: 18px;
+        font-weight: bolder;
+      }
+    }
+    .mountain_coin {
+      padding: 40px 0 0 20px;
+    }
+    .mountain_order {
+      width: 120%;
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+      p {
+        padding: 10px 30px;
+        background-color: #97999b;
+        color: #fff;
+      }
+    }
+  }
+//   reservation_right_box morioka
+.reservation_right_box {
+    padding: 100px 0 0 0;
+    .morioka_list {
+      .morioka_item {
+        .slick-list {
+          max-width: 800px;
+          .slick-track {
+            max-width: 500%;
+          }
+        }
+      }
+      .slick-dots {
+        top: auto;
+        bottom: -20px;
+        li {
+          width: 30px;
+          height: 4px;
+          background-color: #63bedf;
+          button {
+            &::before {
+              content: "";
+            }
+          }
+        }
+        .slick-active {
+          background-color: #0689c8;
+        }
+      }
+    }
+    .morioka_title {
+      p {
+        width: 100%;
+        height: 50px;
+        background-color: #97999b;
+        color: #fff;
+        font-weight: bolder;
+        padding-left: 20px;
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+      }
+    }
+    .morioka_introduction {
+      width: 120%;
+      margin-top: 50px;
+      border-left: 8px solid #97999b;
+      display: flex;
+      justify-content: space-between;
+      p {
+        padding: 10px 30px;
+        background-color: #97999b;
+        color: #fff;
+      }
+      .title {
+        padding-left: 20px;
+        display: flex;
+        align-items: end;
+        font-size: 18px;
+        font-weight: bolder;
+      }
+    }
+    .morioka {
+      padding-left: 20px;
+      .morioka_rooms {
+        margin: 20px 0 40px 20px;
+        span {
+          padding: 0 10px;
+          border-left: 1px solid #97999b;
+          border-right: 1px solid #97999b;
+        }
+      }
+      .morioka_list{
+        line-height: 40px;
+        font-size: 15px;
+      }
+      .morioka_context{
+        padding-left: 20px;
+        line-height: 40px;
+        font-size: 15px;
+        ul{
+            padding-top: 30px;
+            li{
+                list-style: disc;
+            }
+        }
+      }
+    }
+    .morioka_pricing {
+      margin-top: 50px;
+      border-left: 8px solid #97999b;
+      .title {
+        padding-left: 20px;
+        display: flex;
+        align-items: end;
+        font-size: 18px;
+        font-weight: bolder;
+      }
+    }
+    .morioka_coin {
+      padding: 40px 0 0 20px;
+    }
+    .morioka_order {
+      width: 120%;
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+      p {
+        padding: 10px 30px;
+        background-color: #97999b;
+        color: #fff;
+      }
+    }
+  }
+//   reservation_right_box reflection
+.reservation_right_box {
+    padding: 100px 0 0 0;
+    .reflection_list {
+      .reflection_item {
+        .slick-list {
+          max-width: 800px;
+          .slick-track {
+            max-width: 600%;
+          }
+        }
+      }
+      .slick-dots {
+        top: auto;
+        bottom: -20px;
+        li {
+          width: 30px;
+          height: 4px;
+          background-color: #63bedf;
+          button {
+            &::before {
+              content: "";
+            }
+          }
+        }
+        .slick-active {
+          background-color: #0689c8;
+        }
+      }
+    }
+    .reflection_title {
+      p {
+        width: 100%;
+        height: 50px;
+        background-color: #97999b;
+        color: #fff;
+        font-weight: bolder;
+        padding-left: 20px;
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+      }
+    }
+    .reflection_introduction {
+      width: 120%;
+      margin-top: 50px;
+      border-left: 8px solid #97999b;
+      display: flex;
+      justify-content: space-between;
+      p {
+        padding: 10px 30px;
+        background-color: #97999b;
+        color: #fff;
+      }
+      .title {
+        padding-left: 20px;
+        display: flex;
+        align-items: end;
+        font-size: 18px;
+        font-weight: bolder;
+      }
+    }
+    .reflection {
+      padding-left: 20px;
+      .reflection_rooms {
+        margin: 20px 0 40px 20px;
+        span {
+          padding: 0 10px;
+          border-left: 1px solid #97999b;
+          border-right: 1px solid #97999b;
+        }
+      }
+      .reflection_list{
+        line-height: 40px;
+        font-size: 15px;
+      }
+      .reflection_context{
+        padding-left: 20px;
+        line-height: 40px;
+        font-size: 15px;
+        ul{
+            padding-top: 30px;
+            li{
+                list-style: disc;
+            }
+        }
+      }
+    }
+    .reflection_pricing {
+      margin-top: 50px;
+      border-left: 8px solid #97999b;
+      .title {
+        padding-left: 20px;
+        display: flex;
+        align-items: end;
+        font-size: 18px;
+        font-weight: bolder;
+      }
+    }
+    .reflection_coin {
+      padding: 40px 0 0 20px;
+    }
+    .reflection_order {
+      width: 120%;
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+      p {
+        padding: 10px 30px;
+        background-color: #97999b;
+        color: #fff;
+      }
+    }
+  }
+  //   reservation_right_box linshan
+.reservation_right_box {
+    padding: 100px 0 0 0;
+    .linshan_list {
+      .linshan_item {
+        .slick-list {
+          max-width: 800px;
+          .slick-track {
+            max-width: 800%;
+          }
+        }
+      }
+      .slick-dots {
+        top: auto;
+        bottom: -20px;
+        li {
+          width: 30px;
+          height: 4px;
+          background-color: #63bedf;
+          button {
+            &::before {
+              content: "";
+            }
+          }
+        }
+        .slick-active {
+          background-color: #0689c8;
+        }
+      }
+    }
+    .linshan_title {
+      p {
+        width: 100%;
+        height: 50px;
+        background-color: #97999b;
+        color: #fff;
+        font-weight: bolder;
+        padding-left: 20px;
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+      }
+    }
+    .linshan_introduction {
+      width: 120%;
+      margin-top: 50px;
+      border-left: 8px solid #97999b;
+      display: flex;
+      justify-content: space-between;
+      p {
+        padding: 10px 30px;
+        background-color: #97999b;
+        color: #fff;
+      }
+      .title {
+        padding-left: 20px;
+        display: flex;
+        align-items: end;
+        font-size: 18px;
+        font-weight: bolder;
+      }
+    }
+    .linshan {
+      padding-left: 20px;
+      .linshan_rooms {
+        margin: 20px 0 40px 20px;
+        span {
+          padding: 0 10px;
+          border-left: 1px solid #97999b;
+          border-right: 1px solid #97999b;
+        }
+      }
+      .linshan_list{
+        line-height: 40px;
+        font-size: 15px;
+      }
+      .linshan_context{
+        padding-left: 20px;
+        line-height: 40px;
+        font-size: 15px;
+        ul{
+            padding-top: 30px;
+            li{
+                list-style: disc;
+            }
+        }
+      }
+    }
+    .linshan_pricing {
+      margin-top: 50px;
+      border-left: 8px solid #97999b;
+      .title {
+        padding-left: 20px;
+        display: flex;
+        align-items: end;
+        font-size: 18px;
+        font-weight: bolder;
+      }
+    }
+    .linshan_coin {
+      padding: 40px 0 0 20px;
+    }
+    .linshan_order {
+      width: 120%;
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+      p {
+        padding: 10px 30px;
+        background-color: #97999b;
+        color: #fff;
+      }
+    }
+  }
+}
+
+// footer
+.footer {
+  background: #eeeeee;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  border-bottom: 10px solid #1a1a1a;
+  display: flex;
+  position: relative;
+  .title {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    .txt {
+      h2 {
+        padding: 10px 0;
+        font-weight: bolder;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+    .img {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.go_top {
+  margin-top: 5px;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 50px;
+  right: 40px;
+  display: none;
+  &.on {
+    display: block;
+  }
+}
+
+// safe_ad
+.safe_ad {
+  width: 30%;
+  height: 60%;
+  padding: 5px;
+  margin-left: -35%;
+  margin-top: 0%;
+  position: fixed;
+  top: 20%;
+  left: 70%;
+  z-index: 10002;
+  background-color: #fff;
+  text-align: center;
+  z-index: 2;
+  display: block;
+  &.on {
+    display: block;
+  }
+  .safe_title {
+    padding-top: 20px;
+    p {
+      font-weight: bolder;
+      font-size: 28px;
+    }
+  }
+  .remind {
+    padding: 0px 10%;
+    margin: 20px 0px;
+    overflow-y: auto;
+    display: flex;
+    color: red;
+    p {
+      font-size: 21px;
+      font-weight: bolder;
+      text-align: left;
+    }
+  }
+  .safe_main {
+    padding: 0px 10%;
+    margin: 20px 0px;
+    text-align: left;
+    p {
+      font-size: 14px;
+    }
+    a {
+      color: blue;
+    }
+  }
+  .safe_ad_main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .safe_close {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: #fff;
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    z-index: 2;
+    cursor: pointer;
+  }
+}
+
+// safe_back
+.safe_back {
+  width: 100%;
+  height: 200vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.5;
+  // display: none;
+  &.on {
+    display: block;
+  }
+}

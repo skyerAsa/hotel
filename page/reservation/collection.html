@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../style/rooms_item.css" />
+    <link rel="stylesheet" type="text/css" href="../../slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../../slick/slick-theme.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://web.cdn.openinstall.io/openinstall.js"></script>
+    <script src="https://kit.fontawesome.com/64fccb9e01.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../../slick/slick.min.js"></script>
+    <script src="
+    https://cdn.jsdelivr.net/npm/jquery.session@1.0.0/jquery.session.min.js
+    "></script>
+</head>
+
+<body>
+    <div class="all_body">
+        <!-- reservation_logo -->
+        <div class="reservation_logo">
+            <div class="logo">
+                <a href="../../page/reservation.html">
+                    <img src="../../img/logo.png" alt="" />
+                </a>
+                <div class="txt">
+                    <p>Language</p>
+                    <select>
+            <option>繁體中文</option>
+            <option>English</option>
+            <option>日本語</option>
+            <option>简体中文</option>
+          </select>
+                </div>
+                <div class="link">
+                    <a href="../../index.html">
+                        <div class="website">
+                            <img src="../../img/reservation/icon_1.png" alt="" />
+                            <p>官網</p>
+                        </div>
+                    </a>
+                    <div class="checkout">
+                        <img src="../../img/reservation/icon_1.png" alt="" />
+                        <p>結帳</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- reservation_title -->
+        <div class="reservation_title">
+            <ul>
+                <li class="about">
+                    <h2>About Us</h2>
+                    <p>飯店介紹</p>
+                    <a href="../../page/reservation.html">
+                        <div class="about_us">
+                            <p>關於我們</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="reservation">
+                    <h2>Reservation</h2>
+                    <p>線上訂房</p>
+                    <div class="reservation_rooms">
+                        <a href="../../page/generally.html">
+                            <p>一般訂房</p>
+                        </a>
+                        <a href="../../page/offer.html">
+                            <p>特惠套裝</p>
+                        </a>
+                    </div>
+                </li>
+                <li class="instruction">
+                    <h2>Instruction</h2>
+                    <p>使用說明</p>
+                    <div class="instruction_rooms">
+                        <a href="../../page/six_steps.html">
+                            <p>訂房六步驟</p>
+                        </a>
+                        <a href="../../page/privacy.html">
+                            <p>隱私權政策</p>
+                        </a>
+                        <a href="../../page/SSL.html">
+                            <p>SSL安全付款機制</p>
+                        </a>
+                    </div>
+                </li>
+                <li class="membership">
+                    <h2>Membership</h2>
+                    <p>會員專區</p>
+                    <div class="membership_us">
+                        <a href="../../page/login.html">
+                            <p>登入</p>
+                        </a>
+                        <a href="../../page/register.html">
+                            <p>註冊會員</p>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- reservation_box -->
+        <div class="reservation_box">
+            <!-- reservation_left_box -->
+            <div class="reservation_left_box">
+                <div class="reservation_left_box_title">
+                    <p class="title">訂房系統 > 飯店介紹 > 關於我們</p>
+                </div>
+                <div class="reservation_item">
+                    <div class="generally_reserve">
+                        <a href="../../page/generally.html">
+                            <p>一般訂房</p>
+                        </a>
+                    </div>
+                    <div class="offer">
+                        <a href="../../page/offer.html">
+                            <p>特惠套裝</p>
+                        </a>
+                    </div>
+                    <div class="in_rooms">
+                        <div class="in_rooms_title">
+                            <i class="fa fa-caret-right"></i>
+                            <h2>入住日</h2>
+                        </div>
+                        <div class="in_rooms_date">
+                            <div class="in_rooms_years">
+                                <select>
+                            <option>2024</option>
+                            <option>2025</option>
+                            </select>
+                                <h3>-</h3>
+                            </div>
+                            <div class="in_rooms_month">
+                                <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                            </select>
+                                <h3>-</h3>
+                            </div>
+                            <div class="in_rooms_day">
+                                <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
+                            <option>16</option>
+                            <option>17</option>
+                            <option>18</option>
+                            <option>19</option>
+                            <option>20</option>
+                            <option>21</option>
+                            <option>22</option>
+                            <option>23</option>
+                            <option>24</option>
+                            <option>25</option>
+                            <option>26</option>
+                            <option>27</option>
+                            <option>28</option>
+                            <option>29</option>
+                            <option>30</option>
+                            <option>31</option>
+                        </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="in_rooms">
+                        <div class="in_rooms_title">
+                            <i class="fa fa-caret-right"></i>
+                            <h2>退房日</h2>
+                        </div>
+                        <div class="in_rooms_date">
+                            <div class="in_rooms_years">
+                                <select>
+                            <option>2024</option>
+                            <option>2025</option>
+                            </select>
+                                <h3>-</h3>
+                            </div>
+                            <div class="in_rooms_month">
+                                <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                            </select>
+                                <h3>-</h3>
+                            </div>
+                            <div class="in_rooms_day">
+                                <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
+                            <option>16</option>
+                            <option>17</option>
+                            <option>18</option>
+                            <option>19</option>
+                            <option>20</option>
+                            <option>21</option>
+                            <option>22</option>
+                            <option>23</option>
+                            <option>24</option>
+                            <option>25</option>
+                            <option>26</option>
+                            <option>27</option>
+                            <option>28</option>
+                            <option>29</option>
+                            <option>30</option>
+                            <option>31</option>
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reserve_rooms">
+                        <p>
+                            訂房：
+                            <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        </select>
+                            <p>間</p>
+                        </p>
+                    </div>
+                    <div class="rooms_find">
+                        <h2>查詢</h2>
+                    </div>
+                    <div class="txt">
+                        <p>搜尋</p>
+                    </div>
+                </div>
+            </div>
+            <!-- reservation_right_box -->
+            <div class="reservation_right_box">
+                <div class="collect_list">
+                    <ul class="collect_item">
+                        <li>
+                            <img src="../../img/reservation/collection/1.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="../../img/reservation/collection/2.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="../../img/reservation/collection/3.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="../../img/reservation/collection/4.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="../../img/reservation/collection/5.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="../../img/reservation/collection/6.jpg" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <div class="collect_title">
+                    <p>山采 雙人房 • 一泊一食</p>
+                </div>
+                <div class="collect_introduction">
+                    <h2 class="title">簡介</h2>
+                    <p>線上訂房</p>
+                </div>
+                <div class="collect">
+                    <div class="collect_rooms">
+                        <span>雙人房</span>
+                    </div>
+                    <div class="collect_list">
+                        <p>兩人專屬的挑高精緻客房</p>
+                        <p>擁有居高遠眺森林的景致</p>
+                        <p>享受談天休憩的窗景沙發</p>
+                        <p>包含陽光朝食</p>
+                    </div>
+                    <div class="collect_context">
+                        <ul>
+                            <li>坪數：10.8坪</li>
+                            <li>床型：2張單人床（寬115cm X長200cm）</li>
+                            <li>乾濕分離衛浴</li>
+                            <li>TOTO免治馬桶</li>
+                            <li>OLIVA DEL MEDITERRANEO 沐浴清潔組</li>
+                            <li>舞牛森手工香皂</li>
+                            <li>房內Mini Bar全招待</li>
+                            <li>舞牛森精選濾掛咖啡、迎賓點心</li>
+                            <li>高級冰箱、熱水壺、專屬保險箱</li>
+                            <li>Free Wifi及寬頻網路服務</li>
+                            <li>SONY 55吋4K聯網電視</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="collect_pricing">
+                    <h2 class="title">房間定價</h2>
+                </div>
+                <div class="collect_coin">
+                    <p>NT 10800</p>
+                </div>
+                <div class="collect_order">
+                    <span></span>
+                    <p>線上訂房</p>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="footer">
+            <div class="title">
+                <div class="txt">
+                    <h2>舞牛森度假飯店</h2>
+                    <p>統編 : 83698658</p>
+                    <p>旅館登記字號 : 苗栗縣旅館090號</p>
+                    <p>營業人名稱 : 居森有限公司</p>
+                    <p>電話號碼  : (+886)037783899</p>
+                    <p>苗栗縣通霄鎮南和里165-5號</p>
+                    <p>系統提供:靈知科技© 版權所有 盜用必究</p>
+                </div>
+                <div class="img">
+                    <img src="../../img/reservation/globaltrust_seal.gif" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- go_top -->
+        <div class="go_top">
+            <a href="#">
+                <div class="img">
+                    <img src="../../img/reservation/go_top2.jpg" alt="">
+                </div>
+            </a>
+        </div>
+        <!-- safe_ad -->
+        <div class="safe_back"></div>
+        <div class="safe_ad">
+            <div class="safe_ad_main">
+                <div class="safe_close"><img src="../../img/reservation/close.png" alt=""></div>
+                <div class="safe_title">
+                    <p>防詐騙宣導</p>
+                </div>
+                <h2 class="remind">
+                    <p>※防詐騙安全提醒～</p>
+                </h2>
+                <div class="safe_main">
+                    <p>近期非法詐騙集團猖獗冒用旅店及銀行名義針對消費者進行詐騙，請提高警覺 !!</p>
+                    <p>提醒您如接獲不明及可疑的電話以旅店及銀行名義告知任何「促銷活動」、「訂單間數錯誤」或「操作錯誤」、「歇業退款」、或任何簡訊要求提供個資、信用卡及帳號或網銀帳號做設定或轉帳動作，都是詐騙行為，請不予理會。</p>
+                    <p>旅店不會有任何原因要求您解除刷卡、退款、任何需要ATM轉帳或是網路銀行的操作，如接到可疑電話，開頭為 ＋886＋02＋81 或其他有＋號開頭之來電，為詐騙電話 ! 儘速反映至警政署防詐騙專線165，或掛掉電話後，重新撥打旅店電話詢問 (切勿直接回撥手機來電號碼)</p>
+                    <p>內政部警政署防詐騙網址：<a href="https://165.npa.gov.tw">https://165.npa.gov.tw</a> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    $(window).scroll(showMenu);
+
+    function showMenu() {
+        if ($(window).scrollTop() > 1) {
+            $(".go_top").addClass("on");
+        } else {
+            $(".go_top").removeClass("on");
+        }
+    }
+    $(".safe_close").on("click", function() {
+        $(".safe_ad").css("display", "none");
+        $(".safe_back").css("display", "none");
+    });
+    $(document).ready(function() {
+        $('.collect_item').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            cssEase: 'linear',
+            fade: true,
+            dots: true,
+            arrows: false,
+            pauseOnFocus: false,
+        });
+    });
+</script>
