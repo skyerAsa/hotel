@@ -19,6 +19,8 @@
     <script src="
     https://cdn.jsdelivr.net/npm/jquery.session@1.0.0/jquery.session.min.js
     "></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+
 </head>
 
 <body>
@@ -31,11 +33,11 @@
             <div class="txt">
                 <p>Language</p>
                 <select>
-            <option>繁體中文</option>
-            <option>English</option>
-            <option>日本語</option>
-            <option>简体中文</option>
-          </select>
+                <option>繁體中文</option>
+                <option>English</option>
+                <option>日本語</option>
+                <option>简体中文</option>
+                </select>
             </div>
             <div class="link">
                 <a href="../../index.html">
@@ -153,7 +155,7 @@
         <option>森丘 雙人房 • 一泊一食</option>
         <option>綠映 四人房 • 一泊一食</option>
         <option>臨山 四人房 • 一泊一食</option>
-      </select>
+        </select>
         <div class="rooms_number">房間型態 數量</div>
         <select>
         <option>1間</option>
@@ -166,151 +168,10 @@
         <option>8間</option>
         <option>9間</option>
         <option>10間</option>
-      </select>
-    </div>
+        </select>
+        </div>
     <div class="rooms_calendar">
-        <table width="100%">
-            <tbody>
-                <tr>
-                    <td colspan="7" class="month_cell">
-                        <a href="https://www.booking-wise0.com.tw/woodland/hotel/reservation/room_order.php?date=2024-6&amp;rid=2&amp;hid=101&amp;rcount=1">
-                            <img src="../../img/online/prev.gif" /></a>
-                        <select name="resDate" onchange="redirectURl('https://www.booking-wise0.com.tw/woodland/hotel/reservation/room_order.php','101','2',this.value,'1')">
-                <option value="2024-7" selected="">2024 - 七月</option>
-                <option value="2024-8">2024 - 八月</option>
-                <option value="2024-9">2024 - 九月</option>
-                <option value="2024-10">2024 - 十月</option>
-                <option value="2024-11">2024 - 十一月</option>
-                <option value="2024-12">2024 - 十二月</option>
-                <option value="2025-1">2025 - 一月</option>
-                <option value="2025-2">2025 - 二月</option>
-                <option value="2025-3">2025 - 三月</option>
-                <option value="2025-4">2025 - 四月</option>
-                <option value="2025-5">2025 - 五月</option>
-                <option value="2025-6">2025 - 六月</option>
-              </select>
-                        <a href="https://www.booking-wise0.com.tw/woodland/hotel/reservation/room_order.php?date=2024-8&amp;rid=2&amp;hid=101&amp;rcount=1">
-                            <img src="../../img/online/next.gif" /></a>
-                    </td>
-                </tr>
-                <tr class="week">
-                    <td width="14.2%"><span>一</span></td>
-                    <td width="14.2%"><span>二</span></td>
-                    <td width="14.2%"><span>三</span></td>
-                    <td width="14.2%"><span>四</span></td>
-                    <td width="14.2%"><span>五</span></td>
-                    <td width="14.2%"><span>六</span></td>
-                    <td width="14.2%"><span>日</span></td>
-                </tr>
-                <tr>
-                    <td class="cleander_td" height="20">
-                        <span class="data">01</span><br /><span class="font3">X</span>
-                    </td>
-                    <td class="cleander_td" height="20">
-                        <span class="data">02</span><br /><span class="font3">X</span>
-                    </td>
-                    <td class="cleander_td" height="20">
-                        <span class="data">03</span><br /><span class="font3">X</span>
-                    </td>
-                    <td class="cleander_td" height="20">
-                        <span class="data">04</span><br /><span class="font3">X</span>
-                    </td>
-                    <td class="cleander_td" height="20">
-                        <span class="data">05</span><br /><span class="font3">X</span>
-                    </td>
-                    <td class="cleander_td" height="20">
-                        <span class="data">06</span><br /><span class="font3">X</span>
-                    </td>
-                    <td class="cleander_td" height="20">
-                        <span class="data">07</span><br /><span class="font3">X</span>
-                    </td>
-                </tr>
-                <td class="cleander_td" height="20">
-                    <span class="data">08</span><br /><span class="font3">X</span>
-                </td>
-                <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','09')" height="20">
-                    <span class="data">09</span><span class="font3"><br />10988</span>
-                </td>
-                <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','10')" height="20">
-                    <span class="data">10</span><span class="font3"><br />10988</span>
-                </td>
-                <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','11')" height="20">
-                    <span class="data">11</span><span class="font3"><br />10988</span>
-                </td>
-                <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','12')" height="20">
-                    <span class="data">12</span><span class="font3"><br />待補房</span>
-                </td>
-                <td class="cleander_td" height="20">
-                    <span class="data">13</span
-              ><span class="font3"><br />待補房</span>
-                </td>
-                <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','14')" height="20">
-                    <span class="data">14</span><span class="font3"><br />10988</span>
-                </td>
-                </tr>
-                <tr height="40">
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','15')" height="20">
-                        <span class="data">15</span><span class="font3"><br />待補房</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','16')" height="20">
-                        <span class="data">16</span><span class="font3"><br />10988</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','17')" height="20">
-                        <span class="data">17</span><span class="font3"><br />10988</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','18')" height="20">
-                        <span class="data">18</span><span class="font3"><br />10988</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','19')" height="20">
-                        <span class="data">19</span><span class="font3"><br />10988</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','20')" height="20">
-                        <span class="data">20</span><span class="font3"><br />12866</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','21')" height="20">
-                        <span class="data">21</span><span class="font3"><br />10988</span>
-                    </td>
-                </tr>
-                <tr height="40">
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','22')" height="20">
-                        <span class="data">22</span><span class="font3"><br />10988</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','23')" height="20">
-                        <span class="data">23</span><span class="font3"><br />10988</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','24')" height="20">
-                        <span class="data">24</span><span class="font3"><br />10988</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','25')" height="20">
-                        <span class="data">25</span><span class="font3"><br />10988</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','26')" height="20">
-                        <span class="data">26</span><span class="font3"><br />10988</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','27')" height="20">
-                        <span class="data">27</span><span class="font3"><br />12866</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','28')" height="20">
-                        <span class="data">28</span><span class="font3"><br />10988</span>
-                    </td>
-                </tr>
-                <tr height="40">
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','29')" height="20">
-                        <span class="data">29</span><span class="font3"><br />10988</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','30')" height="20">
-                        <span class="data">30</span><span class="font3"><br />10988</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','31')" height="20">
-                        <span class="data">31</span><span class="font3"><br />10988</span>
-                    </td>
-                    <td class="cleander_td"></td>
-                    <td class="cleander_td"></td>
-                    <td class="cleander_td"></td>
-                    <td class="cleander_td"></td>
-                </tr>
-            </tbody>
-        </table>
+        <div id="calendar"></div>
     </div>
     <!-- collection_day -->
     <div class="collection_day">
@@ -371,9 +232,54 @@
             <option>2025</option>
           </select>
                 <span>/</span>
-                <select></select>
+                <select name="month" id="month">
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                    <option value="2">3</option>
+                    <option value="3">4</option>
+                    <option value="4">5</option>
+                    <option value="5">6</option>
+                    <option value="6">7</option>
+                    <option value="7">8</option>
+                    <option value="8">9</option>
+                    <option value="9">10</option>
+                    <option value="10">11</option>
+                    <option value="11">12</option>
+                  </select>
                 <span>/</span>
-                <select></select>
+                <select name="day" id="day">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                  </select>
             </div>
         </div>
         <div class="Next">
@@ -410,6 +316,11 @@
 
 </html>
 <script>
+    var CurrentDate = new Date();
+
+    $("#month").val(CurrentDate.getMonth());
+    $("#day").val(CurrentDate.getDate() + 1);
+
     $(window).scroll(showMenu);
 
     function showMenu() {
@@ -577,4 +488,24 @@
     }
 
     (window.onload = getDay()), changeMonth();
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const calendarEl = document.getElementById("calendar")
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: "dayGridMonth",
+          headerToolbar: {
+            left: "prev,next today",
+            center: "title",
+            right: "dayGridMonth,timeGridWeek,timeGridDay",
+          },
+          buttonText: {
+            today: "Today",
+            month: "Month",
+            week: "Week",
+            day: "Day",
+          },
+        })
+        calendar.render()
+      })
+
 </script>

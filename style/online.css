@@ -480,46 +480,38 @@ body {
   border: 1px solid #000;
   border-radius: 20px 20px 0 0;
 }
-.rooms_calendar table td:hover {
-  background-color: #c0e1fa;
-}
-.rooms_calendar table .font3 {
-  display: block;
-  padding: 5px 0;
-  font-weight: bolder;
-  color: #b20000;
-}
-.rooms_calendar table .week {
-  height: 40px;
-  background-color: #97999b;
-  color: #fff;
-}
-.rooms_calendar table .week td:hover {
-  background-color: #97999b;
-}
-.rooms_calendar table .cleander_td {
-  height: 60px;
-  cursor: pointer !important;
-  border: 1px solid #97999b;
-  padding: 5px 0;
-}
-.rooms_calendar table td {
-  text-align: center;
-}
-.rooms_calendar table td .data {
-  font-size: 12px;
-}
-.rooms_calendar table img {
-  width: 16px;
-  height: 16px;
-}
-.rooms_calendar table .month_cell {
-  text-align: center;
-  padding: 10px 0;
-}
-.rooms_calendar table .month_cell:hover {
+.rooms_calendar .fc-header-toolbar {
+  position: relative;
+  justify-content: center;
+  margin-bottom: 0 !important;
+  padding-bottom: 1.5em;
   border-radius: 20px 20px 0 0;
-  background-color: #c0e1fa;
+}
+.rooms_calendar .fc-header-toolbar:hover {
+  background: #C0E1FA;
+}
+.rooms_calendar .fc-toolbar-chunk:nth-child(3) {
+  display: none;
+}
+.rooms_calendar .fc-today-button {
+  display: none;
+}
+.rooms_calendar .fc-daygrid-day-top {
+  justify-content: center;
+}
+.rooms_calendar .fc-next-button {
+  position: absolute !important;
+  right: -300px;
+}
+.rooms_calendar .fc-toolbar-title {
+  padding: 0 50px;
+}
+.rooms_calendar .fc-button-primary:not(:disabled):active:focus,
+.rooms_calendar .fc-button-primary:focus {
+  box-shadow: none;
+}
+.rooms_calendar .fc-day:hover {
+  background: #C0E1FA;
 }
 
 .collection_day {
