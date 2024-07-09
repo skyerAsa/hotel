@@ -824,7 +824,6 @@ body {
   position: fixed;
   top: 20%;
   left: 70%;
-  z-index: 10002;
   background-color: #fff;
   text-align: center;
   z-index: 2;
