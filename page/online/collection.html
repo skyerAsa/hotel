@@ -19,6 +19,7 @@
     <script src="
     https://cdn.jsdelivr.net/npm/jquery.session@1.0.0/jquery.session.min.js
     "></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
 </head>
 
 <body>
@@ -31,14 +32,14 @@
             <div class="txt">
                 <p>Language</p>
                 <select>
-            <option>繁體中文</option>
-            <option>English</option>
-            <option>日本語</option>
-            <option>简体中文</option>
-          </select>
+              <option>繁體中文</option>
+              <option>English</option>
+              <option>日本語</option>
+              <option>简体中文</option>
+            </select>
             </div>
             <div class="link">
-                <a href="../../index.html">
+                <a href="../index.html">
                     <div class="website">
                         <img src="../../img/reservation/icon_1.png" alt="" />
                         <p>官網</p>
@@ -48,6 +49,61 @@
                     <img src="../../img/reservation/icon_1.png" alt="" />
                     <p>結帳</p>
                 </div>
+            </div>
+            <div class="language">
+                <select>
+              <option>繁體中文</option>
+              <option>English</option>
+              <option>日本語</option>
+              <option>简体中文</option>
+            </select>
+            </div>
+            <div class="menu">
+                <p>Menu</p>
+            </div>
+        </div>
+    </div>
+    <div class="menu_item">
+        <ul>
+            <li>
+                飯店介紹
+                <div class="item_llst">
+                    <p>關於我們</p>
+                </div>
+            </li>
+            <li>
+                線上訂房
+                <div class="item_llst">
+                    <p>一般訂房</p>
+                    <p>特惠套裝</p>
+                </div>
+            </li>
+            <li>
+                使用說明
+                <div class="item_llst">
+                    <p>訂房六步驟</p>
+                    <p>隱私權政策</p>
+                    <p>SSL安全付款機制</p>
+                </div>
+            </li>
+            <li>
+                會員專區
+                <div class="item_llst">
+                    <p>登入</p>
+                    <p>註冊會員</p>
+                </div>
+            </li>
+        </ul>
+        <div class="menu_coin">
+            <a href="../index.html">
+                <div class="website_item">
+                    <img src="../img/reservation/icon_1.png" alt="" />
+                    <p>官網</p>
+                </div>
+            </a>
+            <div class="checkout_item">
+                <img src="../img/reservation/icon_1.png" alt="" />
+                <p>結帳</p>
             </div>
         </div>
     </div>
@@ -169,147 +225,8 @@
       </select>
     </div>
     <div class="rooms_calendar">
-        <table width="100%">
-            <tbody>
-                <tr>
-                    <td colspan="7" class="month_cell">
-                        <a href="https://www.booking-wise0.com.tw/woodland/hotel/reservation/room_order.php?date=2024-6&amp;rid=2&amp;hid=101&amp;rcount=1"><img src="../../img/online/prev.gif" /></a><select name="resDate" onchange="redirectURl('https://www.booking-wise0.com.tw/woodland/hotel/reservation/room_order.php','101','2',this.value,'1')">
-                <option value="2024-7" selected="">2024 - 七月</option>
-                <option value="2024-8">2024 - 八月</option>
-                <option value="2024-9">2024 - 九月</option>
-                <option value="2024-10">2024 - 十月</option>
-                <option value="2024-11">2024 - 十一月</option>
-                <option value="2024-12">2024 - 十二月</option>
-                <option value="2025-1">2025 - 一月</option>
-                <option value="2025-2">2025 - 二月</option>
-                <option value="2025-3">2025 - 三月</option>
-                <option value="2025-4">2025 - 四月</option>
-                <option value="2025-5">2025 - 五月</option>
-                <option value="2025-6">2025 - 六月</option>
-              </select>
-                        <a href="https://www.booking-wise0.com.tw/woodland/hotel/reservation/room_order.php?date=2024-8&amp;rid=2&amp;hid=101&amp;rcount=1">
-                            <img src="../../img/online/next.gif" /></a>
-                    </td>
-                </tr>
-                <tr class="week">
-                    <td width="14.2%"><span>一</span></td>
-                    <td width="14.2%"><span>二</span></td>
-                    <td width="14.2%"><span>三</span></td>
-                    <td width="14.2%"><span>四</span></td>
-                    <td width="14.2%"><span>五</span></td>
-                    <td width="14.2%"><span>六</span></td>
-                    <td width="14.2%"><span>日</span></td>
-                </tr>
-                <tr>
-                    <td class="cleander_td" height="20">
-                        <span class="data">01</span><br /><span class="font3">X</span>
-                    </td>
-                    <td class="cleander_td" height="20">
-                        <span class="data">02</span><br /><span class="font3">X</span>
-                    </td>
-                    <td class="cleander_td" height="20">
-                        <span class="data">03</span><br /><span class="font3">X</span>
-                    </td>
-                    <td class="cleander_td" height="20">
-                        <span class="data">04</span><br /><span class="font3">X</span>
-                    </td>
-                    <td class="cleander_td" height="20">
-                        <span class="data">05</span><br /><span class="font3">X</span>
-                    </td>
-                    <td class="cleander_td" height="20">
-                        <span class="data">06</span><br /><span class="font3">X</span>
-                    </td>
-                    <td class="cleander_td" height="20">
-                        <span class="data">07</span><br /><span class="font3">X</span>
-                    </td>
-                </tr>
-                <td class="cleander_td" height="20">
-                    <span class="data">08</span><br /><span class="font3">X</span>
-                </td>
-                <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','09')" height="20">
-                    <span class="data">09</span><span class="font3"><br />7337</span>
-                </td>
-                <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','10')" height="20">
-                    <span class="data">10</span><span class="font3"><br />7337</span>
-                </td>
-                <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','11')" height="20">
-                    <span class="data">11</span><span class="font3"><br />7337</span>
-                </td>
-                <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','12')" height="20">
-                    <span class="data">12</span><span class="font3"><br />待補房</span>
-                </td>
-                <td class="cleander_td" height="20">
-                    <span class="data">13</span
-              ><span class="font3"><br />待補房</span>
-                </td>
-                <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','14')" height="20">
-                    <span class="data">14</span><span class="font3"><br />7337</span>
-                </td>
-                </tr>
-                <tr height="40">
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','15')" height="20">
-                        <span class="data">15</span><span class="font3"><br />7337</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','16')" height="20">
-                        <span class="data">16</span><span class="font3"><br />7337</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','17')" height="20">
-                        <span class="data">17</span><span class="font3"><br />7337</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','18')" height="20">
-                        <span class="data">18</span><span class="font3"><br />7337</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','19')" height="20">
-                        <span class="data">19</span><span class="font3"><br />7337</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','20')" height="20">
-                        <span class="data">20</span><span class="font3"><br />8228</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','21')" height="20">
-                        <span class="data">21</span><span class="font3"><br />7337</span>
-                    </td>
-                </tr>
-                <tr height="40">
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','22')" height="20">
-                        <span class="data">22</span><span class="font3"><br />7337</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','23')" height="20">
-                        <span class="data">23</span><span class="font3"><br />7337</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','24')" height="20">
-                        <span class="data">24</span><span class="font3"><br />7337</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','25')" height="20">
-                        <span class="data">25</span><span class="font3"><br />7337</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','26')" height="20">
-                        <span class="data">26</span><span class="font3"><br />7337</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','27')" height="20">
-                        <span class="data">27</span><span class="font3"><br />8228</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','28')" height="20">
-                        <span class="data">28</span><span class="font3"><br />7337</span>
-                    </td>
-                </tr>
-                <tr height="40">
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','29')" height="20">
-                        <span class="data">29</span><span class="font3"><br />7337</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','30')" height="20">
-                        <span class="data">30</span><span class="font3"><br />7337</span>
-                    </td>
-                    <td style="cursor: hand" class="cleander_td" onmouseover="this.className='mover'" onmouseout="this.className='cleander_td'" onclick="javascript:ufChangeCheckIn('2024','07','31')" height="20">
-                        <span class="data">31</span><span class="font3"><br />7337</span>
-                    </td>
-                    <td class="cleander_td"></td>
-                    <td class="cleander_td"></td>
-                    <td class="cleander_td"></td>
-                    <td class="cleander_td"></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+        <div id="calendar"></div>
+      </div>
     <!-- collection_day -->
     <div class="collection_day">
         <div class="collect_introduction">
@@ -450,175 +367,197 @@
 </html>
 <script>
     var CurrentDate = new Date();
-
+  
     $("#month").val(CurrentDate.getMonth());
     $("#day").val(CurrentDate.getDate() + 1);
-
+    $("#today").val(CurrentDate.getDate());
     $(window).scroll(showMenu);
-
+  
     function showMenu() {
-        if ($(window).scrollTop() > 1) {
-            $(".go_top").addClass("on");
-        } else {
-            $(".go_top").removeClass("on");
-        }
+      if ($(window).scrollTop() > 1) {
+        $(".go_top").addClass("on");
+      } else {
+        $(".go_top").removeClass("on");
+      }
     }
-    $(document).ready(function() {
-        $(".collection_item").slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            cssEase: "linear",
-            fade: true,
-            dots: true,
-            arrows: false,
-            pauseOnFocus: false,
-        });
+    $(".menu").on("click", function () {
+      $(".menu_item").toggleClass("on");
+    });
+    $(document).ready(function () {
+      $(".collection_item").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        cssEase: "linear",
+        fade: true,
+        dots: true,
+        arrows: false,
+        pauseOnFocus: false,
+      });
     });
     var currentYear = new Date().getFullYear();
     var currentMonth = new Date().getMonth() + 1;
     var currentDay = new Date().getDate();
     var currentWeek = new Date().getDay();
-
+  
     // 年份
     for (i = currentYear; i <= currentYear + 1; i++) {
-        addOption(meetYear, i, i);
+      addOption(meetYear, i, i);
     }
-
+  
     // 新增月份
     for (i = currentMonth; i <= 12; i++) {
-        addOption(meetMonth, i, i);
+      addOption(meetMonth, i, i);
     }
-
+  
     // 設定每個月份的天數
     function setDays(year, month, day) {
-        var monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-        var yea = year.options[year.selectedIndex].text;
-        var mon = month.options[month.selectedIndex].text;
-        var num = monthDays[mon - 1];
-        if (mon == 2 && isLeapYear(yea)) {
-            num++;
-        }
-        for (var j = day.options.length - 1; j >= num; j--) {
-            day.remove(j);
-        }
-        for (var i = day.options.length + 1; i <= num; i++) {
-            addOption(meetDay, i, i);
-        }
+      var monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+      var yea = year.options[year.selectedIndex].text;
+      var mon = month.options[month.selectedIndex].text;
+      var num = monthDays[mon - 1];
+      if (mon == 2 && isLeapYear(yea)) {
+        num++;
+      }
+      for (var j = day.options.length - 1; j >= num; j--) {
+        day.remove(j);
+      }
+      for (var i = day.options.length + 1; i <= num; i++) {
+        addOption(meetDay, i, i);
+      }
     }
     // 限定每個月份的天數
     function currentDays(year, month, day) {
-        var monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-        var yea = year.options[year.selectedIndex].text;
-        var mon = month.options[month.selectedIndex].text;
-        var num = monthDays[mon - 1];
-        if (mon == 2 && isLeapYear(yea)) {
-            num++;
-        }
-        for (var j = currentDay; j >= num; j--) {
-            day.remove(j);
-        }
-        for (var i = currentDay; i <= num; i++) {
-            addOption(meetDay, i, i);
-        }
+      var monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+      var yea = year.options[year.selectedIndex].text;
+      var mon = month.options[month.selectedIndex].text;
+      var num = monthDays[mon - 1];
+      if (mon == 2 && isLeapYear(yea)) {
+        num++;
+      }
+      for (var j = currentDay; j >= num; j--) {
+        day.remove(j);
+      }
+      for (var i = currentDay; i <= num; i++) {
+        addOption(meetDay, i, i);
+      }
     }
-
+  
     // 判斷是否閏年
     function isLeapYear(year) {
-        return year % 4 == 0 || (year % 100 == 0 && year % 400 == 0);
+      return year % 4 == 0 || (year % 100 == 0 && year % 400 == 0);
     }
     // 向select尾部新增option
     function addOption(selectbox, text, value) {
-        var option = document.createElement("option");
-        option.text = text;
-        option.value = value;
-        selectbox.options.add(option);
+      var option = document.createElement("option");
+      option.text = text;
+      option.value = value;
+      selectbox.options.add(option);
     }
-
+  
     // 將今天月份設為預設
-    $("select[name=meetDayMM] option").each(function() {
-        if ($(this).text() == currentMonth) $(this).attr("selected", "selected");
+    $("select[name=meetDayMM] option").each(function () {
+      if ($(this).text() == currentMonth) $(this).attr("selected", "selected");
     });
-
+  
     window.onload = setDays(meetYear, meetMonth, meetDay);
-
+  
     // 今天日期設為預設
-    $("select[name=meetDayDD] option").each(function() {
-        if ($(this).text() == currentDay) $(this).attr("selected", "selected");
+    $("select[name=meetDayDD] option").each(function () {
+      if ($(this).text() == currentDay) $(this).attr("selected", "selected");
     });
-
+  
     // 取得星期並切換選項
     function getDay() {
-        // 取得選取的 年份 月份 日期
-        var selectYY = $("select[name=meetDayYY] option").filter(":selected").val();
-        var selectMM = $("select[name=meetDayMM] option").filter(":selected").val();
-        var selectDD = $("select[name=meetDayDD] option").filter(":selected").val();
-
-        // 取得選取的月份名稱
-        function getMonthName(selectMM) {
-            return [
-                "January",
-                "February",
-                "March",
-                "April",
-                "May",
-                "June",
-                "July",
-                "August",
-                "September",
-                "October",
-                "November",
-                "December",
-            ][selectMM - 1];
-        }
-        var monthName = getMonthName(selectMM);
-
-        // 取得選取之星期
-        var selectDay = new Date(
-            monthName + " " + selectDD + "," + selectYY + " 23:15:30"
-        );
-        var dayOfWeek = selectDay.getDay();
-        //console.log(dayOfWeek);
-
-        // 6 = Saturday, 0 = Sunday
-        if (dayOfWeek === 6 || dayOfWeek === 0) {
-            $("#weekDaily").attr("class", "form-group col-12 d-none");
-            $("#weekend").attr("class", "form-group col-12 d-block");
-        } else {
-            $("#weekDaily").attr("class", "form-group col-12 d-block");
-            $("#weekend").attr("class", "form-group col-12 d-none");
-        }
+      // 取得選取的 年份 月份 日期
+      var selectYY = $("select[name=meetDayYY] option").filter(":selected").val();
+      var selectMM = $("select[name=meetDayMM] option").filter(":selected").val();
+      var selectDD = $("select[name=meetDayDD] option").filter(":selected").val();
+  
+      // 取得選取的月份名稱
+      function getMonthName(selectMM) {
+        return [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ][selectMM - 1];
+      }
+      var monthName = getMonthName(selectMM);
+  
+      // 取得選取之星期
+      var selectDay = new Date(
+        monthName + " " + selectDD + "," + selectYY + " 23:15:30"
+      );
+      var dayOfWeek = selectDay.getDay();
+      //console.log(dayOfWeek);
+  
+      // 6 = Saturday, 0 = Sunday
+      if (dayOfWeek === 6 || dayOfWeek === 0) {
+        $("#weekDaily").attr("class", "form-group col-12 d-none");
+        $("#weekend").attr("class", "form-group col-12 d-block");
+      } else {
+        $("#weekDaily").attr("class", "form-group col-12 d-block");
+        $("#weekend").attr("class", "form-group col-12 d-none");
+      }
     }
-
+  
     function changeYear() {
-        var selectYY = $("select[name=meetDayYY] option").filter(":selected").val();
-        // 僅顯示當年度大於今日之月份
-        if (selectYY == currentYear) {
-            $("#meetMonth").find("option").remove().end();
-            for (i = currentMonth; i <= 12; i++) {
-                addOption(meetMonth, i, i);
-            }
-        } else {
-            $("#meetMonth").find("option").remove().end();
-            for (i = 1; i <= 12; i++) {
-                addOption(meetMonth, i, i);
-            }
+      var selectYY = $("select[name=meetDayYY] option").filter(":selected").val();
+      // 僅顯示當年度大於今日之月份
+      if (selectYY == currentYear) {
+        $("#meetMonth").find("option").remove().end();
+        for (i = currentMonth; i <= 12; i++) {
+          addOption(meetMonth, i, i);
         }
-        changeMonth();
+      } else {
+        $("#meetMonth").find("option").remove().end();
+        for (i = 1; i <= 12; i++) {
+          addOption(meetMonth, i, i);
+        }
+      }
+      changeMonth();
     }
-
+  
     function changeMonth() {
-        var selectYY = $("select[name=meetDayYY] option").filter(":selected").val();
-        var selectMM = $("select[name=meetDayMM] option").filter(":selected").val();
-        // 僅顯示當年度大於今日之日期
-        if (selectMM == currentMonth && selectYY == currentYear) {
-            $("#meetDay").find("option").remove().end();
-            currentDays(meetYear, meetMonth, meetDay);
-        } else {
-            $("#meetDay").find("option").remove().end();
-            setDays(meetYear, meetMonth, meetDay);
-        }
+      var selectYY = $("select[name=meetDayYY] option").filter(":selected").val();
+      var selectMM = $("select[name=meetDayMM] option").filter(":selected").val();
+      // 僅顯示當年度大於今日之日期
+      if (selectMM == currentMonth && selectYY == currentYear) {
+        $("#meetDay").find("option").remove().end();
+        currentDays(meetYear, meetMonth, meetDay);
+      } else {
+        $("#meetDay").find("option").remove().end();
+        setDays(meetYear, meetMonth, meetDay);
+      }
     }
-
+  
     (window.onload = getDay()), changeMonth();
-</script>
+  
+    document.addEventListener("DOMContentLoaded", function () {
+      const calendarEl = document.getElementById("calendar");
+      const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: "dayGridMonth",
+        headerToolbar: {
+          left: "prev,next today",
+          center: "title",
+          right: "dayGridMonth,timeGridWeek,timeGridDay",
+        },
+        buttonText: {
+          today: "Today",
+          month: "Month",
+          week: "Week",
+          day: "Day",
+        },
+      });
+      calendar.render();
+    });
+  </script>

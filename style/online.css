@@ -178,6 +178,13 @@ body {
   margin: 0 auto;
   text-align: center;
   position: relative;
+  border-bottom: 1px solid #dedede;
+}
+@media screen and (max-width: 1200px) {
+  .logo {
+    width: 100%;
+    padding-top: 10px;
+  }
 }
 .logo a img {
   margin-top: 10px;
@@ -190,6 +197,11 @@ body {
   top: 0;
   right: 0;
   display: flex;
+}
+@media screen and (max-width: 768px) {
+  .logo .txt {
+    display: none;
+  }
 }
 .logo .txt p {
   padding-right: 5px;
@@ -204,6 +216,11 @@ body {
   position: absolute;
   right: 0;
   bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .logo .link {
+    display: none;
+  }
 }
 .logo .link .website,
 .logo .link .checkout {
@@ -226,6 +243,128 @@ body {
 }
 .logo .link .checkout {
   margin-left: 10px;
+}
+.logo .language {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .logo .language {
+    width: 76px;
+    height: 28px;
+    margin: 30px 5px 5px 0;
+    display: flex;
+    position: absolute;
+    right: 90px;
+    bottom: 0;
+  }
+}
+.logo .menu {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .logo .menu {
+    width: 76px;
+    height: 28px;
+    display: block;
+    background: url(../img/online/menu.jpg) center center;
+    border: 1px solid #000000;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 30px 5px 5px 0;
+    font-size: 13px;
+    line-height: 28px;
+  }
+}
+
+.menu_item {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .menu_item.on {
+    display: block;
+  }
+  .menu_item ul {
+    animation: ii 0.5s;
+  }
+  @keyframes ii {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  .menu_item ul li {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
+  @keyframes aa {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  .menu_item ul li .item_llst {
+    display: none;
+    padding: 10px 0;
+  }
+  .menu_item ul li .item_llst p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: aa 0.5s forwards;
+    background-color: #97999b;
+  }
+  .menu_item ul li .item_llst p:hover {
+    background-color: #A2D7F1;
+  }
+  .menu_item ul li:hover .item_llst {
+    display: block;
+  }
+}
+
+.menu_coin {
+  width: 100%;
+  display: flex;
+}
+.menu_coin a {
+  width: 50%;
+  display: flex;
+  background-color: #97999b;
+  margin: 0 5px;
+}
+.menu_coin .website_item,
+.menu_coin .checkout_item {
+  height: 60px;
+  width: 49%;
+  margin: 0 5px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  line-height: 50px;
+  background-color: #97999b;
+  border-radius: 0;
+}
+.menu_coin .website_item img,
+.menu_coin .checkout_item img {
+  width: 18px;
+  height: 20px;
+}
+.menu_coin .website_item p,
+.menu_coin .checkout_item p {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+.menu_coin .website_item p {
+  justify-content: start;
+  position: relative;
+  left: 80%;
 }
 
 .reservation_title {
@@ -510,8 +649,22 @@ body {
 .rooms_calendar .fc-button-primary:focus {
   box-shadow: none;
 }
-.rooms_calendar .fc-day:hover {
+.rooms_calendar .fc-daygrid-day:hover {
   background: #C0E1FA;
+}
+.rooms_calendar .fc-scrollgrid-section-header {
+  background: #8a8989;
+  color: #fff;
+}
+.rooms_calendar .fc-scrollgrid-section-header:hover {
+  background: #8a8989;
+}
+.rooms_calendar .fc-scrollgrid-sync-inner {
+  padding: 5px 0;
+}
+.rooms_calendar .fc-daygrid-day-events {
+  display: flex;
+  justify-content: center;
 }
 
 .collection_day {

@@ -14,6 +14,11 @@ body {
   margin: 0 auto;
   text-align: center;
   position: relative;
+  border-bottom: 1px solid #dedede;
+  @include rwd(1200) {
+    width: 100%;
+    padding-top: 10px;
+  }
   a {
     img {
       margin-top: 10px;
@@ -27,6 +32,9 @@ body {
     top: 0;
     right: 0;
     display: flex;
+    @include rwd(768) {
+      display: none;
+    }
     p {
       padding-right: 5px;
       display: flex;
@@ -41,6 +49,9 @@ body {
     position: absolute;
     right: 0;
     bottom: 0;
+    @include rwd(768) {
+      display: none;
+    }
     .website,
     .checkout {
       width: 96px;
@@ -63,16 +74,137 @@ body {
       margin-left: 10px;
     }
   }
+  .language {
+    display: none;
+    @include rwd(768) {
+      width: 76px;
+      height: 28px;
+      margin: 30px 5px 5px 0;
+      display: flex;
+      position: absolute;
+      right: 90px;
+      bottom: 0;
+    }
+  }
+  .menu {
+    display: none;
+    @include rwd(768) {
+      width: 76px;
+      height: 28px;
+      display: block;
+      background: url(../img/online/menu.jpg) center center;
+      border: 1px solid #000000;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      margin: 30px 5px 5px 0;
+      font-size: 13px;
+      line-height: 28px;
+    }
+  }
+}
+
+.menu_item {
+  display: none;
+  @include rwd(768) {
+    &.on {
+      display: block;
+    }
+    ul {
+      @keyframes ii {
+        from {
+          transform: translateX(-100%);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+      animation: ii 0.5s;
+      li {
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+        @keyframes aa {
+          from {
+            transform: translateY(-100%);
+          }
+          to {
+            transform: translateY(0);
+          }
+        }
+        .item_llst {
+          display: none;
+          padding: 10px 0;
+          p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: aa 0.5s forwards;
+            background-color: #97999b;
+            &:hover {
+              background-color: #A2D7F1;
+            }
+          }
+        }
+        &:hover {
+          .item_llst {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu_coin {
+  width: 100%;
+  display: flex;
+  a {
+    width: 50%;
+    display: flex;
+    background-color: #97999b;
+    margin: 0 5px;
+  }
+  .website_item,
+  .checkout_item {
+    height: 60px;
+    width: 49%;
+    margin: 0 5px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    line-height: 50px;
+    background-color: #97999b;
+    border-radius: 0;
+    img {
+      width: 18px;
+      height: 20px;
+    }
+    p {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      color: #fff;
+    }
+  }
+  .website_item {
+    p {
+      justify-content: start;
+      position: relative;
+      left: 80%;
+    }
+  }
 }
 
 // reservation_title
 .reservation_title {
-  border-top: 1px solid #dedede;
-  border-bottom: 1px solid #dedede;
   ul {
     display: flex;
     justify-content: center;
     position: relative;
+    @include rwd(768) {
+      display: none;
+    }
     li {
       padding: 10px 0;
       height: 60px;
@@ -179,7 +311,7 @@ body {
     padding-right: 100px;
     .reservation_left_box_title {
       .title {
-        padding-top: 80px;
+        margin-top: 80px;
         font-size: 12px;
       }
     }
@@ -189,6 +321,14 @@ body {
       padding: 10px 0 20px;
       margin-top: 20px;
       position: relative;
+      z-index: 2;
+      @include rwd(1200) {
+        transform: translateX(-100%);
+        transition: all 0.5s;
+        &:hover {
+          transform: translateX(0);
+        }
+      }
       .generally_reserve,
       .offer {
         padding-bottom: 10px;
@@ -245,13 +385,19 @@ body {
       height: 70px;
       position: absolute;
       display: flex;
-      // justify-content: center;
       align-items: center;
       top: 30%;
       right: -40px;
       border-radius: 0 10px 10px 0;
       background-color: #97999b;
       color: #fff;
+      @include rwd(1200) {
+        &:hover {
+          .reservation_item {
+            transform: translateX(0);
+          }
+        }
+      }
       p {
         font-size: 24px;
         font-weight: bolder;
@@ -261,7 +407,11 @@ body {
   }
   // reservation_right_box
   .reservation_right_box {
-    padding: 100px 0 0 100px;
+    margin: 140px 0 0 100px;
+    @include rwd(1200) {
+      transform: translateX(-200%);
+      margin-left: 0;
+    }
     .reservation_right_item {
       .title {
         color: #0b2657;
@@ -282,9 +432,14 @@ body {
 
 // six_right_box
 .six_right_box {
-  padding-top: 100px;
+  margin-top: 100px;
+  @include rwd(1200) {
+    transform: translateX(-37%);
+    margin-left: 0;
+  }
   .reservation_right_item {
     .six_title {
+      padding-top: 10px;
       font-size: 17px;
       color: #191919;
       font-weight: bold;
@@ -293,6 +448,18 @@ body {
     .six_right_main {
       margin: 50px 0 0 30px;
       padding: 5px 0 0 10px;
+      @include rwd(1200) {
+        margin-top: 0;
+      }
+      @include rwd(968) {
+        width: 80%;
+      }
+      @include rwd(780) {
+        width: 60%;
+      }
+      @include rwd(600) {
+        width: 40%;
+      }
       .six_list {
         .six_num {
           font-size: 16px;
@@ -338,8 +505,13 @@ body {
 
 // privacy_right_box
 .privacy_right_box {
-  padding: 100px 0 0 20px;
+  margin: 100px 0 0 20px;
+  @include rwd(1200) {
+    transform: translateX(-37%);
+    margin-left: 0;
+  }
   .privacy_title {
+    padding-top: 20px;
     p {
       font-weight: bolder;
     }
@@ -347,6 +519,12 @@ body {
   .privacy_txt {
     padding: 50px 200px 0 50px;
     font-size: 15px;
+    @include rwd(768) {
+      width: 80%;
+    }
+    @include rwd(600) {
+      width: 70%;
+    }
     p {
       padding-bottom: 30px;
     }
@@ -358,15 +536,31 @@ body {
 
 // SSL_right_box
 .SSL_right_box {
-  padding: 100px 0 0 20px;
+  margin: 100px 0 0 20px;
+  @include rwd(1200) {
+    transform: translateX(-37%);
+    margin-left: 0;
+  }
   .SSL_title {
-    padding-bottom: 30px;
+    padding: 20px 0 30px 0;
     p {
       font-weight: bolder;
     }
   }
   .SSL_main {
     width: 80%;
+    @include rwd(1200) {
+      width: 100%;
+    }
+    @include rwd(968) {
+      width: 80%;
+    }
+    @include rwd(740) {
+      width: 60%;
+    }
+    @include rwd(570) {
+      width: 50%;
+    }
     .SSL_coin {
       display: flex;
       flex-direction: column;
@@ -375,9 +569,18 @@ body {
       }
       p {
         margin-right: 50px;
+        @include rwd(570) {
+          margin-right: 0;
+        }
         img {
           transform: translateY(-20px);
         }
+      }
+    }
+    .SSL_main {
+      p {
+        width: 100%;
+        text-align: center;
       }
     }
   }
@@ -386,7 +589,11 @@ body {
 // login_right_box
 .login_right_box {
   padding: 100px 0 0 0;
-  width: 600px;
+  width: 100%;
+  @include rwd(1200) {
+    transform: translateX(-37%);
+    margin-left: 0;
+  }
   .login_txt {
     padding: 80px 0 0 30px;
     .account,
@@ -454,6 +661,10 @@ body {
 .register_right_box {
   padding: 100px 0 0 0;
   width: 800px;
+  @include rwd(1200) {
+    transform: translateX(-37%);
+    margin-left: 0;
+  }
   .register_txt {
     padding: 80px 0 0 30px;
     .account,
@@ -474,9 +685,15 @@ body {
     .remark {
       display: flex;
       padding: 10px 0;
+      @include rwd(768) {
+        display: block;
+      }
       select {
         height: 27px;
         border: 1px solid #dedede;
+      }
+      .date_day {
+        display: flex;
       }
       p {
         width: 100px;
@@ -522,8 +739,14 @@ body {
     }
     .email_message {
       padding: 10px 0 0 100px;
+      @include rwd(768) {
+        padding-left: 0;
+      }
     }
     .date {
+      input {
+        width: 80px;
+      }
       h2 {
         padding: 5px 10px;
       }
@@ -560,10 +783,59 @@ body {
       white-space: nowrap;
       display: flex;
       justify-content: end;
+      @include rwd(768) {
+        width: 70%;
+      }
+      @include rwd(650) {
+        width: 50%;
+      }
       p {
         padding: 10px 40px;
         background-color: #97999b;
         color: #eeeeee;
+      }
+    }
+    .account,
+    .password,
+    .password_confirm,
+    .name,
+    .photo,
+    .fax,
+    .company_name,
+    .position,
+    .compiled,
+    .company_tel,
+    .company_address {
+      input {
+        @include rwd(768) {
+          width: 100%;
+          margin-top: 10px;
+          padding: 8px 0;
+          margin-right:20px;
+        }
+      }
+    }
+    .email_box {
+      @include rwd(768) {
+        display: block;
+        input {
+          width: 100%;
+          margin-top: 10px;
+          padding: 8px 0;
+        }
+      }
+    }
+    .tel {
+      input {
+        @include rwd(768) {
+          width: 100%;
+          padding: 8px 0;
+        }
+      }
+    }
+    .tel_phone {
+      input {
+        width: 80px;
       }
     }
   }
@@ -580,6 +852,7 @@ body {
   .title {
     width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     .txt {
@@ -624,6 +897,13 @@ body {
   text-align: center;
   z-index: 2;
   display: block;
+  @include rwd(1024) {
+    width: 70%;
+    height: 92%;
+    margin: 0 auto;
+    top: 2%;
+    left: 15%;
+  }
   &.on {
     display: block;
   }
@@ -684,6 +964,7 @@ body {
   left: 0;
   background-color: #000;
   opacity: 0.5;
+  z-index: 2;
   // display: none;
   &.on {
     display: block;

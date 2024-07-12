@@ -178,6 +178,13 @@ body {
   margin: 0 auto;
   text-align: center;
   position: relative;
+  border-bottom: 1px solid #dedede;
+}
+@media screen and (max-width: 1200px) {
+  .logo {
+    width: 100%;
+    padding-top: 10px;
+  }
 }
 .logo a img {
   margin-top: 10px;
@@ -190,6 +197,11 @@ body {
   top: 0;
   right: 0;
   display: flex;
+}
+@media screen and (max-width: 768px) {
+  .logo .txt {
+    display: none;
+  }
 }
 .logo .txt p {
   padding-right: 5px;
@@ -204,6 +216,11 @@ body {
   position: absolute;
   right: 0;
   bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .logo .link {
+    display: none;
+  }
 }
 .logo .link .website,
 .logo .link .checkout {
@@ -227,15 +244,138 @@ body {
 .logo .link .checkout {
   margin-left: 10px;
 }
-
-.reservation_title {
-  border-top: 1px solid #dedede;
-  border-bottom: 1px solid #dedede;
+.logo .language {
+  display: none;
 }
+@media screen and (max-width: 768px) {
+  .logo .language {
+    width: 76px;
+    height: 28px;
+    margin: 30px 5px 5px 0;
+    display: flex;
+    position: absolute;
+    right: 90px;
+    bottom: 0;
+  }
+}
+.logo .menu {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .logo .menu {
+    width: 76px;
+    height: 28px;
+    display: block;
+    background: url(../img/online/menu.jpg) center center;
+    border: 1px solid #000000;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 30px 5px 5px 0;
+    font-size: 13px;
+    line-height: 28px;
+  }
+}
+
+.menu_item {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .menu_item.on {
+    display: block;
+  }
+  .menu_item ul {
+    animation: ii 0.5s;
+  }
+  @keyframes ii {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  .menu_item ul li {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
+  @keyframes aa {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  .menu_item ul li .item_llst {
+    display: none;
+    padding: 10px 0;
+  }
+  .menu_item ul li .item_llst p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: aa 0.5s forwards;
+    background-color: #97999b;
+  }
+  .menu_item ul li .item_llst p:hover {
+    background-color: #A2D7F1;
+  }
+  .menu_item ul li:hover .item_llst {
+    display: block;
+  }
+}
+
+.menu_coin {
+  width: 100%;
+  display: flex;
+}
+.menu_coin a {
+  width: 50%;
+  display: flex;
+  background-color: #97999b;
+  margin: 0 5px;
+}
+.menu_coin .website_item,
+.menu_coin .checkout_item {
+  height: 60px;
+  width: 49%;
+  margin: 0 5px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  line-height: 50px;
+  background-color: #97999b;
+  border-radius: 0;
+}
+.menu_coin .website_item img,
+.menu_coin .checkout_item img {
+  width: 18px;
+  height: 20px;
+}
+.menu_coin .website_item p,
+.menu_coin .checkout_item p {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+.menu_coin .website_item p {
+  justify-content: start;
+  position: relative;
+  left: 80%;
+}
+
 .reservation_title ul {
   display: flex;
   justify-content: center;
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  .reservation_title ul {
+    display: none;
+  }
 }
 .reservation_title ul li {
   padding: 10px 0;
@@ -353,7 +493,7 @@ body {
   padding-right: 100px;
 }
 .reservation_box .reservation_left_box .reservation_left_box_title .title {
-  padding-top: 80px;
+  margin-top: 80px;
   font-size: 12px;
 }
 .reservation_box .reservation_left_box .reservation_item {
@@ -362,6 +502,16 @@ body {
   padding: 10px 0 20px;
   margin-top: 20px;
   position: relative;
+  z-index: 2;
+}
+@media screen and (max-width: 1200px) {
+  .reservation_box .reservation_left_box .reservation_item {
+    transform: translateX(-100%);
+    transition: all 0.5s;
+  }
+  .reservation_box .reservation_left_box .reservation_item:hover {
+    transform: translateX(0);
+  }
 }
 .reservation_box .reservation_left_box .reservation_item .generally_reserve,
 .reservation_box .reservation_left_box .reservation_item .offer {
@@ -425,13 +575,24 @@ body {
   background-color: #97999b;
   color: #fff;
 }
+@media screen and (max-width: 1200px) {
+  .reservation_box .reservation_left_box .txt:hover .reservation_item {
+    transform: translateX(0);
+  }
+}
 .reservation_box .reservation_left_box .txt p {
   font-size: 24px;
   font-weight: bolder;
   writing-mode: vertical-lr;
 }
 .reservation_box .reservation_right_box {
-  padding: 100px 0 0 100px;
+  margin: 140px 0 0 100px;
+}
+@media screen and (max-width: 1200px) {
+  .reservation_box .reservation_right_box {
+    transform: translateX(-200%);
+    margin-left: 0;
+  }
 }
 .reservation_box .reservation_right_box .reservation_right_item .title {
   color: #0b2657;
@@ -448,9 +609,16 @@ body {
 }
 
 .six_right_box {
-  padding-top: 100px;
+  margin-top: 100px;
+}
+@media screen and (max-width: 1200px) {
+  .six_right_box {
+    transform: translateX(-37%);
+    margin-left: 0;
+  }
 }
 .six_right_box .reservation_right_item .six_title {
+  padding-top: 10px;
   font-size: 17px;
   color: #191919;
   font-weight: bold;
@@ -459,6 +627,26 @@ body {
 .six_right_box .reservation_right_item .six_right_main {
   margin: 50px 0 0 30px;
   padding: 5px 0 0 10px;
+}
+@media screen and (max-width: 1200px) {
+  .six_right_box .reservation_right_item .six_right_main {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 968px) {
+  .six_right_box .reservation_right_item .six_right_main {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 780px) {
+  .six_right_box .reservation_right_item .six_right_main {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .six_right_box .reservation_right_item .six_right_main {
+    width: 40%;
+  }
 }
 .six_right_box .reservation_right_item .six_right_main .six_list .six_num {
   font-size: 16px;
@@ -495,7 +683,16 @@ body {
 }
 
 .privacy_right_box {
-  padding: 100px 0 0 20px;
+  margin: 100px 0 0 20px;
+}
+@media screen and (max-width: 1200px) {
+  .privacy_right_box {
+    transform: translateX(-37%);
+    margin-left: 0;
+  }
+}
+.privacy_right_box .privacy_title {
+  padding-top: 20px;
 }
 .privacy_right_box .privacy_title p {
   font-weight: bolder;
@@ -503,6 +700,16 @@ body {
 .privacy_right_box .privacy_txt {
   padding: 50px 200px 0 50px;
   font-size: 15px;
+}
+@media screen and (max-width: 768px) {
+  .privacy_right_box .privacy_txt {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .privacy_right_box .privacy_txt {
+    width: 70%;
+  }
 }
 .privacy_right_box .privacy_txt p {
   padding-bottom: 30px;
@@ -512,16 +719,42 @@ body {
 }
 
 .SSL_right_box {
-  padding: 100px 0 0 20px;
+  margin: 100px 0 0 20px;
+}
+@media screen and (max-width: 1200px) {
+  .SSL_right_box {
+    transform: translateX(-37%);
+    margin-left: 0;
+  }
 }
 .SSL_right_box .SSL_title {
-  padding-bottom: 30px;
+  padding: 20px 0 30px 0;
 }
 .SSL_right_box .SSL_title p {
   font-weight: bolder;
 }
 .SSL_right_box .SSL_main {
   width: 80%;
+}
+@media screen and (max-width: 1200px) {
+  .SSL_right_box .SSL_main {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 968px) {
+  .SSL_right_box .SSL_main {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 740px) {
+  .SSL_right_box .SSL_main {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 570px) {
+  .SSL_right_box .SSL_main {
+    width: 50%;
+  }
 }
 .SSL_right_box .SSL_main .SSL_coin {
   display: flex;
@@ -533,13 +766,28 @@ body {
 .SSL_right_box .SSL_main .SSL_coin p {
   margin-right: 50px;
 }
+@media screen and (max-width: 570px) {
+  .SSL_right_box .SSL_main .SSL_coin p {
+    margin-right: 0;
+  }
+}
 .SSL_right_box .SSL_main .SSL_coin p img {
   transform: translateY(-20px);
+}
+.SSL_right_box .SSL_main .SSL_main p {
+  width: 100%;
+  text-align: center;
 }
 
 .login_right_box {
   padding: 100px 0 0 0;
-  width: 600px;
+  width: 100%;
+}
+@media screen and (max-width: 1200px) {
+  .login_right_box {
+    transform: translateX(-37%);
+    margin-left: 0;
+  }
 }
 .login_right_box .login_txt {
   padding: 80px 0 0 30px;
@@ -613,6 +861,12 @@ body {
   padding: 100px 0 0 0;
   width: 800px;
 }
+@media screen and (max-width: 1200px) {
+  .register_right_box {
+    transform: translateX(-37%);
+    margin-left: 0;
+  }
+}
 .register_right_box .register_txt {
   padding: 80px 0 0 30px;
 }
@@ -635,6 +889,26 @@ body {
   display: flex;
   padding: 10px 0;
 }
+@media screen and (max-width: 768px) {
+  .register_right_box .register_txt .account,
+  .register_right_box .register_txt .password,
+  .register_right_box .register_txt .password_confirm,
+  .register_right_box .register_txt .name,
+  .register_right_box .register_txt .address,
+  .register_right_box .register_txt .date,
+  .register_right_box .register_txt .gender,
+  .register_right_box .register_txt .tel,
+  .register_right_box .register_txt .photo,
+  .register_right_box .register_txt .fax,
+  .register_right_box .register_txt .company_name,
+  .register_right_box .register_txt .position,
+  .register_right_box .register_txt .compiled,
+  .register_right_box .register_txt .company_tel,
+  .register_right_box .register_txt .company_address,
+  .register_right_box .register_txt .remark {
+    display: block;
+  }
+}
 .register_right_box .register_txt .account select,
 .register_right_box .register_txt .password select,
 .register_right_box .register_txt .password_confirm select,
@@ -653,6 +927,24 @@ body {
 .register_right_box .register_txt .remark select {
   height: 27px;
   border: 1px solid #dedede;
+}
+.register_right_box .register_txt .account .date_day,
+.register_right_box .register_txt .password .date_day,
+.register_right_box .register_txt .password_confirm .date_day,
+.register_right_box .register_txt .name .date_day,
+.register_right_box .register_txt .address .date_day,
+.register_right_box .register_txt .date .date_day,
+.register_right_box .register_txt .gender .date_day,
+.register_right_box .register_txt .tel .date_day,
+.register_right_box .register_txt .photo .date_day,
+.register_right_box .register_txt .fax .date_day,
+.register_right_box .register_txt .company_name .date_day,
+.register_right_box .register_txt .position .date_day,
+.register_right_box .register_txt .compiled .date_day,
+.register_right_box .register_txt .company_tel .date_day,
+.register_right_box .register_txt .company_address .date_day,
+.register_right_box .register_txt .remark .date_day {
+  display: flex;
 }
 .register_right_box .register_txt .account p,
 .register_right_box .register_txt .password p,
@@ -741,6 +1033,14 @@ body {
 .register_right_box .register_txt .email_message {
   padding: 10px 0 0 100px;
 }
+@media screen and (max-width: 768px) {
+  .register_right_box .register_txt .email_message {
+    padding-left: 0;
+  }
+}
+.register_right_box .register_txt .date input {
+  width: 80px;
+}
 .register_right_box .register_txt .date h2 {
   padding: 5px 10px;
 }
@@ -771,10 +1071,57 @@ body {
   display: flex;
   justify-content: end;
 }
+@media screen and (max-width: 768px) {
+  .register_right_box .register_txt .join_member {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .register_right_box .register_txt .join_member {
+    width: 50%;
+  }
+}
 .register_right_box .register_txt .join_member p {
   padding: 10px 40px;
   background-color: #97999b;
   color: #eeeeee;
+}
+@media screen and (max-width: 768px) {
+  .register_right_box .register_txt .account input,
+  .register_right_box .register_txt .password input,
+  .register_right_box .register_txt .password_confirm input,
+  .register_right_box .register_txt .name input,
+  .register_right_box .register_txt .photo input,
+  .register_right_box .register_txt .fax input,
+  .register_right_box .register_txt .company_name input,
+  .register_right_box .register_txt .position input,
+  .register_right_box .register_txt .compiled input,
+  .register_right_box .register_txt .company_tel input,
+  .register_right_box .register_txt .company_address input {
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px 0;
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .register_right_box .register_txt .email_box {
+    display: block;
+  }
+  .register_right_box .register_txt .email_box input {
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .register_right_box .register_txt .tel input {
+    width: 100%;
+    padding: 8px 0;
+  }
+}
+.register_right_box .register_txt .tel_phone input {
+  width: 80px;
 }
 
 .footer {
@@ -788,6 +1135,7 @@ body {
 .footer .title {
   width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
 }
@@ -828,6 +1176,15 @@ body {
   text-align: center;
   z-index: 2;
   display: block;
+}
+@media screen and (max-width: 1024px) {
+  .safe_ad {
+    width: 70%;
+    height: 92%;
+    margin: 0 auto;
+    top: 2%;
+    left: 15%;
+  }
 }
 .safe_ad.on {
   display: block;
@@ -887,6 +1244,7 @@ body {
   left: 0;
   background-color: #000;
   opacity: 0.5;
+  z-index: 2;
 }
 .safe_back.on {
   display: block;

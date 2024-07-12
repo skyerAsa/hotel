@@ -32,14 +32,14 @@
                 <div class="txt">
                     <p>Language</p>
                     <select>
-            <option>繁體中文</option>
-            <option>English</option>
-            <option>日本語</option>
-            <option>简体中文</option>
-          </select>
+                  <option>繁體中文</option>
+                  <option>English</option>
+                  <option>日本語</option>
+                  <option>简体中文</option>
+                </select>
                 </div>
                 <div class="link">
-                    <a href="../../index.html">
+                    <a href="../index.html">
                         <div class="website">
                             <img src="../../img/reservation/icon_1.png" alt="" />
                             <p>官網</p>
@@ -49,6 +49,61 @@
                         <img src="../../img/reservation/icon_1.png" alt="" />
                         <p>結帳</p>
                     </div>
+                </div>
+                <div class="language">
+                    <select>
+                  <option>繁體中文</option>
+                  <option>English</option>
+                  <option>日本語</option>
+                  <option>简体中文</option>
+                </select>
+                </div>
+                <div class="menu">
+                    <p>Menu</p>
+                </div>
+            </div>
+        </div>
+        <div class="menu_item">
+            <ul>
+                <li>
+                    飯店介紹
+                    <div class="item_llst">
+                        <p>關於我們</p>
+                    </div>
+                </li>
+                <li>
+                    線上訂房
+                    <div class="item_llst">
+                        <p>一般訂房</p>
+                        <p>特惠套裝</p>
+                    </div>
+                </li>
+                <li>
+                    使用說明
+                    <div class="item_llst">
+                        <p>訂房六步驟</p>
+                        <p>隱私權政策</p>
+                        <p>SSL安全付款機制</p>
+                    </div>
+                </li>
+                <li>
+                    會員專區
+                    <div class="item_llst">
+                        <p>登入</p>
+                        <p>註冊會員</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="menu_coin">
+                <a href="../index.html">
+                    <div class="website_item">
+                        <img src="../img/reservation/icon_1.png" alt="" />
+                        <p>官網</p>
+                    </div>
+                </a>
+                <div class="checkout_item">
+                    <img src="../img/reservation/icon_1.png" alt="" />
+                    <p>結帳</p>
                 </div>
             </div>
         </div>
@@ -406,6 +461,9 @@
         $(".safe_ad").css("display", "none");
         $(".safe_back").css("display", "none");
     });
+    $(".menu").on("click", function () {
+    $(".menu_item").toggleClass("on");
+  });
     $(document).ready(function() {
         $('.mountain_item').slick({
             slidesToShow: 1,
