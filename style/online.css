@@ -171,6 +171,10 @@ body {
   scroll-behavior: smooth;
 }
 
+.all_body {
+  overflow: hidden;
+}
+
 .logo {
   width: 1200px;
   height: 220px;
@@ -376,6 +380,11 @@ body {
   justify-content: center;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .reservation_title ul {
+    display: none;
+  }
+}
 .reservation_title ul li {
   padding: 10px 0;
   height: 60px;
@@ -489,6 +498,12 @@ body {
   background-color: #97999b;
   position: relative;
 }
+@media screen and (max-width: 1100px) {
+  .process {
+    width: auto;
+    margin: 150px 50px 0 20px;
+  }
+}
 .process ul {
   display: flex;
 }
@@ -561,7 +576,6 @@ body {
 }
 
 .collection_list {
-  width: 1200px;
   margin: 0 auto;
   display: flex;
 }
@@ -571,6 +585,16 @@ body {
 }
 .collection_list .collection_item .slick-list {
   max-width: 700px;
+}
+@media screen and (max-width: 768px) {
+  .collection_list .collection_item .slick-list {
+    max-width: 500px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .collection_list .collection_item .slick-list {
+    max-width: 400px;
+  }
 }
 .collection_list .collection_item .slick-list .slick-track {
   max-width: 900%;
@@ -598,6 +622,13 @@ body {
   padding: 20px 0;
   margin: 0 auto;
   display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .rooms_item {
+    width: auto;
+    justify-content: center;
+  }
 }
 .rooms_item select {
   padding: 5px 10px;
@@ -606,11 +637,18 @@ body {
   padding-right: 20px;
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 .rooms_item .rooms_number {
   padding: 0 20px 0 50px;
   display: flex;
   align-items: center;
+  white-space: nowrap;
+}
+@media screen and (max-width: 768px) {
+  .rooms_item .rooms_number {
+    padding: 0 20px;
+  }
 }
 
 .rooms_calendar {
@@ -618,6 +656,21 @@ body {
   margin: 0 auto;
   border: 1px solid #000;
   border-radius: 20px 20px 0 0;
+}
+@media screen and (max-width: 1200px) {
+  .rooms_calendar {
+    max-width: 700px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .rooms_calendar {
+    max-width: 500px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .rooms_calendar {
+    max-width: 480px;
+  }
 }
 .rooms_calendar .fc-header-toolbar {
   position: relative;
@@ -670,6 +723,12 @@ body {
 .collection_day {
   width: 1200px;
   margin: 0 auto;
+  padding-left: 10px;
+}
+@media screen and (max-width: 768px) {
+  .collection_day {
+    width: auto;
+  }
 }
 .collection_day .rooms_days {
   display: flex;
@@ -677,14 +736,31 @@ body {
   position: relative;
   padding: 100px 0 20px 0;
 }
+@media screen and (max-width: 768px) {
+  .collection_day .rooms_days {
+    justify-content: flex-start;
+  }
+}
+.collection_day .rooms_days .form-group {
+  display: flex;
+}
+.collection_day .rooms_days .form-group select {
+  height: 19px;
+}
 .collection_day .rooms_days .form-row {
   display: flex;
 }
 .collection_day .rooms_days .form-row p {
   padding-right: 5px;
+  white-space: nowrap;
 }
 .collection_day .rooms_days span {
   padding: 0 10px;
+}
+@media screen and (max-width: 768px) {
+  .collection_day .rooms_days span {
+    padding: 0 5px;
+  }
 }
 .collection_day .rooms_days .middle {
   border-right: 1px dotted #787878;
@@ -697,6 +773,7 @@ body {
 }
 .collection_day .rooms_days .rooms p {
   padding-right: 5px;
+  white-space: nowrap;
 }
 .collection_day .rooms_days .rooms select {
   height: 19px;
@@ -720,6 +797,11 @@ body {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  .collect_introduction {
+    width: auto;
+  }
+}
 .collect_introduction p {
   padding: 10px 30px;
   background-color: #97999b;
@@ -737,6 +819,11 @@ body {
   width: 1200px;
   margin: 20px auto 0;
   padding-left: 20px;
+}
+@media screen and (max-width: 768px) {
+  .collect {
+    width: auto;
+  }
 }
 .collect .collect_rooms {
   margin: 5px 0 10px 0;

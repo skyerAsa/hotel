@@ -5,7 +5,9 @@ body {
   position: relative;
   scroll-behavior: smooth;
 }
-
+.all_body{
+  overflow: hidden;
+}
 // logo
 .logo {
   width: 1200px;
@@ -124,6 +126,7 @@ body {
         width: 100%;
         padding: 10px 0;
         text-align: center;
+        font-weight: bolder;
         @keyframes aa {
           from {
             transform: translateY(-100%);
@@ -140,6 +143,7 @@ body {
             align-items: center;
             justify-content: center;
             animation: aa 0.5s forwards;
+            font-weight: bolder;
             background-color: #97999b;
             &:hover {
               background-color: #A2D7F1;
@@ -198,6 +202,8 @@ body {
 
 // reservation_title
 .reservation_title {
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
   ul {
     display: flex;
     justify-content: center;
@@ -303,7 +309,6 @@ body {
 // reservation_box
 .reservation_box {
   width: 1200px;
-  margin: 0 auto;
   display: flex;
   padding-bottom: 100px;
   // reservation_left_box

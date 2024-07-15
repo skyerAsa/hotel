@@ -170,6 +170,10 @@ body {
   scroll-behavior: smooth;
 }
 
+.all_body {
+  overflow: hidden;
+}
+
 .logo {
   width: 1200px;
   height: 220px;
@@ -298,6 +302,7 @@ body {
     width: 100%;
     padding: 10px 0;
     text-align: center;
+    font-weight: bolder;
   }
   @keyframes aa {
     from {
@@ -316,6 +321,7 @@ body {
     align-items: center;
     justify-content: center;
     animation: aa 0.5s forwards;
+    font-weight: bolder;
     background-color: #97999b;
   }
   .menu_item ul li .item_llst p:hover {

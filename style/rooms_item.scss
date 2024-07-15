@@ -306,15 +306,14 @@ body {
 // reservation_box
 .reservation_box {
   width: 1200px;
-  margin: 0 auto;
   display: flex;
   padding-bottom: 100px;
   // reservation_left_box
-  .reservation_left_box {
+.reservation_left_box {
     padding-right: 100px;
     .reservation_left_box_title {
       .title {
-        padding-top: 80px;
+        margin-top: 80px;
         font-size: 12px;
       }
     }
@@ -324,6 +323,14 @@ body {
       padding: 10px 0 20px;
       margin-top: 20px;
       position: relative;
+      z-index: 2;
+      @include rwd(1200) {
+        transform: translateX(-100%);
+        transition: all 0.5s;
+        &:hover {
+          transform: translateX(0);
+        }
+      }
       .generally_reserve,
       .offer {
         padding-bottom: 10px;
@@ -386,6 +393,13 @@ body {
       border-radius: 0 10px 10px 0;
       background-color: #97999b;
       color: #fff;
+      @include rwd(1200) {
+        &:hover {
+          .reservation_item {
+            transform: translateX(0);
+          }
+        }
+      }
       p {
         font-size: 24px;
         font-weight: bolder;
@@ -394,8 +408,11 @@ body {
     }
   }
   // reservation_right_box collext
-  .reservation_right_box {
-    padding: 100px 0 0 0;
+.reservation_right_box {
+    padding: 120px 0 0 0;
+    @include rwd(1200){
+      transform: translateX(-30%);
+    }
     .collect_list {
       .collect_item {
         .slick-list {
