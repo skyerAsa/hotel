@@ -310,12 +310,12 @@ body {
   width: 1000px;
 
   height: 1px;
-  margin: 150px auto 0 ;
+  margin: 100px auto 0 ;
   background-color: #97999b;
   position: relative;
   @include rwd(1100){
     width: auto;
-    margin: 150px 50px 0 20px;
+    margin: 100px 50px 0 20px;
   }
   ul {
     display: flex;

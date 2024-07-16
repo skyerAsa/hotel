@@ -494,14 +494,14 @@ body {
 .process {
   width: 1000px;
   height: 1px;
-  margin: 150px auto 0;
+  margin: 100px auto 0;
   background-color: #97999b;
   position: relative;
 }
 @media screen and (max-width: 1100px) {
   .process {
     width: auto;
-    margin: 150px 50px 0 20px;
+    margin: 100px 50px 0 20px;
   }
 }
 .process ul {

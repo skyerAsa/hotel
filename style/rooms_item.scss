@@ -208,6 +208,9 @@ body {
     display: flex;
     justify-content: center;
     position: relative;
+    @include rwd(768) {
+      display: none;
+    }
     li {
       padding: 10px 0;
       height: 60px;
@@ -306,14 +309,18 @@ body {
 // reservation_box
 .reservation_box {
   width: 1200px;
+  margin: 0 auto;
   display: flex;
   padding-bottom: 100px;
+  @include rwd(768){
+    width: 100%;
+  }
   // reservation_left_box
 .reservation_left_box {
     padding-right: 100px;
     .reservation_left_box_title {
       .title {
-        margin-top: 80px;
+        margin: 80px 0 0 20px;
         font-size: 12px;
       }
     }
@@ -413,16 +420,33 @@ body {
     @include rwd(1200){
       transform: translateX(-30%);
     }
+    @include rwd(768){
+      transform: translateX(-60%);
+    }
+    @include rwd(600){
+      transform: translateX(-70%);
+    }
     .collect_list {
       .collect_item {
         .slick-list {
           max-width: 700px;
+          @include rwd(1200){
+            max-width: 500px;
+          }
+          @include rwd(1200){
+            max-width: 500px;
+          }
+          @include rwd(600){
+            max-width: 400px;
+          }
           .slick-track {
             max-width: 600%;
           }
         }
       }
       .slick-dots {
+        width: 100%;
+        left: auto;
         top: auto;
         bottom: -20px;
         li {
@@ -459,6 +483,9 @@ body {
       border-left: 8px solid #97999b;
       display: flex;
       justify-content: space-between;
+      @include rwd(768){
+        width: 100%;
+      }
       p {
         padding: 10px 30px;
         background-color: #97999b;
@@ -517,6 +544,9 @@ body {
       margin-top: 50px;
       display: flex;
       justify-content: space-between;
+      @include rwd(768){
+        width: 100%;
+      }
       p {
         padding: 10px 30px;
         background-color: #97999b;
@@ -526,16 +556,34 @@ body {
   }
 //   reservation_right_box mountain
 .reservation_right_box {
-    padding: 100px 0 0 0;
-    .mountain_list {
-      .mountain_item {
-        .slick-list {
-          max-width: 800px;
-          .slick-track {
-            max-width: 500%;
-          }
+  padding: 120px 0 0 0;
+  @include rwd(1200){
+    transform: translateX(-30%);
+  }
+  @include rwd(768){
+    transform: translateX(-60%);
+  }
+  @include rwd(600){
+    transform: translateX(-70%);
+  }
+  .mountain_list {
+    .mountain_item {
+      .slick-list {
+        max-width: 700px;
+        @include rwd(1200){
+          max-width: 500px;
+        }
+        @include rwd(1200){
+          max-width: 500px;
+        }
+        @include rwd(600){
+          max-width: 400px;
+        }
+        .slick-track {
+          max-width: 600%;
         }
       }
+    }
       .slick-dots {
         top: auto;
         bottom: -20px;
@@ -573,6 +621,9 @@ body {
       border-left: 8px solid #97999b;
       display: flex;
       justify-content: space-between;
+      @include rwd(768){
+        width: 100%;
+      }
       p {
         padding: 10px 30px;
         background-color: #97999b;
@@ -631,6 +682,9 @@ body {
       margin-top: 50px;
       display: flex;
       justify-content: space-between;
+      @include rwd(768){
+        width: 100%;
+      }
       p {
         padding: 10px 30px;
         background-color: #97999b;
@@ -640,16 +694,34 @@ body {
   }
 //   reservation_right_box morioka
 .reservation_right_box {
-    padding: 100px 0 0 0;
-    .morioka_list {
-      .morioka_item {
-        .slick-list {
-          max-width: 800px;
-          .slick-track {
-            max-width: 500%;
-          }
+  padding: 120px 0 0 0;
+  @include rwd(1200){
+    transform: translateX(-30%);
+  }
+  @include rwd(768){
+    transform: translateX(-60%);
+  }
+  @include rwd(600){
+    transform: translateX(-70%);
+  }
+  .morioka_list {
+    .morioka_item {
+      .slick-list {
+        max-width: 700px;
+        @include rwd(1200){
+          max-width: 500px;
+        }
+        @include rwd(1200){
+          max-width: 500px;
+        }
+        @include rwd(600){
+          max-width: 400px;
+        }
+        .slick-track {
+          max-width: 600%;
         }
       }
+    }
       .slick-dots {
         top: auto;
         bottom: -20px;
@@ -687,6 +759,9 @@ body {
       border-left: 8px solid #97999b;
       display: flex;
       justify-content: space-between;
+      @include rwd(768){
+        width: 100%;
+      }
       p {
         padding: 10px 30px;
         background-color: #97999b;
@@ -745,6 +820,9 @@ body {
       margin-top: 50px;
       display: flex;
       justify-content: space-between;
+      @include rwd(768){
+        width: 100%;
+      }
       p {
         padding: 10px 30px;
         background-color: #97999b;
@@ -754,16 +832,34 @@ body {
   }
 //   reservation_right_box reflection
 .reservation_right_box {
-    padding: 100px 0 0 0;
-    .reflection_list {
-      .reflection_item {
-        .slick-list {
-          max-width: 800px;
-          .slick-track {
-            max-width: 600%;
-          }
+  padding: 120px 0 0 0;
+  @include rwd(1200){
+    transform: translateX(-30%);
+  }
+  @include rwd(768){
+    transform: translateX(-60%);
+  }
+  @include rwd(600){
+    transform: translateX(-70%);
+  }
+  .reflection_list {
+    .reflection_item {
+      .slick-list {
+        max-width: 700px;
+        @include rwd(1200){
+          max-width: 500px;
+        }
+        @include rwd(1200){
+          max-width: 500px;
+        }
+        @include rwd(600){
+          max-width: 400px;
+        }
+        .slick-track {
+          max-width: 600%;
         }
       }
+    }
       .slick-dots {
         top: auto;
         bottom: -20px;
@@ -801,6 +897,9 @@ body {
       border-left: 8px solid #97999b;
       display: flex;
       justify-content: space-between;
+      @include rwd(768){
+        width: 100%;
+      }
       p {
         padding: 10px 30px;
         background-color: #97999b;
@@ -859,6 +958,9 @@ body {
       margin-top: 50px;
       display: flex;
       justify-content: space-between;
+      @include rwd(768){
+        width: 100%;
+      }
       p {
         padding: 10px 30px;
         background-color: #97999b;
@@ -867,14 +969,32 @@ body {
     }
   }
   //   reservation_right_box linshan
-.reservation_right_box {
-    padding: 100px 0 0 0;
+  .reservation_right_box {
+    padding: 120px 0 0 0;
+    @include rwd(1200){
+      transform: translateX(-30%);
+    }
+    @include rwd(768){
+      transform: translateX(-60%);
+    }
+    @include rwd(600){
+      transform: translateX(-70%);
+    }
     .linshan_list {
       .linshan_item {
         .slick-list {
-          max-width: 800px;
+          max-width: 700px;
+          @include rwd(1200){
+            max-width: 500px;
+          }
+          @include rwd(1200){
+            max-width: 500px;
+          }
+          @include rwd(600){
+            max-width: 400px;
+          }
           .slick-track {
-            max-width: 800%;
+            max-width: 600%;
           }
         }
       }
@@ -915,6 +1035,9 @@ body {
       border-left: 8px solid #97999b;
       display: flex;
       justify-content: space-between;
+      @include rwd(768){
+        width: 100%;
+      }
       p {
         padding: 10px 30px;
         background-color: #97999b;
@@ -973,6 +1096,9 @@ body {
       margin-top: 50px;
       display: flex;
       justify-content: space-between;
+      @include rwd(768){
+        width: 100%;
+      }
       p {
         padding: 10px 30px;
         background-color: #97999b;
@@ -1089,6 +1215,78 @@ body {
   }
 }
 
+// safe_ad
+.safe_ad {
+  width: 30%;
+  height: 60%;
+  padding: 5px;
+  margin-left: -35%;
+  margin-top: 0%;
+  position: fixed;
+  top: 20%;
+  left: 70%;
+  background-color: #fff;
+  text-align: center;
+  z-index: 2;
+  display: block;
+  @include rwd(1024) {
+    width: 70%;
+    height: 92%;
+    margin: 0 auto;
+    top: 2%;
+    left: 15%;
+  }
+  &.on {
+    display: block;
+  }
+  .safe_title {
+    padding-top: 20px;
+    p {
+      font-weight: bolder;
+      font-size: 28px;
+    }
+  }
+  .remind {
+    padding: 0px 10%;
+    margin: 20px 0px;
+    overflow-y: auto;
+    display: flex;
+    color: red;
+    p {
+      font-size: 21px;
+      font-weight: bolder;
+      text-align: left;
+    }
+  }
+  .safe_main {
+    padding: 0px 10%;
+    margin: 20px 0px;
+    text-align: left;
+    p {
+      font-size: 14px;
+    }
+    a {
+      color: blue;
+    }
+  }
+  .safe_ad_main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .safe_close {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: #fff;
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    z-index: 2;
+    cursor: pointer;
+  }
+}
+
 // safe_back
 .safe_back {
   width: 100%;
@@ -1098,6 +1296,7 @@ body {
   left: 0;
   background-color: #000;
   opacity: 0.5;
+  z-index: 2;
   // display: none;
   &.on {
     display: block;
