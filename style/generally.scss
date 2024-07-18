@@ -376,6 +376,9 @@ body {
           .in_rooms_day {
             display: flex;
           }
+          span{
+            padding: 0 5px;
+          }
         }
       }
     }
@@ -495,6 +498,9 @@ body {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    @include rwd(1200){
+      margin: 0 10px;
+    }
     .txt {
       h2 {
         padding: 10px 0;

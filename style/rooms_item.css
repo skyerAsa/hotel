@@ -561,6 +561,9 @@ body {
 .reservation_box .reservation_left_box .reservation_item .in_rooms .in_rooms_date .in_rooms_day {
   display: flex;
 }
+.reservation_box .reservation_left_box .reservation_item .in_rooms .in_rooms_date span {
+  padding: 0 5px;
+}
 .reservation_box .reservation_left_box .reserve_rooms {
   display: flex;
   padding: 0 50px 10px 10px;
@@ -1339,6 +1342,11 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 1200px) {
+  .footer .title {
+    margin: 0 10px;
+  }
 }
 .footer .title .txt h2 {
   padding: 10px 0;

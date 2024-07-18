@@ -23,6 +23,7 @@
 </head>
 
 <body>
+  <div class="all_body">
     <!-- reservation_logo -->
     <div class="reservation_logo">
         <div class="logo">
@@ -32,14 +33,14 @@
             <div class="txt">
                 <p>Language</p>
                 <select>
-              <option>繁體中文</option>
-              <option>English</option>
-              <option>日本語</option>
-              <option>简体中文</option>
-            </select>
+                <option>繁體中文</option>
+                <option>English</option>
+                <option>日本語</option>
+                <option>简体中文</option>
+                </select>
             </div>
             <div class="link">
-                <a href="../index.html">
+                <a href="../../index.html">
                     <div class="website">
                         <img src="../../img/reservation/icon_1.png" alt="" />
                         <p>官網</p>
@@ -51,12 +52,12 @@
                 </div>
             </div>
             <div class="language">
-                <select>
+              <select>
               <option>繁體中文</option>
               <option>English</option>
               <option>日本語</option>
               <option>简体中文</option>
-            </select>
+              </select>
             </div>
             <div class="menu">
                 <p>Menu</p>
@@ -111,7 +112,7 @@
           </li>
       </ul>
       <div class="menu_coin">
-          <a href="../index.html">
+          <a href="../../index.html">
               <div class="website_item">
                   <img src="../../img/reservation/icon_1.png" alt="" />
                   <p>官網</p>
@@ -241,7 +242,34 @@
       </select>
     </div>
     <div class="rooms_calendar">
-        <div id="calendar"></div>
+      <div class="container">
+        <div class="calendar">
+          <header>
+            <pre class="left">◀</pre>
+            
+            <div class="header-display">
+              <p class="display">""</p>
+            </div>
+      
+            <pre class="right">▶</pre>
+      
+          </header>
+      
+          <div class="week">
+            <div>日</div>
+            <div>一</div>
+            <div>二</div>
+            <div>三</div>
+            <div>四</div>
+            <div>五</div>
+            <div>六</div>
+          </div>
+          <div class="days"></div>
+        </div>
+        <div class="display-selected">
+          <p class="selected"></p>
+        </div>
+      </div>
       </div>
     <!-- collection_day -->
     <div class="collection_day">
@@ -287,64 +315,63 @@
                 </div>
                 <div class="form-group col-md-4 col-4">
                     <select name="meetDayDD" id="meetDay" class="form-control" onchange="getDay()"></select>
-                    <span class="mx-md-3 mx-0"></span>
                 </div>
             </div>
             <div class="middle"></div>
             <div class="rooms">
                 <p>退房日期</p>
                 <select>
-            <option>2024</option>
-            <option>2025</option>
-          </select>
-                <span>-</span>
-                <select name="month" id="month">
-                  <option value="0">1</option>
-                  <option value="1">2</option>
-                  <option value="2">3</option>
-                  <option value="3">4</option>
-                  <option value="4">5</option>
-                  <option value="5">6</option>
-                  <option value="6">7</option>
-                  <option value="7">8</option>
-                  <option value="8">9</option>
-                  <option value="9">10</option>
-                  <option value="10">11</option>
-                  <option value="11">12</option>
+                <option>2024</option>
+                <option>2025</option>
                 </select>
-                <span>-</span>
+                <span>/</span>
+                <select name="month" id="month">
+                <option value="0">1</option>
+                <option value="1">2</option>
+                <option value="2">3</option>
+                <option value="3">4</option>
+                <option value="4">5</option>
+                <option value="5">6</option>
+                <option value="6">7</option>
+                <option value="7">8</option>
+                <option value="8">9</option>
+                <option value="9">10</option>
+                <option value="10">11</option>
+                <option value="11">12</option>
+                </select>
+                <span>/</span>
                 <select name="day" id="day">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                  <option value="11">11</option>
-                  <option value="12">12</option>
-                  <option value="13">13</option>
-                  <option value="14">14</option>
-                  <option value="15">15</option>
-                  <option value="16">16</option>
-                  <option value="17">17</option>
-                  <option value="18">18</option>
-                  <option value="19">19</option>
-                  <option value="20">20</option>
-                  <option value="21">21</option>
-                  <option value="22">22</option>
-                  <option value="23">23</option>
-                  <option value="24">24</option>
-                  <option value="25">25</option>
-                  <option value="26">26</option>
-                  <option value="27">27</option>
-                  <option value="28">28</option>
-                  <option value="29">29</option>
-                  <option value="30">30</option>
-                  <option value="31">31</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
                 </select>
             </div>
         </div>
@@ -378,6 +405,7 @@
             </div>
         </a>
     </div>
+  </div>
 </body>
 
 </html>
@@ -558,22 +586,102 @@
   
     (window.onload = getDay()), changeMonth();
   
-    document.addEventListener("DOMContentLoaded", function () {
-      const calendarEl = document.getElementById("calendar");
-      const calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: "dayGridMonth",
-        headerToolbar: {
-          left: "prev,next today",
-          center: "title",
-          right: "dayGridMonth,timeGridWeek,timeGridDay",
-        },
-        buttonText: {
-          today: "Today",
-          month: "Month",
-          week: "Week",
-          day: "Day",
-        },
-      });
-      calendar.render();
+    let display = document.querySelector(".display");
+let days = document.querySelector(".days");
+let previous = document.querySelector(".left");
+let next = document.querySelector(".right");
+let selected = document.querySelector(".selected");
+
+let date = new Date();
+
+let year = date.getFullYear();
+let month = date.getMonth();
+
+function displayCalendar() {
+  const firstDay = new Date(year, month, 1);
+
+  const lastDay = new Date(year, month + 1, 0);
+
+  const firstDayIndex = firstDay.getDay(); //4
+
+  const numberOfDays = lastDay.getDate(); //31
+
+  let formattedDate = date.toLocaleString("en-US", {
+    month: "long",
+    year: "numeric"
+  });
+
+  display.innerHTML = `${formattedDate}`;
+
+  for (let x = 1; x <= firstDayIndex; x++) {
+    const div = document.createElement("div");
+    div.innerHTML += "";
+
+    days.appendChild(div);
+  }
+
+  for (let i = 1; i <= numberOfDays; i++) {
+    let div = document.createElement("div");
+    let currentDate = new Date(year, month, i);
+
+    div.dataset.date = currentDate.toDateString();
+
+    div.innerHTML += i;
+    days.appendChild(div);
+    if (
+      currentDate.getFullYear() === new Date().getFullYear() &&
+      currentDate.getMonth() === new Date().getMonth() &&
+      currentDate.getDate() === new Date().getDate()
+    ) {
+      div.classList.add("current-date");
+    }
+  }
+}
+
+// Call the function to display the calendar
+displayCalendar();
+
+previous.addEventListener("click", () => {
+  days.innerHTML = "";
+  selected.innerHTML = "";
+
+  if (month < 0) {
+    month = 11;
+    year = year - 1;
+  }
+
+  month = month - 1;
+
+  date.setMonth(month);
+
+  displayCalendar();
+
+});
+
+next.addEventListener("click", () => {
+  days.innerHTML = "";
+  selected.innerHTML = "";
+
+  if (month > 11) {
+    month = 0;
+    year = year + 1;
+  }
+
+  month = month + 1;
+  date.setMonth(month);
+
+  displayCalendar();
+  displaySelected();
+});
+
+function displaySelected() {
+  const dayElements = document.querySelectorAll(".days div");
+  dayElements.forEach((day) => {
+    day.addEventListener("click", (e) => {
+      const selectedDate = e.target.dataset.date;
+      selected.innerHTML = `Selected Date : ${selectedDate}`;
     });
+  });
+}
+displaySelected();
   </script>
