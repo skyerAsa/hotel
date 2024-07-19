@@ -219,31 +219,69 @@
     </div>
     <!-- rooms_item -->
     <div class="rooms_item">
-        <div class="rooms_name">房間名稱</div>
+      <div class="rooms_name">
+        <p>房間名稱</p>
         <select>
-          <option><a href="../online/collection.html">山采 雙人房 • 一泊一食</a></option>
-          <option><a href="../online/mountain.html">遼山 四人房 • 一泊一食</a></option>
-          <option><a href="../online/morioka.html">森丘 雙人房 • 一泊一食</a></option>
-          <option><a href="../online/reflection.html">綠映 四人房 • 一泊一食</a></option>
-          <option><a href="../online/linshan.html">臨山 四人房 • 一泊一食</a></option>
+          <option>
+            <a href="../online/collection.html">山采 雙人房 • 一泊一食</a>
+          </option>
+          <option>
+            <a href="../online/mountain.html">遼山 四人房 • 一泊一食</a>
+          </option>
+          <option>
+            <a href="../online/morioka.html">森丘 雙人房 • 一泊一食</a>
+          </option>
+          <option>
+            <a href="../online/reflection.html">綠映 四人房 • 一泊一食</a>
+          </option>
+          <option>
+            <a href="../online/linshan.html">臨山 四人房 • 一泊一食</a>
+          </option>
         </select>
-        <div class="rooms_number">房間型態 數量</div>
+      </div>
+
+      <div class="rooms_number">
+        <p>房間型態 數量</p>
         <select>
-        <option>1間</option>
-        <option>2間</option>
-        <option>3間</option>
-        <option>4間</option>
-        <option>5間</option>
-        <option>6間</option>
-        <option>7間</option>
-        <option>8間</option>
-        <option>9間</option>
-        <option>10間</option>
-      </select>
+          <option>1間</option>
+          <option>2間</option>
+          <option>3間</option>
+          <option>4間</option>
+          <option>5間</option>
+          <option>6間</option>
+          <option>7間</option>
+          <option>8間</option>
+          <option>9間</option>
+          <option>10間</option>
+        </select>
+      </div>
     </div>
     <div class="rooms_calendar">
-        <div id="calendar"></div>
+      <div class="container">
+        <div class="calendar">
+          <header>
+            <pre class="left">◀</pre>
+            <div class="header-display">
+              <p class="display">""</p>
+            </div>
+            <pre class="right">▶</pre>
+          </header>
+          <div class="week">
+            <div>日</div>
+            <div>一</div>
+            <div>二</div>
+            <div>三</div>
+            <div>四</div>
+            <div>五</div>
+            <div>六</div>
+          </div>
+          <div class="days"></div>
+        </div>
+        <div class="display-selected">
+          <p class="selected"></p>
+        </div>
       </div>
+    </div>
     <!-- collection_day -->
     <div class="collection_day">
         <div class="collect_introduction">
@@ -383,199 +421,270 @@
 
 </html>
 <script>
-    var CurrentDate = new Date();
-  
-    $("#month").val(CurrentDate.getMonth());
-    $("#day").val(CurrentDate.getDate() + 1);
-    $("#today").val(CurrentDate.getDate());
-  
-    $(window).scroll(showMenu);
-  
-    function showMenu() {
-      if ($(window).scrollTop() > 1) {
-        $(".go_top").addClass("on");
-      } else {
-        $(".go_top").removeClass("on");
-      }
-    }
-    $(".menu").on("click", function () {
-      $(".menu_item").toggleClass("on");
-    });
-    $(document).ready(function () {
-      $(".collection_item").slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        cssEase: "linear",
-        fade: true,
-        dots: true,
-        arrows: false,
-        pauseOnFocus: false,
-      });
-    });
-    var currentYear = new Date().getFullYear();
-    var currentMonth = new Date().getMonth() + 1;
-    var currentDay = new Date().getDate();
-    var currentWeek = new Date().getDay();
-  
-    // 年份
-    for (i = currentYear; i <= currentYear + 1; i++) {
-      addOption(meetYear, i, i);
-    }
-  
-    // 新增月份
+  var CurrentDate = new Date();
+
+$("#month").val(CurrentDate.getMonth());
+$("#day").val(CurrentDate.getDate() + 1);
+$("#today").val(CurrentDate.getDate());
+$(window).scroll(showMenu);
+
+function showMenu() {
+  if ($(window).scrollTop() > 1) {
+    $(".go_top").addClass("on");
+  } else {
+    $(".go_top").removeClass("on");
+  }
+}
+$(".menu").on("click", function () {
+  $(".menu_item").toggleClass("on");
+});
+$(document).ready(function () {
+  $(".collection_item").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    cssEase: "linear",
+    fade: true,
+    dots: true,
+    arrows: false,
+    pauseOnFocus: false,
+  });
+});
+var currentYear = new Date().getFullYear();
+var currentMonth = new Date().getMonth() + 1;
+var currentDay = new Date().getDate();
+var currentWeek = new Date().getDay();
+
+// 年份
+for (i = currentYear; i <= currentYear + 1; i++) {
+  addOption(meetYear, i, i);
+}
+
+// 新增月份
+for (i = currentMonth; i <= 12; i++) {
+  addOption(meetMonth, i, i);
+}
+
+// 設定每個月份的天數
+function setDays(year, month, day) {
+  var monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  var yea = year.options[year.selectedIndex].text;
+  var mon = month.options[month.selectedIndex].text;
+  var num = monthDays[mon - 1];
+  if (mon == 2 && isLeapYear(yea)) {
+    num++;
+  }
+  for (var j = day.options.length - 1; j >= num; j--) {
+    day.remove(j);
+  }
+  for (var i = day.options.length + 1; i <= num; i++) {
+    addOption(meetDay, i, i);
+  }
+}
+// 限定每個月份的天數
+function currentDays(year, month, day) {
+  var monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  var yea = year.options[year.selectedIndex].text;
+  var mon = month.options[month.selectedIndex].text;
+  var num = monthDays[mon - 1];
+  if (mon == 2 && isLeapYear(yea)) {
+    num++;
+  }
+  for (var j = currentDay; j >= num; j--) {
+    day.remove(j);
+  }
+  for (var i = currentDay; i <= num; i++) {
+    addOption(meetDay, i, i);
+  }
+}
+
+// 判斷是否閏年
+function isLeapYear(year) {
+  return year % 4 == 0 || (year % 100 == 0 && year % 400 == 0);
+}
+// 向select尾部新增option
+function addOption(selectbox, text, value) {
+  var option = document.createElement("option");
+  option.text = text;
+  option.value = value;
+  selectbox.options.add(option);
+}
+
+// 將今天月份設為預設
+$("select[name=meetDayMM] option").each(function () {
+  if ($(this).text() == currentMonth) $(this).attr("selected", "selected");
+});
+
+window.onload = setDays(meetYear, meetMonth, meetDay);
+
+// 今天日期設為預設
+$("select[name=meetDayDD] option").each(function () {
+  if ($(this).text() == currentDay) $(this).attr("selected", "selected");
+});
+
+// 取得星期並切換選項
+function getDay() {
+  // 取得選取的 年份 月份 日期
+  var selectYY = $("select[name=meetDayYY] option").filter(":selected").val();
+  var selectMM = $("select[name=meetDayMM] option").filter(":selected").val();
+  var selectDD = $("select[name=meetDayDD] option").filter(":selected").val();
+
+  // 取得選取的月份名稱
+  function getMonthName(selectMM) {
+    return [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ][selectMM - 1];
+  }
+  var monthName = getMonthName(selectMM);
+
+  // 取得選取之星期
+  var selectDay = new Date(
+    monthName + " " + selectDD + "," + selectYY + " 23:15:30"
+  );
+  var dayOfWeek = selectDay.getDay();
+  //console.log(dayOfWeek);
+
+  // 6 = Saturday, 0 = Sunday
+  if (dayOfWeek === 6 || dayOfWeek === 0) {
+    $("#weekDaily").attr("class", "form-group col-12 d-none");
+    $("#weekend").attr("class", "form-group col-12 d-block");
+  } else {
+    $("#weekDaily").attr("class", "form-group col-12 d-block");
+    $("#weekend").attr("class", "form-group col-12 d-none");
+  }
+}
+
+function changeYear() {
+  var selectYY = $("select[name=meetDayYY] option").filter(":selected").val();
+  // 僅顯示當年度大於今日之月份
+  if (selectYY == currentYear) {
+    $("#meetMonth").find("option").remove().end();
     for (i = currentMonth; i <= 12; i++) {
       addOption(meetMonth, i, i);
     }
-  
-    // 設定每個月份的天數
-    function setDays(year, month, day) {
-      var monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-      var yea = year.options[year.selectedIndex].text;
-      var mon = month.options[month.selectedIndex].text;
-      var num = monthDays[mon - 1];
-      if (mon == 2 && isLeapYear(yea)) {
-        num++;
-      }
-      for (var j = day.options.length - 1; j >= num; j--) {
-        day.remove(j);
-      }
-      for (var i = day.options.length + 1; i <= num; i++) {
-        addOption(meetDay, i, i);
-      }
+  } else {
+    $("#meetMonth").find("option").remove().end();
+    for (i = 1; i <= 12; i++) {
+      addOption(meetMonth, i, i);
     }
-    // 限定每個月份的天數
-    function currentDays(year, month, day) {
-      var monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-      var yea = year.options[year.selectedIndex].text;
-      var mon = month.options[month.selectedIndex].text;
-      var num = monthDays[mon - 1];
-      if (mon == 2 && isLeapYear(yea)) {
-        num++;
-      }
-      for (var j = currentDay; j >= num; j--) {
-        day.remove(j);
-      }
-      for (var i = currentDay; i <= num; i++) {
-        addOption(meetDay, i, i);
-      }
+  }
+  changeMonth();
+}
+
+function changeMonth() {
+  var selectYY = $("select[name=meetDayYY] option").filter(":selected").val();
+  var selectMM = $("select[name=meetDayMM] option").filter(":selected").val();
+  // 僅顯示當年度大於今日之日期
+  if (selectMM == currentMonth && selectYY == currentYear) {
+    $("#meetDay").find("option").remove().end();
+    currentDays(meetYear, meetMonth, meetDay);
+  } else {
+    $("#meetDay").find("option").remove().end();
+    setDays(meetYear, meetMonth, meetDay);
+  }
+}
+
+(window.onload = getDay()), changeMonth();
+
+let display = document.querySelector(".display");
+let days = document.querySelector(".days");
+let previous = document.querySelector(".left");
+let next = document.querySelector(".right");
+let selected = document.querySelector(".selected");
+let date = new Date();
+let year = date.getFullYear();
+let month = date.getMonth();
+
+function displayCalendar() {
+  const firstDay = new Date(year, month, 1);
+  const lastDay = new Date(year, month + 1, 0);
+  const firstDayIndex = firstDay.getDay(); //4
+  const numberOfDays = lastDay.getDate(); //31
+
+  let formattedDate = date.toLocaleString("en-US", {
+    month: "long",
+    year: "numeric",
+  });
+
+  display.innerHTML = `${formattedDate}`;
+
+  for (let x = 1; x <= firstDayIndex; x++) {
+    const div = document.createElement("div");
+    div.innerHTML += "";
+
+    days.appendChild(div);
+  }
+
+  for (let i = 1; i <= numberOfDays; i++) {
+    let div = document.createElement("div");
+    let currentDate = new Date(year, month, i);
+
+    div.dataset.date = currentDate.toDateString();
+
+    div.innerHTML += i;
+    days.appendChild(div);
+    if (
+      currentDate.getFullYear() === new Date().getFullYear() &&
+      currentDate.getMonth() === new Date().getMonth() &&
+      currentDate.getDate() === new Date().getDate()
+    ) {
+      div.classList.add("current-date");
     }
-  
-    // 判斷是否閏年
-    function isLeapYear(year) {
-      return year % 4 == 0 || (year % 100 == 0 && year % 400 == 0);
-    }
-    // 向select尾部新增option
-    function addOption(selectbox, text, value) {
-      var option = document.createElement("option");
-      option.text = text;
-      option.value = value;
-      selectbox.options.add(option);
-    }
-  
-    // 將今天月份設為預設
-    $("select[name=meetDayMM] option").each(function () {
-      if ($(this).text() == currentMonth) $(this).attr("selected", "selected");
+  }
+}
+
+// Call the function to display the calendar
+displayCalendar();
+
+previous.addEventListener("click", () => {
+  days.innerHTML = "";
+  selected.innerHTML = "";
+
+  if (month < 0) {
+    month = 11;
+    year = year - 1;
+  }
+
+  month = month - 1;
+  date.setMonth(month);
+  displayCalendar();
+});
+
+next.addEventListener("click", () => {
+  days.innerHTML = "";
+  selected.innerHTML = "";
+
+  if (month > 11) {
+    month = 0;
+    year = year + 1;
+  }
+
+  month = month + 1;
+  date.setMonth(month);
+
+  displayCalendar();
+  displaySelected();
+});
+
+function displaySelected() {
+  const dayElements = document.querySelectorAll(".days div");
+  dayElements.forEach((day) => {
+    day.addEventListener("click", (e) => {
+      const selectedDate = e.target.dataset.date;
+      selected.innerHTML = `Selected Date : ${selectedDate}`;
     });
-  
-    window.onload = setDays(meetYear, meetMonth, meetDay);
-  
-    // 今天日期設為預設
-    $("select[name=meetDayDD] option").each(function () {
-      if ($(this).text() == currentDay) $(this).attr("selected", "selected");
-    });
-  
-    // 取得星期並切換選項
-    function getDay() {
-      // 取得選取的 年份 月份 日期
-      var selectYY = $("select[name=meetDayYY] option").filter(":selected").val();
-      var selectMM = $("select[name=meetDayMM] option").filter(":selected").val();
-      var selectDD = $("select[name=meetDayDD] option").filter(":selected").val();
-  
-      // 取得選取的月份名稱
-      function getMonthName(selectMM) {
-        return [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
-          "August",
-          "September",
-          "October",
-          "November",
-          "December",
-        ][selectMM - 1];
-      }
-      var monthName = getMonthName(selectMM);
-  
-      // 取得選取之星期
-      var selectDay = new Date(
-        monthName + " " + selectDD + "," + selectYY + " 23:15:30"
-      );
-      var dayOfWeek = selectDay.getDay();
-      //console.log(dayOfWeek);
-  
-      // 6 = Saturday, 0 = Sunday
-      if (dayOfWeek === 6 || dayOfWeek === 0) {
-        $("#weekDaily").attr("class", "form-group col-12 d-none");
-        $("#weekend").attr("class", "form-group col-12 d-block");
-      } else {
-        $("#weekDaily").attr("class", "form-group col-12 d-block");
-        $("#weekend").attr("class", "form-group col-12 d-none");
-      }
-    }
-  
-    function changeYear() {
-      var selectYY = $("select[name=meetDayYY] option").filter(":selected").val();
-      // 僅顯示當年度大於今日之月份
-      if (selectYY == currentYear) {
-        $("#meetMonth").find("option").remove().end();
-        for (i = currentMonth; i <= 12; i++) {
-          addOption(meetMonth, i, i);
-        }
-      } else {
-        $("#meetMonth").find("option").remove().end();
-        for (i = 1; i <= 12; i++) {
-          addOption(meetMonth, i, i);
-        }
-      }
-      changeMonth();
-    }
-  
-    function changeMonth() {
-      var selectYY = $("select[name=meetDayYY] option").filter(":selected").val();
-      var selectMM = $("select[name=meetDayMM] option").filter(":selected").val();
-      // 僅顯示當年度大於今日之日期
-      if (selectMM == currentMonth && selectYY == currentYear) {
-        $("#meetDay").find("option").remove().end();
-        currentDays(meetYear, meetMonth, meetDay);
-      } else {
-        $("#meetDay").find("option").remove().end();
-        setDays(meetYear, meetMonth, meetDay);
-      }
-    }
-  
-    (window.onload = getDay()), changeMonth();
-  
-    document.addEventListener("DOMContentLoaded", function () {
-      const calendarEl = document.getElementById("calendar");
-      const calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: "dayGridMonth",
-        headerToolbar: {
-          left: "prev,next today",
-          center: "title",
-          right: "dayGridMonth,timeGridWeek,timeGridDay",
-        },
-        buttonText: {
-          today: "Today",
-          month: "Month",
-          week: "Week",
-          day: "Day",
-        },
-      });
-      calendar.render();
-    });
+  });
+}
+displaySelected();
   </script>

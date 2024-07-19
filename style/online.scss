@@ -361,6 +361,7 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
+      white-space: nowrap;
       &:first-child {
         position: relative;
         top: -87px;
@@ -405,6 +406,9 @@ body {
       @include rwd(550) {
         max-width: 400px;
       }
+      @include rwd(499) {
+        max-width: 300px;
+      }
       .slick-track {
         max-width: 900%;
       }
@@ -442,6 +446,9 @@ body {
     width: auto;
     justify-content: center;
   }
+  @include rwd(499) {
+    display: block;
+  }
   select {
     padding: 5px 10px;
   }
@@ -450,14 +457,29 @@ body {
     display: flex;
     align-items: center;
     white-space: nowrap;
+    p {
+      padding-right: 10px;
+    }
+    @include rwd(499) {
+      padding: 0;
+      justify-content: center;
+    }
   }
   .rooms_number {
     padding: 0 20px 0 50px;
     display: flex;
     align-items: center;
     white-space: nowrap;
+    p {
+      padding-right: 10px;
+    }
     @include rwd(768) {
       padding: 0 20px;
+    }
+    @include rwd(499) {
+      padding-right: 90px;
+      margin-top: 20px;
+      justify-content: center;
     }
   }
 }
@@ -469,7 +491,9 @@ body {
   border: 1px solid #000;
   border-radius: 20px 20px 0 0;
   @include rwd(1200) {
-    max-width: 700px;
+    width: auto;
+    max-width: 100%;
+    margin: 0 5px;
   }
   @include rwd(768) {
     max-width: 500px;
@@ -497,7 +521,9 @@ body {
     display: inline-block;
     background-color: var(--white);
     border-radius: 35px;
-    padding: 0 1em 0 65px;
+    @include rwd(1200) {
+      width: 100%;
+    }
   }
   header {
     display: flex;
@@ -525,11 +551,10 @@ body {
   .days,
   .week {
     display: grid;
+    border: 1px solid #000;
     grid-template-columns: repeat(7, 1fr);
     margin: auto;
-    padding: 0 20px;
     justify-content: space-between;
-    
   }
   .week div,
   .days div {
@@ -537,25 +562,41 @@ body {
     justify-content: center;
     align-items: center;
     height: 3rem;
-    width: 3em;
-    border-radius: 100%;
+    border: 1px solid #000;
+    position: relative;
   }
-  .days div:hover {
+  .days div {
+    height: 60px;
+    padding-bottom: 10px;
+    position: relative;
     background: var(--accent-2);
-    color: rgb(25, 25, 201);
     cursor: pointer;
+    &:hover {
+      background: #c4dff6;
+      color: #000;
+    }
+    &::before {
+      content: "X";
+      position: absolute;
+      bottom: 5px;
+      color: #b20000;
+    }
   }
   .week div {
-    opacity: 0.5;
+    background: #8a8989;
+    opacity: 0.7;
+    border: none;
+    color: #fff;
   }
   .current-date {
-    background-color: var(--accent);
-    color: var(--white);
+    background-color: #c4dff6 !important;
+    &:hover {
+      background: #c4dff6;
+      color: #000;
+    }
   }
   .display-selected {
-    margin-bottom: 10px;
-    padding: 20px 20px;
-    text-align: center;
+    display: none;
   }
 }
 
@@ -579,6 +620,10 @@ body {
       }
     }
     .form-row {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
       p {
         padding-right: 5px;
         white-space: nowrap;
@@ -599,6 +644,9 @@ body {
     }
     .rooms {
       display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
       p {
         padding-right: 5px;
         white-space: nowrap;

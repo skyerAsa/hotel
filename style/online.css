@@ -549,6 +549,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  white-space: nowrap;
 }
 .process .process_list li:first-child {
   position: relative;
@@ -596,6 +597,11 @@ body {
     max-width: 400px;
   }
 }
+@media screen and (max-width: 499px) {
+  .collection_list .collection_item .slick-list {
+    max-width: 300px;
+  }
+}
 .collection_list .collection_item .slick-list .slick-track {
   max-width: 900%;
 }
@@ -630,6 +636,11 @@ body {
     justify-content: center;
   }
 }
+@media screen and (max-width: 499px) {
+  .rooms_item {
+    display: block;
+  }
+}
 .rooms_item select {
   padding: 5px 10px;
 }
@@ -639,15 +650,34 @@ body {
   align-items: center;
   white-space: nowrap;
 }
+.rooms_item .rooms_name p {
+  padding-right: 10px;
+}
+@media screen and (max-width: 499px) {
+  .rooms_item .rooms_name {
+    padding: 0;
+    justify-content: center;
+  }
+}
 .rooms_item .rooms_number {
   padding: 0 20px 0 50px;
   display: flex;
   align-items: center;
   white-space: nowrap;
 }
+.rooms_item .rooms_number p {
+  padding-right: 10px;
+}
 @media screen and (max-width: 768px) {
   .rooms_item .rooms_number {
     padding: 0 20px;
+  }
+}
+@media screen and (max-width: 499px) {
+  .rooms_item .rooms_number {
+    padding-right: 90px;
+    margin-top: 20px;
+    justify-content: center;
   }
 }
 
@@ -661,7 +691,9 @@ body {
 }
 @media screen and (max-width: 1200px) {
   .rooms_calendar {
-    max-width: 700px;
+    width: auto;
+    max-width: 100%;
+    margin: 0 5px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -692,7 +724,11 @@ body {
   display: inline-block;
   background-color: var(--white);
   border-radius: 35px;
-  padding: 0 1em 0 65px;
+}
+@media screen and (max-width: 1200px) {
+  .rooms_calendar .container {
+    width: 100%;
+  }
 }
 .rooms_calendar header {
   display: flex;
@@ -720,9 +756,9 @@ body {
 .rooms_calendar .days,
 .rooms_calendar .week {
   display: grid;
+  border: 1px solid #000;
   grid-template-columns: repeat(7, 1fr);
   margin: auto;
-  padding: 0 20px;
   justify-content: space-between;
 }
 .rooms_calendar .week div,
@@ -731,25 +767,41 @@ body {
   justify-content: center;
   align-items: center;
   height: 3rem;
-  width: 3em;
-  border-radius: 100%;
+  border: 1px solid #000;
+  position: relative;
 }
-.rooms_calendar .days div:hover {
+.rooms_calendar .days div {
+  height: 60px;
+  padding-bottom: 10px;
+  position: relative;
   background: var(--accent-2);
-  color: rgb(25, 25, 201);
   cursor: pointer;
 }
+.rooms_calendar .days div:hover {
+  background: #c4dff6;
+  color: #000;
+}
+.rooms_calendar .days div::before {
+  content: "X";
+  position: absolute;
+  bottom: 5px;
+  color: #b20000;
+}
 .rooms_calendar .week div {
-  opacity: 0.5;
+  background: #8a8989;
+  opacity: 0.7;
+  border: none;
+  color: #fff;
 }
 .rooms_calendar .current-date {
-  background-color: var(--accent);
-  color: var(--white);
+  background-color: #c4dff6 !important;
+}
+.rooms_calendar .current-date:hover {
+  background: #c4dff6;
+  color: #000;
 }
 .rooms_calendar .display-selected {
-  margin-bottom: 10px;
-  padding: 20px 20px;
-  text-align: center;
+  display: none;
 }
 
 .collection_day {
@@ -769,6 +821,10 @@ body {
   height: 19px;
 }
 .collection_day .rooms_days .form-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   display: flex;
 }
 .collection_day .rooms_days .form-row p {
@@ -791,6 +847,9 @@ body {
 }
 .collection_day .rooms_days .rooms {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .collection_day .rooms_days .rooms p {
   padding-right: 5px;

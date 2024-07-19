@@ -517,7 +517,7 @@ body {
   }
 }
 .reservation_box .reservation_left_box .reservation_left_box_title .title {
-  margin-top: 80px;
+  margin: 80px 0 0 20px;
   font-size: 12px;
 }
 .reservation_box .reservation_left_box .reservation_item {
@@ -629,6 +629,11 @@ body {
 @media screen and (max-width: 667px) {
   .reservation_box .reservation_right_box {
     transform: translateX(-37%);
+  }
+}
+@media screen and (max-width: 400px) {
+  .reservation_box .reservation_right_box {
+    transform: translateX(-41%);
   }
 }
 .reservation_box .reservation_right_box .reservation_right_item {

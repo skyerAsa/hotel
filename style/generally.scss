@@ -325,7 +325,7 @@ body {
     }
     .reservation_left_box_title {
       .title {
-        margin-top: 80px;
+        margin: 80px 0 0 20px;
         font-size: 12px;
       }
     }
@@ -435,6 +435,9 @@ body {
     }
     @include rwd(667) {
       transform: translateX(-37%);
+    }
+    @include rwd(400) {
+      transform: translateX(-41%);
     }
     .reservation_right_item {
       display: flex;
