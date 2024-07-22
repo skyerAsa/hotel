@@ -26,10 +26,12 @@
             <li>EN</li>
           </ul>
         </div>
-        <div class="message_box">
-          <img class="message_img" src="../../img/mail.png" alt="" />
-          <h2>聯絡我們</h2>
-        </div>
+        <a href="../page/contact.html">
+          <div class="message_box">
+            <img class="message_img" src="../../img/mail.png" alt="" />
+            <h2>聯絡我們</h2>
+          </div>
+        </a>
       </div>
     </div>
     <div class="header_m">
@@ -58,10 +60,12 @@
                 <li>EN</li>
               </ul>
             </div>
-            <div class="message_box">
-              <img class="message_img" src="../../img/mail.png" alt="" />
-              <h2>聯絡我們</h2>
-            </div>
+            <a href="../page/contact.html">
+              <div class="message_box">
+                <img class="message_img" src="../../img/mail.png" alt="" />
+                <h2>聯絡我們</h2>
+              </div>
+            </a>
           </div>
           <div class="menu_bg_list">
             <ul class="menu_item">
@@ -75,13 +79,13 @@
                 <a href="../../page/servers.html">
                   <h2>Service Facilities</h2>
                   <p>服務設施</p>
-              </a>
+                </a>
               </li>
               <li>
                 <a href="../../page/rooms.html">
                   <h2>Room Introduction</h2>
                   <p>客房介紹</p>
-              </a>
+                </a>
               </li>
               <li>
                 <a href="../../page/location.html">
@@ -155,6 +159,10 @@
     $(".language_box").on("click", function () {
       $(".language_list").toggleClass("on");
     });
+    $(".burger").on("click", function () {
+      $(".header_m").toggleClass("on");
+    });
+
     $(window).scroll(showMenu);
 
     function showMenu() {

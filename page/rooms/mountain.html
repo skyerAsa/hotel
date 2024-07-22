@@ -184,17 +184,17 @@
           <span>(適用日期2024/2/1-2024/6/30)</span></span
         >
       </div>
-      <div class="linshan_icon">
+      <div class="rooms_item">
         <span
           ><strong>一泊一食</strong>
           <span>NT.8970(平日)  NT.10350(假日)</span></span
         >
-        <h2>線上訂房</h2>
+        <a href="../online/mountain.html"><h2>線上訂房</h2></a>
         <span
           ><strong>一泊二食</strong>
           <span>NT.10212(平日) NT.11592(假日)</span></span
         >
-        <h2>線上訂房</h2>
+        <a href="../offer_online/mountain.html"><h2>線上訂房</h2></a>
       </div>
     </div>
     <div class="rooms_price">
@@ -328,6 +328,22 @@
     arrows: false,
     asNavFor: ".clous_carousel_b",
     // focusOnSelect: true
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   });
   $(function () {
     $(".rooms_type").on("click", function () {

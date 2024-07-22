@@ -310,7 +310,7 @@ img {
   }
 }
 .introduction_main .title .title_m {
-  width: 100%;
+  width: 87%;
   position: absolute;
   padding: 10px;
   left: 0;
@@ -331,6 +331,7 @@ img {
   margin: initial;
   font-weight: bold;
   position: relative;
+  text-align: center;
 }
 .introduction_main .txt {
   display: flex;

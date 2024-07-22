@@ -395,11 +395,12 @@ body {
             letter-spacing: 0.5px;
             @include rwd(1180) {
               font-size: 28px;
-              white-space: nowrap;
+              // white-space: nowrap;
             }
           }
           p {
             padding-bottom: 10px;
+            white-space: nowrap;
           }
           &:hover {
             &::after {

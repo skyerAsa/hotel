@@ -408,6 +408,10 @@ img {
   background-color: #fff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
+.header_m.on {
+  background-color: transparent;
+  filter: contrast(0) brightness(10);
+}
 @media screen and (max-width: 1180px) {
   .header_m {
     display: flex;
@@ -517,7 +521,6 @@ img {
   background: linear-gradient(to top, rgba(59, 175, 219, 0.5) 100%, rgba(54, 175, 101, 0.5) 100%);
 }
 .header_m.on {
-  background-color: #fff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 .header_m.on .hd_m_img {

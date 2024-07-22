@@ -85,10 +85,10 @@
               </div>
             </li>
           </ul>
-          <ul class="clous_carousel_m">
+          <ul class="morioka_carousel_m">
             <li>
               <div class="clous_carousel_m_img">
-                <img src="../../img/rooms/morioka/1.jpg" alt="" />
+                <img src="../../img/rooms/c/1.jpg" alt="" />
               </div>
             </li>
             <li>
@@ -182,17 +182,17 @@
           <span>(適用日期2024/2/1-2024/6/30)</span></span
         >
       </div>
-      <div class="linshan_icon">
+      <div class="rooms_item">
         <span
           ><strong>一泊一食</strong>
           <span>NT.5720(平日)  NT.6600(假日)</span></span
         >
-        <h2>線上訂房</h2>
+        <a href="../online/morioka.html"><h2>線上訂房</h2></a>
         <span
           ><strong>一泊二食</strong>
           <span>NT.6512(平日)  NT.7392(假日)</span></span
         >
-        <h2>線上訂房</h2>
+        <a href="../offer_online/morioka.html"><h2>線上訂房</h2></a>
       </div>
     </div>
     <div class="rooms_price">
@@ -326,6 +326,22 @@
     arrows: false,
     asNavFor: ".clous_carousel_b",
     // focusOnSelect: true
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   });
   $(function () {
     $(".rooms_type").on("click", function () {

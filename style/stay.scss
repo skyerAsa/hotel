@@ -1,6 +1,5 @@
 @import "reset";
 @import "method";
-
 .clous_content_bg {
   padding-left: 140px;
   position: relative;
@@ -17,12 +16,18 @@
     background-color: black;
     opacity: 0.2;
   }
-  img {
+  .img {
     height: 640px;
+    img {
+      width: 100%;
+      height: 100%;
+      vertical-align: middle;
+      object-fit: cover;
+    }
   }
   .title {
     position: absolute;
-    top: 15%;
+    top: 30%;
     left: 45%;
     writing-mode: vertical-lr;
     color: #fff;
@@ -112,9 +117,9 @@
     .clous_carousel_b {
       width: 100%;
       height: 100%;
-      .slick-list{
+      .slick-list {
         margin: 0;
-        @include rwd(599){
+        @include rwd(599) {
           max-width: none;
         }
       }
@@ -137,9 +142,9 @@
     }
     .clous_carousel_m {
       width: 100%;
-      .slick-list{
+      .slick-list {
         margin: 0;
-        @include rwd(599){
+        @include rwd(599) {
           max-width: none;
         }
       }
@@ -148,10 +153,14 @@
         .slick-slide {
           padding-top: 10px;
           .clous_carousel_m_img {
-            margin-left: 5px;
+            margin-right: 5px;
             img {
               width: 100%;
               height: 137px;
+              @include rwd(768) {
+                width: 209px;
+                height: 209px;
+              }
             }
           }
           &.slick-current {
@@ -159,6 +168,9 @@
               margin-left: 0;
             }
           }
+        }
+        .slick-current {
+          padding-right: 5px;
         }
       }
     }
@@ -264,10 +276,11 @@
       font-size: 18px;
     }
   }
-  .linshan_icon {
+  .rooms_item {
     padding-top: 20px;
     h2 {
-      width: 20%;
+      width: 100%;
+      max-width: 310px;
       padding: 10px 0;
       margin: 20px 0;
       text-align: center;
@@ -351,6 +364,7 @@
     }
   }
 }
+
 .linshan_content_bg {
   padding-left: 140px;
   position: relative;
@@ -462,9 +476,9 @@
     .linshan_carousel_b {
       width: 100%;
       height: 100%;
-      .slick-list{
+      .slick-list {
         margin: 0;
-        @include rwd(599){
+        @include rwd(599) {
           max-width: none;
         }
       }
@@ -487,9 +501,9 @@
     }
     .linshan_carousel_m {
       width: 100%;
-      .slick-list{
+      .slick-list {
         margin: 0;
-        @include rwd(599){
+        @include rwd(599) {
           max-width: none;
         }
       }
@@ -497,9 +511,11 @@
         max-width: 1400%;
         .slick-slide {
           padding-top: 10px;
-           margin-left: 5px;
+          margin-left: 5px;
           .linshan_carousel_m_img {
-            margin-left: 5px;
+            @include rwd(480) {
+              margin-left: 5px;
+            }
             img {
               width: 100%;
               height: 137px;

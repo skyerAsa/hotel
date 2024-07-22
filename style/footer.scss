@@ -25,8 +25,8 @@
       @include rwd(960) {
         border-radius: 15px;
       }
-      @include rwd(400) {
-        padding: 130px 0 90px 10px;
+      @include rwd(460) {
+        padding: 90px 20px;
       }
       .wrap {
         width: 100%;
@@ -113,6 +113,11 @@
             max-width: 259px;
             cursor: pointer;
             position: relative;
+            @include rwd(460){
+              max-width: 320px;
+              padding-right: 60px;
+      
+            }
           }
           .title {
             padding-top: 36px;
@@ -288,6 +293,9 @@
               padding-top: 5px;
               display: flex;
               justify-content: center;
+              @include rwd(460){
+                justify-content: flex-start
+              }
               h3 {
                 padding-right: 5px;
                 cursor: pointer;

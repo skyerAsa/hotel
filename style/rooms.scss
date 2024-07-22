@@ -17,12 +17,19 @@
     background-color: black;
     opacity: 0.2;
   }
-  img {
+  .img{
     height: 640px;
+    img {
+      width: 100%;
+      height: 100%;
+      vertical-align: middle;
+      object-fit: cover;
+    }
   }
+
   .title {
     position: absolute;
-    top: 15%;
+    top: 30%;
     left: 45%;
     writing-mode: vertical-lr;
     color: #fff;
@@ -97,9 +104,15 @@
     display: flex;
     flex-wrap: wrap;
     padding: 0 20px;
+    @include rwd(960){
+      padding: 0;
+    }
     .rooms_list {
       width: 50%;
       padding: 0 15px 50px;
+      @include rwd(960){
+        width: 100%;
+      }
       .rooms_img {
         position: relative;
         overflow: hidden;
