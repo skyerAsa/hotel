@@ -171,6 +171,10 @@ body {
   scroll-behavior: smooth;
 }
 
+.all_body {
+  overflow: hidden;
+}
+
 .logo {
   width: 1200px;
   height: 220px;
@@ -178,6 +182,13 @@ body {
   margin: 0 auto;
   text-align: center;
   position: relative;
+  border-bottom: 1px solid #dedede;
+}
+@media screen and (max-width: 1200px) {
+  .logo {
+    width: 100%;
+    padding-top: 10px;
+  }
 }
 .logo a img {
   margin-top: 10px;
@@ -190,6 +201,11 @@ body {
   top: 0;
   right: 0;
   display: flex;
+}
+@media screen and (max-width: 768px) {
+  .logo .txt {
+    display: none;
+  }
 }
 .logo .txt p {
   padding-right: 5px;
@@ -204,6 +220,11 @@ body {
   position: absolute;
   right: 0;
   bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .logo .link {
+    display: none;
+  }
 }
 .logo .link .website,
 .logo .link .checkout {
@@ -227,6 +248,130 @@ body {
 .logo .link .checkout {
   margin-left: 10px;
 }
+.logo .language {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .logo .language {
+    width: 76px;
+    height: 28px;
+    margin: 30px 5px 5px 0;
+    display: flex;
+    position: absolute;
+    right: 90px;
+    bottom: 0;
+  }
+}
+.logo .menu {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .logo .menu {
+    width: 76px;
+    height: 28px;
+    display: block;
+    background: url(../img/online/menu.jpg) center center;
+    border: 1px solid #000000;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 30px 5px 5px 0;
+    font-size: 13px;
+    line-height: 28px;
+  }
+}
+
+.menu_item {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .menu_item.on {
+    display: block;
+  }
+  .menu_item ul {
+    animation: ii 0.5s;
+  }
+  @keyframes ii {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  .menu_item ul li {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bolder;
+  }
+  @keyframes aa {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  .menu_item ul li .item_llst {
+    display: none;
+    padding: 10px 0;
+  }
+  .menu_item ul li .item_llst p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: aa 0.5s forwards;
+    font-weight: bolder;
+    background-color: #97999b;
+  }
+  .menu_item ul li .item_llst p:hover {
+    background-color: #a2d7f1;
+  }
+  .menu_item ul li:hover .item_llst {
+    display: block;
+  }
+}
+
+.menu_coin {
+  width: 100%;
+  display: flex;
+}
+.menu_coin a {
+  width: 50%;
+  display: flex;
+  background-color: #97999b;
+  margin: 0 5px;
+}
+.menu_coin .website_item,
+.menu_coin .checkout_item {
+  height: 60px;
+  width: 49%;
+  margin: 0 5px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  line-height: 50px;
+  background-color: #97999b;
+  border-radius: 0;
+}
+.menu_coin .website_item img,
+.menu_coin .checkout_item img {
+  width: 18px;
+  height: 20px;
+}
+.menu_coin .website_item p,
+.menu_coin .checkout_item p {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+.menu_coin .website_item p {
+  justify-content: start;
+  position: relative;
+  left: 80%;
+}
 
 .reservation_title {
   border-top: 1px solid #dedede;
@@ -236,6 +381,11 @@ body {
   display: flex;
   justify-content: center;
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  .reservation_title ul {
+    display: none;
+  }
 }
 .reservation_title ul li {
   padding: 10px 0;
@@ -350,6 +500,12 @@ body {
   background-color: #97999b;
   position: relative;
 }
+@media screen and (max-width: 1100px) {
+  .process {
+    width: auto;
+    margin: 130px 50px 0 20px;
+  }
+}
 .process .process_item {
   display: flex;
 }
@@ -428,6 +584,12 @@ body {
   padding-top: 50px;
   margin: 0 auto;
 }
+@media screen and (max-width: 968px) {
+  .notice {
+    width: auto;
+    margin: 0 15px;
+  }
+}
 .notice .title {
   font-weight: bolder;
 }
@@ -446,17 +608,83 @@ body {
   padding: 10px 0;
 }
 .notice .agree {
+  padding: 20px 0;
   display: flex;
   justify-content: center;
   color: red;
-  padding: 20px 0;
+  font-size: 15px;
+  font-weight: bold;
 }
 .notice .rooms_content {
-  border-top: 5px solid #000;
   padding: 10px 0 10px 10px;
   margin-bottom: 2px;
+  border-top: 5px solid #000;
   background-color: #dedede;
   font-size: 14px;
+}
+.notice table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.notice table tbody {
+  border-bottom: 2px solid #ededed;
+}
+.notice table tbody tr {
+  width: 100%;
+}
+.notice table tbody tr:first-child {
+  border-top: 2px solid #fff;
+  background: #ededed;
+}
+.notice table tbody tr:first-child td {
+  padding: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.notice table tbody tr:first-child td:first-child {
+  width: 30%;
+}
+.notice table tbody tr .edit {
+  height: 100%;
+  padding-top: 10px;
+  display: flex;
+}
+.notice table tbody tr .edit p {
+  padding: 0 5px;
+}
+.notice .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.notice .content h2 {
+  font-size: 15px;
+}
+.notice .content p {
+  padding: 5px 10px;
+  margin-top: 5px;
+  border: 2px solid #b20000;
+  font-weight: bold;
+}
+.notice .coin {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.notice .coin h2 {
+  width: 120px;
+  height: 36px;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 14px;
+  background-color: #97999b;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.notice .coin h2 + h2 {
+  margin: 0 0 100px 20px;
 }
 
 .footer {
@@ -472,6 +700,11 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 1200px) {
+  .footer .title {
+    margin: 0 10px;
+  }
 }
 .footer .title .txt h2 {
   padding: 10px 0;

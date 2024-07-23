@@ -30,35 +30,107 @@
   </head>
 
   <body>
-    <!-- reservation_logo -->
-    <div class="reservation_logo">
-      <div class="logo">
-        <a href="../../page/reservation.html">
-          <img src="../../img/logo.png" alt="" />
-        </a>
-        <div class="txt">
-          <p>Language</p>
-          <select>
-            <option>繁體中文</option>
-            <option>English</option>
-            <option>日本語</option>
-            <option>简体中文</option>
-          </select>
-        </div>
-        <div class="link">
-          <a href="../../index.html">
-            <div class="website">
-              <img src="../../img/reservation/icon_1.png" alt="" />
-              <p>官網</p>
+    <div class="all_body">
+         <!-- reservation_logo -->
+         <div class="reservation_logo">
+          <div class="logo">
+            <a href="../../page/reservation.html">
+              <img src="../../img/logo.png" alt="" />
+            </a>
+            <div class="txt">
+              <p>Language</p>
+              <select>
+                <option>繁體中文</option>
+                <option>English</option>
+                <option>日本語</option>
+                <option>简体中文</option>
+              </select>
             </div>
-          </a>
-          <div class="checkout">
-            <img src="../../img/reservation/icon_1.png" alt="" />
-            <p>結帳</p>
+            <div class="link">
+              <a href="../../index.html">
+                <div class="website">
+                  <img src="../../img/reservation/icon_1.png" alt="" />
+                  <p>官網</p>
+                </div>
+              </a>
+              <div class="checkout">
+                <img src="../../img/reservation/icon_1.png" alt="" />
+                <p>結帳</p>
+              </div>
+            </div>
+            <div class="language">
+              <select>
+                <option>繁體中文</option>
+                <option>English</option>
+                <option>日本語</option>
+                <option>简体中文</option>
+              </select>
+            </div>
+            <div class="menu">
+              <p>Menu</p>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+        <div class="menu_item">
+          <ul>
+            <li>
+              飯店介紹
+              <div class="item_llst">
+                <a href="../../page/reservation.html">
+                  <p>關於我們</p>
+                </a>
+              </div>
+            </li>
+            <li>
+              線上訂房
+              <div class="item_llst">
+                <a href="../../page/generally.html">
+                  <p>一般訂房</p>
+                </a>
+                <a href="../../page/offer.html">
+                  <p>特惠套裝</p>
+                </a>
+              </div>
+            </li>
+            <li>
+              使用說明
+              <div class="item_llst">
+                <a href="../../page/six_steps.html">
+                  <p>訂房六步驟</p>
+                </a>
+                <a href="../../page/privacy.html">
+                  <p>隱私權政策</p>
+                </a>
+                <a href="../../page/SSL.html">
+                  <p>SSL安全付款機制</p>
+                </a>
+              </div>
+            </li>
+            <li>
+              會員專區
+              <div class="item_llst">
+                <a href="../../page/login.html">
+                  <p>登入</p>
+                </a>
+                <a href="../../page/register.html">
+                  <p>註冊會員</p>
+                </a>
+              </div>
+            </li>
+          </ul>
+          <div class="menu_coin">
+            <a href="../../index.html">
+              <div class="website_item">
+                <img src="../../img/reservation/icon_1.png" alt="" />
+                <p>官網</p>
+              </div>
+            </a>
+            <div class="checkout_item">
+              <img src="../../img/reservation/icon_1.png" alt="" />
+              <p>結帳</p>
+            </div>
+          </div>
+        </div>
     <!-- reservation_title -->
     <div class="reservation_title">
       <ul>
@@ -227,32 +299,43 @@
       <div class="rooms_content">
         <div class="title">您的訂房內容如下:</div>
       </div>
-      <tbody>
-        <tr>
-          <td>名稱</td>
-          <td>住宿日期</td>
-          <td>退房日期</td>
-          <td>住宿</td>
-          <td>間數</td>
-          <td>房價</td>
-          <td>訂金</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>山采 雙人房 • 一泊一食</td>
-          <td>2024-07-05</td>
-          <td>2024-07-06</td>
-          <td>1晚</td>
-          <td>1</td>
-          <td>NT 7337</td>
-          <td>NT 7337</td>
-          <td>
-            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-            <p>|</p>
-            <i class="fa fa-trash-o" aria-hidden="true"></i>
-          </td>
-        </tr>
-      </tbody>
+      <table>
+        <tbody>
+          <tr>
+            <td>名稱</td>
+            <td>住宿日期</td>
+            <td>退房日期</td>
+            <td>住宿</td>
+            <td>間數</td>
+            <td>房價</td>
+            <td>訂金</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>山采 雙人房 • 一泊一食</td>
+            <td>2024-07-23</td>
+            <td>2024-07-24</td>
+            <td>1晚</td>
+            <td>1</td>
+            <td>NT 7337</td>
+            <td>NT 7337</td>
+            <td class="edit">
+              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+              <p>|</p>
+              <i class="fa fa-trash-o" aria-hidden="true"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="content">
+        <h2>訂房總計 訂金</h2>
+        <h2>NT 9688 NT 9688</h2>
+        <p>應付金額NT 9688</p>
+      </div>
+      <div class="coin">
+        <h2>繼續訂購</h2>
+        <h2>結構</h2>
+      </div>
     </div>
 
     <!-- footer -->
@@ -280,6 +363,20 @@
         </div>
       </a>
     </div>
+    </div>
   </body>
 </html>
-<script></script>
+<script>
+  $(window).scroll(showMenu);
+
+  function showMenu() {
+    if ($(window).scrollTop() > 1) {
+      $(".go_top").addClass("on");
+    } else {
+      $(".go_top").removeClass("on");
+    }
+  }
+  $(".menu").on("click", function () {
+    $(".menu_item").toggleClass("on");
+  });
+</script>

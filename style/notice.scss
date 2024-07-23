@@ -5,7 +5,9 @@ body {
   position: relative;
   scroll-behavior: smooth;
 }
-
+.all_body {
+  overflow: hidden;
+}
 // logo
 .logo {
   width: 1200px;
@@ -14,6 +16,11 @@ body {
   margin: 0 auto;
   text-align: center;
   position: relative;
+  border-bottom: 1px solid #dedede;
+  @include rwd(1200) {
+    width: 100%;
+    padding-top: 10px;
+  }
   a {
     img {
       margin-top: 10px;
@@ -27,6 +34,9 @@ body {
     top: 0;
     right: 0;
     display: flex;
+    @include rwd(768) {
+      display: none;
+    }
     p {
       padding-right: 5px;
       display: flex;
@@ -41,6 +51,9 @@ body {
     position: absolute;
     right: 0;
     bottom: 0;
+    @include rwd(768) {
+      display: none;
+    }
     .website,
     .checkout {
       width: 96px;
@@ -63,6 +76,128 @@ body {
       margin-left: 10px;
     }
   }
+  .language {
+    display: none;
+    @include rwd(768) {
+      width: 76px;
+      height: 28px;
+      margin: 30px 5px 5px 0;
+      display: flex;
+      position: absolute;
+      right: 90px;
+      bottom: 0;
+    }
+  }
+  .menu {
+    display: none;
+    @include rwd(768) {
+      width: 76px;
+      height: 28px;
+      display: block;
+      background: url(../img/online/menu.jpg) center center;
+      border: 1px solid #000000;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      margin: 30px 5px 5px 0;
+      font-size: 13px;
+      line-height: 28px;
+    }
+  }
+}
+
+.menu_item {
+  display: none;
+  @include rwd(768) {
+    &.on {
+      display: block;
+    }
+    ul {
+      @keyframes ii {
+        from {
+          transform: translateX(-100%);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+      animation: ii 0.5s;
+      li {
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+        font-weight: bolder;
+        @keyframes aa {
+          from {
+            transform: translateY(-100%);
+          }
+          to {
+            transform: translateY(0);
+          }
+        }
+        .item_llst {
+          display: none;
+          padding: 10px 0;
+          p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: aa 0.5s forwards;
+            font-weight: bolder;
+            background-color: #97999b;
+            &:hover {
+              background-color: #a2d7f1;
+            }
+          }
+        }
+        &:hover {
+          .item_llst {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu_coin {
+  width: 100%;
+  display: flex;
+  a {
+    width: 50%;
+    display: flex;
+    background-color: #97999b;
+    margin: 0 5px;
+  }
+  .website_item,
+  .checkout_item {
+    height: 60px;
+    width: 49%;
+    margin: 0 5px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    line-height: 50px;
+    background-color: #97999b;
+    border-radius: 0;
+    img {
+      width: 18px;
+      height: 20px;
+    }
+    p {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      color: #fff;
+    }
+  }
+  .website_item {
+    p {
+      justify-content: start;
+      position: relative;
+      left: 80%;
+    }
+  }
 }
 
 // reservation_title
@@ -73,6 +208,9 @@ body {
     display: flex;
     justify-content: center;
     position: relative;
+    @include rwd(768) {
+      display: none;
+    }
     li {
       padding: 10px 0;
       height: 60px;
@@ -175,6 +313,10 @@ body {
   margin: 150px auto 0;
   background-color: #97999b;
   position: relative;
+  @include rwd(1100) {
+    width: auto;
+    margin: 130px 50px 0 20px;
+  }
   .process_item {
     display: flex;
     li {
@@ -254,38 +396,107 @@ body {
   width: 800px;
   padding-top: 50px;
   margin: 0 auto;
-  
-  .title{
+  @include rwd(968) {
+    width: auto;
+    margin: 0 15px;
+  }
+  .title {
     font-weight: bolder;
   }
-  .illustrate{
-    padding:20px  0 20px 20px;
+  .illustrate {
+    padding: 20px 0 20px 20px;
   }
-  .definition{
-    padding: 0 0  20px 20px;
+  .definition {
+    padding: 0 0 20px 20px;
   }
-  .online_rooms{
-    p{
-        padding: 20px 0;
+  .online_rooms {
+    p {
+      padding: 20px 0;
     }
   }
   .retreat,
   .reserve,
-  .travelers_notice{
+  .travelers_notice {
     padding: 10px 0;
   }
-  .agree{
+  .agree {
+    padding: 20px 0;
     display: flex;
     justify-content: center;
     color: red;
-    padding: 20px 0;
+    font-size: 15px;
+    font-weight: bold;
   }
-  .rooms_content{
-    border-top: 5px solid #000 ;
+  .rooms_content {
     padding: 10px 0 10px 10px;
     margin-bottom: 2px;
+    border-top: 5px solid #000;
     background-color: #dedede;
     font-size: 14px;
+  }
+  table {
+    width: 100%;
+    margin-bottom: 20px;
+    tbody {
+      border-bottom: 2px solid #ededed;
+      tr {
+        width: 100%;
+        &:first-child {
+          border-top: 2px solid #fff;
+          background: #ededed;
+          td {
+            padding: 5px;
+            font-size: 14px;
+            white-space: nowrap;
+            &:first-child {
+              width: 30%;
+            }
+          }
+        }
+        .edit {
+          height: 100%;
+          padding-top: 10px;
+          display: flex;
+          p {
+            padding: 0 5px;
+          }
+        }
+      }
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    h2 {
+      font-size: 15px;
+    }
+    p {
+      padding: 5px 10px;
+      margin-top: 5px;
+      border: 2px solid #b20000;
+      font-weight: bold;
+    }
+  }
+  .coin {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    h2 {
+      width: 120px;
+      height: 36px;
+      color: #fff;
+      letter-spacing: 2px;
+      font-size: 14px;
+      background-color: #97999b;
+      border: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & + h2 {
+        margin: 0 0 100px 20px;
+      }
+    }
   }
 }
 
@@ -302,6 +513,9 @@ body {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    @include rwd(1200) {
+      margin: 0 10px;
+    }
     .txt {
       h2 {
         padding: 10px 0;
