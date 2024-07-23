@@ -494,14 +494,14 @@ body {
 .process {
   width: 1000px;
   height: 1px;
-  margin: 100px auto 0;
+  margin: 130px auto 0;
   background-color: #97999b;
   position: relative;
 }
 @media screen and (max-width: 1100px) {
   .process {
     width: auto;
-    margin: 100px 50px 0 20px;
+    margin: 130px 50px 0 20px;
   }
 }
 .process ul {
@@ -681,6 +681,18 @@ body {
   }
 }
 
+.rooms_title {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 50px;
+}
+.rooms_title h2 {
+  font-weight: bolder;
+}
+.rooms_title p {
+  padding: 10px 0 10px 10px;
+}
+
 .rooms_calendar {
   width: 1000px;
   margin: 0 auto;
@@ -698,17 +710,13 @@ body {
 }
 @media screen and (max-width: 768px) {
   .rooms_calendar {
-    max-width: 500px;
+    max-width: auto;
   }
 }
 @media screen and (max-width: 550px) {
   .rooms_calendar {
-    max-width: 470px;
-    margin: 0px 5px;
+    max-width: auto;
   }
-}
-.rooms_calendar header:hover {
-  background: #C0E1FA;
 }
 .rooms_calendar :root {
   --white: #fff;
@@ -738,6 +746,10 @@ body {
   justify-content: center;
   align-items: center;
   padding: 10px;
+  border-radius: 20px 20px 0 0;
+}
+.rooms_calendar header:hover {
+  background: #c4dff6;
 }
 .rooms_calendar .header-display {
   display: flex;

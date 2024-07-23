@@ -310,7 +310,7 @@ body {
 .process {
   width: 1000px;
   height: 1px;
-  margin: 100px auto 0;
+  margin: 130px auto 0;
   background-color: #97999b;
   position: relative;
   @include rwd(1100) {
@@ -493,14 +493,13 @@ body {
   @include rwd(1200) {
     width: auto;
     max-width: 100%;
-    margin: 0 5px;
+    margin: 0 auto;
   }
   @include rwd(768) {
     max-width: 500px;
   }
   @include rwd(550) {
     max-width: 470px;
-    margin: 0px 5px;
   }
   /*variables*/
   :root {
@@ -530,6 +529,10 @@ body {
     justify-content: center;
     align-items: center;
     padding: 10px;
+    border-radius: 20px 20px 0 0 ;
+    &:hover{
+      background: #c4dff6;
+    }
   }
   .header-display {
     display: flex;

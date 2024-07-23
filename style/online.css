@@ -494,7 +494,7 @@ body {
 .process {
   width: 1000px;
   height: 1px;
-  margin: 100px auto 0;
+  margin: 130px auto 0;
   background-color: #97999b;
   position: relative;
 }
@@ -693,7 +693,7 @@ body {
   .rooms_calendar {
     width: auto;
     max-width: 100%;
-    margin: 0 5px;
+    margin: 0 auto;
   }
 }
 @media screen and (max-width: 768px) {
@@ -704,7 +704,6 @@ body {
 @media screen and (max-width: 550px) {
   .rooms_calendar {
     max-width: 470px;
-    margin: 0px 5px;
   }
 }
 .rooms_calendar :root {
@@ -735,6 +734,10 @@ body {
   justify-content: center;
   align-items: center;
   padding: 10px;
+  border-radius: 20px 20px 0 0;
+}
+.rooms_calendar header:hover {
+  background: #c4dff6;
 }
 .rooms_calendar .header-display {
   display: flex;
