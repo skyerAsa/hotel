@@ -707,6 +707,9 @@ body {
     margin: 0px 5px;
   }
 }
+.rooms_calendar header:hover {
+  background: #C0E1FA;
+}
 .rooms_calendar :root {
   --white: #fff;
   --main: #eaedf0;

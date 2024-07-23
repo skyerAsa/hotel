@@ -502,6 +502,12 @@ body {
     max-width: 470px;
     margin: 0px 5px;
   }
+  header{
+    &:hover{
+        background: #C0E1FA;
+
+    }
+  }
   /*variables*/
   :root {
     --white: #fff;
