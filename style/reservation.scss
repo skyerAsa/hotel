@@ -878,7 +878,7 @@ body {
         padding: 5px 10px;
       }
       .email_checkbox {
-        width: 100%;
+        width: 220px;
         @include rwd(876) {
           width: 70%;
         }
@@ -963,7 +963,7 @@ body {
     .company_tel,
     .company_address {
       input {
-        width: 100%;
+        width: 220px;
         @include rwd(768) {
           width: 70%;
           margin-top: 10px;
@@ -976,7 +976,7 @@ body {
       @include rwd(768) {
         display: block;
         input {
-          width: 100%;
+          width: 220px;
           margin-top: 10px;
           padding: 8px 0;
         }

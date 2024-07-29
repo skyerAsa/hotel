@@ -1224,7 +1224,7 @@ body {
   padding: 5px 10px;
 }
 .register_right_box .register_txt .email .email_checkbox {
-  width: 100%;
+  width: 220px;
 }
 @media screen and (max-width: 876px) {
   .register_right_box .register_txt .email .email_checkbox {
@@ -1331,7 +1331,7 @@ body {
 .register_right_box .register_txt .compiled input,
 .register_right_box .register_txt .company_tel input,
 .register_right_box .register_txt .company_address input {
-  width: 100%;
+  width: 220px;
 }
 @media screen and (max-width: 768px) {
   .register_right_box .register_txt .account input,
@@ -1356,7 +1356,7 @@ body {
     display: block;
   }
   .register_right_box .register_txt .email_box input {
-    width: 100%;
+    width: 220px;
     margin-top: 10px;
     padding: 8px 0;
   }
