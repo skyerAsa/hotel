@@ -840,18 +840,21 @@ body {
     margin-left: 0;
   }
 }
-@media screen and (max-width: 420px) {
-  .login_right_box {
-    transform: translateX(-41%);
-  }
-}
 .login_right_box .login_txt {
-  padding: 80px 0 0 30px;
+  padding: 20px 0 0 30px;
 }
 .login_right_box .login_txt .account,
 .login_right_box .login_txt .password,
 .login_right_box .login_txt .forget {
   display: flex;
+  white-space: nowrap;
+}
+@media screen and (max-width: 768px) {
+  .login_right_box .login_txt .account,
+  .login_right_box .login_txt .password,
+  .login_right_box .login_txt .forget {
+    display: block;
+  }
 }
 .login_right_box .login_txt .account p,
 .login_right_box .login_txt .password p,
@@ -862,7 +865,7 @@ body {
 .login_right_box .login_txt .account input,
 .login_right_box .login_txt .password input,
 .login_right_box .login_txt .forget input {
-  width: 100%;
+  width: 220px;
   margin-right: 10px;
   padding: 5px 5px;
   border: 1px solid #dedede;
@@ -874,7 +877,6 @@ body {
 }
 .login_right_box .login_txt .account,
 .login_right_box .login_txt .password {
-  display: block;
   margin-top: 20px;
 }
 .login_right_box .login_txt .account input,
@@ -882,23 +884,43 @@ body {
   padding: 10px 0;
   border-radius: 10px;
 }
-@media screen and (max-width: 499px) {
+@media screen and (max-width: 768px) {
+  .login_right_box .login_txt .account input,
+  .login_right_box .login_txt .password input {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 699px) {
+  .login_right_box .login_txt .account input,
+  .login_right_box .login_txt .password input {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 599px) {
   .login_right_box .login_txt .account input,
   .login_right_box .login_txt .password input {
     width: 40%;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 499px) {
   .login_right_box .login_txt .account input,
   .login_right_box .login_txt .password input {
     width: 30%;
   }
 }
 .login_right_box .login_txt .forget {
+  width: 30%;
   margin: 20px 0 0 100px;
   padding: 5px 5px;
   font-size: 12px;
   color: #97999b;
+  justify-content: space-around;
+}
+@media screen and (max-width: 768px) {
+  .login_right_box .login_txt .forget {
+    display: flex;
+    justify-content: inherit;
+  }
 }
 @media screen and (max-width: 499px) {
   .login_right_box .login_txt .forget {
@@ -914,6 +936,11 @@ body {
   padding: 10px 40px;
   background-color: #97999b;
   color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .login_right_box .login_txt .forget .log_in {
+    margin-left: 100px;
+  }
 }
 @media screen and (max-width: 499px) {
   .login_right_box .login_txt .forget .log_in {
@@ -942,9 +969,13 @@ body {
     display: block;
   }
 }
+.login_right_box .join .join_log p {
+  white-space: nowrap;
+}
 .login_right_box .join .join_log .join_log_in {
   width: 120px;
-  padding: 10px 40px;
+  padding: 10px 0;
+  text-align: center;
   margin-left: 90px;
   color: #97999b;
   border: 1px solid #97999b;
@@ -973,9 +1004,13 @@ body {
     display: block;
   }
 }
+.login_right_box .visitor_log p {
+  white-space: nowrap;
+}
 .login_right_box .visitor_log .visitor_log_in {
   width: 120px;
-  padding: 10px 40px;
+  padding: 10px 0;
+  text-align: center;
   margin-left: 110px;
   letter-spacing: 2px;
   color: #97999b;
