@@ -124,15 +124,12 @@
         }
       }
       .slick-track {
-        // max-width: 700%;
         padding-right: 10px;
         .slick-slide {
           .clous_carousel_b_img {
             img {
               width: 100%;
-              // width: 750px;
               height: 500px;
-
             }
           }
         }
@@ -162,7 +159,6 @@
             }
           }
           &.slick-current {
-            // padding-right: 5px;
             .clous_carousel_m_img {
               margin-left: 0;
             }
@@ -479,13 +475,11 @@
         }
       }
       .slick-track {
-        // max-width: 1400%;
         padding-right: 10px;
         .slick-slide {
           .linshan_carousel_b_img {
             img {
               width: 100%;
-              // width: 750px;
               height: 500px;
               @include rwd(1500) {
                 height: auto;

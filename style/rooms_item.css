@@ -669,7 +669,7 @@ body {
   align-items: center;
 }
 .reservation_box .reservation_right_box .collect_introduction {
-  width: 120%;
+  width: 100%;
   margin-top: 50px;
   border-left: 8px solid #97999b;
   display: flex;
@@ -733,7 +733,7 @@ body {
   padding: 40px 0 0 20px;
 }
 .reservation_box .reservation_right_box .collect_order {
-  width: 120%;
+  width: 100%;
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
@@ -814,7 +814,7 @@ body {
   align-items: center;
 }
 .reservation_box .reservation_right_box .mountain_introduction {
-  width: 120%;
+  width: 100%;
   margin-top: 50px;
   border-left: 8px solid #97999b;
   display: flex;
@@ -878,7 +878,7 @@ body {
   padding: 40px 0 0 20px;
 }
 .reservation_box .reservation_right_box .mountain_order {
-  width: 120%;
+  width: 100%;
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
@@ -959,7 +959,7 @@ body {
   align-items: center;
 }
 .reservation_box .reservation_right_box .morioka_introduction {
-  width: 120%;
+  width: 100%;
   margin-top: 50px;
   border-left: 8px solid #97999b;
   display: flex;
@@ -1023,7 +1023,7 @@ body {
   padding: 40px 0 0 20px;
 }
 .reservation_box .reservation_right_box .morioka_order {
-  width: 120%;
+  width: 100%;
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
@@ -1104,7 +1104,7 @@ body {
   align-items: center;
 }
 .reservation_box .reservation_right_box .reflection_introduction {
-  width: 120%;
+  width: 100%;
   margin-top: 50px;
   border-left: 8px solid #97999b;
   display: flex;
@@ -1168,7 +1168,7 @@ body {
   padding: 40px 0 0 20px;
 }
 .reservation_box .reservation_right_box .reflection_order {
-  width: 120%;
+  width: 100%;
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
@@ -1249,7 +1249,7 @@ body {
   align-items: center;
 }
 .reservation_box .reservation_right_box .linshan_introduction {
-  width: 120%;
+  width: 100%;
   margin-top: 50px;
   border-left: 8px solid #97999b;
   display: flex;
@@ -1313,7 +1313,7 @@ body {
   padding: 40px 0 0 20px;
 }
 .reservation_box .reservation_right_box .linshan_order {
-  width: 120%;
+  width: 100%;
   margin-top: 50px;
   display: flex;
   justify-content: space-between;

@@ -696,16 +696,6 @@ body {
     margin: 0 auto;
   }
 }
-@media screen and (max-width: 768px) {
-  .rooms_calendar {
-    max-width: 500px;
-  }
-}
-@media screen and (max-width: 550px) {
-  .rooms_calendar {
-    max-width: 470px;
-  }
-}
 .rooms_calendar :root {
   --white: #fff;
   --main: #eaedf0;

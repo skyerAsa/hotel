@@ -495,12 +495,12 @@ body {
     max-width: 100%;
     margin: 0 auto;
   }
-  @include rwd(768) {
-    max-width: 500px;
-  }
-  @include rwd(550) {
-    max-width: 470px;
-  }
+  // @include rwd(768) {
+  //   max-width: 500px;
+  // }
+  // @include rwd(550) {
+  //   max-width: 470px;
+  // }
   /*variables*/
   :root {
     --white: #fff;
