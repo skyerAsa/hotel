@@ -1285,7 +1285,6 @@ body {
 .register_right_box .register_txt .join_member {
   width: 100%;
   padding-top: 50px;
-  margin-left: 100px;
   white-space: nowrap;
   display: flex;
   justify-content: end;
@@ -1332,6 +1331,7 @@ body {
 .register_right_box .register_txt .company_tel input,
 .register_right_box .register_txt .company_address input {
   width: 220px;
+  padding: 10px 0 10px 10px;
 }
 @media screen and (max-width: 768px) {
   .register_right_box .register_txt .account input,
@@ -1347,7 +1347,7 @@ body {
   .register_right_box .register_txt .company_address input {
     width: 70%;
     margin-top: 10px;
-    padding: 8px 0;
+    padding: 10px 0 10px 10px;
     margin-right: 20px;
   }
 }

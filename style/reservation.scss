@@ -657,7 +657,6 @@ body {
       input {
         padding: 10px 0;
         border-radius: 10px;
-
         @include rwd(768) {
           width: 70%;
         }
@@ -926,7 +925,6 @@ body {
     .join_member {
       width: 100%;
       padding-top: 50px;
-      margin-left: 100px;
       white-space: nowrap;
       display: flex;
       justify-content: end;
@@ -964,10 +962,11 @@ body {
     .company_address {
       input {
         width: 220px;
+        padding: 10px 0 10px 10px;
         @include rwd(768) {
           width: 70%;
           margin-top: 10px;
-          padding: 8px 0;
+          padding: 10px 0 10px 10px;
           margin-right: 20px;
         }
       }
@@ -1171,7 +1170,6 @@ body {
   background-color: #000;
   opacity: 0.5;
   z-index: 2;
-  // display: none;
   &.on {
     display: block;
   }

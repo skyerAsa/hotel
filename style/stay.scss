@@ -132,9 +132,7 @@
               width: 100%;
               // width: 750px;
               height: 500px;
-              @include rwd(1500) {
-                height: auto;
-              }
+
             }
           }
         }
@@ -158,19 +156,17 @@
               width: 100%;
               height: 137px;
               @include rwd(768) {
-                width: 209px;
+                width: 100%;
                 height: 209px;
               }
             }
           }
           &.slick-current {
+            // padding-right: 5px;
             .clous_carousel_m_img {
               margin-left: 0;
             }
           }
-        }
-        .slick-current {
-          padding-right: 5px;
         }
       }
     }
