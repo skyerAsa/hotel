@@ -190,10 +190,24 @@ body {
     padding-top: 10px;
   }
 }
+@media screen and (max-width: 768px) {
+  .logo {
+    height: auto;
+    margin: 0;
+    padding: 0 0 10px 30px;
+    text-align: start;
+  }
+}
 .logo a img {
   margin-top: 10px;
   width: 130px;
   height: 160px;
+}
+@media screen and (max-width: 768px) {
+  .logo a img {
+    width: 30px;
+    height: 40px;
+  }
 }
 .logo .txt {
   padding-top: 5px;
@@ -270,6 +284,7 @@ body {
     width: 76px;
     height: 28px;
     display: block;
+    text-align: center;
     background: url(../img/online/menu.jpg) center center;
     border: 1px solid #000000;
     position: absolute;

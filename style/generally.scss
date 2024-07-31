@@ -20,11 +20,21 @@ body {
     width: 100%;
     padding-top: 10px;
   }
+  @include rwd(768){
+    height: auto;
+    margin: 0;
+    padding: 0 0 10px 10px;
+    text-align: start;
+  }
   a {
     img {
       margin-top: 10px;
       width: 130px;
       height: 160px;
+      @include rwd(768){
+        width: 30px;
+        height: 40px;
+      }
     }
   }
   .txt {
@@ -101,6 +111,7 @@ body {
       margin: 30px 5px 5px 0;
       font-size: 13px;
       line-height: 28px;
+      text-align: center;
     }
   }
 }

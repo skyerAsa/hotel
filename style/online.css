@@ -190,10 +190,24 @@ body {
     padding-top: 10px;
   }
 }
+@media screen and (max-width: 768px) {
+  .logo {
+    height: auto;
+    margin: 0;
+    padding: 0 0 10px 10px;
+    text-align: start;
+  }
+}
 .logo a img {
   margin-top: 10px;
   width: 130px;
   height: 160px;
+}
+@media screen and (max-width: 768px) {
+  .logo a img {
+    width: 30px;
+    height: 40px;
+  }
 }
 .logo .txt {
   padding-top: 5px;
@@ -278,6 +292,7 @@ body {
     margin: 30px 5px 5px 0;
     font-size: 13px;
     line-height: 28px;
+    text-align: center;
   }
 }
 
