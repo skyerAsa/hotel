@@ -148,9 +148,10 @@ body {
           }
         }
         .item_llst {
-          display: none;
           padding: 10px 0;
+          display: none;
           p {
+            padding: 10px 0;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -434,7 +435,7 @@ body {
       }
     }
   }
-  // reservation_right_box collext
+  // reservation_right_box collect
 .reservation_right_box {
     padding: 120px 0 0 0;
     @include rwd(1200){
@@ -445,6 +446,9 @@ body {
     }
     @include rwd(600){
       transform: translateX(-70%);
+    }
+    @include rwd(400){
+      transform: translateX(-112%);
     }
     .collect_list {
       .collect_item {
@@ -458,6 +462,9 @@ body {
           }
           @include rwd(600){
             max-width: 400px;
+          }
+          @include rwd(400){
+            max-width: 300px;
           }
           .slick-track {
             max-width: 600%;
@@ -586,6 +593,9 @@ body {
   @include rwd(600){
     transform: translateX(-70%);
   }
+  @include rwd(400){
+    transform: translateX(-112%);
+  }
   .mountain_list {
     .mountain_item {
       .slick-list {
@@ -598,6 +608,9 @@ body {
         }
         @include rwd(600){
           max-width: 400px;
+        }
+        @include rwd(400){
+          max-width: 300px;
         }
         .slick-track {
           max-width: 600%;
@@ -724,6 +737,9 @@ body {
   @include rwd(600){
     transform: translateX(-70%);
   }
+  @include rwd(400){
+    transform: translateX(-112%);
+  }
   .morioka_list {
     .morioka_item {
       .slick-list {
@@ -736,6 +752,9 @@ body {
         }
         @include rwd(600){
           max-width: 400px;
+        }
+        @include rwd(400){
+          max-width: 300px;
         }
         .slick-track {
           max-width: 600%;
@@ -862,6 +881,9 @@ body {
   @include rwd(600){
     transform: translateX(-70%);
   }
+  @include rwd(400){
+    transform: translateX(-112%);
+  }
   .reflection_list {
     .reflection_item {
       .slick-list {
@@ -874,6 +896,9 @@ body {
         }
         @include rwd(600){
           max-width: 400px;
+        }
+        @include rwd(400){
+          max-width: 300px;
         }
         .slick-track {
           max-width: 600%;
@@ -999,6 +1024,9 @@ body {
     }
     @include rwd(600){
       transform: translateX(-70%);
+    }
+    @include rwd(400){
+      transform: translateX(-112%);
     }
     .linshan_list {
       .linshan_item {

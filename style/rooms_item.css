@@ -328,10 +328,11 @@ body {
     }
   }
   .menu_item ul li .item_llst {
-    display: none;
     padding: 10px 0;
+    display: none;
   }
   .menu_item ul li .item_llst p {
+    padding: 10px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -646,6 +647,11 @@ body {
     transform: translateX(-70%);
   }
 }
+@media screen and (max-width: 400px) {
+  .reservation_box .reservation_right_box {
+    transform: translateX(-112%);
+  }
+}
 .reservation_box .reservation_right_box .collect_list .collect_item .slick-list {
   max-width: 700px;
 }
@@ -662,6 +668,11 @@ body {
 @media screen and (max-width: 600px) {
   .reservation_box .reservation_right_box .collect_list .collect_item .slick-list {
     max-width: 400px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .reservation_box .reservation_right_box .collect_list .collect_item .slick-list {
+    max-width: 300px;
   }
 }
 .reservation_box .reservation_right_box .collect_list .collect_item .slick-list .slick-track {
@@ -793,6 +804,11 @@ body {
     transform: translateX(-70%);
   }
 }
+@media screen and (max-width: 400px) {
+  .reservation_box .reservation_right_box {
+    transform: translateX(-112%);
+  }
+}
 .reservation_box .reservation_right_box .mountain_list .mountain_item .slick-list {
   max-width: 700px;
 }
@@ -809,6 +825,11 @@ body {
 @media screen and (max-width: 600px) {
   .reservation_box .reservation_right_box .mountain_list .mountain_item .slick-list {
     max-width: 400px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .reservation_box .reservation_right_box .mountain_list .mountain_item .slick-list {
+    max-width: 300px;
   }
 }
 .reservation_box .reservation_right_box .mountain_list .mountain_item .slick-list .slick-track {
@@ -938,6 +959,11 @@ body {
     transform: translateX(-70%);
   }
 }
+@media screen and (max-width: 400px) {
+  .reservation_box .reservation_right_box {
+    transform: translateX(-112%);
+  }
+}
 .reservation_box .reservation_right_box .morioka_list .morioka_item .slick-list {
   max-width: 700px;
 }
@@ -954,6 +980,11 @@ body {
 @media screen and (max-width: 600px) {
   .reservation_box .reservation_right_box .morioka_list .morioka_item .slick-list {
     max-width: 400px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .reservation_box .reservation_right_box .morioka_list .morioka_item .slick-list {
+    max-width: 300px;
   }
 }
 .reservation_box .reservation_right_box .morioka_list .morioka_item .slick-list .slick-track {
@@ -1083,6 +1114,11 @@ body {
     transform: translateX(-70%);
   }
 }
+@media screen and (max-width: 400px) {
+  .reservation_box .reservation_right_box {
+    transform: translateX(-112%);
+  }
+}
 .reservation_box .reservation_right_box .reflection_list .reflection_item .slick-list {
   max-width: 700px;
 }
@@ -1099,6 +1135,11 @@ body {
 @media screen and (max-width: 600px) {
   .reservation_box .reservation_right_box .reflection_list .reflection_item .slick-list {
     max-width: 400px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .reservation_box .reservation_right_box .reflection_list .reflection_item .slick-list {
+    max-width: 300px;
   }
 }
 .reservation_box .reservation_right_box .reflection_list .reflection_item .slick-list .slick-track {
@@ -1226,6 +1267,11 @@ body {
 @media screen and (max-width: 600px) {
   .reservation_box .reservation_right_box {
     transform: translateX(-70%);
+  }
+}
+@media screen and (max-width: 400px) {
+  .reservation_box .reservation_right_box {
+    transform: translateX(-112%);
   }
 }
 .reservation_box .reservation_right_box .linshan_list .linshan_item .slick-list {
