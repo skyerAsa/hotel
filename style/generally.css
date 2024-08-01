@@ -303,7 +303,7 @@ body {
     display: block;
   }
   .menu_item ul {
-    animation: ii 0.5s;
+    animation: ii 0.5s forwards;
   }
   @keyframes ii {
     from {
@@ -339,6 +339,13 @@ body {
     font-weight: bolder;
     background-color: #97999b;
   }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .menu_item ul li .item_llst p {
+    animation: aaaa 0.5s forwards;
+  }
+}
+@media screen and (max-width: 768px) {
   .menu_item ul li .item_llst p:hover {
     background-color: #a2d7f1;
   }
@@ -350,6 +357,16 @@ body {
 .menu_coin {
   width: 100%;
   display: flex;
+  opacity: 0;
+  animation: bbbb 0.5s 0.5s forwards;
+}
+@keyframes bbbb {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .menu_coin a {
   width: 50%;
@@ -360,7 +377,7 @@ body {
 .menu_coin .website_item,
 .menu_coin .checkout_item {
   height: 60px;
-  width: 49%;
+  width: 50%;
   margin: 0 5px;
   padding: 0 10px;
   display: flex;
@@ -458,12 +475,30 @@ body {
   transform: translateY(100%);
   animation: aa 0.5s;
 }
+@media screen and (max-width: 768px) {
+  .reservation_title ul .about_us {
+    height: 40px;
+  }
+}
 @keyframes aa {
   from {
     height: 0px;
   }
   to {
+    height: 70px;
+  }
+}
+@keyframes aaaa {
+  from {
+    height: 0px;
+  }
+  to {
     height: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .reservation_title ul .about_us {
+    animation: aaaa 0.5s;
   }
 }
 .reservation_title ul .about_us p {
@@ -487,6 +522,13 @@ body {
   bottom: 0;
   transform: translateY(100%);
   animation: aa 0.5s;
+}
+@media screen and (max-width: 768px) {
+  .reservation_title ul .reservation_rooms,
+  .reservation_title ul .instruction_rooms,
+  .reservation_title ul .membership_us {
+    height: 40px;
+  }
 }
 .reservation_title ul .reservation_rooms p,
 .reservation_title ul .instruction_rooms p,
@@ -643,7 +685,7 @@ body {
 }
 @media screen and (max-width: 667px) {
   .reservation_box .reservation_right_box {
-    transform: translateX(-37%);
+    transform: translateX(-32%);
   }
 }
 @media screen and (max-width: 400px) {

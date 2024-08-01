@@ -340,6 +340,13 @@ body {
     font-weight: bolder;
     background-color: #97999b;
   }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .menu_item ul li .item_llst p {
+    animation: aaaa 0.5s forwards;
+  }
+}
+@media screen and (max-width: 768px) {
   .menu_item ul li .item_llst p:hover {
     background-color: #a2d7f1;
   }
@@ -464,7 +471,12 @@ body {
     height: 0px;
   }
   to {
-    height: 40px;
+    height: 70px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .reservation_title ul .about_us {
+    animation: aaaa 0.5s;
   }
 }
 .reservation_title ul .about_us p {
@@ -780,11 +792,6 @@ body {
     margin-left: 0;
   }
 }
-@media screen and (max-width: 420px) {
-  .SSL_right_box {
-    transform: translateX(-41%);
-  }
-}
 .SSL_right_box .SSL_title {
   padding: 20px 0 30px 0;
 }
@@ -833,7 +840,6 @@ body {
 }
 .SSL_right_box .SSL_main .SSL_coin p {
   width: 100%;
-  text-align: center;
   margin-right: 50px;
 }
 @media screen and (max-width: 570px) {
@@ -935,6 +941,11 @@ body {
   .login_right_box .login_txt .forget {
     display: flex;
     justify-content: inherit;
+  }
+}
+@media screen and (max-width: 599px) {
+  .login_right_box .login_txt .forget {
+    margin-left: 0;
   }
 }
 @media screen and (max-width: 499px) {

@@ -338,6 +338,13 @@ body {
     animation: aa 0.5s forwards;
     background-color: #97999b;
   }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .menu_item ul li .item_llst p {
+    animation: aaaa 0.5s forwards;
+  }
+}
+@media screen and (max-width: 768px) {
   .menu_item ul li .item_llst p:hover {
     background-color: #a2d7f1;
   }
@@ -463,6 +470,11 @@ body {
   }
   to {
     height: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .reservation_title ul .about_us {
+    animation: aaaa 0.5s;
   }
 }
 .reservation_title ul .about_us p {
