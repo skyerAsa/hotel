@@ -491,7 +491,7 @@ body {
       padding-right: 10px;
     }
     @include rwd(768) {
-      padding: 0 20px;
+      padding: 0;
     }
     @include rwd(499) {
       padding-right: 90px;

@@ -697,7 +697,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .rooms_item .rooms_number {
-    padding: 0 20px;
+    padding: 0;
   }
 }
 @media screen and (max-width: 499px) {
