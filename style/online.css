@@ -199,9 +199,9 @@ body {
   }
 }
 .logo a img {
-  margin-top: 10px;
   width: 130px;
   height: 160px;
+  margin-top: 10px;
 }
 @media screen and (max-width: 768px) {
   .logo a img {
@@ -256,8 +256,7 @@ body {
 .logo .link .checkout img {
   width: 18px;
   height: 20px;
-  margin-right: 10px;
-  margin-top: 0;
+  margin: 0 10px 0 0;
 }
 .logo .link .checkout {
   margin-left: 10px;
@@ -283,13 +282,13 @@ body {
   .logo .menu {
     width: 76px;
     height: 28px;
+    margin: 30px 5px 5px 0;
     display: block;
     background: url(../img/online/menu.jpg) center center;
     border: 1px solid #000000;
     position: absolute;
     right: 0;
     bottom: 0;
-    margin: 30px 5px 5px 0;
     font-size: 13px;
     line-height: 28px;
     text-align: center;
@@ -328,8 +327,8 @@ body {
     }
   }
   .menu_item ul li .item_llst {
-    display: none;
     padding: 10px 0;
+    display: none;
   }
   .menu_item ul li .item_llst p {
     padding: 10px 0;
@@ -360,14 +359,14 @@ body {
 }
 .menu_coin a {
   width: 50%;
+  margin: 0 5px;
   display: flex;
   background-color: #97999b;
-  margin: 0 5px;
 }
 .menu_coin .website_item,
 .menu_coin .checkout_item {
-  height: 60px;
   width: 49%;
+  height: 60px;
   margin: 0 5px;
   padding: 0 10px;
   display: flex;
@@ -409,8 +408,8 @@ body {
   }
 }
 .reservation_title ul li {
-  padding: 10px 0;
   height: 60px;
+  padding: 10px 0;
   cursor: pointer;
 }
 .reservation_title ul li:hover .about_us,
@@ -748,10 +747,10 @@ body {
   }
 }
 .rooms_calendar header {
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
   border-radius: 20px 20px 0 0;
 }
 .rooms_calendar header:hover {
@@ -762,8 +761,8 @@ body {
   align-items: center;
 }
 .rooms_calendar .header-display p {
-  color: var(--accent);
   margin: 5px;
+  color: var(--accent);
   font-size: 1.2rem;
   word-spacing: 0.5rem;
 }
@@ -776,18 +775,18 @@ body {
 }
 .rooms_calendar .days,
 .rooms_calendar .week {
+  margin: auto;
   display: grid;
   border: 1px solid #000;
   grid-template-columns: repeat(7, 1fr);
-  margin: auto;
   justify-content: space-between;
 }
 .rooms_calendar .week div,
 .rooms_calendar .days div {
+  height: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 3rem;
   border: 1px solid #000;
   position: relative;
 }
@@ -830,10 +829,10 @@ body {
   padding-left: 10px;
 }
 .collection_day .rooms_days {
+  padding: 100px 0 20px 0;
   display: flex;
   justify-content: space-evenly;
   position: relative;
-  padding: 100px 0 20px 0;
 }
 .collection_day .rooms_days .form-group {
   display: flex;
@@ -861,10 +860,10 @@ body {
   }
 }
 .collection_day .rooms_days .middle {
-  border-right: 1px dotted #787878;
   width: 1px;
   height: 30px;
   margin: 15px 5px 0;
+  border-right: 1px dotted #787878;
 }
 .collection_day .rooms_days .rooms {
   display: flex;
@@ -881,10 +880,10 @@ body {
 }
 .collection_day .Next {
   width: auto;
-  display: flex;
-  justify-content: end;
   padding-bottom: 100px;
   margin-right: 20px;
+  display: flex;
+  justify-content: end;
 }
 .collection_day .Next p {
   padding: 10px 40px;
@@ -953,8 +952,8 @@ body {
 }
 
 .footer {
-  background: #eeeeee;
   margin: 0 auto;
+  background: #eeeeee;
   padding-bottom: 20px;
   border-bottom: 10px solid #1a1a1a;
   display: flex;

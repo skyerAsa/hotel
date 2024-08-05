@@ -66,16 +66,17 @@
       writing-mode: vertical-lr;
     }
     span {
+      margin-top: 30px;
       writing-mode: vertical-lr;
       position: relative;
-      margin-top: 30px;
+     
       &::before {
         content: "";
+        width: 4px;
+        height: 4px;
         position: absolute;
         top: -17px;
         left: 10px;
-        width: 4px;
-        height: 4px;
         border-radius: 100%;
         background: #fff;
         z-index: 1;
@@ -120,9 +121,9 @@
     }
     @include rwd(1024) {
       width: 100%;
+      padding: 10px;
       background-color: #63bedf;
       color: #fff;
-      padding: 10px;
       border-radius: 10px;
       cursor: pointer;
       display: flex;
@@ -138,8 +139,8 @@
     }
     .title_m {
       width: 87%;
-      position: absolute;
       padding: 10px;
+      position: absolute;
       left: 0;
       bottom: -43px;
       color: #63bedf;
@@ -153,10 +154,10 @@
     }
   }
   h2 {
+    margin: initial;
     padding-bottom: 20px;
     font-size: 36px;
     line-height: 1.5;
-    margin: initial;
     font-weight: bold;
     position: relative;
     text-align: center;

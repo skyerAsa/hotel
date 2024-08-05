@@ -199,9 +199,9 @@ body {
   }
 }
 .logo a img {
-  margin-top: 10px;
   width: 130px;
   height: 160px;
+  margin-top: 10px;
 }
 @media screen and (max-width: 768px) {
   .logo a img {
@@ -256,8 +256,7 @@ body {
 .logo .link .checkout img {
   width: 18px;
   height: 20px;
-  margin-right: 10px;
-  margin-top: 0;
+  margin: 0 10px 0 0;
 }
 .logo .link .checkout {
   margin-left: 10px;
@@ -283,13 +282,13 @@ body {
   .logo .menu {
     width: 76px;
     height: 28px;
+    margin: 30px 5px 5px 0;
     display: block;
     background: url(../img/online/menu.jpg) center center;
     border: 1px solid #000000;
     position: absolute;
     right: 0;
     bottom: 0;
-    margin: 30px 5px 5px 0;
     font-size: 13px;
     line-height: 28px;
     text-align: center;
@@ -329,8 +328,8 @@ body {
     }
   }
   .menu_item ul li .item_llst {
-    display: none;
     padding: 10px 0;
+    display: none;
   }
   .menu_item ul li .item_llst p {
     padding: 10px 0;
@@ -362,9 +361,9 @@ body {
 }
 .menu_coin a {
   width: 50%;
+  margin: 0 5px;
   display: flex;
   background-color: #97999b;
-  margin: 0 5px;
 }
 .menu_coin .website_item,
 .menu_coin .checkout_item {
@@ -411,8 +410,8 @@ body {
   }
 }
 .reservation_title ul li {
-  padding: 10px 0;
   height: 60px;
+  padding: 10px 0;
   cursor: pointer;
 }
 .reservation_title ul li:hover .about_us,
@@ -695,9 +694,9 @@ body {
   font-weight: bold;
 }
 .notice .coin {
+  margin-top: 30px;
   display: flex;
   justify-content: center;
-  margin-top: 30px;
 }
 .notice .coin h2 {
   width: 120px;
@@ -716,8 +715,8 @@ body {
 }
 
 .footer {
-  background: #eeeeee;
   margin: 0 auto;
+  background: #eeeeee;
   padding-bottom: 20px;
   border-bottom: 10px solid #1a1a1a;
   display: flex;

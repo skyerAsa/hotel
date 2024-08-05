@@ -30,9 +30,9 @@ body {
   }
   a {
     img {
-      margin-top: 10px;
       width: 130px;
       height: 160px;
+      margin-top: 10px;
       @include rwd(768) {
         width: 30px;
         height: 40px;
@@ -79,8 +79,7 @@ body {
       img {
         width: 18px;
         height: 20px;
-        margin-right: 10px;
-        margin-top: 0;
+        margin: 0 10px 0 0;
       }
     }
     .checkout {
@@ -104,13 +103,13 @@ body {
     @include rwd(768) {
       width: 76px;
       height: 28px;
+      margin: 30px 5px 5px 0;
       display: block;
       background: url(../img/online/menu.jpg) center center;
       border: 1px solid #000000;
       position: absolute;
       right: 0;
       bottom: 0;
-      margin: 30px 5px 5px 0;
       font-size: 13px;
       line-height: 28px;
       text-align: center;
@@ -148,8 +147,8 @@ body {
           }
         }
         .item_llst {
-          display: none;
           padding: 10px 0;
+          display: none;
           p {
             padding: 10px 0;
             display: flex;
@@ -198,8 +197,8 @@ body {
   }
   .website_item,
   .checkout_item {
-    height: 60px;
     width: 50%;
+    height: 60px;
     margin: 0 5px;
     padding: 0 10px;
     display: flex;
@@ -239,8 +238,8 @@ body {
       display: none;
     }
     li {
-      padding: 10px 0;
       height: 60px;
+      padding: 10px 0;    
       cursor: pointer;
       &:hover {
         .about_us,
@@ -353,9 +352,9 @@ body {
 // reservation_box
 .reservation_box {
   width: 1200px;
+  padding-bottom: 100px;
   margin: 0 auto;
   display: flex;
-  padding-bottom: 100px;
   @include rwd(968) {
     width: 1000px;
   }
@@ -376,9 +375,9 @@ body {
     }
     .reservation_item {
       width: 250px;
-      background-color: #97999b;
       padding: 10px 0 20px;
       margin-top: 20px;
+      background-color: #97999b;
       position: relative;
       z-index: 2;
       @include rwd(1200) {
@@ -428,8 +427,8 @@ body {
       }
     }
     .reserve_rooms {
-      display: flex;
       padding: 0 50px 10px 10px;
+      display: flex;
     }
     .rooms_find {
       margin: 20px 10px 0;
@@ -447,7 +446,6 @@ body {
       height: 70px;
       position: absolute;
       display: flex;
-      // justify-content: center;
       align-items: center;
       top: 30%;
       right: -40px;
@@ -535,9 +533,9 @@ body {
 
 // footer
 .footer {
-  background: #eeeeee;
   margin: 0 auto;
   padding-bottom: 20px;
+  background: #eeeeee;
   border-bottom: 10px solid #1a1a1a;
   display: flex;
   position: relative;
@@ -582,8 +580,7 @@ body {
   width: 30%;
   height: 60%;
   padding: 5px;
-  margin-left: -35%;
-  margin-top: 0%;
+  margin:0% 0 0 -35%;
   position: fixed;
   top: 20%;
   left: 70%;
@@ -660,7 +657,6 @@ body {
   background-color: #000;
   opacity: 0.5;
   z-index: 2;
-  // display: none;
   &.on {
     display: block;
   }

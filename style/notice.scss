@@ -29,9 +29,9 @@ body {
   }
   a {
     img {
-      margin-top: 10px;
       width: 130px;
       height: 160px;
+      margin-top: 10px;
       @include rwd(768){
         width: 30px;
         height: 40px;
@@ -78,8 +78,7 @@ body {
       img {
         width: 18px;
         height: 20px;
-        margin-right: 10px;
-        margin-top: 0;
+        margin:0 10px 0 0;
       }
     }
     .checkout {
@@ -103,13 +102,13 @@ body {
     @include rwd(768) {
       width: 76px;
       height: 28px;
+      margin: 30px 5px 5px 0;
       display: block;
       background: url(../img/online/menu.jpg) center center;
       border: 1px solid #000000;
       position: absolute;
       right: 0;
       bottom: 0;
-      margin: 30px 5px 5px 0;
       font-size: 13px;
       line-height: 28px;
       text-align: center;
@@ -147,8 +146,8 @@ body {
           }
         }
         .item_llst {
-          display: none;
           padding: 10px 0;
+          display: none;
           p {
             padding: 10px 0;
             display: flex;
@@ -180,9 +179,9 @@ body {
   display: flex;
   a {
     width: 50%;
+    margin: 0 5px;
     display: flex;
     background-color: #97999b;
-    margin: 0 5px;
   }
   .website_item,
   .checkout_item {
@@ -227,8 +226,8 @@ body {
       display: none;
     }
     li {
-      padding: 10px 0;
       height: 60px;
+      padding: 10px 0;
       cursor: pointer;
       &:hover {
         .about_us,
@@ -497,9 +496,9 @@ body {
     }
   }
   .coin {
+    margin-top: 30px;
     display: flex;
     justify-content: center;
-    margin-top: 30px;
     h2 {
       width: 120px;
       height: 36px;
@@ -520,8 +519,8 @@ body {
 
 // footer
 .footer {
-  background: #eeeeee;
   margin: 0 auto;
+  background: #eeeeee;
   padding-bottom: 20px;
   border-bottom: 10px solid #1a1a1a;
   display: flex;

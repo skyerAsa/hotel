@@ -1751,9 +1751,9 @@ body:has(.privacy_option.on) {
 }
 .m_bg::before {
   content: "";
-  display: flex;
   width: 100%;
   height: 100%;
+  display: flex;
   background: linear-gradient(to bottom, rgba(59, 175, 219, 0.5) 0%, rgba(54, 175, 101, 0.5) 100%);
 }
 
@@ -1888,17 +1888,17 @@ body:has(.privacy_option.on) {
 }
 .menu_bg .wrap .menu_box .message_box h2 {
   width: 19px;
+  padding-right: 1px;
   display: flex;
   justify-content: center;
-  padding-right: 1px;
   align-items: center;
   writing-mode: vertical-lr;
 }
 .menu_bg .wrap .menu_bg_list {
   height: 100%;
+  padding: 20px 80px 0 0;
   display: flex;
   align-items: center;
-  padding: 20px 80px 0 0;
 }
 @media screen and (max-width: 840px) {
   .menu_bg .wrap .menu_bg_list {
@@ -1939,20 +1939,20 @@ body:has(.privacy_option.on) {
 }
 @media screen and (max-width: 1180px) {
   .menu_bg .wrap .menu_bg_list ul {
-    position: relative;
     padding-left: 0;
+    position: relative;
     left: 2%;
     top: auto;
   }
 }
 @media screen and (max-width: 840px) {
   .menu_bg .wrap .menu_bg_list ul {
-    flex-wrap: nowrap;
-    flex-direction: column;
-    left: auto;
     width: 100%;
     margin-right: 70px;
     padding-left: 50px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    left: auto;
   }
 }
 .menu_bg .wrap .menu_bg_list ul li {
@@ -2154,9 +2154,9 @@ body:has(.privacy_option.on) {
   transition: all 0.2s linear;
 }
 .label_list ul li .line {
+  width: 1px;
   height: 40px;
   position: absolute;
-  width: 1px;
   background-color: #b2b2b2;
   z-index: 2;
 }
@@ -2198,8 +2198,8 @@ body:has(.privacy_option.on) {
   margin-top: 10px;
 }
 .label_list ul li h2 {
-  opacity: 0;
   padding: 5px 0;
+  opacity: 0;
   writing-mode: vertical-lr;
   position: absolute;
   left: 25px;
@@ -2261,9 +2261,9 @@ body:has(.privacy_option.on) {
   font-size: 15px;
 }
 .privacy_option .wrap .txt h2 {
+  padding-bottom: 15px;
   font-size: 20px;
   font-weight: bolder;
-  padding-bottom: 15px;
 }
 .privacy_option .wrap .txt .privacy_about {
   margin-top: 25px;
@@ -2288,9 +2288,9 @@ body:has(.privacy_option.on) {
   }
 }
 .privacy_option .wrap .txt .privacy_about button {
+  width: 80%;
   height: 40px;
   min-width: 165px;
-  width: 80%;
   padding: 10px;
   position: absolute;
   background-color: transparent;
@@ -2306,8 +2306,8 @@ body:has(.privacy_option.on) {
 @media screen and (max-width: 540px) {
   .privacy_option .wrap .txt .privacy_about button {
     width: 100%;
-    position: relative;
     margin-bottom: 10px;
+    position: relative;
   }
 }
 .privacy_option .wrap .txt .privacy_about .arrow {
@@ -2363,9 +2363,9 @@ body:has(.privacy_option.on) {
   padding: 80px 0 20px;
 }
 .privacy_option .wrap .txt .need {
+  padding-bottom: 20px;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 20px;
 }
 .privacy_option .wrap .txt .need h3 span {
   font-weight: bolder;
@@ -2374,8 +2374,8 @@ body:has(.privacy_option.on) {
   display: flex;
 }
 .privacy_option .wrap .txt .need .need_txt p {
-  color: #63bedf;
   padding-right: 10px;
+  color: #63bedf;
 }
 .privacy_option .wrap .txt .need .need_txt .slide_need {
   cursor: pointer;
@@ -2386,8 +2386,8 @@ body:has(.privacy_option.on) {
   transform: rotate(90deg);
 }
 .privacy_option .wrap .txt .manage_txt {
-  background-color: #e1e1e1;
   padding: 18px 15px;
+  background-color: #e1e1e1;
   font-size: 15px;
   line-height: 1.35;
   transition: all 1s linear;
@@ -2539,9 +2539,9 @@ body:has(.privacy_option.on) {
   }
 }
 .hd_bg .header_bg li h2 {
+  padding-top: 20px;
   top: 50%;
   left: 7%;
-  padding-top: 20px;
   font-size: 23px;
   opacity: 0;
   display: flex;
@@ -2585,8 +2585,8 @@ body:has(.privacy_option.on) {
 .hd_bg .header_bg li .txt {
   width: 100%;
   height: 100%;
-  margin: auto;
   max-width: 1720px;
+  margin: auto;
   padding: 68px 19% 20px 160px;
   z-index: 2;
   position: absolute;
@@ -2627,9 +2627,9 @@ body:has(.privacy_option.on) {
   }
 }
 .hd_bg .hd_news h2 {
-  max-width: 110px;
-  width: 100%;
   height: 70px;
+  width: 100%;
+  max-width: 110px;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -2916,9 +2916,8 @@ body:has(.privacy_option.on) {
 }
 .brand .brand_txt .brand_title {
   width: 100%;
+  padding-bottom: 30px 0 15px 0;
   margin-right: 25px;
-  padding-bottom: 15px;
-  padding-top: 30px;
   position: relative;
   display: inline-block;
   font-size: 20px;
@@ -2989,9 +2988,9 @@ body:has(.privacy_option.on) {
   }
 }
 .brand .brand_img {
-  position: relative;
-  margin: 0 30px;
   width: 570px;
+  margin: 0 30px;
+  position: relative;
   -webkit-clip-path: circle(50% at 50% 50%);
           clip-path: circle(50% at 50% 50%);
   overflow: hidden;
@@ -3105,8 +3104,8 @@ body:has(.privacy_option.on) {
 }
 @media screen and (max-width: 1180px) {
   .brand .brand_list li h2 {
-    writing-mode: initial;
     padding-right: 20px;
+    writing-mode: initial;
   }
 }
 .brand .brand_list li p {
@@ -3239,19 +3238,18 @@ body:has(.privacy_option.on) {
 .field .title p::before {
   content: "";
   width: 100%;
+  height: 1px;
   position: absolute;
   bottom: 20%;
-  height: 1px;
   background-color: #63bedf;
 }
 .field h3 {
-  letter-spacing: 2.5px;
   padding-top: 20px;
+  letter-spacing: 2.5px;
 }
 .field .field_bg {
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 100px;
+  padding-top: 50px 0 100px 0;
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -3721,8 +3719,8 @@ body:has(.privacy_option.on) {
   }
 }
 .events .content li .item .title {
-  display: flex;
   padding-bottom: 50px;
+  display: flex;
   border-right: 1px solid rgba(0, 0, 0, 0.2);
 }
 @media screen and (max-width: 1180px) {
@@ -3760,9 +3758,9 @@ body:has(.privacy_option.on) {
 .events .content li .item .title p::before {
   content: "";
   width: 60%;
+  height: 1px;
   position: absolute;
   bottom: 20%;
-  height: 1px;
   background-color: #63bedf;
 }
 .events .content li .item .txt {
@@ -4006,9 +4004,9 @@ body:has(.privacy_option.on) {
 }
 
 .rooms {
-  display: flex;
   padding: 105px 140px 50px;
   margin: 0 30px;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -5069,8 +5067,7 @@ body:has(.privacy_option.on) {
 }
 @media screen and (max-width: 700px) {
   .dining ul li {
-    padding: 0;
-    padding-left: 50px;
+    padding: 0 0 0 50px;
     margin-left: 50px;
   }
 }
@@ -5526,9 +5523,9 @@ body:has(.privacy_option.on) {
   writing-mode: vertical-lr;
 }
 .introduction_bg .txt span {
+  margin-top: 30px;
   writing-mode: vertical-lr;
   position: relative;
-  margin-top: 30px;
 }
 .introduction_bg .txt span::before {
   content: "";
@@ -5577,9 +5574,9 @@ body:has(.privacy_option.on) {
 }
 .introduction_main h2 {
   padding-bottom: 20px;
+  margin: initial;
   font-size: 36px;
   line-height: 1.5;
-  margin: initial;
   font-weight: bold;
   position: relative;
 }

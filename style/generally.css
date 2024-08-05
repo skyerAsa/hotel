@@ -198,9 +198,9 @@ body {
   }
 }
 .logo a img {
-  margin-top: 10px;
   width: 130px;
   height: 160px;
+  margin-top: 10px;
 }
 @media screen and (max-width: 768px) {
   .logo a img {
@@ -255,8 +255,7 @@ body {
 .logo .link .checkout img {
   width: 18px;
   height: 20px;
-  margin-right: 10px;
-  margin-top: 0;
+  margin: 0 10px 0 0;
 }
 .logo .link .checkout {
   margin-left: 10px;
@@ -282,13 +281,13 @@ body {
   .logo .menu {
     width: 76px;
     height: 28px;
+    margin: 30px 5px 5px 0;
     display: block;
     background: url(../img/online/menu.jpg) center center;
     border: 1px solid #000000;
     position: absolute;
     right: 0;
     bottom: 0;
-    margin: 30px 5px 5px 0;
     font-size: 13px;
     line-height: 28px;
     text-align: center;
@@ -328,8 +327,8 @@ body {
     }
   }
   .menu_item ul li .item_llst {
-    display: none;
     padding: 10px 0;
+    display: none;
   }
   .menu_item ul li .item_llst p {
     padding: 10px 0;
@@ -377,8 +376,8 @@ body {
 }
 .menu_coin .website_item,
 .menu_coin .checkout_item {
-  height: 60px;
   width: 50%;
+  height: 60px;
   margin: 0 5px;
   padding: 0 10px;
   display: flex;
@@ -420,8 +419,8 @@ body {
   }
 }
 .reservation_title ul li {
-  padding: 10px 0;
   height: 60px;
+  padding: 10px 0;
   cursor: pointer;
 }
 .reservation_title ul li:hover .about_us,
@@ -552,9 +551,9 @@ body {
 
 .reservation_box {
   width: 1200px;
+  padding-bottom: 100px;
   margin: 0 auto;
   display: flex;
-  padding-bottom: 100px;
 }
 @media screen and (max-width: 968px) {
   .reservation_box {
@@ -580,9 +579,9 @@ body {
 }
 .reservation_box .reservation_left_box .reservation_item {
   width: 250px;
-  background-color: #97999b;
   padding: 10px 0 20px;
   margin-top: 20px;
+  background-color: #97999b;
   position: relative;
   z-index: 2;
 }
@@ -634,8 +633,8 @@ body {
   padding: 0 5px;
 }
 .reservation_box .reservation_left_box .reserve_rooms {
-  display: flex;
   padding: 0 50px 10px 10px;
+  display: flex;
 }
 .reservation_box .reservation_left_box .rooms_find {
   margin: 20px 10px 0;
@@ -748,9 +747,9 @@ body {
 }
 
 .footer {
-  background: #eeeeee;
   margin: 0 auto;
   padding-bottom: 20px;
+  background: #eeeeee;
   border-bottom: 10px solid #1a1a1a;
   display: flex;
   position: relative;
@@ -794,8 +793,7 @@ body {
   width: 30%;
   height: 60%;
   padding: 5px;
-  margin-left: -35%;
-  margin-top: 0%;
+  margin: 0% 0 0 -35%;
   position: fixed;
   top: 20%;
   left: 70%;

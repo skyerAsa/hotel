@@ -237,17 +237,17 @@ img {
   writing-mode: vertical-lr;
 }
 .location_bg .txt span {
+  margin-top: 30px;
   writing-mode: vertical-lr;
   position: relative;
-  margin-top: 30px;
 }
 .location_bg .txt span::before {
   content: "";
+  width: 4px;
+  height: 4px;
   position: absolute;
   top: -17px;
   left: 10px;
-  width: 4px;
-  height: 4px;
   border-radius: 100%;
   background: #fff;
   z-index: 1;

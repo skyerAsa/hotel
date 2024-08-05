@@ -23,7 +23,7 @@ body {
     width: 100%;
     padding-top: 10px;
   }
-  @include rwd(768){
+  @include rwd(768) {
     height: auto;
     margin: 0;
     padding: 0 0 10px 10px;
@@ -31,10 +31,10 @@ body {
   }
   a {
     img {
-      margin-top: 10px;
       width: 130px;
       height: 160px;
-      @include rwd(768){
+      margin-top: 10px;
+      @include rwd(768) {
         width: 30px;
         height: 40px;
       }
@@ -105,13 +105,13 @@ body {
     @include rwd(768) {
       width: 76px;
       height: 28px;
+      margin: 30px 5px 5px 0;
       display: block;
       background: url(../img/online/menu.jpg) center center;
       border: 1px solid #000000;
       position: absolute;
       right: 0;
       bottom: 0;
-      margin: 30px 5px 5px 0;
       font-size: 13px;
       line-height: 28px;
       text-align: center;
@@ -157,11 +157,11 @@ body {
             justify-content: center;
             animation: aa 0.5s forwards;
             background-color: #97999b;
-            @include rwd(768){
+            @include rwd(768) {
               animation: aaaa 0.5s forwards;
             }
             &:hover {
-              background-color: #A2D7F1;
+              background-color: #a2d7f1;
             }
           }
         }
@@ -180,9 +180,9 @@ body {
   display: flex;
   a {
     width: 50%;
+    margin: 0 5px;
     display: flex;
     background-color: #97999b;
-    margin: 0 5px;
   }
   .website_item,
   .checkout_item {
@@ -283,7 +283,7 @@ body {
         }
       }
       animation: aa 0.5s;
-      @include rwd(768){
+      @include rwd(768) {
         animation: aaaa 0.5s;
       }
       p {
@@ -330,12 +330,15 @@ body {
   margin: 0 auto;
   display: flex;
   padding-bottom: 100px;
-  @include rwd(768){
+  @include rwd(1200) {
     width: 100%;
   }
   // reservation_left_box
-.reservation_left_box {
+  .reservation_left_box {
     padding-right: 100px;
+    @include rwd(1200) {
+      position: absolute;
+    }
     .reservation_left_box_title {
       .title {
         margin: 80px 0 0 20px;
@@ -344,8 +347,8 @@ body {
     }
     .reservation_item {
       width: 250px;
-      background-color: #97999b;
       padding: 10px 0 20px;
+      background-color: #97999b;
       margin-top: 20px;
       position: relative;
       z-index: 2;
@@ -375,29 +378,29 @@ body {
       .in_rooms {
         padding-left: 20px;
         .in_rooms_title {
-          display: flex;
           padding-bottom: 20px;
+          display: flex;
           i {
             padding-right: 10px;
           }
         }
         .in_rooms_date {
-          display: flex;
           padding-bottom: 10px;
+          display: flex;
           .in_rooms_years,
           .in_rooms_month,
           .in_rooms_day {
             display: flex;
           }
-          span{
+          span {
             padding: 0 5px;
           }
         }
       }
     }
     .reserve_rooms {
-      display: flex;
       padding: 0 50px 10px 10px;
+      display: flex;
     }
     .rooms_find {
       margin: 20px 10px 0;
@@ -435,37 +438,18 @@ body {
       }
     }
   }
-  // reservation_right_box collect
-.reservation_right_box {
+  // reservation_right_box collection
+  .reservation_right_box {
+    width: 70%;
     padding: 120px 0 0 0;
-    @include rwd(1200){
-      transform: translateX(-30%);
-    }
-    @include rwd(768){
-      transform: translateX(-60%);
-    }
-    @include rwd(600){
-      transform: translateX(-70%);
-    }
-    @include rwd(400){
-      transform: translateX(-112%);
+    @include rwd(1200) {
+      width: 100%;
     }
     .collect_list {
       .collect_item {
         .slick-list {
-          max-width: 700px;
-          @include rwd(1200){
-            max-width: 500px;
-          }
-          @include rwd(1200){
-            max-width: 500px;
-          }
-          @include rwd(600){
-            max-width: 400px;
-          }
-          @include rwd(400){
-            max-width: 300px;
-          }
+          max-width: 96%;
+          margin: 0 10px;
           .slick-track {
             max-width: 600%;
           }
@@ -485,6 +469,9 @@ body {
               content: "";
             }
           }
+          @include rwd(500) {
+            margin: 0 4px;
+          }
         }
         .slick-active {
           background-color: #0689c8;
@@ -493,26 +480,24 @@ body {
     }
     .collect_title {
       p {
-        width: 100%;
+        width: 96%;
         height: 50px;
+        padding-left: 20px;
+        margin: 0 10px;
         background-color: #97999b;
         color: #fff;
         font-weight: bolder;
-        padding-left: 20px;
         font-size: 17px;
         display: flex;
         align-items: center;
       }
     }
     .collect_introduction {
-      width: 100%;
-      margin-top: 50px;
+      width: 95%;
+      margin: 50px 0 0 10px;
       border-left: 8px solid #97999b;
       display: flex;
       justify-content: space-between;
-      @include rwd(768){
-        width: 100%;
-      }
       p {
         padding: 10px 30px;
         background-color: #97999b;
@@ -536,24 +521,24 @@ body {
           border-right: 1px solid #97999b;
         }
       }
-      .collect_list{
+      .collect_list {
         line-height: 40px;
         font-size: 15px;
       }
-      .collect_context{
+      .collect_context {
         padding-left: 20px;
         line-height: 40px;
         font-size: 15px;
-        ul{
-            padding-top: 30px;
-            li{
-                list-style: disc;
-            }
+        ul {
+          padding-top: 30px;
+          li {
+            list-style: disc;
+          }
         }
       }
     }
     .collect_pricing {
-      margin-top: 50px;
+      margin: 50px 0 0 10px;
       border-left: 8px solid #97999b;
       .title {
         padding-left: 20px;
@@ -567,13 +552,10 @@ body {
       padding: 40px 0 0 20px;
     }
     .collect_order {
-      width: 100%;
+      width: 98%;
       margin-top: 50px;
       display: flex;
       justify-content: space-between;
-      @include rwd(768){
-        width: 100%;
-      }
       p {
         padding: 10px 30px;
         background-color: #97999b;
@@ -581,42 +563,22 @@ body {
       }
     }
   }
-//   reservation_right_box mountain
-.reservation_right_box {
-  padding: 120px 0 0 0;
-  @include rwd(1200){
-    transform: translateX(-30%);
-  }
-  @include rwd(768){
-    transform: translateX(-60%);
-  }
-  @include rwd(600){
-    transform: translateX(-70%);
-  }
-  @include rwd(400){
-    transform: translateX(-112%);
-  }
-  .mountain_list {
-    .mountain_item {
-      .slick-list {
-        max-width: 700px;
-        @include rwd(1200){
-          max-width: 500px;
-        }
-        @include rwd(1200){
-          max-width: 500px;
-        }
-        @include rwd(600){
-          max-width: 400px;
-        }
-        @include rwd(400){
-          max-width: 300px;
-        }
-        .slick-track {
-          max-width: 600%;
+  //   reservation_right_box mountain
+  .reservation_right_box {
+    width: 70%;
+    padding: 120px 0 0 0;
+    @include rwd(1200) {
+      width: 100%;
+    }
+    .mountain_list {
+      .mountain_item {
+        .slick-list {
+          max-width: 96%;
+          .slick-track {
+            max-width: 600%;
+          }
         }
       }
-    }
       .slick-dots {
         top: auto;
         bottom: -20px;
@@ -629,34 +591,38 @@ body {
               content: "";
             }
           }
+          @include rwd(500) {
+            margin: 0 4px;
+          }
         }
         .slick-active {
           background-color: #0689c8;
+        }
+        @include rwd(400) {
+          left: 10%;
         }
       }
     }
     .mountain_title {
       p {
-        width: 100%;
+        width: 96%;
         height: 50px;
+        padding-left: 20px;
+        margin: 0 10px;
         background-color: #97999b;
         color: #fff;
         font-weight: bolder;
-        padding-left: 20px;
         font-size: 17px;
         display: flex;
         align-items: center;
       }
     }
     .mountain_introduction {
-      width: 100%;
-      margin-top: 50px;
+      width: 95%;
+      margin: 50px 0 0 10px;
       border-left: 8px solid #97999b;
       display: flex;
       justify-content: space-between;
-      @include rwd(768){
-        width: 100%;
-      }
       p {
         padding: 10px 30px;
         background-color: #97999b;
@@ -680,24 +646,24 @@ body {
           border-right: 1px solid #97999b;
         }
       }
-      .mountain_list{
+      .mountain_list {
         line-height: 40px;
         font-size: 15px;
       }
-      .mountain_context{
+      .mountain_context {
         padding-left: 20px;
         line-height: 40px;
         font-size: 15px;
-        ul{
-            padding-top: 30px;
-            li{
-                list-style: disc;
-            }
+        ul {
+          padding-top: 30px;
+          li {
+            list-style: disc;
+          }
         }
       }
     }
     .mountain_pricing {
-      margin-top: 50px;
+      margin: 50px 0 0 10px;
       border-left: 8px solid #97999b;
       .title {
         padding-left: 20px;
@@ -711,13 +677,10 @@ body {
       padding: 40px 0 0 20px;
     }
     .mountain_order {
-      width: 100%;
+      width: 98%;
       margin-top: 50px;
       display: flex;
       justify-content: space-between;
-      @include rwd(768){
-        width: 100%;
-      }
       p {
         padding: 10px 30px;
         background-color: #97999b;
@@ -725,42 +688,22 @@ body {
       }
     }
   }
-//   reservation_right_box morioka
-.reservation_right_box {
-  padding: 120px 0 0 0;
-  @include rwd(1200){
-    transform: translateX(-30%);
-  }
-  @include rwd(768){
-    transform: translateX(-60%);
-  }
-  @include rwd(600){
-    transform: translateX(-70%);
-  }
-  @include rwd(400){
-    transform: translateX(-112%);
-  }
-  .morioka_list {
-    .morioka_item {
-      .slick-list {
-        max-width: 700px;
-        @include rwd(1200){
-          max-width: 500px;
-        }
-        @include rwd(1200){
-          max-width: 500px;
-        }
-        @include rwd(600){
-          max-width: 400px;
-        }
-        @include rwd(400){
-          max-width: 300px;
-        }
-        .slick-track {
-          max-width: 600%;
+  //   reservation_right_box morioka
+  .reservation_right_box {
+    width: 70%;
+    padding: 120px 0 0 0;
+    @include rwd(1200) {
+      width: 100%;
+    }
+    .morioka_list {
+      .morioka_item {
+        .slick-list {
+          max-width: 96%;
+          .slick-track {
+            max-width: 600%;
+          }
         }
       }
-    }
       .slick-dots {
         top: auto;
         bottom: -20px;
@@ -773,6 +716,12 @@ body {
               content: "";
             }
           }
+          @include rwd(500) {
+            margin: 0 4px;
+          }
+        }
+        @include rwd(400) {
+          left: 10%;
         }
         .slick-active {
           background-color: #0689c8;
@@ -781,26 +730,25 @@ body {
     }
     .morioka_title {
       p {
-        width: 100%;
+        width: 96%;
         height: 50px;
+        padding-left: 20px;
+        margin: 0 10px;
         background-color: #97999b;
         color: #fff;
         font-weight: bolder;
-        padding-left: 20px;
         font-size: 17px;
         display: flex;
         align-items: center;
       }
     }
     .morioka_introduction {
-      width: 100%;
+      width: 95%;
+      margin: 50px 0 0 10px;
       margin-top: 50px;
       border-left: 8px solid #97999b;
       display: flex;
       justify-content: space-between;
-      @include rwd(768){
-        width: 100%;
-      }
       p {
         padding: 10px 30px;
         background-color: #97999b;
@@ -824,24 +772,24 @@ body {
           border-right: 1px solid #97999b;
         }
       }
-      .morioka_list{
+      .morioka_list {
         line-height: 40px;
         font-size: 15px;
       }
-      .morioka_context{
+      .morioka_context {
         padding-left: 20px;
         line-height: 40px;
         font-size: 15px;
-        ul{
-            padding-top: 30px;
-            li{
-                list-style: disc;
-            }
+        ul {
+          padding-top: 30px;
+          li {
+            list-style: disc;
+          }
         }
       }
     }
     .morioka_pricing {
-      margin-top: 50px;
+      margin: 50px 0 0 10px;
       border-left: 8px solid #97999b;
       .title {
         padding-left: 20px;
@@ -855,13 +803,10 @@ body {
       padding: 40px 0 0 20px;
     }
     .morioka_order {
-      width: 100%;
+      width: 98%;
       margin-top: 50px;
       display: flex;
       justify-content: space-between;
-      @include rwd(768){
-        width: 100%;
-      }
       p {
         padding: 10px 30px;
         background-color: #97999b;
@@ -869,42 +814,22 @@ body {
       }
     }
   }
-//   reservation_right_box reflection
-.reservation_right_box {
-  padding: 120px 0 0 0;
-  @include rwd(1200){
-    transform: translateX(-30%);
-  }
-  @include rwd(768){
-    transform: translateX(-60%);
-  }
-  @include rwd(600){
-    transform: translateX(-70%);
-  }
-  @include rwd(400){
-    transform: translateX(-112%);
-  }
-  .reflection_list {
-    .reflection_item {
-      .slick-list {
-        max-width: 700px;
-        @include rwd(1200){
-          max-width: 500px;
-        }
-        @include rwd(1200){
-          max-width: 500px;
-        }
-        @include rwd(600){
-          max-width: 400px;
-        }
-        @include rwd(400){
-          max-width: 300px;
-        }
-        .slick-track {
-          max-width: 600%;
+  //   reservation_right_box reflection
+  .reservation_right_box {
+    width: 70%;
+    padding: 120px 0 0 0;
+    @include rwd(1200) {
+      width: 100%;
+    }
+    .reflection_list {
+      .reflection_item {
+        .slick-list {
+          max-width: 96%;
+          .slick-track {
+            max-width: 600%;
+          }
         }
       }
-    }
       .slick-dots {
         top: auto;
         bottom: -20px;
@@ -917,6 +842,12 @@ body {
               content: "";
             }
           }
+          @include rwd(500) {
+            margin: 0 4px;
+          }
+        }
+        @include rwd(400) {
+          left: 10%;
         }
         .slick-active {
           background-color: #0689c8;
@@ -925,26 +856,24 @@ body {
     }
     .reflection_title {
       p {
-        width: 100%;
+        width: 96%;
         height: 50px;
+        padding-left: 20px;
+        margin: 0 10px;
         background-color: #97999b;
         color: #fff;
         font-weight: bolder;
-        padding-left: 20px;
         font-size: 17px;
         display: flex;
         align-items: center;
       }
     }
     .reflection_introduction {
-      width: 100%;
-      margin-top: 50px;
+      width: 95%;
+      margin: 50px 0 0 10px;
       border-left: 8px solid #97999b;
       display: flex;
       justify-content: space-between;
-      @include rwd(768){
-        width: 100%;
-      }
       p {
         padding: 10px 30px;
         background-color: #97999b;
@@ -968,24 +897,24 @@ body {
           border-right: 1px solid #97999b;
         }
       }
-      .reflection_list{
+      .reflection_list {
         line-height: 40px;
         font-size: 15px;
       }
-      .reflection_context{
+      .reflection_context {
         padding-left: 20px;
         line-height: 40px;
         font-size: 15px;
-        ul{
-            padding-top: 30px;
-            li{
-                list-style: disc;
-            }
+        ul {
+          padding-top: 30px;
+          li {
+            list-style: disc;
+          }
         }
       }
     }
     .reflection_pricing {
-      margin-top: 50px;
+      margin: 50px 0 0 10px;
       border-left: 8px solid #97999b;
       .title {
         padding-left: 20px;
@@ -999,13 +928,10 @@ body {
       padding: 40px 0 0 20px;
     }
     .reflection_order {
-      width: 100%;
+      width: 98%;
       margin-top: 50px;
       display: flex;
       justify-content: space-between;
-      @include rwd(768){
-        width: 100%;
-      }
       p {
         padding: 10px 30px;
         background-color: #97999b;
@@ -1015,34 +941,17 @@ body {
   }
   //   reservation_right_box linshan
   .reservation_right_box {
+    width: 70%;
     padding: 120px 0 0 0;
-    @include rwd(1200){
-      transform: translateX(-30%);
-    }
-    @include rwd(768){
-      transform: translateX(-60%);
-    }
-    @include rwd(600){
-      transform: translateX(-70%);
-    }
-    @include rwd(400){
-      transform: translateX(-112%);
+    @include rwd(1200) {
+      width: 100%;
     }
     .linshan_list {
       .linshan_item {
         .slick-list {
-          max-width: 700px;
-          @include rwd(1200){
-            max-width: 500px;
-          }
-          @include rwd(1200){
-            max-width: 500px;
-          }
-          @include rwd(600){
-            max-width: 400px;
-          }
+          max-width: 96%;
           .slick-track {
-            max-width: 600%;
+            max-width: 900%;
           }
         }
       }
@@ -1058,34 +967,38 @@ body {
               content: "";
             }
           }
+          @include rwd(500) {
+            margin: 0 4px;
+          }
         }
         .slick-active {
           background-color: #0689c8;
+        }
+        @include rwd(500) {
+          left: 0%;
         }
       }
     }
     .linshan_title {
       p {
-        width: 100%;
+        width: 96%;
         height: 50px;
+        padding-left: 20px;
+        margin: 0 10px;
         background-color: #97999b;
         color: #fff;
         font-weight: bolder;
-        padding-left: 20px;
         font-size: 17px;
         display: flex;
         align-items: center;
       }
     }
     .linshan_introduction {
-      width: 100%;
-      margin-top: 50px;
+      width: 95%;
+      margin: 50px 0 0 10px;
       border-left: 8px solid #97999b;
       display: flex;
       justify-content: space-between;
-      @include rwd(768){
-        width: 100%;
-      }
       p {
         padding: 10px 30px;
         background-color: #97999b;
@@ -1109,24 +1022,24 @@ body {
           border-right: 1px solid #97999b;
         }
       }
-      .linshan_list{
+      .linshan_list {
         line-height: 40px;
         font-size: 15px;
       }
-      .linshan_context{
+      .linshan_context {
         padding-left: 20px;
         line-height: 40px;
         font-size: 15px;
-        ul{
-            padding-top: 30px;
-            li{
-                list-style: disc;
-            }
+        ul {
+          padding-top: 30px;
+          li {
+            list-style: disc;
+          }
         }
       }
     }
     .linshan_pricing {
-      margin-top: 50px;
+      margin: 50px 0 0 10px;
       border-left: 8px solid #97999b;
       .title {
         padding-left: 20px;
@@ -1140,13 +1053,10 @@ body {
       padding: 40px 0 0 20px;
     }
     .linshan_order {
-      width: 100%;
+      width: 98%;
       margin-top: 50px;
       display: flex;
       justify-content: space-between;
-      @include rwd(768){
-        width: 100%;
-      }
       p {
         padding: 10px 30px;
         background-color: #97999b;
@@ -1158,9 +1068,9 @@ body {
 
 // footer
 .footer {
-  background: #eeeeee;
   margin: 0 auto;
   padding-bottom: 20px;
+  background: #eeeeee;
   border-bottom: 10px solid #1a1a1a;
   display: flex;
   position: relative;
@@ -1169,7 +1079,7 @@ body {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    @include rwd(1200){
+    @include rwd(1200) {
       margin: 0 10px;
     }
     .txt {
@@ -1205,8 +1115,7 @@ body {
   width: 30%;
   height: 60%;
   padding: 5px;
-  margin-left: -35%;
-  margin-top: 0%;
+  margin: 0 0 0 -35%;
   position: fixed;
   top: 20%;
   left: 70%;

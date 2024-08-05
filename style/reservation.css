@@ -199,9 +199,9 @@ body {
   }
 }
 .logo a img {
-  margin-top: 10px;
   width: 130px;
   height: 160px;
+  margin-top: 10px;
 }
 @media screen and (max-width: 768px) {
   .logo a img {
@@ -256,8 +256,7 @@ body {
 .logo .link .checkout img {
   width: 18px;
   height: 20px;
-  margin-right: 10px;
-  margin-top: 0;
+  margin: 0 10px 0 0;
 }
 .logo .link .checkout {
   margin-left: 10px;
@@ -283,6 +282,7 @@ body {
   .logo .menu {
     width: 76px;
     height: 28px;
+    margin: 30px 5px 5px 0;
     display: block;
     text-align: center;
     background: url(../img/online/menu.jpg) center center;
@@ -290,7 +290,6 @@ body {
     position: absolute;
     right: 0;
     bottom: 0;
-    margin: 30px 5px 5px 0;
     font-size: 13px;
     line-height: 28px;
   }
@@ -362,9 +361,9 @@ body {
 }
 .menu_coin a {
   width: 50%;
+  margin: 0 5px;
   display: flex;
   background-color: #97999b;
-  margin: 0 5px;
 }
 .menu_coin .website_item,
 .menu_coin .checkout_item {
@@ -411,8 +410,8 @@ body {
   }
 }
 .reservation_title ul li {
-  padding: 10px 0;
   height: 60px;
+  padding: 10px 0;
   cursor: pointer;
 }
 .reservation_title ul li:hover .about_us,
@@ -523,9 +522,9 @@ body {
 
 .reservation_box {
   width: 1200px;
+  padding-bottom: 100px;
   margin: 0 auto;
   display: flex;
-  padding-bottom: 100px;
 }
 .reservation_box .reservation_left_box {
   padding-right: 100px;
@@ -571,15 +570,15 @@ body {
   padding-left: 20px;
 }
 .reservation_box .reservation_left_box .reservation_item .in_rooms .in_rooms_title {
-  display: flex;
   padding-bottom: 20px;
+  display: flex;
 }
 .reservation_box .reservation_left_box .reservation_item .in_rooms .in_rooms_title i {
   padding-right: 10px;
 }
 .reservation_box .reservation_left_box .reservation_item .in_rooms .in_rooms_date {
-  display: flex;
   padding-bottom: 10px;
+  display: flex;
 }
 .reservation_box .reservation_left_box .reservation_item .in_rooms .in_rooms_date .in_rooms_years,
 .reservation_box .reservation_left_box .reservation_item .in_rooms .in_rooms_date .in_rooms_month,
@@ -590,8 +589,8 @@ body {
   padding: 0 5px;
 }
 .reservation_box .reservation_left_box .reserve_rooms {
-  display: flex;
   padding: 0 50px 10px 10px;
+  display: flex;
 }
 .reservation_box .reservation_left_box .rooms_find {
   margin: 20px 10px 0;
@@ -631,8 +630,8 @@ body {
 }
 @media screen and (max-width: 1200px) {
   .reservation_box .reservation_right_box {
-    transform: translateX(-200%);
     margin-left: 0;
+    transform: translateX(-200%);
   }
 }
 .reservation_box .reservation_right_box .reservation_right_item .title {
@@ -654,8 +653,8 @@ body {
 }
 @media screen and (max-width: 1200px) {
   .six_right_box {
-    transform: translateX(-37%);
     margin-left: 0;
+    transform: translateX(-37%);
   }
 }
 @media screen and (max-width: 420px) {
@@ -665,14 +664,14 @@ body {
 }
 .six_right_box .reservation_right_item .six_title {
   padding-top: 10px;
+  margin-left: 40px;
   font-size: 17px;
   color: #191919;
   font-weight: bold;
-  margin-left: 40px;
 }
 .six_right_box .reservation_right_item .six_right_main {
-  margin: 50px 0 0 30px;
   padding: 5px 0 0 10px;
+  margin: 50px 0 0 30px;
 }
 @media screen and (max-width: 1200px) {
   .six_right_box .reservation_right_item .six_right_main {
@@ -704,10 +703,10 @@ body {
   font-weight: bolder;
 }
 .six_right_box .reservation_right_item .six_right_main .six_list .six_num span {
+  padding: 5px 5px 5px 20px;
   font-style: italic;
   font-weight: bolder;
   font-size: 22px;
-  padding: 5px 5px 5px 20px;
 }
 .six_right_box .reservation_right_item .six_right_main .six_list .six_num img {
   width: 17px;
@@ -725,12 +724,12 @@ body {
   font-weight: bolder;
 }
 .six_right_box .reservation_right_item .six_right_main .six_list .six_icon .icon_title p {
-  font-weight: bolder;
   padding: 50px 0 0 50px;
+  font-weight: bolder;
 }
 .six_right_box .reservation_right_item .six_right_main .six_list .six_icon .icon_title .txt p {
-  font-weight: normal;
   padding-top: 10px;
+  font-weight: normal;
 }
 .six_right_box .reservation_right_item .six_right_main .six_list:last-child {
   padding-top: 50px;
@@ -741,14 +740,13 @@ body {
 }
 @media screen and (max-width: 1200px) {
   .privacy_right_box {
-    transform: translateX(-37%);
     margin-left: 0;
+    transform: translateX(-37%);
   }
 }
 @media screen and (max-width: 440px) {
   .privacy_right_box {
     transform: translateX(-41%);
-    margin-left: 0;
   }
 }
 .privacy_right_box .privacy_title {
@@ -789,8 +787,8 @@ body {
 }
 @media screen and (max-width: 1200px) {
   .SSL_right_box {
-    transform: translateX(-37%);
     margin-left: 0;
+    transform: translateX(-37%);
   }
 }
 .SSL_right_box .SSL_title {
@@ -853,13 +851,13 @@ body {
 }
 
 .login_right_box {
-  padding: 100px 0 0 0;
   width: 100%;
+  padding: 100px 0 0 0;
 }
 @media screen and (max-width: 1200px) {
   .login_right_box {
-    transform: translateX(-37%);
     margin-left: 0;
+    transform: translateX(-37%);
   }
 }
 .login_right_box .login_txt {
@@ -1037,8 +1035,8 @@ body {
 .login_right_box .visitor_log .visitor_log_in {
   width: 120px;
   padding: 10px 0;
-  text-align: center;
   margin-left: 110px;
+  text-align: center;
   letter-spacing: 2px;
   color: #97999b;
   border: 1px solid #97999b;
@@ -1052,8 +1050,8 @@ body {
 }
 
 .register_right_box {
-  padding: 100px 0 0 0;
   width: 800px;
+  padding: 100px 0 0 0;
 }
 @media screen and (max-width: 1200px) {
   .register_right_box {
@@ -1373,9 +1371,7 @@ body {
   .register_right_box .register_txt .company_tel input,
   .register_right_box .register_txt .company_address input {
     width: 70%;
-    margin-top: 10px;
-    padding: 10px 0 10px 10px;
-    margin-right: 20px;
+    margin: 10px 20px 0 0;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1499,8 +1495,8 @@ body {
 }
 
 .footer {
-  background: #eeeeee;
   margin: 0 auto;
+  background: #eeeeee;
   padding-bottom: 20px;
   border-bottom: 10px solid #1a1a1a;
   display: flex;
@@ -1546,8 +1542,7 @@ body {
   width: 30%;
   height: 60%;
   padding: 5px;
-  margin-left: -35%;
-  margin-top: 0%;
+  margin: 0 0 0 -35%;
   position: fixed;
   top: 20%;
   left: 70%;

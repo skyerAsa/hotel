@@ -31,9 +31,9 @@ body {
   }
   a {
     img {
-      margin-top: 10px;
       width: 130px;
       height: 160px;
+      margin-top: 10px;
       @include rwd(768){
         width: 30px;
         height: 40px;
@@ -80,8 +80,7 @@ body {
       img {
         width: 18px;
         height: 20px;
-        margin-right: 10px;
-        margin-top: 0;
+        margin:0 10px 0 0;
       }
     }
     .checkout {
@@ -105,6 +104,7 @@ body {
     @include rwd(768) {
       width: 76px;
       height: 28px;
+      margin: 30px 5px 5px 0;
       display: block;
       text-align: center;
       background: url(../img/online/menu.jpg) center center;
@@ -112,7 +112,6 @@ body {
       position: absolute;
       right: 0;
       bottom: 0;
-      margin: 30px 5px 5px 0;
       font-size: 13px;
       line-height: 28px;
     }
@@ -182,9 +181,9 @@ body {
   display: flex;
   a {
     width: 50%;
+    margin: 0 5px;
     display: flex;
     background-color: #97999b;
-    margin: 0 5px;
   }
   .website_item,
   .checkout_item {
@@ -229,8 +228,8 @@ body {
       display: none;
     }
     li {
-      padding: 10px 0;
       height: 60px;
+      padding: 10px 0;
       cursor: pointer;
       &:hover {
         .about_us,
@@ -329,9 +328,9 @@ body {
 // reservation_box
 .reservation_box {
   width: 1200px;
+  padding-bottom: 100px;
   margin: 0 auto;
   display: flex;
-  padding-bottom: 100px;
   // reservation_left_box
   .reservation_left_box {
     padding-right: 100px;
@@ -374,15 +373,15 @@ body {
       .in_rooms {
         padding-left: 20px;
         .in_rooms_title {
-          display: flex;
           padding-bottom: 20px;
+          display: flex;
           i {
             padding-right: 10px;
           }
         }
         .in_rooms_date {
-          display: flex;
           padding-bottom: 10px;
+          display: flex;
           .in_rooms_years,
           .in_rooms_month,
           .in_rooms_day {
@@ -395,8 +394,8 @@ body {
       }
     }
     .reserve_rooms {
-      display: flex;
       padding: 0 50px 10px 10px;
+      display: flex;
     }
     .rooms_find {
       margin: 20px 10px 0;
@@ -438,8 +437,8 @@ body {
   .reservation_right_box {
     margin: 140px 0 0 100px;
     @include rwd(1200) {
-      transform: translateX(-200%);
       margin-left: 0;
+      transform: translateX(-200%);
     }
     .reservation_right_item {
       .title {
@@ -463,8 +462,8 @@ body {
 .six_right_box {
   margin-top: 100px;
   @include rwd(1200) {
-    transform: translateX(-37%);
     margin-left: 0;
+    transform: translateX(-37%);
   }
   @include rwd(420) {
     transform: translateX(-41%);
@@ -472,14 +471,14 @@ body {
   .reservation_right_item {
     .six_title {
       padding-top: 10px;
+      margin-left: 40px;
       font-size: 17px;
       color: #191919;
       font-weight: bold;
-      margin-left: 40px;
     }
     .six_right_main {
-      margin: 50px 0 0 30px;
       padding: 5px 0 0 10px;
+      margin: 50px 0 0 30px; 
       @include rwd(1200) {
         margin-top: 0;
       }
@@ -500,10 +499,10 @@ body {
           font-size: 16px;
           font-weight: bolder;
           span {
+            padding: 5px 5px 5px 20px;
             font-style: italic;
             font-weight: bolder;
             font-size: 22px;
-            padding: 5px 5px 5px 20px;
           }
           img {
             width: 17px;
@@ -522,13 +521,13 @@ body {
               font-weight: bolder;
             }
             p {
-              font-weight: bolder;
               padding: 50px 0 0 50px;
+              font-weight: bolder;
             }
             .txt {
               p {
-                font-weight: normal;
                 padding-top: 10px;
+                font-weight: normal;
               }
             }
           }
@@ -545,12 +544,11 @@ body {
 .privacy_right_box {
   margin: 100px 0 0 20px;
   @include rwd(1200) {
-    transform: translateX(-37%);
     margin-left: 0;
+    transform: translateX(-37%); 
   }
   @include rwd(440) {
     transform: translateX(-41%);
-    margin-left: 0;
   }
   .privacy_title {
     padding-top: 20px;
@@ -584,8 +582,8 @@ body {
 .SSL_right_box {
   margin: 100px 0 0 20px;
   @include rwd(1200) {
-    transform: translateX(-37%);
     margin-left: 0;
+    transform: translateX(-37%);
   }
 
   .SSL_title {
@@ -622,7 +620,6 @@ body {
       }
       p {
         width: 100%;
-        // text-align: center;
         margin-right: 50px;
         @include rwd(570) {
           margin-right: 0;
@@ -637,11 +634,11 @@ body {
 
 // login_right_box
 .login_right_box {
-  padding: 100px 0 0 0;
   width: 100%;
+  padding: 100px 0 0 0;
   @include rwd(1200) {
-    transform: translateX(-37%);
     margin-left: 0;
+    transform: translateX(-37%);
   }
   .login_txt {
     padding: 20px 0 0 30px;
@@ -774,8 +771,8 @@ body {
     .visitor_log_in {
       width: 120px;
       padding: 10px 0;
-      text-align: center;
       margin-left: 110px;
+      text-align: center;
       letter-spacing: 2px;
       color: #97999b;
       border: 1px solid #97999b;
@@ -790,8 +787,8 @@ body {
 
 // register_right_box
 .register_right_box {
-  padding: 100px 0 0 0;
   width: 800px;
+  padding: 100px 0 0 0;
   @include rwd(1200) {
     transform: translateX(-37%);
     margin-left: 0;
@@ -984,9 +981,7 @@ body {
         padding: 10px 0 10px 10px;
         @include rwd(768) {
           width: 70%;
-          margin-top: 10px;
-          padding: 10px 0 10px 10px;
-          margin-right: 20px;
+          margin: 10px 20px 0 0;
         }
       }
     }
@@ -1064,8 +1059,8 @@ body {
 
 // footer
 .footer {
-  background: #eeeeee;
   margin: 0 auto;
+  background: #eeeeee;
   padding-bottom: 20px;
   border-bottom: 10px solid #1a1a1a;
   display: flex;
@@ -1112,8 +1107,7 @@ body {
   width: 30%;
   height: 60%;
   padding: 5px;
-  margin-left: -35%;
-  margin-top: 0%;
+  margin:0 0 0 -35%;
   position: fixed;
   top: 20%;
   left: 70%;

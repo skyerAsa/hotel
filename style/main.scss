@@ -10,9 +10,6 @@
 html,
 body {
   scroll-behavior: smooth;
-  // &:has(.menu_bg.on) {
-  //   overflow-y: hidden;
-  // }
   &:has(.m_bg.on) {
     overflow-y: hidden;
   }
@@ -178,9 +175,9 @@ body {
   }
   &::before {
     content: "";
-    display: flex;
     width: 100%;
     height: 100%;
+    display: flex;
     background: linear-gradient(
       to bottom,
       rgba(59, 175, 219, 0.5) 0%,
@@ -312,9 +309,9 @@ body {
         }
         h2 {
           width: 19px;
+          padding-right: 1px;
           display: flex;
           justify-content: center;
-          padding-right: 1px;
           align-items: center;
           writing-mode: vertical-lr;
         }
@@ -322,9 +319,9 @@ body {
     }
     .menu_bg_list {
       height: 100%;
+      padding: 20px 80px 0 0;
       display: flex;
       align-items: center;
-      padding: 20px 80px 0 0;
       @include rwd(840) {
         flex-direction: column;
       }
@@ -358,18 +355,18 @@ body {
           left: 0;
         }
         @include rwd(1180) {
-          position: relative;
           padding-left: 0;
+          position: relative;
           left: 2%;
           top: auto;
         }
         @include rwd(840) {
-          flex-wrap: nowrap;
-          flex-direction: column;
-          left: auto;
           width: 100%;
           margin-right: 70px;
           padding-left: 50px;
+          flex-wrap: nowrap;
+          flex-direction: column;
+          left: auto;
         }
         li {
           width: 40%;
@@ -395,7 +392,6 @@ body {
             letter-spacing: 0.5px;
             @include rwd(1180) {
               font-size: 28px;
-              // white-space: nowrap;
             }
           }
           p {
@@ -551,7 +547,6 @@ body {
   &.mid {
     position: absolute;
     top: 533%;
-    // right: -8px;
   }
   ul {
     text-align: center;
@@ -564,9 +559,9 @@ body {
       position: relative;
       transition: all 0.2s linear;
       .line {
+        width: 1px;
         height: 40px;
         position: absolute;
-        width: 1px;
         background-color: #b2b2b2;
         z-index: 2;
       }
@@ -608,8 +603,8 @@ body {
         margin-top: 10px;
       }
       h2 {
-        opacity: 0;
         padding: 5px 0;
+        opacity: 0;
         writing-mode: vertical-lr;
         position: absolute;
         left: 25px;
@@ -644,7 +639,6 @@ body {
     max-width: 700px;
     position: absolute;
     background-color: #fff;
-    // margin: 0 20px;
     .privacy_close {
       width: 30px;
       height: 30px;
@@ -674,9 +668,9 @@ body {
       padding: 50px 30px 30px;
       font-size: 15px;
       h2 {
+        padding-bottom: 15px;
         font-size: 20px;
         font-weight: bolder;
-        padding-bottom: 15px;
       }
       .privacy_about {
         margin-top: 25px;
@@ -695,9 +689,9 @@ body {
           }
         }
         button {
+          width: 80%;
           height: 40px;
           min-width: 165px;
-          width: 80%;
           padding: 10px;
           position: absolute;
           background-color: transparent;
@@ -711,8 +705,8 @@ body {
           cursor: pointer;
           @include rwd(540) {
             width: 100%;
-            position: relative;
             margin-bottom: 10px;
+            position: relative;
           }
         }
         .arrow {
@@ -775,9 +769,9 @@ body {
         padding: 80px 0 20px;
       }
       .need {
+        padding-bottom: 20px;
         display: flex;
         justify-content: space-between;
-        padding-bottom: 20px;
         h3 {
           span {
             font-weight: bolder;
@@ -786,8 +780,8 @@ body {
         .need_txt {
           display: flex;
           p {
-            color: #63bedf;
             padding-right: 10px;
+            color: #63bedf;
           }
           .slide_need {
             cursor: pointer;
@@ -800,8 +794,8 @@ body {
         }
       }
       .manage_txt {
-        background-color: #e1e1e1;
         padding: 18px 15px;
+        background-color: #e1e1e1;
         font-size: 15px;
         line-height: 1.35;
         transition: all 1s linear;
@@ -950,9 +944,9 @@ body {
         }
       }
       h2 {
+        padding-top: 20px;
         top: 50%;
         left: 7%;
-        padding-top: 20px;
         font-size: 23px;
         opacity: 0;
         display: flex;
@@ -988,8 +982,8 @@ body {
       .txt {
         width: 100%;
         height: 100%;
-        margin: auto;
         max-width: 1720px;
+        margin: auto;
         padding: 68px 19% 20px 160px;
         z-index: 2;
         position: absolute;
@@ -1029,9 +1023,9 @@ body {
       bottom: 2%;
     }
     h2 {
-      max-width: 110px;
-      width: 100%;
       height: 70px;
+      width: 100%;
+      max-width: 110px;
       padding: 20px;
       display: flex;
       align-items: center;
@@ -1308,9 +1302,8 @@ body {
     }
     .brand_title {
       width: 100%;
+      padding-bottom: 30px 0 15px 0;
       margin-right: 25px;
-      padding-bottom: 15px;
-      padding-top: 30px;
       position: relative;
       display: inline-block;
       font-size: 20px;
@@ -1370,9 +1363,9 @@ body {
     }
   }
   .brand_img {
-    position: relative;
-    margin: 0 30px;
     width: 570px;
+    margin: 0 30px;
+    position: relative;
     clip-path: circle(50% at 50% 50%);
     overflow: hidden;
     aspect-ratio: 1 / 1;
@@ -1467,8 +1460,8 @@ body {
         font-weight: bolder;
         writing-mode: vertical-lr;
         @include rwd(1180) {
-          writing-mode: initial;
           padding-right: 20px;
+          writing-mode: initial;
         }
       }
       p {
@@ -1592,21 +1585,20 @@ body {
       &::before {
         content: "";
         width: 100%;
+        height: 1px;
         position: absolute;
         bottom: 20%;
-        height: 1px;
         background-color: #63bedf;
       }
     }
   }
   h3 {
-    letter-spacing: 2.5px;
     padding-top: 20px;
+    letter-spacing: 2.5px;
   }
   .field_bg {
     width: 100%;
-    padding-top: 50px;
-    padding-bottom: 100px;
+    padding-top: 50px 0 100px 0;
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -1983,8 +1975,8 @@ body {
           margin: 0 20px;
         }
         .title {
-          display: flex;
           padding-bottom: 50px;
+          display: flex;
           border-right: 1px solid rgba($color: #000000, $alpha: 0.2);
           @include rwd(1180) {
             border-right: 0px;
@@ -2014,9 +2006,9 @@ body {
             &::before {
               content: "";
               width: 60%;
+              height: 1px;
               position: absolute;
               bottom: 20%;
-              height: 1px;
               background-color: #63bedf;
             }
           }
@@ -2259,9 +2251,9 @@ body {
 
 // Rooms
 .rooms {
-  display: flex;
   padding: 105px 140px 50px;
   margin: 0 30px;
+  display: flex;
   flex-direction: column;
   align-items: center;
   @include rwd(1180) {
@@ -3248,8 +3240,7 @@ body {
         padding-left: 50px;
       }
       @include rwd(700) {
-        padding: 0;
-        padding-left: 50px;
+        padding: 0 0 0 50px;
         margin-left: 50px;
       }
       @include rwd(600) {
@@ -3677,9 +3668,9 @@ body {
       writing-mode: vertical-lr;
     }
     span {
+      margin-top: 30px;
       writing-mode: vertical-lr;
       position: relative;
-      margin-top: 30px;
       &::before {
         content: "";
         position: absolute;
@@ -3728,9 +3719,9 @@ body {
   }
   h2 {
     padding-bottom: 20px;
+    margin: initial;
     font-size: 36px;
     line-height: 1.5;
-    margin: initial;
     font-weight: bold;
     position: relative;
   }

@@ -269,8 +269,8 @@ img {
   }
 }
 .clous_content .clous_introduce {
-  display: flex;
   padding: 20px 0 100px 60px;
+  display: flex;
 }
 @media screen and (max-width: 767px) {
   .clous_content .clous_introduce {
@@ -359,12 +359,12 @@ img {
   }
 }
 .clous_content .clous_item h2 {
+  padding: 12px 0;
+  padding-top: 60px;
   border-bottom: 1px solid #d6d6d6;
   color: #191919;
   font-size: 24px;
   font-weight: bolder;
-  padding: 12px 0;
-  padding-top: 60px;
 }
 .clous_content .clous_item .clous_txt {
   margin-top: 20px;
@@ -398,8 +398,8 @@ img {
   }
 }
 .rooms_list ul {
-  display: flex;
   padding-left: 60px;
+  display: flex;
   justify-content: space-between;
 }
 @media screen and (max-width: 1180px) {
@@ -490,8 +490,8 @@ img {
   padding-bottom: 20px;
 }
 .rooms_price li h2 {
-  font-weight: bolder;
   padding-bottom: 5px;
+  font-weight: bolder;
 }
 .rooms_price li span {
   padding: 0 10px;
@@ -646,8 +646,8 @@ img {
   }
 }
 .linshan_content .linshan_introduce {
-  display: flex;
   padding: 20px 0 100px 60px;
+  display: flex;
 }
 @media screen and (max-width: 767px) {
   .linshan_content .linshan_introduce {
@@ -738,12 +738,12 @@ img {
   }
 }
 .linshan_content .linshan_item h2 {
+  padding: 12px 0;
+  padding-top: 60px;
   border-bottom: 1px solid #d6d6d6;
   color: #191919;
   font-size: 24px;
   font-weight: bolder;
-  padding: 12px 0;
-  padding-top: 60px;
 }
 .linshan_content .linshan_item .linshan_txt {
   margin-top: 20px;

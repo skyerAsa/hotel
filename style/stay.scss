@@ -97,8 +97,8 @@
     padding: 0 20px;
   }
   .clous_introduce {
-    display: flex;
     padding: 20px 0 100px 60px;
+    display: flex;    
     @include rwd(767) {
       padding-left: 0;
       display: block;
@@ -178,12 +178,12 @@
       padding-left: 0;
     }
     h2 {
+      padding: 12px 0;
+      padding-top: 60px;
       border-bottom: 1px solid #d6d6d6;
       color: #191919;
       font-size: 24px;
       font-weight: bolder;
-      padding: 12px 0;
-      padding-top: 60px;
     }
     .clous_txt {
       margin-top: 20px;
@@ -216,8 +216,8 @@
     padding: 0;
   }
   ul {
-    display: flex;
     padding-left: 60px;
+    display: flex;  
     justify-content: space-between;
     @include rwd(1180) {
       padding: 0 20px;
@@ -301,8 +301,8 @@
   li {
     padding-bottom: 20px;
     h2 {
-      font-weight: bolder;
       padding-bottom: 5px;
+      font-weight: bolder;
     }
     span {
       padding: 0 10px;
@@ -448,8 +448,8 @@
     padding: 0 20px;
   }
   .linshan_introduce {
-    display: flex;
     padding: 20px 0 100px 60px;
+    display: flex;  
     @include rwd(767) {
       padding-left: 0;
       display: block;
@@ -531,12 +531,12 @@
       padding-left: 0;
     }
     h2 {
+      padding: 12px 0;
+      padding-top: 60px;
       border-bottom: 1px solid #d6d6d6;
       color: #191919;
       font-size: 24px;
       font-weight: bolder;
-      padding: 12px 0;
-      padding-top: 60px;
     }
     .linshan_txt {
       margin-top: 20px;
