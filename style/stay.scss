@@ -130,6 +130,9 @@
             img {
               width: 100%;
               height: 500px;
+              @include rwd(499){
+                height: 100%;
+              }
             }
           }
         }

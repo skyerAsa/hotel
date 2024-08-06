@@ -57,10 +57,10 @@
         content: "";
         width: 2px;
         height: 35px;
+        position: absolute;
         left: 0;
         bottom: 0;
-        background-color: #fff;
-        position: absolute;
+        background-color: #fff; 
         font-size: 12px;
       }
       &::before {
@@ -116,9 +116,9 @@
         }
       }
       .language_list {
-        position: absolute;
         display: flex;
         flex-direction: column;
+        position: absolute;
         top: 0;
         opacity: 0;
         transition: all 0.5s linear;
