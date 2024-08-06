@@ -409,7 +409,6 @@ body {
 
 // collection_list
 .collection_list {
-  // width: 1200px;
   margin: 0 auto;
   display: flex;
   .collection_item {
@@ -510,7 +509,7 @@ body {
   @include rwd(1200) {
     width: auto;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0 10px;
   }
   /*variables*/
   :root {
@@ -616,7 +615,6 @@ body {
 
 // collection_day
 .collection_day {
-  // width: 1200px;
   margin: 0 auto;
   padding-left: 10px;
   .rooms_days {

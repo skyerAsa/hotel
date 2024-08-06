@@ -523,12 +523,9 @@ body {
   @include rwd(1200) {
     width: auto;
     max-width: 100%;
-    margin: 0 5px;
+    margin: 0 10px;
   }
   @include rwd(768) {
-    max-width: auto;
-  }
-  @include rwd(550) {
     max-width: auto;
   }
   /*variables*/

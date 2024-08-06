@@ -732,15 +732,10 @@ body {
   .rooms_calendar {
     width: auto;
     max-width: 100%;
-    margin: 0 5px;
+    margin: 0 10px;
   }
 }
 @media screen and (max-width: 768px) {
-  .rooms_calendar {
-    max-width: auto;
-  }
-}
-@media screen and (max-width: 550px) {
   .rooms_calendar {
     max-width: auto;
   }
