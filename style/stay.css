@@ -310,9 +310,9 @@ img {
   width: 100%;
   height: 500px;
 }
-@media screen and (max-width: 499px) {
+@media screen and (max-width: 600px) {
   .clous_content .clous_carousel .clous_carousel_b .slick-track .slick-slide .clous_carousel_b_img img {
-    height: 100%;
+    height: 300px;
   }
 }
 .clous_content .clous_carousel .clous_carousel_m {
