@@ -216,7 +216,7 @@ img {
 }
 @media screen and (max-width: 840px) {
   .footer .footer_box .wrap {
-    justify-content: center;
+    justify-content: start;
     align-items: center;
   }
 }
@@ -304,6 +304,7 @@ img {
   .footer .footer_box .wrap .left_box .left_box_img {
     max-width: 320px;
     padding-right: 60px;
+    width: 100%;
   }
 }
 .footer .footer_box .wrap .left_box .title {
@@ -403,6 +404,9 @@ img {
 .footer .footer_box .wrap .middle_box .tel p:hover::after,
 .footer .footer_box .wrap .middle_box .email p:hover::after {
   width: 100%;
+}
+.footer .footer_box .wrap .middle_box .address {
+  white-space: nowrap;
 }
 .footer .footer_box .wrap .middle_box .message {
   padding: 6px 0;

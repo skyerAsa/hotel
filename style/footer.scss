@@ -36,7 +36,7 @@
           justify-content: center;
         }
         @include rwd(840) {
-          justify-content: center;
+          justify-content: start;
           align-items: center;
         }
         @include rwd(400) {
@@ -113,7 +113,7 @@
             @include rwd(460){
               max-width: 320px;
               padding-right: 60px;
-      
+              width: 100%;
             }
           }
           .title {
@@ -208,6 +208,9 @@
                 }
               }
             }
+          }
+          .address{
+            white-space: nowrap;
           }
           .message {
             padding: 6px 0;
