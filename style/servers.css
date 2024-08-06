@@ -384,7 +384,7 @@ img {
 .tags_list {
   width: 95%;
   padding: 10px;
-  margin: 100px 20px;
+  margin: 100px 10px;
   background-color: #63bedf;
   color: #fff;
   border-radius: 10px;
@@ -440,13 +440,12 @@ img {
 .facility_item .wrap {
   width: 100%;
   max-width: 1540px;
-  padding: 0 20px;
   display: flex;
   flex-wrap: wrap;
 }
 .facility_item .wrap .facility_list {
   width: 50%;
-  padding: 0 15px 50px;
+  padding: 0 0px 50px;
 }
 @media screen and (max-width: 960px) {
   .facility_item .wrap .facility_list {
@@ -464,7 +463,7 @@ img {
   padding: 10px 20px;
   position: absolute;
   top: 45%;
-  left: 45%;
+  left: 40%;
   border: 1px solid #fff;
   z-index: 2;
   color: #fff;

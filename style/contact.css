@@ -277,6 +277,9 @@ img {
   color: #737373;
   font-size: 16px;
 }
+.qustion_all .qustion_form select option {
+  margin: 0 10px;
+}
 .qustion_all .qustion_form .qustion_list {
   display: flex;
   flex-wrap: wrap;

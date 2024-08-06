@@ -1897,6 +1897,7 @@ body:has(.privacy_option.on) {
   padding: 20px 80px 0 0;
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 @media screen and (max-width: 840px) {
   .menu_bg .wrap .menu_bg_list {
