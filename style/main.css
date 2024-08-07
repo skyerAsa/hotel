@@ -388,10 +388,10 @@ img {
   content: "";
   width: 2px;
   height: 35px;
+  position: absolute;
   left: 0;
   bottom: 0;
   background-color: #fff;
-  position: absolute;
   font-size: 12px;
 }
 .header .burger .menu::before {
@@ -429,11 +429,11 @@ img {
 .header .header_box .language_box .language_txt {
   padding: 25px 10px;
   display: flex;
+  justify-content: center;
+  align-items: flex-end;
   border: 1px solid #fff;
   color: #fff;
   border-radius: 50px;
-  justify-content: center;
-  align-items: flex-end;
   writing-mode: vertical-lr;
   position: relative;
   cursor: pointer;
@@ -446,9 +446,9 @@ img {
   padding-top: 20px;
 }
 .header .header_box .language_box .language_list {
-  position: absolute;
   display: flex;
   flex-direction: column;
+  position: absolute;
   top: 0;
   opacity: 0;
   transition: all 0.5s linear;
@@ -577,8 +577,8 @@ img {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 .header_m.on {
-  background-color: transparent;
-  filter: contrast(0) brightness(10);
+  background-color: #fff;
+  filter: contrast(100%) brightness(1);
 }
 @media screen and (max-width: 1180px) {
   .header_m {
@@ -635,10 +635,10 @@ img {
   content: "";
   width: 35px;
   height: 2px;
+  position: absolute;
   right: 0;
   bottom: 0;
   background-color: #fff;
-  position: absolute;
   display: flex;
   font-size: 12px;
 }
@@ -922,7 +922,7 @@ img {
 }
 @media screen and (max-width: 840px) {
   .footer .footer_box .wrap {
-    justify-content: center;
+    justify-content: start;
     align-items: center;
   }
 }
@@ -1008,6 +1008,7 @@ img {
 }
 @media screen and (max-width: 460px) {
   .footer .footer_box .wrap .left_box .left_box_img {
+    width: 100%;
     max-width: 320px;
     padding-right: 60px;
   }
@@ -1109,6 +1110,9 @@ img {
 .footer .footer_box .wrap .middle_box .tel p:hover::after,
 .footer .footer_box .wrap .middle_box .email p:hover::after {
   width: 100%;
+}
+.footer .footer_box .wrap .middle_box .address {
+  white-space: nowrap;
 }
 .footer .footer_box .wrap .middle_box .message {
   padding: 6px 0;
@@ -1817,9 +1821,9 @@ body:has(.privacy_option.on) {
   padding-top: 20px;
 }
 .menu_bg .wrap .menu_box .language_box .language_list {
-  position: absolute;
   flex-direction: column;
   display: none;
+  position: absolute;
   left: -115px;
   top: 0;
 }
@@ -2029,9 +2033,9 @@ body:has(.privacy_option.on) {
     width: 100%;
     padding-left: 10px;
     display: flex;
+    flex-direction: column;
     left: auto;
     right: auto;
-    flex-direction: column;
   }
 }
 .menu_bg .wrap .menu_bg_list .top_box .address p,
@@ -2288,8 +2292,8 @@ body:has(.privacy_option.on) {
 }
 .privacy_option .wrap .txt .privacy_about button {
   width: 80%;
-  height: 40px;
   min-width: 165px;
+  height: 40px;
   padding: 10px;
   position: absolute;
   background-color: transparent;
@@ -2497,10 +2501,10 @@ body:has(.privacy_option.on) {
   }
 }
 .hd_bg .header_bg li p {
+  min-width: 25px;
   position: absolute;
   top: 30%;
   left: 7%;
-  min-width: 25px;
   font-size: 25px;
   color: #fff;
   z-index: 2;
@@ -2613,9 +2617,9 @@ body:has(.privacy_option.on) {
   display: flex;
   align-items: center;
   position: absolute;
-  color: #fff;
   right: 0;
   top: 2%;
+  color: #fff;
   border: 1px solid #fff;
   border-radius: 20px 0 0 20px;
 }
@@ -2749,9 +2753,9 @@ body:has(.privacy_option.on) {
   }
 }
 .hd_bg .scoll .circle a {
-  position: absolute;
   width: 100%;
   height: 100%;
+  position: absolute;
   cursor: pointer;
   z-index: 2;
 }
@@ -4400,12 +4404,12 @@ body:has(.privacy_option.on) {
   width: calc(100% - 30px);
   height: calc(100% - 20px);
   margin: 10px;
-  position: absolute;
-  top: 0;
   display: flex;
-  opacity: 0;
   flex-direction: column;
   justify-content: center;
+  position: absolute;
+  top: 0;
+  opacity: 0;
   background: linear-gradient(to bottom, rgba(59, 175, 219, 0.5) 0%, rgba(54, 175, 101, 0.5) 100%);
   text-align: center;
   color: #fff;
@@ -4795,8 +4799,8 @@ body:has(.privacy_option.on) {
 .rooms .wrap .room_list_carousel .morioka .more,
 .rooms .wrap .room_list_carousel .reflection .more,
 .rooms .wrap .room_list_carousel .linshan .more {
-  text-align: center;
   padding-top: 20px;
+  text-align: center;
   letter-spacing: 3px;
 }
 .rooms .wrap .room_list_carousel .clous .more h2,
@@ -5032,9 +5036,9 @@ body:has(.privacy_option.on) {
 }
 @media screen and (max-width: 1180px) {
   .dining ul .slick-next {
+    transform: rotate(0deg);
     left: 50%;
     top: 100%;
-    transform: rotate(0deg);
   }
 }
 @media screen and (max-width: 960px) {
@@ -5149,9 +5153,9 @@ body:has(.privacy_option.on) {
   width: calc(100% - 20px);
   height: calc(100% - 30px);
   position: absolute;
-  border-radius: 20px;
   top: 42%;
   left: 50%;
+  border-radius: 20px;
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: all 0.5s linear;
@@ -5528,11 +5532,11 @@ body:has(.privacy_option.on) {
 }
 .introduction_bg .txt span::before {
   content: "";
+  width: 4px;
+  height: 4px;
   position: absolute;
   top: -17px;
   left: 10px;
-  width: 4px;
-  height: 4px;
   border-radius: 100%;
   background: #fff;
   z-index: 1;

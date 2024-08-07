@@ -66,9 +66,9 @@
       writing-mode: vertical-lr;
     }
     span {
+      margin-top: 30px;
       writing-mode: vertical-lr;
       position: relative;
-      margin-top: 30px;
       &::before {
         content: "";
         width: 4px;
@@ -107,7 +107,7 @@
       border-radius: 10px;
       color: #737373;
       font-size: 16px;
-      option{
+      option {
         margin: 0 10px;
       }
     }

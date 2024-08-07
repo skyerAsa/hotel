@@ -370,9 +370,9 @@ body {
 }
 .menu_coin a {
   width: 50%;
+  margin: 0 5px;
   display: flex;
   background-color: #97999b;
-  margin: 0 5px;
 }
 .menu_coin .website_item,
 .menu_coin .checkout_item {
@@ -614,15 +614,15 @@ body {
   padding-left: 20px;
 }
 .reservation_box .reservation_left_box .reservation_item .in_rooms .in_rooms_title {
-  display: flex;
   padding-bottom: 20px;
+  display: flex;
 }
 .reservation_box .reservation_left_box .reservation_item .in_rooms .in_rooms_title i {
   padding-right: 10px;
 }
 .reservation_box .reservation_left_box .reservation_item .in_rooms .in_rooms_date {
-  display: flex;
   padding-bottom: 10px;
+  display: flex;
 }
 .reservation_box .reservation_left_box .reservation_item .in_rooms .in_rooms_date .in_rooms_years,
 .reservation_box .reservation_left_box .reservation_item .in_rooms .in_rooms_date .in_rooms_month,
@@ -650,9 +650,9 @@ body {
 .reservation_box .reservation_left_box .txt {
   width: 40px;
   height: 70px;
-  position: absolute;
   display: flex;
   align-items: center;
+  position: absolute;
   top: 30%;
   right: -40px;
   border-radius: 0 10px 10px 0;
@@ -793,7 +793,7 @@ body {
   width: 30%;
   height: 60%;
   padding: 5px;
-  margin: 0% 0 0 -35%;
+  margin: 0 0 0 -35%;
   position: fixed;
   top: 20%;
   left: 70%;

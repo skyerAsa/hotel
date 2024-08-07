@@ -304,10 +304,10 @@
         content: "";
         width: 35px;
         height: 2px;
+        position: absolute;
         right: 0;
         bottom: 0;
         background-color: #fff;
-        position: absolute;
         display: flex;
         font-size: 12px;
         @include rwd(1180){

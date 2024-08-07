@@ -179,7 +179,6 @@ body {
   width: 100%;
   display: flex;
   opacity: 0;
-  
   @keyframes bbbb {
     from {
       opacity: 0;
@@ -191,9 +190,9 @@ body {
   animation: bbbb 0.5s 0.5s forwards;
   a {
     width: 50%;
+    margin: 0 5px;
     display: flex;
     background-color: #97999b;
-    margin: 0 5px;
   }
   .website_item,
   .checkout_item {
@@ -406,15 +405,15 @@ body {
       .in_rooms {
         padding-left: 20px;
         .in_rooms_title {
-          display: flex;
           padding-bottom: 20px;
+          display: flex;
           i {
             padding-right: 10px;
           }
         }
         .in_rooms_date {
-          display: flex;
           padding-bottom: 10px;
+          display: flex;
           .in_rooms_years,
           .in_rooms_month,
           .in_rooms_day {
@@ -444,9 +443,9 @@ body {
     .txt {
       width: 40px;
       height: 70px;
-      position: absolute;
       display: flex;
       align-items: center;
+      position: absolute;
       top: 30%;
       right: -40px;
       border-radius: 0 10px 10px 0;
@@ -580,7 +579,7 @@ body {
   width: 30%;
   height: 60%;
   padding: 5px;
-  margin:0% 0 0 -35%;
+  margin:0 0 0 -35%;
   position: fixed;
   top: 20%;
   left: 70%;
