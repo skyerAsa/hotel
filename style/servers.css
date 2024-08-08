@@ -184,7 +184,7 @@ img {
   background-color: black;
   opacity: 0.2;
 }
-.servers_bg img {
+.servers_bg .servers_bg_img {
   height: 640px;
 }
 .servers_bg .title {

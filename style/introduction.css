@@ -184,7 +184,7 @@ img {
   background-color: black;
   opacity: 0.2;
 }
-.introduction_bg img {
+.introduction_bg .introduction_bg_img {
   height: 640px;
 }
 .introduction_bg .title {

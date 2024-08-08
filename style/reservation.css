@@ -829,11 +829,11 @@ body {
   display: flex;
   flex-direction: column;
 }
-.SSL_right_box .SSL_main .SSL_coin img {
+.SSL_right_box .SSL_main .SSL_coin .SSL_img {
   width: 400px;
 }
 @media screen and (max-width: 468px) {
-  .SSL_right_box .SSL_main .SSL_coin img {
+  .SSL_right_box .SSL_main .SSL_coin .SSL_img {
     width: 260px;
   }
 }

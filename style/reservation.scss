@@ -612,7 +612,7 @@ body {
     .SSL_coin {
       display: flex;
       flex-direction: column;
-      img {
+      .SSL_img {
         width: 400px;
         @include rwd(468) {
           width: 260px;

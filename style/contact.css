@@ -184,7 +184,7 @@ img {
   background-color: black;
   opacity: 0.2;
 }
-.contact_bg img {
+.contact_bg .contact_bg_img {
   height: 640px;
 }
 .contact_bg .title {
