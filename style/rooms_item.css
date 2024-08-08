@@ -1270,7 +1270,7 @@ body {
 .footer .title .txt p {
   font-size: 12px;
 }
-.footer .title .img {
+.footer .title .foot {
   display: flex;
   align-items: center;
 }

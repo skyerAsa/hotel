@@ -184,10 +184,10 @@ img {
   background-color: black;
   opacity: 0.2;
 }
-.clous_content_bg .img {
+.clous_content_bg .content_bg {
   height: 640px;
 }
-.clous_content_bg .img img {
+.clous_content_bg .content_bg img {
   width: 100%;
   height: 100%;
   vertical-align: middle;
