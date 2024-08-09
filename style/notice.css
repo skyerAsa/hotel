@@ -594,7 +594,7 @@ body {
 }
 .process .process_list li:first-child {
   position: relative;
-  top: -87px;
+  top: -70px;
   left: -11px;
   color: #0d7000;
   background-color: transparent;
@@ -606,7 +606,7 @@ body {
 }
 .process .process_list li:nth-child(3) {
   left: 48%;
-  top: -55px;
+  top: -40px;
 }
 .process .process_list li:nth-child(4) {
   left: 73%;
@@ -614,7 +614,7 @@ body {
 }
 .process .process_list li:nth-child(5) {
   left: 99%;
-  top: -55px;
+  top: -40px;
   white-space: nowrap;
 }
 

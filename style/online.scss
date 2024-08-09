@@ -380,17 +380,16 @@ body {
       width: auto;
       border-radius: 50px;
       background-color: transparent;
-      color: #000;
       font-size: 12px;
       position: absolute;
+      color: #000;
       top: -13px;
       display: flex;
       align-items: center;
       justify-content: center;
-      white-space: nowrap;
       &:first-child {
         position: relative;
-        top: -87px;
+        top: -70px;
         left: -11px;
         color: #0d7000;
         background-color: transparent;
@@ -401,7 +400,7 @@ body {
       }
       &:nth-child(3) {
         left: 48%;
-        top: -55px;
+        top: -40px;
       }
       &:nth-child(4) {
         left: 73%;
@@ -409,7 +408,7 @@ body {
       }
       &:nth-child(5) {
         left: 99%;
-        top: -55px;
+        top: -40px;
         white-space: nowrap;
       }
     }
