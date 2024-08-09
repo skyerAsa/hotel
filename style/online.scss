@@ -324,17 +324,26 @@ body {
 }
 
 // process
+.process_title{
+  width: 1200px;
+  margin: 70px auto 0;
+  font-size: 14px;
+  @include rwd(968){
+    width: auto;
+    margin:70px 0 0;
+  }
+}
 .process {
   width: 1000px;
   height: 1px;
-  margin: 130px auto 0;
+  margin: 70px auto 0;
   background-color: #97999b;
   position: relative;
   @include rwd(1100) {
     width: auto;
-    margin: 100px 50px 0 20px;
+    margin: 70px 50px 0 20px;
   }
-  ul {
+  .process_item {
     display: flex;
     li {
       width: 30px;

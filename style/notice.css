@@ -520,17 +520,29 @@ body {
   display: flex;
 }
 
+.process_title {
+  width: 1200px;
+  margin: 70px auto 0;
+  font-size: 14px;
+}
+@media screen and (max-width: 968px) {
+  .process_title {
+    width: auto;
+    margin: 70px 0 0;
+  }
+}
+
 .process {
   width: 1000px;
   height: 1px;
-  margin: 150px auto 0;
+  margin: 70px auto 0;
   background-color: #97999b;
   position: relative;
 }
 @media screen and (max-width: 1100px) {
   .process {
     width: auto;
-    margin: 130px 50px 0 20px;
+    margin: 70px 50px 0 20px;
   }
 }
 .process .process_item {
@@ -607,7 +619,15 @@ body {
 }
 
 .notice {
+  width: 1200px;
+  margin: 0 auto;
   padding: 50px 0 0 20px;
+}
+@media screen and (max-width: 968px) {
+  .notice {
+    width: auto;
+    margin: 0;
+  }
 }
 .notice .title {
   font-weight: bolder;
