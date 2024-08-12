@@ -254,8 +254,11 @@
   background-color: #fff;
   box-shadow: 0 0 15px rgba($color: #000000, $alpha: 0.1);
   &.on{
-    background-color: #fff;
+    background-color: transparent;
     filter: contrast(100%) brightness(1);
+    .hd_m_img{
+      filter: contrast(0) brightness(10);
+    }
   }
   @include rwd(1180) {
     display: flex;
@@ -366,18 +369,21 @@
   }
   &.on {
     box-shadow: 0 0 15px rgba($color: #000000, $alpha: 0.1);
+    @include rwd(1180){
+      box-shadow:none;
+    }
     .hd_m_img {
-      filter: contrast(100%) brightness(1);
+      filter: contrast(0) brightness(10);
     }
     .burger {
       .menu {
-        background-color: #000;
+        background-color: #fff;
         p {
-          color: #000;
+          color: #fff;
         }
         &::before,
         &::after {
-          background-color: #000;
+          background-color: #fff;
         }
       }
     }

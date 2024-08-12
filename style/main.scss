@@ -64,40 +64,49 @@ body {
     }
   }
 }
-.header_m_bg{
-  @keyframes nnnn {
-    from{
-      transform: translateY(-100%);
-    }
-    to{
-      transform: translateY(0%);
-    }
-  }
-  animation: nnnn 0.5s;
- 
-}
-.header_m{
+
+.header_m {
   background-color: transparent;
   transition: all 0.5s;
-  &.on{
-    filter: contrast(100%) brightness(1);
+  box-shadow: none;
+  &.on {
+    background-color: #fff;
+    .hd_m_img {
+      filter: contrast(100%) brightness(1);
+    }
+    .burger {
+      .menu {
+        background-color: #000;
+        &::before,
+        &::after {
+          background-color: #000;
+        }
+        p {
+          color: #000;
+        }
+      }
+    }
   }
-  .hd_m_img{
+  &.off {
+    box-shadow: none;
+  }
+  .hd_m_img {
     filter: contrast(0) brightness(10);
   }
-  .burger{
-    .menu{
+  .burger {
+    .menu {
       background-color: #fff;
       &::before,
-      &::after{
+      &::after {
         background-color: #fff;
       }
-      p{
+      p {
         color: #fff;
       }
     }
   }
 }
+
 // start_bg
 .start_bg {
   width: 100%;
@@ -1056,7 +1065,7 @@ body {
           }
         }
         animation: hh 0.5s 1s forwards;
-        span{
+        span {
           padding-left: 50px;
         }
       }
@@ -1383,7 +1392,6 @@ body {
     }
     .brand_title {
       width: 100%;
-      padding-bottom: 30px 0 15px 0;
       margin-right: 25px;
       position: relative;
       display: inline-block;
@@ -1407,16 +1415,16 @@ body {
         left: 50%;
         background-color: #63bedf;
         @include rwd(1180) {
-          width: 90px;
+          width: 100px;
           height: 1px;
-          top: 0;
+          top: -40px;
           left: 46%;
         }
         @include rwd(900) {
           left: 44%;
         }
         @include rwd(600) {
-          left: 42%;
+          left: 40%;
         }
         @include rwd(400) {
           left: 40%;
@@ -3026,10 +3034,10 @@ body {
       }
       .slick-track {
         @include rwd(1180) {
-          max-width: 700%;
+          max-width: 800%;
         }
         @include rwd(960) {
-          max-width: 1400%;
+          max-width: 1600%;
         }
       }
       .clous,
