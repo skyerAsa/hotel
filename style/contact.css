@@ -187,6 +187,12 @@ img {
 .contact_bg .contact_bg_img {
   height: 640px;
 }
+.contact_bg .contact_bg_img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  vertical-align: middle;
+}
 .contact_bg .title {
   position: absolute;
   top: 15%;

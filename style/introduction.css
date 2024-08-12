@@ -187,6 +187,12 @@ img {
 .introduction_bg .introduction_bg_img {
   height: 640px;
 }
+.introduction_bg .introduction_bg_img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  vertical-align: middle;
+}
 .introduction_bg .title {
   position: absolute;
   top: 15%;

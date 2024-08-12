@@ -50,6 +50,7 @@
                     </div>
                 </div>
             </div>
+            <div class="header_m_bg"> </div>
             <div class="header_m">
                 <div class="hd_m_img">
                     <a href="/"> <img src="img/logo_m.png" alt="" /></a>
@@ -60,7 +61,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- menu_bg -->
             <div class="menu_black">
             </div>
@@ -73,7 +73,6 @@
                                     <h2>Language</h2>
                                     <p>></p>
                                 </div>
-
                                 <ul class="language_list">
                                     <li>繁</li>
                                     <li>EN</li>
@@ -878,19 +877,6 @@
                     $(".language_box").on("click", function() {
                         $(".language_list").toggleClass("on");
                     });
-
-                    function showMenu() {
-                        if ($(window).scrollTop() > 200) {
-                            $(".header").addClass("on");
-                        } else {
-                            $(".header").removeClass("on");
-                        }
-                        if ($(window).scrollTop() > 200) {
-                            $(".header_m").addClass("on");
-                        } else {
-                            $(".header_m").removeClass("on");
-                        }
-                    }
                     $(".privacy_close").on("click", function() {
                         $(".privacy_option").removeClass("on");
                     });
@@ -934,6 +920,16 @@
                 }
 
                 function showMenu() {
+                    if ($(window).scrollTop() > 200) {
+                        $(".header").addClass("on");
+                    } else {
+                        $(".header").removeClass("on");
+                    }
+                    if ($(window).scrollTop() > 200) {
+                        $(".header_m").addClass("on");
+                    } else {
+                        $(".header_m").removeClass("on");
+                    }
                     if ($(window).scrollTop() > 400) {
                         $(".brand_txt").addClass("on");
                         $(".brand_list").addClass("on");

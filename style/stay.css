@@ -269,7 +269,7 @@ img {
   }
 }
 .clous_content .clous_introduce {
-  padding: 20px 0 100px 60px;
+  padding: 40px 0 100px 60px;
   display: flex;
 }
 @media screen and (max-width: 767px) {
@@ -649,7 +649,7 @@ img {
   }
 }
 .linshan_content .linshan_introduce {
-  padding: 20px 0 100px 60px;
+  padding: 40px 0 100px 60px;
   display: flex;
 }
 @media screen and (max-width: 767px) {

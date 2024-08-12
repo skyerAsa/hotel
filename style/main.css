@@ -1606,6 +1606,63 @@ body:has(.privacy_option.on) {
   overflow-y: hidden;
 }
 
+.header.on .burger .menu.on {
+  background-color: #000;
+}
+.header.on .burger .menu.on::before, .header.on .burger .menu.on::after {
+  background-color: #000;
+}
+.header.on .header_box .language_txt.on {
+  border: 1px solid #000;
+}
+.header.on .header_box .language_txt.on h2 {
+  color: #000;
+}
+.header.on .header_box .language_txt.on p {
+  color: #000;
+}
+.header.on .header_box .message_box.on {
+  border: 1px solid #000;
+}
+.header.on .header_box .message_box.on img {
+  filter: contrast(100%) brightness(1);
+}
+.header.on .header_box .message_box.on h2 {
+  color: #000;
+}
+
+.header_m_bg {
+  animation: nnnn 0.5s;
+}
+@keyframes nnnn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.header_m {
+  background-color: transparent;
+  transition: all 0.5s;
+}
+.header_m.on {
+  filter: contrast(100%) brightness(1);
+}
+.header_m .hd_m_img {
+  filter: contrast(0) brightness(10);
+}
+.header_m .burger .menu {
+  background-color: #fff;
+}
+.header_m .burger .menu::before, .header_m .burger .menu::after {
+  background-color: #fff;
+}
+.header_m .burger .menu p {
+  color: #fff;
+}
+
 .start_bg {
   width: 100%;
   height: 100vh;
@@ -1693,6 +1750,11 @@ body:has(.privacy_option.on) {
   transform: translate(-50%, -50%);
   font-size: 36px;
   color: #63bedf;
+}
+@media screen and (max-width: 768px) {
+  .start_ad .inner {
+    width: 500px;
+  }
 }
 .start_ad .inner .txt h2 {
   font-weight: bolder;
@@ -2585,6 +2647,9 @@ body:has(.privacy_option.on) {
     transform: translateY(0%);
   }
 }
+.hd_bg .header_bg li h2 span {
+  padding-left: 50px;
+}
 .hd_bg .header_bg li .txt {
   width: 100%;
   height: 100%;
@@ -2933,7 +2998,7 @@ body:has(.privacy_option.on) {
 @media screen and (max-width: 1180px) {
   .brand .brand_txt .brand_title {
     margin-right: 0;
-    transform: translateY(300%);
+    transform: translateY(800%);
   }
 }
 .brand .brand_txt .brand_title::before {
@@ -3247,7 +3312,7 @@ body:has(.privacy_option.on) {
   background-color: #63bedf;
 }
 .field h3 {
-  padding-top: 20px;
+  padding: 20px;
   letter-spacing: 2.5px;
 }
 .field .field_bg {
@@ -3413,7 +3478,7 @@ body:has(.privacy_option.on) {
   padding-top: 20px;
 }
 .field .field_list li p {
-  padding-top: 10px;
+  padding: 20px;
 }
 @media screen and (max-width: 1600px) {
   .field .field_list li {
@@ -3599,6 +3664,7 @@ body:has(.privacy_option.on) {
   }
 }
 .field .field_about {
+  margin-top: 50px;
   position: relative;
   bottom: 15%;
 }

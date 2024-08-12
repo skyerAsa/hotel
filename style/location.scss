@@ -18,6 +18,11 @@
   }
   .location_bg_img {
     height: 640px;
+    img {
+      object-fit: cover;
+      height: 100%;
+      vertical-align: middle;
+    }
   }
   .title {
     position: absolute;
@@ -89,7 +94,7 @@
   height: 1px;
   margin: 50px 140px 100px 160px;
   background-color: #e9e9e9;
-  @include rwd(1180){
+  @include rwd(1180) {
     margin: 50px 20px;
   }
 }
@@ -99,7 +104,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  @include rwd(1180){
+  @include rwd(1180) {
     padding: 0 20px;
   }
   .location_maps {
@@ -110,7 +115,7 @@
 
 .location_item {
   padding-left: 160px;
-  @include rwd(1180){
+  @include rwd(1180) {
     padding: 0 20px 50px;
   }
   .txt {

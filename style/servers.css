@@ -187,6 +187,12 @@ img {
 .servers_bg .servers_bg_img {
   height: 640px;
 }
+.servers_bg .servers_bg_img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  vertical-align: middle;
+}
 .servers_bg .title {
   position: absolute;
   top: 15%;
