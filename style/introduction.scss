@@ -19,8 +19,8 @@
   .introduction_bg_img {
     height: 640px;
     img {
-      object-fit: cover;
       height: 100%;
+      object-fit: cover;
       vertical-align: middle;
     }
   }
@@ -74,7 +74,6 @@
       margin-top: 30px;
       writing-mode: vertical-lr;
       position: relative;
-     
       &::before {
         content: "";
         width: 4px;

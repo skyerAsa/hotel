@@ -188,9 +188,9 @@ img {
   height: 640px;
 }
 .servers_bg .servers_bg_img img {
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 100%;
   vertical-align: middle;
 }
 .servers_bg .title {
@@ -242,9 +242,9 @@ img {
   writing-mode: vertical-lr;
 }
 .servers_bg .txt span {
+  margin-top: 30px;
   writing-mode: vertical-lr;
   position: relative;
-  margin-top: 30px;
 }
 .servers_bg .txt span::before {
   content: "";
@@ -290,9 +290,9 @@ img {
   color: #36af63;
 }
 .list_tags p:hover::before, .list_tags p:hover::after {
-  background-color: #36af63;
   width: 0;
   height: 1px;
+  background-color: #36af63;
   animation: ab 0.5s forwards;
 }
 @keyframes ab {
@@ -309,9 +309,9 @@ img {
 }
 .list_tags p:hover::after {
   content: "";
+  position: absolute;
   bottom: 0;
   right: 0;
-  position: absolute;
 }
 .list_tags p.on {
   color: #36af63;

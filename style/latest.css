@@ -188,9 +188,9 @@ img {
   height: 640px;
 }
 .latest_bg .latest_bg_img img {
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 100%;
   vertical-align: middle;
 }
 .latest_bg .title {

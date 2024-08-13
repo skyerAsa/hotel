@@ -766,10 +766,10 @@ body {
 .go_top {
   margin-top: 5px;
   padding: 10px 0;
+  display: none;
   position: fixed;
   bottom: 50px;
   right: 40px;
-  display: none;
 }
 .go_top.on {
   display: block;

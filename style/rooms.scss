@@ -74,9 +74,9 @@
       writing-mode: vertical-lr;
     }
     span {
+      margin-top: 30px;
       writing-mode: vertical-lr;
       position: relative;
-      margin-top: 30px;
       &::before {
         content: "";
         width: 4px;

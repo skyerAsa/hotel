@@ -188,9 +188,9 @@ img {
   height: 640px;
 }
 .location_bg .location_bg_img img {
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 100%;
   vertical-align: middle;
 }
 .location_bg .title {

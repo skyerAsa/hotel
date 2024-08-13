@@ -1846,8 +1846,8 @@ body:has(.privacy_option.on) {
   top: 0;
   bottom: 0;
   left: 0;
-  z-index: 4;
   background-size: cover;
+  z-index: 4;
 }
 @media screen and (max-width: 1180px) {
   .menu_bg {
@@ -2372,8 +2372,8 @@ body:has(.privacy_option.on) {
 }
 .privacy_option .wrap .txt .privacy_about button {
   width: 80%;
-  min-width: 165px;
   height: 40px;
+  min-width: 165px;
   padding: 10px;
   position: absolute;
   background-color: transparent;
@@ -2981,10 +2981,11 @@ body:has(.privacy_option.on) {
 .brand .brand_txt {
   padding-right: 60px;
   display: flex;
+  flex-direction: row-reverse;
 }
 @media screen and (max-width: 1180px) {
   .brand .brand_txt {
-    margin-bottom: 150px;
+    margin-bottom: 80px;
     padding-right: 0;
     flex-direction: column;
   }
@@ -3006,27 +3007,25 @@ body:has(.privacy_option.on) {
   position: relative;
   display: inline-block;
   font-size: 20px;
-  font-weight: 300;
   letter-spacing: 2px;
   color: #63bedf;
-  font-size: 20px;
   font-weight: bolder;
 }
 @media screen and (max-width: 1180px) {
   .brand .brand_txt .brand_title {
     margin-right: 0;
-    transform: translateY(800%);
+    transform: translateY(200%);
   }
 }
 .brand .brand_txt .brand_title::before {
   content: "";
   height: 90px;
   width: 1px;
+  background-color: #63bedf;
   display: flex;
   position: absolute;
   top: 22%;
   left: 50%;
-  background-color: #63bedf;
 }
 @media screen and (max-width: 1180px) {
   .brand .brand_txt .brand_title::before {

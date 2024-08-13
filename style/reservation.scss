@@ -342,9 +342,9 @@ body {
     }
     .reservation_item {
       width: 250px;
-      background-color: #97999b;
       padding: 10px 0 20px;
       margin-top: 20px;
+      background-color: #97999b;
       position: relative;
       z-index: 2;
       @include rwd(1200) {
@@ -411,9 +411,9 @@ body {
     .txt {
       width: 40px;
       height: 70px;
-      position: absolute;
       display: flex;
       align-items: center;
+      position: absolute;
       top: 30%;
       right: -40px;
       border-radius: 0 10px 10px 0;
@@ -741,8 +741,8 @@ body {
       .join_log_in {
         width: 120px;
         padding: 10px 0;
-        text-align: center;
         margin-left: 90px;
+        text-align: center;
         color: #97999b;
         border: 1px solid #97999b;
         cursor: pointer;
@@ -815,8 +815,8 @@ body {
     .company_tel,
     .company_address,
     .remark {
-      display: flex;
       padding: 10px 0;
+      display: flex;
       @include rwd(768) {
         display: block;
       }
@@ -1060,8 +1060,8 @@ body {
 // footer
 .footer {
   margin: 0 auto;
-  background: #eeeeee;
   padding-bottom: 20px;
+  background: #eeeeee;
   border-bottom: 10px solid #1a1a1a;
   display: flex;
   position: relative;

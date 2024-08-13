@@ -326,15 +326,16 @@ body {
 }
 
 // process
-.process_title{
+.process_title {
   width: 1200px;
   margin: 70px auto 0;
   font-size: 14px;
-  @include rwd(968){
+  @include rwd(968) {
     width: auto;
-    margin:70px 0 0;
+    margin: 70px 0 0;
   }
 }
+
 .process {
   width: 1000px;
   height: 1px;
@@ -424,7 +425,7 @@ body {
   width: 1200px;
   margin: 0 auto;
   padding: 50px 0 0 20px;
-  @include rwd(968){
+  @include rwd(968) {
     width: auto;
     margin: 0;
   }
@@ -459,7 +460,7 @@ body {
     font-size: 15px;
     font-weight: bold;
   }
-  .rooms_content { 
+  .rooms_content {
     padding: 10px 0 10px 10px;
     margin-bottom: 2px;
     border-top: 5px solid #000;
@@ -568,10 +569,10 @@ body {
 .go_top {
   margin-top: 5px;
   padding: 10px 0;
+  display: none;
   position: fixed;
   bottom: 50px;
   right: 40px;
-  display: none;
   &.on {
     display: block;
   }

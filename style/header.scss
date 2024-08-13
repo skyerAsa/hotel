@@ -60,7 +60,7 @@
         position: absolute;
         left: 0;
         bottom: 0;
-        background-color: #fff; 
+        background-color: #fff;
         font-size: 12px;
       }
       &::before {
@@ -253,10 +253,10 @@
   justify-content: space-between;
   background-color: #fff;
   box-shadow: 0 0 15px rgba($color: #000000, $alpha: 0.1);
-  &.on{
+  &.on {
     background-color: transparent;
     filter: contrast(100%) brightness(1);
-    .hd_m_img{
+    .hd_m_img {
       filter: contrast(0) brightness(10);
     }
   }
@@ -289,7 +289,6 @@
     @include rwd(500) {
       right: 4%;
     }
-
     .menu {
       width: 43px;
       height: 2px;
@@ -299,7 +298,7 @@
       display: flex;
       justify-content: center;
       align-items: flex-end;
-      @include rwd(1180){
+      @include rwd(1180) {
         background-color: #000;
       }
       &::before,
@@ -313,7 +312,7 @@
         background-color: #fff;
         display: flex;
         font-size: 12px;
-        @include rwd(1180){
+        @include rwd(1180) {
           background-color: #000;
         }
       }
@@ -351,7 +350,7 @@
       position: absolute;
       bottom: -30px;
       left: 20%;
-      @include rwd(1180){
+      @include rwd(1180) {
         color: #000;
       }
     }
@@ -369,8 +368,8 @@
   }
   &.on {
     box-shadow: 0 0 15px rgba($color: #000000, $alpha: 0.1);
-    @include rwd(1180){
-      box-shadow:none;
+    @include rwd(1180) {
+      box-shadow: none;
     }
     .hd_m_img {
       filter: contrast(0) brightness(10);

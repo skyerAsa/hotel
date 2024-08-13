@@ -521,9 +521,9 @@ body {
 
 .reservation_box {
   width: 1200px;
+  padding-bottom: 100px;
   margin: 0 auto;
   display: flex;
-  padding-bottom: 100px;
 }
 @media screen and (max-width: 1200px) {
   .reservation_box {
@@ -545,8 +545,8 @@ body {
 .reservation_box .reservation_left_box .reservation_item {
   width: 250px;
   padding: 10px 0 20px;
-  background-color: #97999b;
   margin-top: 20px;
+  background-color: #97999b;
   position: relative;
   z-index: 2;
 }

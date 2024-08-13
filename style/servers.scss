@@ -20,8 +20,8 @@
   .servers_bg_img {
     height: 640px;
     img {
-      object-fit: cover;
       height: 100%;
+      object-fit: cover;
       vertical-align: middle;
     }
   }
@@ -71,9 +71,9 @@
       writing-mode: vertical-lr;
     }
     span {
+      margin-top: 30px;
       writing-mode: vertical-lr;
       position: relative;
-      margin-top: 30px;
       &::before {
         content: "";
         width: 4px;
@@ -118,9 +118,9 @@
       color: #36af63;
       &::before,
       &::after {
-        background-color: #36af63;
         width: 0;
         height: 1px;
+        background-color: #36af63;
         @keyframes ab {
           from {
             width: 0;
@@ -137,9 +137,9 @@
       }
       &::after {
         content: "";
+        position: absolute;
         bottom: 0;
         right: 0;
-        position: absolute;
       }
     }
     &.on {
@@ -225,13 +225,13 @@
 .tags_list {
   width: 95%;
   padding: 10px;
-  margin: 100px  10px ;
+  margin: 100px 10px;
   background-color: #63bedf;
   color: #fff;
   border-radius: 10px;
   position: relative;
   display: none;
-  @include rwd(1024){
+  @include rwd(1024) {
     display: block;
   }
   .tag_txt {
@@ -253,7 +253,7 @@
   top: 40px;
   left: 0;
   z-index: 2;
-  &.on{
+  &.on {
     display: block;
   }
   h2 {
@@ -261,8 +261,8 @@
     color: #63bedf;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   }
-  p{
-    padding: 20px 10px ;
+  p {
+    padding: 20px 10px;
     border-top: 1px solid #c8c8c8;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   }
@@ -282,7 +282,7 @@
     .facility_list {
       width: 50%;
       padding: 0 0px 50px;
-      @include rwd(960){
+      @include rwd(960) {
         width: 100%;
       }
       .facility_img {
@@ -406,7 +406,7 @@
 // farm
 .farm {
   padding: 0 140px 0 180px;
-  @include rwd(1180){
+  @include rwd(1180) {
     padding: 0 20px;
   }
   .title {
@@ -454,7 +454,7 @@
 // canopy
 .canopy {
   padding: 0 140px 0 180px;
-  @include rwd(1180){
+  @include rwd(1180) {
     padding: 0 20px;
   }
   .title {
@@ -502,7 +502,7 @@
 // sky
 .sky {
   padding: 0 140px 0 180px;
-  @include rwd(1180){
+  @include rwd(1180) {
     padding: 0 20px;
   }
   .title {
@@ -550,7 +550,7 @@
 // garden
 .garden {
   padding: 0 140px 0 180px;
-  @include rwd(1180){
+  @include rwd(1180) {
     padding: 0 20px;
   }
   .title {
@@ -598,7 +598,7 @@
 // restaurant
 .restaurant {
   padding: 0 140px 0 180px;
-  @include rwd(1180){
+  @include rwd(1180) {
     padding: 0 20px;
   }
   .title {
@@ -646,7 +646,7 @@
 // dairy
 .dairy {
   padding: 0 140px 0 180px;
-  @include rwd(1180){
+  @include rwd(1180) {
     padding: 0 20px;
   }
   .title {
@@ -696,7 +696,7 @@
 // hold
 .hold {
   padding: 0 140px 0 180px;
-  @include rwd(1180){
+  @include rwd(1180) {
     padding: 0 20px;
   }
   .title {
@@ -759,7 +759,7 @@
 // gathering
 .gathering {
   padding: 0 140px 0 180px;
-  @include rwd(1180){
+  @include rwd(1180) {
     padding: 0 20px;
   }
   .title {
@@ -822,7 +822,7 @@
 // colleague
 .colleague {
   padding: 0 140px 0 180px;
-  @include rwd(1180){
+  @include rwd(1180) {
     padding: 0 20px;
   }
   .title {
@@ -885,7 +885,7 @@
 // picnic
 .picnic {
   padding: 0 140px 0 180px;
-  @include rwd(1180){
+  @include rwd(1180) {
     padding: 0 20px;
   }
   .title {
@@ -935,7 +935,7 @@
 // milk
 .milk {
   padding: 0 140px 0 180px;
-  @include rwd(1180){
+  @include rwd(1180) {
     padding: 0 20px;
   }
   .title {
@@ -985,7 +985,7 @@
 // sun
 .sun {
   padding: 0 140px 0 180px;
-  @include rwd(1180){
+  @include rwd(1180) {
     padding: 0 20px;
   }
   .title {
@@ -1035,7 +1035,7 @@
 // banquet
 .banquet {
   padding: 0 140px 0 180px;
-  @include rwd(1180){
+  @include rwd(1180) {
     padding: 0 20px;
   }
   .title {
