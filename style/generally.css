@@ -465,10 +465,10 @@ body {
   width: 100%;
   height: 70px;
   background-color: #97999b;
+  display: none;
   align-items: center;
   justify-content: center;
   color: #fff;
-  display: none;
   position: absolute;
   left: 0;
   bottom: 0;

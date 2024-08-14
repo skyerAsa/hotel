@@ -376,6 +376,7 @@ img {
   min-width: 165px;
   padding: 10px;
   position: relative;
+  color: #191919;
   background-color: #fff;
   border: 1px solid #191919;
   border-radius: 50px;
@@ -383,16 +384,15 @@ img {
   font-weight: 400;
   letter-spacing: 1px;
   text-align: center;
-  color: #191919;
   cursor: pointer;
 }
 .qustion_all .contact_about .arrow {
   width: 60px;
   height: 1px;
-  background-color: #191919;
   position: absolute;
   top: 50%;
   right: -30px;
+  background-color: #191919;
   transition: transform 0.5s linear;
 }
 .qustion_all .contact_about .arrow::before {

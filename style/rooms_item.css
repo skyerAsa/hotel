@@ -256,8 +256,7 @@ body {
 .logo .link .checkout img {
   width: 18px;
   height: 20px;
-  margin-right: 10px;
-  margin-top: 0;
+  margin: 0 10px 0 0;
 }
 .logo .link .checkout {
   margin-left: 10px;

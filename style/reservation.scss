@@ -105,13 +105,13 @@ body {
       width: 76px;
       height: 28px;
       margin: 30px 5px 5px 0;
+      position: absolute;
+      right: 0;
+      bottom: 0;
       display: block;
       text-align: center;
       background: url(../img/online/menu.jpg) center center;
       border: 1px solid #000000;
-      position: absolute;
-      right: 0;
-      bottom: 0;
       font-size: 13px;
       line-height: 28px;
     }
