@@ -526,8 +526,20 @@ body {
   margin: 0 auto;
   display: flex;
 }
+@media screen and (max-width: 1200px) {
+  .reservation_box {
+    width: auto;
+    margin: 0;
+    display: block;
+  }
+}
 .reservation_box .reservation_left_box {
   padding-right: 100px;
+}
+@media screen and (max-width: 1200px) {
+  .reservation_box .reservation_left_box {
+    padding-right: 0;
+  }
 }
 .reservation_box .reservation_left_box .reservation_left_box_title .title {
   margin: 80px 0 0 10px;
@@ -544,6 +556,7 @@ body {
 @media screen and (max-width: 1200px) {
   .reservation_box .reservation_left_box .reservation_item {
     transform: translateX(-100%);
+    position: absolute;
     transition: all 0.5s;
   }
   .reservation_box .reservation_left_box .reservation_item:hover {
@@ -630,8 +643,7 @@ body {
 }
 @media screen and (max-width: 1200px) {
   .reservation_box .reservation_right_box {
-    margin-left: 0;
-    transform: translateX(-200%);
+    margin: 20px 0 0 30px;
   }
 }
 .reservation_box .reservation_right_box .reservation_right_item .title {
@@ -654,12 +666,11 @@ body {
 @media screen and (max-width: 1200px) {
   .six_right_box {
     margin-left: 0;
-    transform: translateX(-37%);
   }
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 768px) {
   .six_right_box {
-    transform: translateX(-41%);
+    margin-top: 0;
   }
 }
 .six_right_box .reservation_right_item .six_title {
@@ -678,24 +689,9 @@ body {
     margin-top: 0;
   }
 }
-@media screen and (max-width: 968px) {
-  .six_right_box .reservation_right_item .six_right_main {
-    width: 80%;
-  }
-}
-@media screen and (max-width: 780px) {
-  .six_right_box .reservation_right_item .six_right_main {
-    width: 60%;
-  }
-}
-@media screen and (max-width: 600px) {
-  .six_right_box .reservation_right_item .six_right_main {
-    width: 40%;
-  }
-}
-@media screen and (max-width: 420px) {
-  .six_right_box .reservation_right_item .six_right_main {
-    width: 30%;
+@media screen and (max-width: 768px) {
+  .six_right_box .reservation_right_item .six_right_main .six_list {
+    padding-right: 100px;
   }
 }
 .six_right_box .reservation_right_item .six_right_main .six_list .six_num {
@@ -740,13 +736,7 @@ body {
 }
 @media screen and (max-width: 1200px) {
   .privacy_right_box {
-    margin-left: 0;
-    transform: translateX(-37%);
-  }
-}
-@media screen and (max-width: 440px) {
-  .privacy_right_box {
-    transform: translateX(-41%);
+    margin: 0;
   }
 }
 .privacy_right_box .privacy_title {
@@ -762,17 +752,8 @@ body {
 }
 @media screen and (max-width: 768px) {
   .privacy_right_box .privacy_txt {
-    width: 80%;
-  }
-}
-@media screen and (max-width: 600px) {
-  .privacy_right_box .privacy_txt {
-    width: 70%;
-  }
-}
-@media screen and (max-width: 400px) {
-  .privacy_right_box .privacy_txt {
-    width: 60%;
+    width: 100%;
+    padding: 50px 100px 0 70px;
   }
 }
 .privacy_right_box .privacy_txt p {
@@ -787,8 +768,13 @@ body {
 }
 @media screen and (max-width: 1200px) {
   .SSL_right_box {
-    margin-left: 0;
-    transform: translateX(-37%);
+    margin: 0;
+    padding: 0 100px 0 70px;
+  }
+}
+@media screen and (max-width: 499px) {
+  .SSL_right_box {
+    padding: 0 20px;
   }
 }
 .SSL_right_box .SSL_title {
@@ -800,29 +786,9 @@ body {
 .SSL_right_box .SSL_main {
   width: 80%;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .SSL_right_box .SSL_main {
     width: 100%;
-  }
-}
-@media screen and (max-width: 968px) {
-  .SSL_right_box .SSL_main {
-    width: 80%;
-  }
-}
-@media screen and (max-width: 740px) {
-  .SSL_right_box .SSL_main {
-    width: 60%;
-  }
-}
-@media screen and (max-width: 570px) {
-  .SSL_right_box .SSL_main {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 468px) {
-  .SSL_right_box .SSL_main {
-    width: 30%;
   }
 }
 .SSL_right_box .SSL_main .SSL_coin {
@@ -840,6 +806,7 @@ body {
 .SSL_right_box .SSL_main .SSL_coin p {
   width: 100%;
   margin-right: 50px;
+  font-size: 14px;
 }
 @media screen and (max-width: 570px) {
   .SSL_right_box .SSL_main .SSL_coin p {
@@ -847,7 +814,13 @@ body {
   }
 }
 .SSL_right_box .SSL_main .SSL_coin p img {
+  width: 400px;
   transform: translateY(-20px);
+}
+@media screen and (max-width: 768px) {
+  .SSL_right_box .SSL_main .SSL_coin p img {
+    width: 100%;
+  }
 }
 
 .login_right_box {
@@ -857,7 +830,7 @@ body {
 @media screen and (max-width: 1200px) {
   .login_right_box {
     margin-left: 0;
-    transform: translateX(-37%);
+    padding: 0;
   }
 }
 .login_right_box .login_txt {
@@ -899,6 +872,12 @@ body {
 .login_right_box .login_txt .password {
   margin-top: 20px;
 }
+@media screen and (max-width: 768px) {
+  .login_right_box .login_txt .account,
+  .login_right_box .login_txt .password {
+    margin-right: 20px;
+  }
+}
 .login_right_box .login_txt .account input,
 .login_right_box .login_txt .password input {
   padding: 10px 0;
@@ -907,30 +886,12 @@ body {
 @media screen and (max-width: 768px) {
   .login_right_box .login_txt .account input,
   .login_right_box .login_txt .password input {
-    width: 70%;
-  }
-}
-@media screen and (max-width: 699px) {
-  .login_right_box .login_txt .account input,
-  .login_right_box .login_txt .password input {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 599px) {
-  .login_right_box .login_txt .account input,
-  .login_right_box .login_txt .password input {
-    width: 40%;
-  }
-}
-@media screen and (max-width: 499px) {
-  .login_right_box .login_txt .account input,
-  .login_right_box .login_txt .password input {
-    width: 30%;
+    width: 100%;
   }
 }
 .login_right_box .login_txt .forget {
-  width: 30%;
-  margin: 20px 0 0 100px;
+  width: 100%;
+  margin: 20px auto;
   padding: 5px 5px;
   font-size: 12px;
   color: #97999b;
@@ -939,15 +900,10 @@ body {
 @media screen and (max-width: 768px) {
   .login_right_box .login_txt .forget {
     display: flex;
-    justify-content: inherit;
+    justify-content: center;
   }
 }
 @media screen and (max-width: 599px) {
-  .login_right_box .login_txt .forget {
-    margin-left: 0;
-  }
-}
-@media screen and (max-width: 499px) {
   .login_right_box .login_txt .forget {
     margin-left: 0;
   }
@@ -964,7 +920,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .login_right_box .login_txt .forget .log_in {
-    margin-left: 100px;
+    margin-left: 50px;
   }
 }
 @media screen and (max-width: 499px) {
@@ -977,6 +933,9 @@ body {
 }
 .login_right_box .join {
   padding-top: 20px;
+}
+.login_right_box .join .title p {
+  padding-left: 30px;
 }
 .login_right_box .join .join_log {
   padding: 40px 0 20px 50px;
@@ -1055,18 +1014,23 @@ body {
 }
 @media screen and (max-width: 1200px) {
   .register_right_box {
-    transform: translateX(-37%);
     margin-left: 0;
+    padding-top: 0;
   }
 }
-@media screen and (max-width: 499px) {
+@media screen and (max-width: 768px) {
   .register_right_box {
-    transform: translateX(-41%);
+    width: auto;
   }
 }
 .register_right_box .register_txt {
   width: 96%;
   padding: 80px 0 0 30px;
+}
+@media screen and (max-width: 768px) {
+  .register_right_box .register_txt {
+    padding-top: 50px;
+  }
 }
 .register_right_box .register_txt .account,
 .register_right_box .register_txt .password,
@@ -1251,24 +1215,9 @@ body {
 .register_right_box .register_txt .email .email_checkbox {
   width: 220px;
 }
-@media screen and (max-width: 876px) {
+@media screen and (max-width: 768px) {
   .register_right_box .register_txt .email .email_checkbox {
-    width: 70%;
-  }
-}
-@media screen and (max-width: 650px) {
-  .register_right_box .register_txt .email .email_checkbox {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 430px) {
-  .register_right_box .register_txt .email .email_checkbox {
-    width: 40%;
-  }
-}
-@media screen and (max-width: 350px) {
-  .register_right_box .register_txt .email .email_checkbox {
-    width: 30%;
+    width: 100%;
   }
 }
 .register_right_box .register_txt .email p {
@@ -1287,26 +1236,6 @@ body {
   height: 160px;
   border: 1px solid #dedede;
 }
-@media screen and (max-width: 876px) {
-  .register_right_box .register_txt .remark textarea {
-    width: 70%;
-  }
-}
-@media screen and (max-width: 650px) {
-  .register_right_box .register_txt .remark textarea {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 430px) {
-  .register_right_box .register_txt .remark textarea {
-    width: 40%;
-  }
-}
-@media screen and (max-width: 350px) {
-  .register_right_box .register_txt .remark textarea {
-    width: 30%;
-  }
-}
 .register_right_box .register_txt .join_member {
   width: 100%;
   padding-top: 50px;
@@ -1314,35 +1243,12 @@ body {
   display: flex;
   justify-content: end;
 }
-@media screen and (max-width: 876px) {
-  .register_right_box .register_txt .join_member {
-    width: 70%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .register_right_box .register_txt .join_member {
-    margin-left: 0;
-  }
-}
-@media screen and (max-width: 650px) {
-  .register_right_box .register_txt .join_member {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 430px) {
-  .register_right_box .register_txt .join_member {
-    width: 40%;
-  }
-}
-@media screen and (max-width: 350px) {
-  .register_right_box .register_txt .join_member {
-    width: 30%;
-  }
-}
 .register_right_box .register_txt .join_member p {
-  padding: 10px 40px;
+  padding: 8px 30px;
+  letter-spacing: 2px;
+  font-size: 14px;
   background-color: #97999b;
-  color: #eeeeee;
+  color: #fff;
 }
 .register_right_box .register_txt .account input,
 .register_right_box .register_txt .password input,
@@ -1390,24 +1296,10 @@ body {
     padding: 8px 0;
   }
 }
-@media screen and (max-width: 876px) {
+@media screen and (max-width: 768px) {
   .register_right_box .register_txt .tel .tel_box {
-    width: 70%;
-  }
-}
-@media screen and (max-width: 650px) {
-  .register_right_box .register_txt .tel .tel_box {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 430px) {
-  .register_right_box .register_txt .tel .tel_box {
-    width: 40%;
-  }
-}
-@media screen and (max-width: 350px) {
-  .register_right_box .register_txt .tel .tel_box {
-    width: 30%;
+    width: 100%;
+    border-radius: 5px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1418,7 +1310,7 @@ body {
 .register_right_box .register_txt .tel_phone input {
   width: 80px;
 }
-@media screen and (max-width: 876px) {
+@media screen and (max-width: 768px) {
   .register_right_box .register_txt .account input,
   .register_right_box .register_txt .password input,
   .register_right_box .register_txt .password_confirm input,
@@ -1430,67 +1322,8 @@ body {
   .register_right_box .register_txt .compiled input,
   .register_right_box .register_txt .company_tel input,
   .register_right_box .register_txt .company_address input {
-    width: 70%;
-  }
-}
-@media screen and (max-width: 650px) {
-  .register_right_box .register_txt .account input,
-  .register_right_box .register_txt .password input,
-  .register_right_box .register_txt .password_confirm input,
-  .register_right_box .register_txt .name input,
-  .register_right_box .register_txt .photo input,
-  .register_right_box .register_txt .fax input,
-  .register_right_box .register_txt .company_name input,
-  .register_right_box .register_txt .position input,
-  .register_right_box .register_txt .compiled input,
-  .register_right_box .register_txt .company_tel input,
-  .register_right_box .register_txt .company_address input {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 650px) {
-  .register_right_box .register_txt .account input,
-  .register_right_box .register_txt .password input,
-  .register_right_box .register_txt .password_confirm input,
-  .register_right_box .register_txt .name input,
-  .register_right_box .register_txt .photo input,
-  .register_right_box .register_txt .fax input,
-  .register_right_box .register_txt .company_name input,
-  .register_right_box .register_txt .position input,
-  .register_right_box .register_txt .compiled input,
-  .register_right_box .register_txt .company_tel input,
-  .register_right_box .register_txt .company_address input {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 430px) {
-  .register_right_box .register_txt .account input,
-  .register_right_box .register_txt .password input,
-  .register_right_box .register_txt .password_confirm input,
-  .register_right_box .register_txt .name input,
-  .register_right_box .register_txt .photo input,
-  .register_right_box .register_txt .fax input,
-  .register_right_box .register_txt .company_name input,
-  .register_right_box .register_txt .position input,
-  .register_right_box .register_txt .compiled input,
-  .register_right_box .register_txt .company_tel input,
-  .register_right_box .register_txt .company_address input {
-    width: 40%;
-  }
-}
-@media screen and (max-width: 350px) {
-  .register_right_box .register_txt .account input,
-  .register_right_box .register_txt .password input,
-  .register_right_box .register_txt .password_confirm input,
-  .register_right_box .register_txt .name input,
-  .register_right_box .register_txt .photo input,
-  .register_right_box .register_txt .fax input,
-  .register_right_box .register_txt .company_name input,
-  .register_right_box .register_txt .position input,
-  .register_right_box .register_txt .compiled input,
-  .register_right_box .register_txt .company_tel input,
-  .register_right_box .register_txt .company_address input {
-    width: 30%;
+    width: 100%;
+    border-radius: 5px;
   }
 }
 

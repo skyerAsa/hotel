@@ -899,7 +899,6 @@ img {
 }
 .footer .footer_box {
   width: 100%;
-  width: 100%;
   padding: 103px 12% 90px calc(20px + 5.7%);
   position: relative;
   background: #bae1d0;
@@ -1422,9 +1421,9 @@ img {
   height: 640px;
 }
 .introduction_bg .introduction_bg_img img {
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 100%;
   vertical-align: middle;
 }
 .introduction_bg .title {
