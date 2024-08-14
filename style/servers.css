@@ -561,8 +561,8 @@ img {
   transition: 0.5s;
 }
 .page_list_tag a.is_active {
-  background-color: #36af63;
   border: 1px solid #36af63;
+  background-color: #36af63;
   color: #fff;
 }
 .page_list_tag a.is_active:hover {
@@ -723,9 +723,9 @@ img {
 .garden .about_field h2 {
   padding: 15px 10px;
   margin: 50px 0;
+  text-align: center;
   background-color: #63bedf;
   color: #fff;
-  text-align: center;
   border: 1px solid #63bedf;
   cursor: pointer;
 }
@@ -1071,9 +1071,9 @@ img {
 .milk .about_field h2 {
   padding: 15px 10px;
   margin: 50px 0;
+  text-align: center;
   background-color: #63bedf;
   color: #fff;
-  text-align: center;
   border: 1px solid #63bedf;
   cursor: pointer;
 }
@@ -1167,8 +1167,8 @@ img {
   margin: 50px 0;
   background-color: #63bedf;
   color: #fff;
-  text-align: center;
   border: 1px solid #63bedf;
+  text-align: center;
   cursor: pointer;
 }
 .banquet .about_field .txt {

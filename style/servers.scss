@@ -392,8 +392,8 @@
       transition: 0.5s;
     }
     &.is_active {
-      background-color: #36af63;
       border: 1px solid #36af63;
+      background-color: #36af63;
       color: #fff;
       &:hover {
         background-color: #36af63;
@@ -570,9 +570,9 @@
     h2 {
       padding: 15px 10px;
       margin: 50px 0;
+      text-align: center;
       background-color: #63bedf;
       color: #fff;
-      text-align: center;
       border: 1px solid #63bedf;
       cursor: pointer;
     }
@@ -955,9 +955,9 @@
     h2 {
       padding: 15px 10px;
       margin: 50px 0;
+      text-align: center;
       background-color: #63bedf;
       color: #fff;
-      text-align: center;
       border: 1px solid #63bedf;
       cursor: pointer;
     }
@@ -1057,8 +1057,8 @@
       margin: 50px 0;
       background-color: #63bedf;
       color: #fff;
-      text-align: center;
       border: 1px solid #63bedf;
+      text-align: center;
       cursor: pointer;
     }
     .txt {

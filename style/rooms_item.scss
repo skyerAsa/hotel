@@ -266,10 +266,10 @@ body {
       width: 100%;
       height: 70px;
       background-color: #97999b;
+      display: none;
       align-items: center;
       justify-content: center;
       color: #fff;
-      display: none;
       position: absolute;
       left: 0;
       bottom: 0;
@@ -298,11 +298,11 @@ body {
     .membership_us {
       width: 100%;
       height: 70px;
-      background-color: #97999b;
+      display: none;
       align-items: center;
       justify-content: center;
+      background-color: #97999b;
       color: #fff;
-      display: none;
       position: absolute;
       left: 0;
       bottom: 0;
@@ -416,9 +416,9 @@ body {
     .txt {
       width: 40px;
       height: 70px;
-      position: absolute;
       display: flex;
       align-items: center;
+      position: absolute;
       top: 30%;
       right: -40px;
       border-radius: 0 10px 10px 0;
@@ -484,20 +484,20 @@ body {
         height: 50px;
         padding-left: 20px;
         margin: 0 10px;
+        display: flex;
+        align-items: center;
         background-color: #97999b;
         color: #fff;
         font-weight: bolder;
         font-size: 17px;
-        display: flex;
-        align-items: center;
       }
     }
     .collect_introduction {
       width: 95%;
       margin: 50px 0 0 10px;
-      border-left: 8px solid #97999b;
       display: flex;
       justify-content: space-between;
+      border-left: 8px solid #97999b;
       p {
         padding: 10px 30px;
         background-color: #97999b;
@@ -609,12 +609,12 @@ body {
         height: 50px;
         padding-left: 20px;
         margin: 0 10px;
-        background-color: #97999b;
-        color: #fff;
-        font-weight: bolder;
-        font-size: 17px;
         display: flex;
         align-items: center;
+        background-color: #97999b;
+        color: #fff;
+        font-size: 17px;
+        font-weight: bolder;
       }
     }
     .mountain_introduction {

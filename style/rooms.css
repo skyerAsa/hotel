@@ -302,8 +302,8 @@ img {
   top: 45%;
   left: 40%;
   border: 1px solid #fff;
-  z-index: 2;
   color: #fff;
+  z-index: 2;
   display: none;
 }
 .rooms_item .wrap .rooms_list .rooms_img::after {

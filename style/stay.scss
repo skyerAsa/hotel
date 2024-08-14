@@ -173,7 +173,7 @@
     width: 40%;
     padding: 0 140px 0 50px;
     @include rwd(1180) {
-      padding: 0 0 0 50px;
+      padding-right: 0;
     }
     @include rwd(767) {
       width: 100%;
@@ -532,8 +532,7 @@
       padding-left: 0;
     }
     h2 {
-      padding: 12px 0;
-      padding-top: 60px;
+      padding:60px 0 12px;
       border-bottom: 1px solid #d6d6d6;
       color: #191919;
       font-size: 24px;
