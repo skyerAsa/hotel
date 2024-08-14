@@ -328,8 +328,8 @@ body {
     }
   }
   .menu_item ul li .item_llst {
-    display: none;
     padding: 10px 0;
+    display: none;
   }
   .menu_item ul li .item_llst p {
     padding: 10px 0;

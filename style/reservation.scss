@@ -148,8 +148,8 @@ body {
           }
         }
         .item_llst {
-          display: none;
           padding: 10px 0;
+          display: none;
           p {
             padding: 10px 0;
             display: flex;
@@ -472,10 +472,9 @@ body {
   @include rwd(1200) {
     margin-left: 0;
   }
-  @include rwd(768){
+  @include rwd(768) {
     margin-top: 0;
   }
-
   .reservation_right_item {
     .six_title {
       padding-top: 10px;
@@ -491,7 +490,7 @@ body {
         margin-top: 0;
       }
       .six_list {
-        @include rwd(768){
+        @include rwd(768) {
           padding-right: 100px;
         }
         .six_num {
@@ -557,7 +556,7 @@ body {
     font-size: 15px;
     @include rwd(768) {
       width: 100%;
-      padding:50px 100px 0 70px;
+      padding: 50px 100px 0 70px;
     }
     p {
       padding-bottom: 30px;
@@ -573,9 +572,9 @@ body {
   margin: 100px 0 0 20px;
   @include rwd(1200) {
     margin: 0;
-    padding: 0 100px  0 70px;
+    padding: 0 100px 0 70px;
   }
-  @include rwd(499){
+  @include rwd(499) {
     padding: 0 20px;
   }
   .SSL_title {
@@ -608,7 +607,7 @@ body {
         img {
           width: 400px;
           transform: translateY(-20px);
-          @include rwd(768){
+          @include rwd(768) {
             width: 100%;
           }
         }
