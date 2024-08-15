@@ -300,12 +300,12 @@ img {
   .introduction_main .title {
     width: 100%;
     padding: 10px;
+    display: flex;
+    justify-content: space-between;
     background-color: #63bedf;
     color: #fff;
     border-radius: 10px;
     cursor: pointer;
-    display: flex;
-    justify-content: space-between;
   }
   .introduction_main .title::before, .introduction_main .title::after {
     height: 0;

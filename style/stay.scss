@@ -72,16 +72,16 @@
       writing-mode: vertical-lr;
     }
     span {
+      margin-top: 30px;
       writing-mode: vertical-lr;
       position: relative;
-      margin-top: 30px;
       &::before {
         content: "";
         width: 4px;
         height: 4px;
         position: absolute;
         top: -17px;
-        left: 10px; 
+        left: 10px;
         border-radius: 100%;
         background: #fff;
         z-index: 1;
@@ -98,7 +98,7 @@
   }
   .clous_introduce {
     padding: 40px 0 100px 60px;
-    display: flex;    
+    display: flex;
     @include rwd(767) {
       padding-left: 0;
       display: block;
@@ -130,8 +130,8 @@
             img {
               width: 100%;
               height: 500px;
-              @include rwd(1200){
-                height:300px;
+              @include rwd(1200) {
+                height: 300px;
               }
             }
           }
@@ -180,7 +180,7 @@
       padding-left: 0;
     }
     h2 {
-      padding:60px 0 12px 0;
+      padding: 60px 0 12px 0;
       border-bottom: 1px solid #d6d6d6;
       color: #191919;
       font-size: 24px;
@@ -218,7 +218,7 @@
   }
   ul {
     padding-left: 60px;
-    display: flex;  
+    display: flex;
     justify-content: space-between;
     @include rwd(1180) {
       padding: 0 20px;
@@ -450,7 +450,7 @@
   }
   .linshan_introduce {
     padding: 40px 0 100px 60px;
-    display: flex;  
+    display: flex;
     @include rwd(767) {
       padding-left: 0;
       display: block;
@@ -532,7 +532,7 @@
       padding-left: 0;
     }
     h2 {
-      padding:60px 0 12px;
+      padding: 60px 0 12px;
       border-bottom: 1px solid #d6d6d6;
       color: #191919;
       font-size: 24px;

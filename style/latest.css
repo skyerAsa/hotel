@@ -209,9 +209,9 @@ img {
   height: 100px;
   width: 1px;
   margin-top: 20px;
-  background-color: #fff;
   position: absolute;
   left: 50%;
+  background-color: #fff;
 }
 .latest_bg .title h1 {
   font-size: 55px;

@@ -186,6 +186,7 @@ body {
     width: 700px;
     padding: 20px;
     text-align: center;
+    color: #63bedf;
     background-color: #fff;
     z-index: 5;
     position: absolute;
@@ -193,7 +194,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 36px;
-    color: #63bedf;
     @include rwd(768) {
       width: 500px;
     }
@@ -311,11 +311,11 @@ body {
         .language_txt {
           padding: 25px 10px;
           display: flex;
-          border: 1px solid #fff;
-          color: #fff;
-          border-radius: 50px;
           justify-content: center;
           align-items: flex-end;
+          color: #fff;
+          border: 1px solid #fff;
+          border-radius: 50px;
           writing-mode: vertical-lr;
           position: relative;
           cursor: pointer;
@@ -381,9 +381,9 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        color: #fff;
         border: 1px solid #fff;
         border-radius: 50px;
-        color: #fff;
         cursor: pointer;
         &:hover {
           opacity: 0.5;
@@ -417,13 +417,13 @@ body {
         width: 100%;
         max-width: 880px;
         padding-top: 3px;
+        color: #fff;
         position: absolute;
         top: 35%;
         left: 20%;
         display: flex;
         flex-wrap: wrap;
         z-index: 3;
-        color: #fff;
         opacity: 0;
         &.on {
           animation: ppp 0.5s 1s linear forwards;
