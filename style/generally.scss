@@ -377,6 +377,7 @@ body {
             padding: 10px 0 20px;
             margin-top: 20px;
             background-color: #97999b;
+            border-radius: 0 0 10px 0;
             position: relative;
             z-index: 2;
             @include rwd(1200) {

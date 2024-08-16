@@ -673,7 +673,7 @@ img {
   top: -10%;
 }
 .header_m .burger .menu.on p {
-  padding: 0 0 0 5px;
+  padding-left: 5px;
 }
 .header_m .burger p {
   padding-right: 20px;
@@ -902,8 +902,7 @@ img {
   padding: 103px 12% 90px calc(20px + 5.7%);
   position: relative;
   background: #bae1d0;
-  border-bottom-right-radius: 15px;
-  border-top-right-radius: 15px;
+  border-radius: 0 15px 15px 0;
 }
 @media screen and (max-width: 960px) {
   .footer .footer_box {
@@ -1178,7 +1177,7 @@ img {
 }
 .footer .footer_box .wrap .right_box ul li::after {
   content: "";
-  width: 0;
+  width: auto;
   height: 1px;
   margin-top: 5px;
   position: absolute;
@@ -1533,12 +1532,12 @@ img {
   .introduction_main .title {
     width: 100%;
     padding: 10px;
+    display: flex;
+    justify-content: space-between;
     background-color: #63bedf;
     color: #fff;
     border-radius: 10px;
     cursor: pointer;
-    display: flex;
-    justify-content: space-between;
   }
   .introduction_main .title::before, .introduction_main .title::after {
     height: 0;
@@ -1564,8 +1563,8 @@ img {
   }
 }
 .introduction_main h2 {
-  margin: initial;
   padding-bottom: 20px;
+  margin: initial;
   font-size: 36px;
   line-height: 1.5;
   font-weight: bold;
@@ -2206,7 +2205,7 @@ body:has(.privacy_option.on) {
   height: 100%;
   position: fixed;
   top: 30%;
-  right: -1%;
+  right: 0;
   flex: 1;
   z-index: 1;
   display: none;
@@ -2370,8 +2369,8 @@ body:has(.privacy_option.on) {
   }
 }
 .privacy_option .wrap .txt .privacy_about button {
-  width: 80%;
   height: 40px;
+  width: 80%;
   min-width: 165px;
   padding: 10px;
   position: absolute;
@@ -2503,13 +2502,13 @@ body:has(.privacy_option.on) {
   padding: 10px;
   position: relative;
   background-color: transparent;
+  color: #000;
   border: 1px solid #000;
   border-radius: 50px;
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 1px;
   text-align: center;
-  color: #000;
   cursor: pointer;
 }
 .privacy_option .wrap .txt .choose .arrow {

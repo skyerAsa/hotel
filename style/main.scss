@@ -287,7 +287,6 @@ body {
   &::-webkit-scrollbar {
     display: none;
   }
- 
   @include rwd(840) {
     overflow-y: auto;
   }
@@ -622,7 +621,7 @@ body {
   height: 100%;
   position: fixed;
   top: 30%;
-  right: -1%;
+  right: 0;
   flex: 1;
   z-index: 1;
   display: none;
@@ -777,9 +776,9 @@ body {
           }
         }
         button {
-          width: 80%;
           height: 40px;
-          min-width: 165px;    
+          width: 80%;
+          min-width: 165px;
           padding: 10px;
           position: absolute;
           background-color: transparent;
@@ -918,13 +917,13 @@ body {
           padding: 10px;
           position: relative;
           background-color: transparent;
+          color: #000;
           border: 1px solid #000;
           border-radius: 50px;
           font-size: 15px;
           font-weight: 400;
           letter-spacing: 1px;
           text-align: center;
-          color: #000;
           cursor: pointer;
         }
         .arrow {

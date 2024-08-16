@@ -336,9 +336,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: aa 0.5s forwards;
     font-weight: bolder;
     background-color: #97999b;
+    animation: aa 0.5s forwards;
   }
 }
 @media screen and (max-width: 768px) and (max-width: 768px) {

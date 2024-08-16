@@ -412,6 +412,20 @@ body {
         top: -40px;
         white-space: nowrap;
       }
+      @include rwd(700){
+        &:nth-child(2) {
+          left: 23%;
+        }
+        &:nth-child(3) {
+          left: 46%;
+        }
+        &:nth-child(4) {
+          left: 73%;
+        }
+        &:nth-child(5) {
+          left: 99%;
+        }
+      }
     }
   }
 }

@@ -408,8 +408,8 @@ body {
   }
 }
 .reservation_title ul li {
-  padding: 10px 0;
   height: 60px;
+  padding: 10px 0;
   cursor: pointer;
 }
 .reservation_title ul li:hover .about_us,

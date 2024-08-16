@@ -331,8 +331,8 @@ img {
   }
 }
 .introduction_main h2 {
-  margin: initial;
   padding-bottom: 20px;
+  margin: initial;
   font-size: 36px;
   line-height: 1.5;
   font-weight: bold;

@@ -613,6 +613,20 @@ body {
   top: -40px;
   white-space: nowrap;
 }
+@media screen and (max-width: 700px) {
+  .process .process_list li:nth-child(2) {
+    left: 23%;
+  }
+  .process .process_list li:nth-child(3) {
+    left: 46%;
+  }
+  .process .process_list li:nth-child(4) {
+    left: 73%;
+  }
+  .process .process_list li:nth-child(5) {
+    left: 99%;
+  }
+}
 
 .collection_list {
   margin: 0 auto;

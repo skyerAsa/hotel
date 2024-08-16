@@ -451,7 +451,7 @@ img {
 }
 .facility_item .wrap .facility_list {
   width: 50%;
-  padding: 0 0px 50px;
+  padding-bottom: 50px;
 }
 @media screen and (max-width: 960px) {
   .facility_item .wrap .facility_list {
@@ -594,10 +594,10 @@ img {
 .farm .about_field h2 {
   padding: 15px 10px;
   margin: 50px 0;
-  background-color: #63bedf;
-  color: #fff;
   text-align: center;
   border: 1px solid #63bedf;
+  background-color: #63bedf;
+  color: #fff;
   cursor: pointer;
 }
 .farm .about_field .txt {

@@ -256,7 +256,7 @@ body {
 .logo .link .checkout img {
   width: 18px;
   height: 20px;
-  margin: 0 10px 0 0;
+  margin-right: 10px;
 }
 .logo .link .checkout {
   margin-left: 10px;
@@ -549,14 +549,14 @@ body {
 .process .process_item li {
   width: 30px;
   height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50px;
   background-color: #8a8989;
   color: #fff;
   position: absolute;
   top: -13px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .process .process_item li:first-child {
   position: relative;
@@ -579,15 +579,15 @@ body {
 }
 .process .process_list li {
   width: auto;
-  border-radius: 50px;
-  background-color: transparent;
-  font-size: 12px;
-  position: absolute;
-  top: -13px;
-  color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50px;
+  background-color: transparent;
+  color: #000;
+  font-size: 12px;
+  position: absolute;
+  top: -13px;
   white-space: nowrap;
 }
 .process .process_list li:first-child {
@@ -613,6 +613,20 @@ body {
   left: 99%;
   top: -40px;
   white-space: nowrap;
+}
+@media screen and (max-width: 700px) {
+  .process .process_list li:nth-child(2) {
+    left: 23%;
+  }
+  .process .process_list li:nth-child(3) {
+    left: 46%;
+  }
+  .process .process_list li:nth-child(4) {
+    left: 73%;
+  }
+  .process .process_list li:nth-child(5) {
+    left: 99%;
+  }
 }
 
 .collection_list {

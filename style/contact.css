@@ -206,8 +206,8 @@ img {
 }
 .contact_bg .title h2::after {
   content: "";
-  height: 100px;
   width: 1px;
+  height: 100px;
   margin-top: 20px;
   background-color: #fff;
   position: absolute;

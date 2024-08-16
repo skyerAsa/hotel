@@ -80,7 +80,7 @@ body {
       img {
         width: 18px;
         height: 20px;
-        margin: 0 10px 0 0;
+        margin-right: 10px;
       }
     }
     .checkout {
@@ -349,14 +349,14 @@ body {
     li {
       width: 30px;
       height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       border-radius: 50px;
       background-color: #8a8989;
       color: #fff;
       position: absolute;
-      top: -13px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      top: -13px;    
       &:first-child {
         position: relative;
         background-color: #019875;
@@ -379,15 +379,15 @@ body {
     display: flex;
     li {
       width: auto;
-      border-radius: 50px;
-      background-color: transparent;
-      font-size: 12px;
-      position: absolute;
-      top: -13px;
-      color: #000;
       display: flex;
       align-items: center;
       justify-content: center;
+      border-radius: 50px;
+      background-color: transparent;
+      color: #000;
+      font-size: 12px;
+      position: absolute;
+      top: -13px;
       white-space: nowrap;
       &:first-child {
         position: relative;
@@ -412,6 +412,20 @@ body {
         left: 99%;
         top: -40px;
         white-space: nowrap;
+      }
+      @include rwd(700){
+        &:nth-child(2) {
+          left: 23%;
+        }
+        &:nth-child(3) {
+          left: 46%;
+        }
+        &:nth-child(4) {
+          left: 73%;
+        }
+        &:nth-child(5) {
+          left: 99%;
+        }
       }
     }
   }

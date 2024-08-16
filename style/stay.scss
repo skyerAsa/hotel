@@ -401,11 +401,11 @@
     }
   }
   .txt {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 30%;
     right: 2%;
-    display: flex;
-    flex-direction: column;
     color: #fff;
     @include rwd(840) {
       display: none;
@@ -525,7 +525,7 @@
     width: 40%;
     padding: 0 140px 0 50px;
     @include rwd(1180) {
-      padding: 0 0 0 50px;
+      padding-right: 0;
     }
     @include rwd(767) {
       width: 100%;
