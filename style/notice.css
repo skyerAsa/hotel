@@ -535,7 +535,7 @@ body {
 .process {
   width: 1000px;
   height: 1px;
-  margin: 70px auto 0;
+  margin: 130px auto 0;
   background-color: #97999b;
   position: relative;
 }
@@ -583,11 +583,11 @@ body {
 .process .process_list li {
   width: auto;
   border-radius: 50px;
-  background-color: transparent;
   font-size: 12px;
   position: absolute;
-  color: #000;
   top: -13px;
+  background-color: transparent;
+  color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
