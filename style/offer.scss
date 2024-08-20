@@ -356,7 +356,7 @@ body {
       background-color: #8a8989;
       color: #fff;
       position: absolute;
-      top: -13px;    
+      top: -13px;
       &:first-child {
         position: relative;
         background-color: #019875;
@@ -413,7 +413,7 @@ body {
         top: -40px;
         white-space: nowrap;
       }
-      @include rwd(700){
+      @include rwd(700) {
         &:nth-child(2) {
           left: 23%;
         }
@@ -497,12 +497,12 @@ body {
     display: flex;
     align-items: center;
     white-space: nowrap;
-    p {
-      padding-right: 10px;
-    }
     @include rwd(499) {
       padding: 0;
       justify-content: center;
+    }
+    p {
+      padding-right: 10px;
     }
   }
   .rooms_number {
@@ -587,12 +587,12 @@ body {
   .header-display {
     display: flex;
     align-items: center;
-  }
-  .header-display p {
-    margin: 5px;
-    color: var(--accent);
-    font-size: 1.2rem;
-    word-spacing: 0.5rem;
+    p {
+      margin: 5px;
+      color: var(--accent);
+      font-size: 1.2rem;
+      word-spacing: 0.5rem;
+    }
   }
   pre {
     padding: 10px;

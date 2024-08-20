@@ -703,14 +703,14 @@ body {
   align-items: center;
   white-space: nowrap;
 }
-.rooms_item .rooms_name p {
-  padding-right: 10px;
-}
 @media screen and (max-width: 499px) {
   .rooms_item .rooms_name {
     padding: 0;
     justify-content: center;
   }
+}
+.rooms_item .rooms_name p {
+  padding-right: 10px;
 }
 .rooms_item .rooms_number {
   padding: 0 20px 0 50px;

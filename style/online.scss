@@ -570,12 +570,12 @@ body {
   .header-display {
     display: flex;
     align-items: center;
-  }
-  .header-display p {
-    margin: 5px;
-    color: var(--accent);
-    font-size: 1.2rem;
-    word-spacing: 0.5rem;
+    p {
+      margin: 5px;
+      color: var(--accent);
+      font-size: 1.2rem;
+      word-spacing: 0.5rem;
+    }
   }
   pre {
     padding: 10px;
