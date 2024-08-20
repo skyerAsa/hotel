@@ -27,7 +27,7 @@
   }
   .title {
     position: absolute;
-    top: 15%;
+    top: 30%;
     left: 45%;
     writing-mode: vertical-lr;
     color: #fff;
@@ -46,6 +46,8 @@
     }
     h1 {
       font-size: 55px;
+      font-weight: 500;
+      padding: 0 10px;
     }
   }
   .txt {
@@ -91,7 +93,7 @@
 
 // list_tags
 .list_tags {
-  padding: 100px 0;
+  padding: 70px 0;
   display: flex;
   justify-content: center;
   color: #404040;
@@ -223,7 +225,7 @@
 }
 
 .tags_list {
-  width: 95%;
+  width: 97%;
   padding: 10px;
   margin: 100px 10px;
   background-color: #63bedf;
@@ -271,7 +273,7 @@
 // facility_item
 .facility_item {
   padding-left: 140px;
-  @include rwd(1080) {
+  @include rwd(1180) {
     padding: 0 20px;
   }
   .wrap {
@@ -281,7 +283,16 @@
     flex-wrap: wrap;
     .facility_list {
       width: 50%;
-      padding-bottom: 50px;
+      padding: 0 10px 50px 50px;
+      @include rwd(1024) {
+        padding: 0 10px 50px 0;
+      }
+      &:nth-child(even) {
+        padding: 0 50px 50px 10px;
+        @include rwd(1024) {
+          padding: 0 0 50px 10px;
+        }
+      }
       @include rwd(960) {
         width: 100%;
       }
@@ -295,7 +306,7 @@
           padding: 10px 20px;
           position: absolute;
           top: 45%;
-          left: 40%;
+          left: 45%;
           border: 1px solid #fff;
           z-index: 2;
           color: #fff;
@@ -340,7 +351,6 @@
         font-size: 20px;
         letter-spacing: 3px;
         p {
-          font-weight: bold;
           cursor: pointer;
           &:hover {
             color: #63bedf;

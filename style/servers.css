@@ -195,7 +195,7 @@ img {
 }
 .servers_bg .title {
   position: absolute;
-  top: 15%;
+  top: 30%;
   left: 45%;
   writing-mode: vertical-lr;
   color: #fff;
@@ -215,6 +215,8 @@ img {
 }
 .servers_bg .title h1 {
   font-size: 55px;
+  font-weight: 500;
+  padding: 0 10px;
 }
 .servers_bg .txt {
   position: absolute;
@@ -259,7 +261,7 @@ img {
 }
 
 .list_tags {
-  padding: 100px 0;
+  padding: 70px 0;
   display: flex;
   justify-content: center;
   color: #404040;
@@ -388,7 +390,7 @@ img {
 }
 
 .tags_list {
-  width: 95%;
+  width: 97%;
   padding: 10px;
   margin: 100px 10px;
   background-color: #63bedf;
@@ -438,7 +440,7 @@ img {
 .facility_item {
   padding-left: 140px;
 }
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1180px) {
   .facility_item {
     padding: 0 20px;
   }
@@ -451,7 +453,20 @@ img {
 }
 .facility_item .wrap .facility_list {
   width: 50%;
-  padding-bottom: 50px;
+  padding: 0 10px 50px 50px;
+}
+@media screen and (max-width: 1024px) {
+  .facility_item .wrap .facility_list {
+    padding: 0 10px 50px 0;
+  }
+}
+.facility_item .wrap .facility_list:nth-child(even) {
+  padding: 0 50px 50px 10px;
+}
+@media screen and (max-width: 1024px) {
+  .facility_item .wrap .facility_list:nth-child(even) {
+    padding: 0 0 50px 10px;
+  }
 }
 @media screen and (max-width: 960px) {
   .facility_item .wrap .facility_list {
@@ -469,7 +484,7 @@ img {
   padding: 10px 20px;
   position: absolute;
   top: 45%;
-  left: 40%;
+  left: 45%;
   border: 1px solid #fff;
   z-index: 2;
   color: #fff;
@@ -512,7 +527,6 @@ img {
   letter-spacing: 3px;
 }
 .facility_item .wrap .facility_list .txt p {
-  font-weight: bold;
   cursor: pointer;
 }
 .facility_item .wrap .facility_list .txt p:hover {
