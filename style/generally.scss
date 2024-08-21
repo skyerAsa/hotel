@@ -493,7 +493,6 @@ body {
                 }
                 @include rwd(768) {
                     width: 300px;
-                    margin: 0 21px 20px ;
                 }
                 h2 {
                     padding: 20px 0;
@@ -505,9 +504,6 @@ body {
                 }
                 li {
                     list-style: none;
-                }
-                &:nth-child(even) {
-
                 }
                 .rooms_item {
                     display: flex;

@@ -706,7 +706,6 @@ body {
 @media screen and (max-width: 768px) {
   .reservation_box .reservation_right_box .reservation_right_item .room_list {
     width: 300px;
-    margin: 0 21px 20px;
   }
 }
 .reservation_box .reservation_right_box .reservation_right_item .room_list h2 {
