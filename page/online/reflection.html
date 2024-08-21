@@ -358,59 +358,17 @@
           <div class="middle"></div>
           <div class="rooms">
             <p>退房日期</p>
-            <select>
-              <option>2024</option>
-              <option>2025</option>
-            </select>
-            <span>/</span>
-            <select name="month" id="month">
-              <option value="0">1</option>
-              <option value="1">2</option>
-              <option value="2">3</option>
-              <option value="3">4</option>
-              <option value="4">5</option>
-              <option value="5">6</option>
-              <option value="6">7</option>
-              <option value="7">8</option>
-              <option value="8">9</option>
-              <option value="9">10</option>
-              <option value="10">11</option>
-              <option value="11">12</option>
-            </select>
-            <span>/</span>
-            <select name="day" id="day">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-              <option value="13">13</option>
-              <option value="14">14</option>
-              <option value="15">15</option>
-              <option value="16">16</option>
-              <option value="17">17</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="20">20</option>
-              <option value="21">21</option>
-              <option value="22">22</option>
-              <option value="23">23</option>
-              <option value="24">24</option>
-              <option value="25">25</option>
-              <option value="26">26</option>
-              <option value="27">27</option>
-              <option value="28">28</option>
-              <option value="29">29</option>
-              <option value="30">30</option>
-              <option value="31">31</option>
-            </select>
+            <div class="birthday">
+              <select name="menu-birthyear" id="birthyearmenu">
+                  <option value=""></option>
+              </select> /
+              <select name="menu-birthmonth" id="birthmonthmenu">
+                  <option value=""></option>
+              </select> /
+              <select name="menu-birthday" id="birthdaymenu">
+                  <option value=""></option>
+              </select>
+      </div>
           </div>
         </div>
         <a href="../rooms_notice.html">
@@ -448,11 +406,83 @@
   </body>
 </html>
 <script>
-  var CurrentDate = new Date();
+function contactFormDate() {
+	if ($('.birthday').length != 0) {
+		/* 填充年份下拉菜单 */
+		$cur_year = new Date().getFullYear();
+		$max_old_year = $cur_year; // 设定最小为一百年前。
+		$max_available_year = $cur_year + 1 ; // 设定最大为16年前，若为0即为当前年份。		
+		var $birthyears = '<option value="">--</option>';
+		for (var i = $max_old_year; i <= $max_available_year; i++) {
+			$birthyears = $birthyears + '<option value="' + i + '">' + i + '</option>';
+		}
+		$('#birthyearmenu').html($birthyears);
 
-  $("#month").val(CurrentDate.getMonth());
-  $("#day").val(CurrentDate.getDate() + 1);
-  $("#today").val(CurrentDate.getDate());
+		/* 填充月份下拉菜单 */
+		var $birthmonthes = '<option value="">--</option>';
+		for (var i = 1; i <= 12; i++) {
+			$birthmonthes = $birthmonthes + '<option value="' + i + '">' + i + '</option>';
+		}
+		$('#birthmonthmenu').html($birthmonthes);
+
+		/* 填充日下拉菜单设定默认31天 */
+		var $birthdays = '<option value="">--</option>';
+		for (var i = 1; i <= 31; i++) {
+			$birthdays = $birthdays + '<option value="' + i + '">' + i + '</option>';
+		}
+		$('#birthdaymenu').html($birthdays);
+
+		/* 以下开始判断每个月具体的日数 */
+
+		/* 设定每月默认天数 */
+		var month_maxday = new Array();
+		month_maxday[1] = 31;
+		month_maxday[2] = 28;
+		month_maxday[3] = 31;
+		month_maxday[4] = 30;
+		month_maxday[5] = 31;
+		month_maxday[6] = 30;
+		month_maxday[7] = 31;
+		month_maxday[8] = 31;
+		month_maxday[9] = 30;
+		month_maxday[10] = 31;
+		month_maxday[11] = 30;
+		month_maxday[12] = 31;
+
+		/* 判断你是否是闰年 */
+		function isLeapYear(year) {
+			var a = false;
+			if (0 == year % 4 && (year % 100 != 0 || year % 400 == 0)) {
+				a = true;
+			}
+			return a;
+		}
+
+		/* 计算2月份具体日数 */
+		function getMonthCount(year, month) {
+			var c = month_maxday[month];
+			if (month == 2 && isLeapYear(year)) {
+				c++;
+			}
+			var $birthdays = '<option value="">--</option>';
+			for (var i = 1; i <= c; i++) {
+				$birthdays = $birthdays + '<option value="' + i + '">' + i + '</option>';
+			}
+			$('#birthdaymenu').html($birthdays);
+		}
+
+		/* 当年/月发生改变时重新设定2月份的天数 */
+		$('#birthyearmenu,#birthmonthmenu').on('change', function() {
+			$year = $('#birthyearmenu').val();
+			$month = $('#birthmonthmenu').val();
+			getMonthCount($year, $month);
+		});
+	}
+}
+$(function() {
+	/* 触发函数 */
+	contactFormDate();
+});
   $(window).scroll(showMenu);
 
   function showMenu() {

@@ -338,9 +338,9 @@ img {
 }
 .rooms_item .wrap .rooms_list .txt {
   padding-top: 30px;
-  text-align: center;
   font-size: 20px;
   letter-spacing: 3px;
+  text-align: center;
 }
 .rooms_item .wrap .rooms_list .txt p {
   padding-top: 10px;
