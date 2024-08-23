@@ -10,10 +10,7 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://web.cdn.openinstall.io/openinstall.js"></script>
-    <script
-      src="https://kit.fontawesome.com/64fccb9e01.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/64fccb9e01.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script
       type="text/javascript"
@@ -372,7 +369,7 @@
               <select name="menu-birthday" id="birthdaymenu">
                   <option value=""></option>
               </select>
-      </div>
+            </div>
           </div>
         </div>
         <a href="../rooms_notice.html">
@@ -416,7 +413,7 @@ function contactFormDate() {
 		$cur_year = new Date().getFullYear();
 		$max_old_year = $cur_year; // 设定最小为一百年前。
 		$max_available_year = $cur_year + 1 ; // 设定最大为16年前，若为0即为当前年份。		
-		var $birthyears = '<option value="">--</option>';
+		var $birthyears = $cur_year;
 		for (var i = $max_old_year; i <= $max_available_year; i++) {
 			$birthyears = $birthyears + '<option value="' + i + '">' + i + '</option>';
 		}
@@ -614,7 +611,6 @@ $(function() {
       monthName + " " + selectDD + "," + selectYY + " 23:15:30"
     );
     var dayOfWeek = selectDay.getDay();
-    //console.log(dayOfWeek);
 
     // 6 = Saturday, 0 = Sunday
     if (dayOfWeek === 6 || dayOfWeek === 0) {

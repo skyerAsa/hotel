@@ -421,7 +421,7 @@
       $cur_year = new Date().getFullYear();
       $max_old_year = $cur_year; // 设定最小为一百年前。
       $max_available_year = $cur_year + 1; // 设定最大为16年前，若为0即为当前年份。
-      var $birthyears = '<option value="">--</option>';
+      var $birthyears = $cur_year;
       for (var i = $max_old_year; i <= $max_available_year; i++) {
         $birthyears =
           $birthyears + '<option value="' + i + '">' + i + "</option>";

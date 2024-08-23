@@ -359,15 +359,17 @@
             <p>退房日期</p>
             <div class="birthday">
               <select name="menu-birthyear" id="birthyearmenu">
-                  <option value=""></option>
-              </select> /
-              <select name="menu-birthmonth" id="birthmonthmenu">
-                  <option value=""></option>
-              </select> /
-              <select name="menu-birthday" id="birthdaymenu">
-                  <option value=""></option>
+                <option value=""></option>
               </select>
-      </div>
+              /
+              <select name="menu-birthmonth" id="birthmonthmenu">
+                <option value=""></option>
+              </select>
+              /
+              <select name="menu-birthday" id="birthdaymenu">
+                <option value=""></option>
+              </select>
+            </div>
           </div>
         </div>
         <a href="../rooms_notice.html">
@@ -405,83 +407,87 @@
   </body>
 </html>
 <script>
-function contactFormDate() {
-	if ($('.birthday').length != 0) {
-		/* 填充年份下拉菜单 */
-		$cur_year = new Date().getFullYear();
-		$max_old_year = $cur_year; // 设定最小为一百年前。
-		$max_available_year = $cur_year + 1 ; // 设定最大为16年前，若为0即为当前年份。		
-		var $birthyears = '<option value="">--</option>';
-		for (var i = $max_old_year; i <= $max_available_year; i++) {
-			$birthyears = $birthyears + '<option value="' + i + '">' + i + '</option>';
-		}
-		$('#birthyearmenu').html($birthyears);
+  function contactFormDate() {
+    if ($(".birthday").length != 0) {
+      /* 填充年份下拉菜单 */
+      $cur_year = new Date().getFullYear();
+      $max_old_year = $cur_year; // 设定最小为一百年前。
+      $max_available_year = $cur_year + 1; // 设定最大为16年前，若为0即为当前年份。
+      var $birthyears = $cur_year;
+      for (var i = $max_old_year; i <= $max_available_year; i++) {
+        $birthyears =
+          $birthyears + '<option value="' + i + '">' + i + "</option>";
+      }
+      $("#birthyearmenu").html($birthyears);
 
-		/* 填充月份下拉菜单 */
-		var $birthmonthes = '<option value="">--</option>';
-		for (var i = 1; i <= 12; i++) {
-			$birthmonthes = $birthmonthes + '<option value="' + i + '">' + i + '</option>';
-		}
-		$('#birthmonthmenu').html($birthmonthes);
+      /* 填充月份下拉菜单 */
+      var $birthmonthes = '<option value="">--</option>';
+      for (var i = 1; i <= 12; i++) {
+        $birthmonthes =
+          $birthmonthes + '<option value="' + i + '">' + i + "</option>";
+      }
+      $("#birthmonthmenu").html($birthmonthes);
 
-		/* 填充日下拉菜单设定默认31天 */
-		var $birthdays = '<option value="">--</option>';
-		for (var i = 1; i <= 31; i++) {
-			$birthdays = $birthdays + '<option value="' + i + '">' + i + '</option>';
-		}
-		$('#birthdaymenu').html($birthdays);
+      /* 填充日下拉菜单设定默认31天 */
+      var $birthdays = '<option value="">--</option>';
+      for (var i = 1; i <= 31; i++) {
+        $birthdays =
+          $birthdays + '<option value="' + i + '">' + i + "</option>";
+      }
+      $("#birthdaymenu").html($birthdays);
 
-		/* 以下开始判断每个月具体的日数 */
+      /* 以下开始判断每个月具体的日数 */
 
-		/* 设定每月默认天数 */
-		var month_maxday = new Array();
-		month_maxday[1] = 31;
-		month_maxday[2] = 28;
-		month_maxday[3] = 31;
-		month_maxday[4] = 30;
-		month_maxday[5] = 31;
-		month_maxday[6] = 30;
-		month_maxday[7] = 31;
-		month_maxday[8] = 31;
-		month_maxday[9] = 30;
-		month_maxday[10] = 31;
-		month_maxday[11] = 30;
-		month_maxday[12] = 31;
+      /* 设定每月默认天数 */
+      var month_maxday = new Array();
+      month_maxday[1] = 31;
+      month_maxday[2] = 28;
+      month_maxday[3] = 31;
+      month_maxday[4] = 30;
+      month_maxday[5] = 31;
+      month_maxday[6] = 30;
+      month_maxday[7] = 31;
+      month_maxday[8] = 31;
+      month_maxday[9] = 30;
+      month_maxday[10] = 31;
+      month_maxday[11] = 30;
+      month_maxday[12] = 31;
 
-		/* 判断你是否是闰年 */
-		function isLeapYear(year) {
-			var a = false;
-			if (0 == year % 4 && (year % 100 != 0 || year % 400 == 0)) {
-				a = true;
-			}
-			return a;
-		}
+      /* 判断你是否是闰年 */
+      function isLeapYear(year) {
+        var a = false;
+        if (0 == year % 4 && (year % 100 != 0 || year % 400 == 0)) {
+          a = true;
+        }
+        return a;
+      }
 
-		/* 计算2月份具体日数 */
-		function getMonthCount(year, month) {
-			var c = month_maxday[month];
-			if (month == 2 && isLeapYear(year)) {
-				c++;
-			}
-			var $birthdays = '<option value="">--</option>';
-			for (var i = 1; i <= c; i++) {
-				$birthdays = $birthdays + '<option value="' + i + '">' + i + '</option>';
-			}
-			$('#birthdaymenu').html($birthdays);
-		}
+      /* 计算2月份具体日数 */
+      function getMonthCount(year, month) {
+        var c = month_maxday[month];
+        if (month == 2 && isLeapYear(year)) {
+          c++;
+        }
+        var $birthdays = '<option value="">--</option>';
+        for (var i = 1; i <= c; i++) {
+          $birthdays =
+            $birthdays + '<option value="' + i + '">' + i + "</option>";
+        }
+        $("#birthdaymenu").html($birthdays);
+      }
 
-		/* 当年/月发生改变时重新设定2月份的天数 */
-		$('#birthyearmenu,#birthmonthmenu').on('change', function() {
-			$year = $('#birthyearmenu').val();
-			$month = $('#birthmonthmenu').val();
-			getMonthCount($year, $month);
-		});
-	}
-}
-$(function() {
-	/* 触发函数 */
-	contactFormDate();
-});
+      /* 当年/月发生改变时重新设定2月份的天数 */
+      $("#birthyearmenu,#birthmonthmenu").on("change", function () {
+        $year = $("#birthyearmenu").val();
+        $month = $("#birthmonthmenu").val();
+        getMonthCount($year, $month);
+      });
+    }
+  }
+  $(function () {
+    /* 触发函数 */
+    contactFormDate();
+  });
   $(window).scroll(showMenu);
 
   function showMenu() {
@@ -667,7 +673,6 @@ $(function() {
     const lastDay = new Date(year, month + 1, 0);
     const firstDayIndex = firstDay.getDay(); //4
     const numberOfDays = lastDay.getDate(); //31
-
     let formattedDate = date.toLocaleString("en-US", {
       month: "long",
       year: "numeric",
@@ -678,16 +683,13 @@ $(function() {
     for (let x = 1; x <= firstDayIndex; x++) {
       const div = document.createElement("div");
       div.innerHTML += "";
-
       days.appendChild(div);
     }
 
     for (let i = 1; i <= numberOfDays; i++) {
       let div = document.createElement("div");
       let currentDate = new Date(year, month, i);
-
       div.dataset.date = currentDate.toDateString();
-
       div.innerHTML += i;
       days.appendChild(div);
       if (
@@ -728,7 +730,6 @@ $(function() {
 
     month = month + 1;
     date.setMonth(month);
-
     displayCalendar();
     displaySelected();
   });
