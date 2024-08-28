@@ -682,8 +682,14 @@ body {
   }
 }
 .reservation_box .reservation_right_box .reservation_right_item {
+  margin-left: 50px;
   display: flex;
   flex-wrap: wrap;
+}
+@media screen and (max-width: 968px) {
+  .reservation_box .reservation_right_box .reservation_right_item {
+    margin: 0;
+  }
 }
 @media screen and (max-width: 665px) {
   .reservation_box .reservation_right_box .reservation_right_item {

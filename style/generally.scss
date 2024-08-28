@@ -476,8 +476,12 @@ body {
       margin-top: 50px;
     }
     .reservation_right_item {
+      margin-left: 50px;
       display: flex;
       flex-wrap: wrap;
+      @include rwd(968){
+        margin: 0;
+      }
       @include rwd(665) {
         display: block;
       }

@@ -491,10 +491,10 @@ body {
   width: 100%;
   height: 70px;
   background-color: #97999b;
-  align-items: center;
-  justify-content: center;
   color: #fff;
   display: none;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -643,8 +643,8 @@ body {
   }
 }
 .notice .title {
-  font-weight: bolder;
   padding-left: 50px;
+  font-weight: bolder;
 }
 .notice .illustrate {
   padding: 20px 0;
