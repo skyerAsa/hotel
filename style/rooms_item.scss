@@ -80,7 +80,7 @@ body {
       img {
         width: 18px;
         height: 20px;
-        margin:0 10px 0 0;
+        margin-right: 10px;
       }
     }
     .checkout {
@@ -440,7 +440,7 @@ body {
   // reservation_right_box collection
   .reservation_right_box {
     width: 70%;
-    padding: 120px 0 0 0;
+    padding-top: 120px;
     @include rwd(1200) {
       width: 100%;
     }
@@ -565,7 +565,7 @@ body {
   //   reservation_right_box mountain
   .reservation_right_box {
     width: 70%;
-    padding: 120px 0 0 0;
+    padding-top: 120px;
     @include rwd(1200) {
       width: 100%;
     }
@@ -690,7 +690,7 @@ body {
   //   reservation_right_box morioka
   .reservation_right_box {
     width: 70%;
-    padding: 120px 0 0 0;
+   padding-top: 120px;
     @include rwd(1200) {
       width: 100%;
     }
@@ -816,7 +816,7 @@ body {
   //   reservation_right_box reflection
   .reservation_right_box {
     width: 70%;
-    padding: 120px 0 0 0;
+    padding-top: 120px;
     @include rwd(1200) {
       width: 100%;
     }
@@ -941,7 +941,7 @@ body {
   //   reservation_right_box linshan
   .reservation_right_box {
     width: 70%;
-    padding: 120px 0 0 0;
+    padding-top: 120px;
     @include rwd(1200) {
       width: 100%;
     }

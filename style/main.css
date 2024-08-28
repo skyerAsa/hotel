@@ -3522,12 +3522,12 @@ body:has(.privacy_option.on) {
 }
 @media screen and (max-width: 550px) {
   .field .field_list li {
-    margin: 0 60px 0 0;
+    margin-right: 60px;
   }
 }
 @media screen and (max-width: 510px) {
   .field .field_list li {
-    margin: 0 90px 0 0;
+    margin-right: 90px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -5285,7 +5285,7 @@ body:has(.privacy_option.on) {
   height: 17px;
 }
 .dining ul li .dining_img .team p {
-  margin: 0 0 0 20px;
+  margin-left: 20px;
 }
 .dining ul .slick-slide {
   width: 100%;

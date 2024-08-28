@@ -439,7 +439,7 @@ body {
         font-size: 24px;
         font-weight: bolder;
         writing-mode: vertical-lr;
-      } 
+      }
     }
   }
   // reservation_right_box
@@ -619,7 +619,7 @@ body {
 // login_right_box
 .login_right_box {
   width: 100%;
-  padding: 100px 0 0 0;
+  padding-top: 100px;
   @include rwd(1200) {
     margin-left: 0;
     padding: 0;
@@ -641,7 +641,7 @@ body {
       input {
         width: 220px;
         margin-right: 10px;
-        padding: 5px 5px;
+        padding: 5px;
         border: 1px solid #dedede;
         &:active {
           border: 1px solid #000;
@@ -768,7 +768,7 @@ body {
 // register_right_box
 .register_right_box {
   width: 800px;
-  padding: 100px 0 0 0;
+  padding-top: 100px;
   @include rwd(1200) {
     margin-left: 0;
     padding-top: 0;
@@ -778,9 +778,9 @@ body {
   }
   .register_txt {
     width: 96%;
-    padding: 80px 0 0 30px;
+    padding: 80px 0 0 80px;
     @include rwd(768) {
-      padding-top: 50px;
+      padding: 50px 0 0 30px;
     }
     .account,
     .password,
@@ -927,7 +927,7 @@ body {
     .company_address {
       input {
         width: 220px;
-        padding: 10px 0 10px 10px;
+        padding: 5px 10px;
         @include rwd(768) {
           width: 70%;
           margin: 10px 20px 0 0;

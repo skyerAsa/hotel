@@ -544,7 +544,6 @@
             ][selectMM - 1];
         }
         var monthName = getMonthName(selectMM);
-
         // 取得選取之星期
         var selectDay = new Date(
             monthName + " " + selectDD + "," + selectYY + " 23:15:30"
@@ -591,9 +590,7 @@
             setDays(meetYear, meetMonth, meetDay);
         }
     }
-
     (window.onload = getDay()), changeMonth();
-
     document.addEventListener("DOMContentLoaded", function() {
         const calendarEl = document.getElementById("calendar");
         const calendar = new FullCalendar.Calendar(calendarEl, {
