@@ -166,9 +166,17 @@
             }
           }
         }
+        .slick-active {
+          &:last-child {
+            .clous_carousel_m_img {
+              margin: 0;
+            }
+          }
+        }
       }
     }
   }
+
   .clous_item {
     width: 40%;
     padding: 0 140px 0 50px;
@@ -180,7 +188,7 @@
       padding-left: 0;
     }
     h2 {
-      padding: 60px 0 12px 0;
+      padding: 60px 0 12px;
       border-bottom: 1px solid #d6d6d6;
       color: #191919;
       font-size: 24px;

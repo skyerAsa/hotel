@@ -4999,8 +4999,8 @@ body:has(.privacy_option.on) {
   height: 1px;
   width: 90px;
   display: flex;
-  position: absolute;
   align-items: center;
+  position: absolute;
   bottom: 20%;
   background-color: #63bedf;
 }
@@ -5025,8 +5025,8 @@ body:has(.privacy_option.on) {
   }
 }
 .dining ul {
-  display: flex;
   margin-left: 50px;
+  display: flex;
 }
 @media screen and (max-width: 960px) {
   .dining ul {

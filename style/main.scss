@@ -3203,8 +3203,8 @@ body {
         height: 1px;
         width: 90px;
         display: flex;
-        position: absolute;
         align-items: center;
+        position: absolute;
         bottom: 20%;
         background-color: #63bedf;
       }
@@ -3227,8 +3227,8 @@ body {
     }
   }
   ul {
-    display: flex;
     margin-left: 50px;
+    display: flex;
     @include rwd(960) {
       margin-left: 0;
     }

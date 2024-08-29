@@ -301,10 +301,15 @@ img {
   display: none;
   position: absolute;
   top: 45%;
-  left: 40%;
+  left: 45%;
   border: 1px solid #fff;
   color: #fff;
   z-index: 2;
+}
+@media screen and (max-width: 1400px) {
+  .rooms_item .wrap .rooms_list .rooms_img::before {
+    left: 40%;
+  }
 }
 .rooms_item .wrap .rooms_list .rooms_img::after {
   content: "";
