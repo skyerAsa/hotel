@@ -214,9 +214,9 @@ img {
   left: 50%;
 }
 .servers_bg .title h1 {
+  padding: 0 10px;
   font-size: 55px;
   font-weight: 500;
-  padding: 0 10px;
 }
 .servers_bg .txt {
   position: absolute;
@@ -465,7 +465,7 @@ img {
 }
 @media screen and (max-width: 1024px) {
   .facility_item .wrap .facility_list:nth-child(even) {
-    padding: 0 0 50px 10px;
+    padding-right: 0;
   }
 }
 @media screen and (max-width: 960px) {

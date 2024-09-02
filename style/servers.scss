@@ -45,9 +45,9 @@
       }
     }
     h1 {
+      padding: 0 10px;
       font-size: 55px;
       font-weight: 500;
-      padding: 0 10px;
     }
   }
   .txt {
@@ -290,7 +290,7 @@
       &:nth-child(even) {
         padding: 0 50px 50px 10px;
         @include rwd(1024) {
-          padding: 0 0 50px 10px;
+         padding-right: 0;
         }
       }
       @include rwd(960) {

@@ -872,7 +872,7 @@ body {
   padding-left: 10px;
 }
 .collection_day .rooms_days {
-  padding: 100px 0 20px 0;
+  padding: 100px 0 20px;
   display: flex;
   justify-content: space-evenly;
   position: relative;
