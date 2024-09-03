@@ -1757,15 +1757,15 @@ body:has(.privacy_option.on) {
 .start_ad .inner {
   width: 700px;
   padding: 20px;
-  text-align: center;
   color: #63bedf;
   background-color: #fff;
-  z-index: 5;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 36px;
+  text-align: center;
+  z-index: 5;
 }
 @media screen and (max-width: 768px) {
   .start_ad .inner {

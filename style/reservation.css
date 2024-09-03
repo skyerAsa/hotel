@@ -740,8 +740,7 @@ body {
   }
 }
 .privacy_right_box .privacy_title {
-  padding-top: 20px;
-  margin-left: 40px;
+  padding: 20px 0 0 40px;
 }
 .privacy_right_box .privacy_title p {
   font-weight: bolder;
@@ -764,11 +763,10 @@ body {
 }
 
 .SSL_right_box {
-  margin: 100px 0 0 20px;
+  padding: 100px 0 0 20px;
 }
 @media screen and (max-width: 1200px) {
   .SSL_right_box {
-    margin: 0;
     padding: 0 100px 0 70px;
   }
 }
@@ -1014,7 +1012,6 @@ body {
 }
 @media screen and (max-width: 1200px) {
   .register_right_box {
-    margin-left: 0;
     padding-top: 0;
   }
 }

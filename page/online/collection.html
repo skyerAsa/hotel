@@ -685,9 +685,7 @@
     for (let i = 1; i <= numberOfDays; i++) {
       let div = document.createElement("div");
       let currentDate = new Date(year, month, i);
-
       div.dataset.date = currentDate.toDateString();
-
       div.innerHTML += i;
       days.appendChild(div);
       if (
