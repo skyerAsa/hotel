@@ -308,8 +308,8 @@
           top: 45%;
           left: 45%;
           border: 1px solid #fff;
-          z-index: 2;
           color: #fff;
+          z-index: 2;
           display: none;
         }
         &::after {
@@ -320,8 +320,8 @@
           top: 0;
           left: 0;
           background-color: #000;
-          opacity: 0.6;
           display: none;
+          opacity: 0.6;
         }
         &:hover {
           img {

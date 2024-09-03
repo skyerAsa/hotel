@@ -690,7 +690,7 @@ body {
   //   reservation_right_box morioka
   .reservation_right_box {
     width: 70%;
-   padding-top: 120px;
+    padding-top: 120px;
     @include rwd(1200) {
       width: 100%;
     }
@@ -744,7 +744,6 @@ body {
     .morioka_introduction {
       width: 95%;
       margin: 50px 0 0 10px;
-      margin-top: 50px;
       border-left: 8px solid #97999b;
       display: flex;
       justify-content: space-between;

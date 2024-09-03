@@ -154,8 +154,8 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
-            animation: aa 0.5s forwards;
             background-color: #97999b;
+            animation: aa 0.5s forwards;
             @include rwd(768) {
               animation: aaaa 0.5s forwards;
             }

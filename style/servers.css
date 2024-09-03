@@ -486,8 +486,8 @@ img {
   top: 45%;
   left: 45%;
   border: 1px solid #fff;
-  z-index: 2;
   color: #fff;
+  z-index: 2;
   display: none;
 }
 .facility_item .wrap .facility_list .facility_img::after {
@@ -498,8 +498,8 @@ img {
   top: 0;
   left: 0;
   background-color: #000;
-  opacity: 0.6;
   display: none;
+  opacity: 0.6;
 }
 .facility_item .wrap .facility_list .facility_img:hover img {
   transform: scale(1.1);
