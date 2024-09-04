@@ -911,12 +911,9 @@
                 function showMenu() {
                     if ($(window).scrollTop() > 200) {
                         $(".header").addClass("on");
-                    } else {
-                        $(".header").removeClass("on");
-                    }
-                    if ($(window).scrollTop() > 200) {
                         $(".header_m").addClass("on");
                     } else {
+                        $(".header").removeClass("on");
                         $(".header_m").removeClass("on");
                     }
                     if ($(window).scrollTop() > 400) {
@@ -976,9 +973,6 @@
                     } else {
                         $(".stay").removeClass("on");
                     }
-                    if ($(window).scrollTop() > 4000) {
-                        $(".dining_title").addClass("on");
-                    }
                     if ($(window).scrollTop() > 4500) {
                         $(".label_list").addClass("mid");
                     } else {
@@ -986,6 +980,7 @@
                     }
                     if ($(window).scrollTop() > 4000) {
                         $(".food").addClass("on");
+                        $(".dining_title").addClass("on");
                         $(".stay").removeClass("on");
                         $(".serve").removeClass("on");
                         $(".environment").removeClass("on");
@@ -1011,15 +1006,11 @@
                         $(".activity").removeClass("on");
                     }
 
-
                     if ($(window).scrollTop() > 250) {
                         $(".scroll_img").addClass("on");
-                    } else {
-                        $(".scroll_img").removeClass("on");
-                    }
-                    if ($(window).scrollTop() > 250) {
                         $(".scroll_img").addClass("aa");
                     } else {
+                        $(".scroll_img").removeClass("on");
                         $(".scroll_img").removeClass("aa");
                     }
                     if ($(window).scrollTop() > 300) {

@@ -455,8 +455,10 @@ img {
   display: flex;
   flex-wrap: wrap;
 }
-.footer .footer_box .wrap .right_box ul li {
+.footer .footer_box .wrap .right_box ul a {
   width: 50%;
+}
+.footer .footer_box .wrap .right_box ul li {
   padding-bottom: 25px;
   cursor: pointer;
   position: relative;
@@ -470,10 +472,18 @@ img {
   left: 0;
   display: block;
   background: #191919;
-  transition: all 0.5s linear;
 }
 .footer .footer_box .wrap .right_box ul li:hover::after {
-  width: 30%;
+  width: 0;
+  animation: iiiii 0.4s linear forwards;
+}
+@keyframes iiiii {
+  from {
+    width: 0;
+  }
+  to {
+    width: 30%;
+  }
 }
 .footer .footer_box .wrap .right_box .txt {
   font-size: 12px;

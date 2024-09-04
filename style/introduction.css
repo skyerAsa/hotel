@@ -196,7 +196,7 @@ img {
 .introduction_bg .title {
   position: absolute;
   top: 15%;
-  left: 45%;
+  left: 50%;
   writing-mode: vertical-lr;
   color: #fff;
 }
@@ -333,11 +333,11 @@ img {
 .introduction_main h2 {
   padding-bottom: 20px;
   margin: initial;
-  font-size: 36px;
   line-height: 1.5;
+  font-size: 36px;
   font-weight: bold;
-  position: relative;
   text-align: center;
+  position: relative;
 }
 .introduction_main .txt {
   display: flex;

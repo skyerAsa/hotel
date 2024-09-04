@@ -256,8 +256,10 @@
           max-width: 285px;
           display: flex;
           flex-wrap: wrap;
-          li {
+          a {
             width: 50%;
+          }
+          li {
             padding-bottom: 25px;
             cursor: pointer;
             position: relative;
@@ -270,11 +272,19 @@
               left: 0;
               display: block;
               background: #191919;
-              transition: all 0.5s linear;
             }
             &:hover {
               &::after {
-                width: 30%;
+                width: 0;
+                animation: iiiii 0.4s linear forwards;
+                @keyframes iiiii {
+                  from {
+                    width: 0;
+                  }
+                  to{
+                    width: 30%;
+                  }
+                }
               }
             }
           }
