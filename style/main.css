@@ -1169,6 +1169,9 @@ img {
   display: flex;
   flex-wrap: wrap;
 }
+.footer .footer_box .wrap .right_box ul a {
+  width: 50%;
+}
 .footer .footer_box .wrap .right_box ul li {
   padding-bottom: 25px;
   cursor: pointer;
@@ -1183,10 +1186,18 @@ img {
   left: 0;
   display: block;
   background: #191919;
-  transition: all 0.5s linear;
 }
 .footer .footer_box .wrap .right_box ul li:hover::after {
-  width: 30%;
+  width: 0;
+  animation: iiiii 0.4s linear forwards;
+}
+@keyframes iiiii {
+  from {
+    width: 0;
+  }
+  to {
+    width: 30%;
+  }
 }
 .footer .footer_box .wrap .right_box .txt {
   font-size: 12px;
@@ -1427,7 +1438,7 @@ img {
 .introduction_bg .title {
   position: absolute;
   top: 15%;
-  left: 45%;
+  left: 50%;
   writing-mode: vertical-lr;
   color: #fff;
 }
@@ -1564,11 +1575,11 @@ img {
 .introduction_main h2 {
   padding-bottom: 20px;
   margin: initial;
-  font-size: 36px;
   line-height: 1.5;
+  font-size: 36px;
   font-weight: bold;
-  position: relative;
   text-align: center;
+  position: relative;
 }
 .introduction_main .txt {
   display: flex;

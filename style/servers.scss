@@ -894,7 +894,7 @@
 
 // picnic
 .picnic {
-  padding: 0 140px 0 180px;
+  padding: 0 140px 0 200px;
   @include rwd(1180) {
     padding: 0 20px;
   }
@@ -907,8 +907,8 @@
   h3 {
     margin-top: 20px;
     line-height: 1.6;
-    font-size: 18px;
     color: #404040;
+    font-size: 18px;
     font-weight: bold;
   }
   .about_field {

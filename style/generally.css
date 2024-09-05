@@ -643,10 +643,10 @@ body {
 .reservation_box .reservation_left_box .rooms_find {
   margin: 20px 10px 0;
   padding: 20px 0;
+  font-size: 18px;
   text-align: center;
   background-color: #666;
   color: #fff;
-  font-size: 18px;
 }
 .reservation_box .reservation_left_box .rooms_find h2 {
   font-weight: bolder;

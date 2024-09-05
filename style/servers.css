@@ -1015,7 +1015,7 @@ img {
 }
 
 .picnic {
-  padding: 0 140px 0 180px;
+  padding: 0 140px 0 200px;
 }
 @media screen and (max-width: 1180px) {
   .picnic {
@@ -1031,8 +1031,8 @@ img {
 .picnic h3 {
   margin-top: 20px;
   line-height: 1.6;
-  font-size: 18px;
   color: #404040;
+  font-size: 18px;
   font-weight: bold;
 }
 .picnic .about_field h2 {
