@@ -366,23 +366,24 @@
             </div>
           </div>
         </div>
-        <a href="../rooms_notice.html">
-          <div class="Next">
+
+        <div class="Next">
+          <a href="../rooms_notice.html">
             <p>下一步</p>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
       <!-- footer -->
       <div class="footer">
         <div class="title">
           <div class="txt">
             <h2>舞牛森度假飯店</h2>
-            <p>統編 : 83698658</p>
-            <p>旅館登記字號 : 苗栗縣旅館090號</p>
-            <p>營業人名稱 : 居森有限公司</p>
-            <p>電話號碼  : (+886)037783899</p>
+            <p>統編 : 83698658</p>
+            <p>旅館登記字號 : 苗栗縣旅館090號</p>
+            <p>營業人名稱 : 居森有限公司</p>
+            <p>電話號碼 : (+886)037783899</p>
             <p>苗栗縣通霄鎮南和里165-5號</p>
-            <p>系統提供:靈知科技© 版權所有 盜用必究</p>
+            <p>系統提供 : 靈知科技© 版權所有 盜用必究</p>
           </div>
           <div class="foot">
             <img src="../../img/reservation/globaltrust_seal.gif" alt="" />
@@ -413,18 +414,18 @@
           $birthyears + '<option value="' + i + '">' + i + "</option>";
       }
       $("#birthyearmenu").html($birthyears);
-
       /* 填充月份下拉菜单 */
-      var $birthmonthes = month;
-      for (var i = 1; i <= 12; i++) {
+      var $birthmonthes = currentMonth;
+      for (var i = currentMonth; i <= 12; i++) {
         $birthmonthes =
           $birthmonthes + '<option value="' + i + '">' + i + "</option>";
       }
       $("#birthmonthmenu").html($birthmonthes);
 
       /* 填充日下拉菜单设定默认31天 */
-      var $birthdays = currentDay;
-      for (var i = 1; i <= 31; i++) {
+      var $birthdays = days;
+      var days = currentDay + 1;
+      for (var i = days; i <= 31; i++) {
         $birthdays =
           $birthdays + '<option value="' + i + '">' + i + "</option>";
       }
@@ -462,7 +463,7 @@
         if (month == 2 && isLeapYear(year)) {
           c++;
         }
-        var $birthdays = '<option value="">--</option>';
+        var $birthdays = 1;
         for (var i = 1; i <= c; i++) {
           $birthdays =
             $birthdays + '<option value="' + i + '">' + i + "</option>";

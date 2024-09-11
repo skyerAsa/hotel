@@ -378,11 +378,11 @@
             </div>
           </div>
         </div>
-        <a href="../rooms_notice.html">
-          <div class="Next">
+        <div class="Next">
+          <a href="../rooms_notice.html">
             <p>下一步</p>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
       <!-- footer -->
       <div class="footer">
@@ -427,15 +427,16 @@
       $("#birthyearmenu").html($birthyears);
       /* 填充月份下拉菜单 */
       var $birthmonthes = currentMonth;
-      for (var i = 1; i <= 12; i++) {
+      for (var i = currentMonth; i <= 12; i++) {
         $birthmonthes =
           $birthmonthes + '<option value="' + i + '">' + i + "</option>";
       }
       $("#birthmonthmenu").html($birthmonthes);
 
       /* 填充日下拉菜单设定默认31天 */
-      var $birthdays = currentDay;
-      for (var i = 1; i <= 31; i++) {
+      var $birthdays = days;
+      var days = currentDay + 1;
+      for (var i = days; i <= 31; i++) {
         $birthdays =
           $birthdays + '<option value="' + i + '">' + i + "</option>";
       }
@@ -473,7 +474,7 @@
         if (month == 2 && isLeapYear(year)) {
           c++;
         }
-        var $birthdays = '<option value="">--</option>';
+        var $birthdays = 1;
         for (var i = 1; i <= c; i++) {
           $birthdays =
             $birthdays + '<option value="' + i + '">' + i + "</option>";

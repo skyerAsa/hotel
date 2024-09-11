@@ -854,10 +854,18 @@ body {
   padding-left: 10px;
 }
 .collection_day .rooms_days {
+  width: 1200px;
   padding: 100px 0 20px 0;
+  margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
   position: relative;
+}
+@media screen and (max-width: 1200px) {
+  .collection_day .rooms_days {
+    width: auto;
+    margin: inherit;
+  }
 }
 .collection_day .rooms_days .form-group {
   display: flex;
@@ -904,11 +912,17 @@ body {
   height: 19px;
 }
 .collection_day .Next {
-  width: auto;
+  width: 1200px;
   padding-bottom: 100px;
-  margin-right: 20px;
+  margin: 0 auto;
   display: flex;
   justify-content: end;
+}
+@media screen and (max-width: 1200px) {
+  .collection_day .Next {
+    width: auto;
+    margin: 0 20px 0 0;
+  }
 }
 .collection_day .Next p {
   padding: 10px 40px;
