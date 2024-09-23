@@ -229,6 +229,9 @@
           <p>房間名稱</p>
           <select>
             <option>
+              <a href="../online/collection.html">采霞 雙人房 • 一泊二食</a>
+            </option>
+            <option>
               <a href="../online/collection.html">山采 雙人房 • 一泊二食</a>
             </option>
             <option>
@@ -263,7 +266,7 @@
       </div>
       <div class="rooms_title">
         <h2>銷售期限</h2>
-        <p>2024-06-30～2024-08-31</p>
+        <p>2024-06-30～2024-10-31</p>
       </div>
       <div class="rooms_calendar">
         <div class="container">
@@ -417,7 +420,9 @@
           $birthyears + '<option value="' + i + '">' + i + "</option>";
       }
       $("#birthyearmenu").html($birthyears);
+
       /* 填充月份下拉菜单 */
+
       var $birthmonthes = currentMonth;
       for (var i = currentMonth; i <= 12; i++) {
         $birthmonthes =
@@ -426,6 +431,7 @@
       $("#birthmonthmenu").html($birthmonthes);
 
       /* 填充日下拉菜单设定默认31天 */
+      
       var $birthdays = days;
       var days = currentDay + 1;
       for (var i = days; i <= 31; i++) {

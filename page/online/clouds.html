@@ -204,22 +204,22 @@
       <div class="collection_list">
         <ul class="collection_item">
           <li>
-            <img src="../../img/reservation/mountain/1.jpg" alt="" />
+            <img src="../../img/reservation/clous/1.jpg" alt="" />
           </li>
           <li>
-            <img src="../../img/reservation/mountain/2.jpg" alt="" />
+            <img src="../../img/reservation/clous/2.jpg" alt="" />
           </li>
           <li>
-            <img src="../../img/reservation/mountain/3.jpg" alt="" />
+            <img src="../../img/reservation/clous/3.jpg" alt="" />
           </li>
           <li>
-            <img src="../../img/reservation/mountain/4.jpg" alt="" />
+            <img src="../../img/reservation/clous/4.jpg" alt="" />
           </li>
           <li>
-            <img src="../../img/reservation/mountain/5.jpg" alt="" />
+            <img src="../../img/reservation/clous/5.jpg" alt="" />
           </li>
           <li>
-            <img src="../../img/reservation/mountain/1.jpg" alt="" />
+            <img src="../../img/reservation/clous/6.jpg" alt="" />
           </li>
         </ul>
       </div>
@@ -228,6 +228,9 @@
         <div class="rooms_name">
           <p>房間名稱</p>
           <select>
+            <option>
+              <a href="../online/clouds.html">采霞 雙人房 • 一泊一食</a>
+            </option>
             <option>
               <a href="../online/collection.html">山采 雙人房 • 一泊一食</a>
             </option>
@@ -297,15 +300,15 @@
             <span>四人房</span>
           </div>
           <div class="collect_list">
-            <p>全館唯兩間臨接山稜與海景</p>
-            <p>擁有大片落地窗的陽台客房</p>
+            <p>舞牛森經典設計款房型</p>
+            <p>遠眺樹林庭院景致</p>
+            <p>享受談天休憩的窗景沙發</p>
             <p>包含陽光朝食</p>
           </div>
           <div class="collect_context">
             <ul>
-              <li>坪數：13.8坪</li>
+              <li>坪數：10.8坪</li>
               <li>床型：2張雙人床（寬182cm X長200cm）</li>
-              <li>獨立山景陽台</li>
               <li>乾濕分離衛浴</li>
               <li>TOTO免治馬桶</li>
               <li>OLIVA DEL MEDITERRANEO 沐浴清潔組</li>
@@ -366,6 +369,7 @@
             </div>
           </div>
         </div>
+
         <div class="Next">
           <a href="../rooms_notice.html">
             <p>下一步</p>
@@ -377,12 +381,12 @@
         <div class="title">
           <div class="txt">
             <h2>舞牛森度假飯店</h2>
-            <p>統編 : 83698658</p>
-            <p>旅館登記字號 : 苗栗縣旅館090號</p>
-            <p>營業人名稱 : 居森有限公司</p>
-            <p>電話號碼  : (+886)037783899</p>
+            <p>統編 : 83698658</p>
+            <p>旅館登記字號 : 苗栗縣旅館090號</p>
+            <p>營業人名稱 : 居森有限公司</p>
+            <p>電話號碼 : (+886)037783899</p>
             <p>苗栗縣通霄鎮南和里165-5號</p>
-            <p>系統提供:靈知科技© 版權所有 盜用必究</p>
+            <p>系統提供 : 靈知科技© 版權所有 盜用必究</p>
           </div>
           <div class="foot">
             <img src="../../img/reservation/globaltrust_seal.gif" alt="" />
@@ -465,7 +469,6 @@
         if (month == 2 && isLeapYear(year)) {
           c++;
         }
-
         var $birthdays = 1;
         for (var i = 1; i <= c; i++) {
           $birthdays =
@@ -475,7 +478,6 @@
       }
 
       /* 当年/月发生改变时重新设定2月份的天数 */
-
       $("#birthyearmenu,#birthmonthmenu").on("change", function () {
         $year = $("#birthyearmenu").val();
         $month = $("#birthmonthmenu").val();
@@ -496,11 +498,9 @@
       $(".go_top").removeClass("on");
     }
   }
-
   $(".menu").on("click", function () {
     $(".menu_item").toggleClass("on");
   });
-
   $(document).ready(function () {
     $(".collection_item").slick({
       slidesToShow: 1,
@@ -616,7 +616,7 @@
       monthName + " " + selectDD + "," + selectYY + " 23:15:30"
     );
     var dayOfWeek = selectDay.getDay();
-    // console.log(dayOfWeek);
+    //console.log(dayOfWeek);
 
     // 6 = Saturday, 0 = Sunday
     if (dayOfWeek === 6 || dayOfWeek === 0) {
@@ -747,5 +747,4 @@
     });
   }
   displaySelected();
-  console.log(currentDay);
 </script>

@@ -683,6 +683,29 @@ body {
   font-weight: bolder;
   font-size: 17px;
 }
+.reservation_box .reservation_right_box .sell_collect .sell_item {
+  width: 100%;
+  margin: 50px 0 20px 10px;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-left: 8px solid #97999b;
+}
+.reservation_box .reservation_right_box .sell_collect .sell_item h2 {
+  font-weight: bolder;
+}
+.reservation_box .reservation_right_box .sell_collect .sell_item p {
+  width: 120px;
+  height: 36px;
+  padding: 10px 30px;
+  background-color: #97999b;
+  color: #fff;
+  white-space: nowrap;
+}
+.reservation_box .reservation_right_box .sell_collect .sell_day {
+  padding-left: 30px;
+}
 .reservation_box .reservation_right_box .collect_introduction {
   width: 95%;
   margin: 50px 0 0 10px;

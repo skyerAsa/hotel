@@ -743,7 +743,7 @@ body {
   font-weight: bolder;
 }
 .rooms_title p {
-  padding: 10px 0 10px 10px;
+  padding: 10px 0 30px 10px;
 }
 
 .rooms_calendar {
@@ -922,9 +922,9 @@ body {
   height: 19px;
 }
 .collection_day .Next {
-  width: auto;
+  width: 1200px;
   padding-bottom: 100px;
-  margin-right: 20px;
+  margin: 0 auto;
   display: flex;
   justify-content: end;
 }
@@ -933,6 +933,12 @@ body {
   background-color: #97999b;
   font-size: 14px;
   color: #fff;
+}
+@media screen and (max-width: 1200px) {
+  .collection_day .Next {
+    width: auto;
+    margin: 0 20px 0 0;
+  }
 }
 
 .collect_introduction {
