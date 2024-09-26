@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
@@ -11,57 +12,46 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://web.cdn.openinstall.io/openinstall.js"></script>
-    <script
-      src="https://kit.fontawesome.com/64fccb9e01.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/64fccb9e01.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-1.11.0.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
-    ></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery.session@1.0.0/jquery.session.min.js"></script>
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- Header -->
     <div class="headerpage"></div>
     <!-- contact_bg -->
     <div class="contact_bg">
-      <div class="contact_bg_img">
-        <img src="../img/24A1542RUp.jpg" alt="" />
-        <div class="title">
-          <h2>聯絡我們</h2>
-          <h1>CONTACT US</h1>
+        <div class="contact_bg_img">
+            <img src="../img/24A1542RUp.jpg" alt="" />
+            <div class="title">
+                <h2>聯絡我們</h2>
+                <h1>CONTACT US</h1>
+            </div>
+            <div class="txt">
+                <a href="/">
+                    <i class="fa fa-home"></i>
+                    <p>首頁</p>
+                </a>
+                <span>聯絡我們</span>
+            </div>
         </div>
-        <div class="txt">
-          <a href="/">
-            <i class="fa fa-home"></i>
-            <p>首頁</p>
-          </a>
-          <span>聯絡我們</span>
-        </div>
-      </div>
     </div>
     <!-- qustion_item -->
     <div class="qustion_all">
-      <div class="qustion_item">
-        <p>
-          我們歡迎您透過本信件表單詢問住宿、訂房問題
-          也歡迎您寫下相關的住宿心得與建議 您的鼓勵是我們成長的動力，所有的問題
-          我們都會盡快回覆給您
-        </p>
-        <div class="line"></div>
-      </div>
-      <div class="qustion_form">
-        <div class="sort">
-          <h2>問題分類</h2>
-          <select>
+        <div class="qustion_item">
+            <p>
+                我們歡迎您透過本信件表單詢問住宿、訂房問題 也歡迎您寫下相關的住宿心得與建議 您的鼓勵是我們成長的動力，所有的問題 我們都會盡快回覆給您
+            </p>
+            <div class="line"></div>
+        </div>
+        <div class="qustion_form">
+            <div class="sort">
+                <h2>問題分類</h2>
+                <select>
             <option>請選擇分類</option>
             <option>訂房洽詢</option>
             <option>婚宴洽詢</option>
@@ -69,51 +59,52 @@
             <option>會議團體專案</option>
             <option>其他</option>
           </select>
+            </div>
+            <div class="qustion_list">
+                <div class="gender">
+                    <form class="choose">
+                        <p>
+                            性別 <input type="radio" name="gender" value="male" />先生
+                            <input type="radio" name="gender" value="female" />小姐
+                        </p>
+                    </form>
+                    <input type="text" />
+                </div>
+                <div class="email">
+                    <p>電子信箱</p>
+                    <input type="email" />
+                </div>
+                <div class="phone">
+                    <p>連絡電話</p>
+                    <input type="tel" />
+                    <h3>範例:041122333</h3>
+                </div>
+                <div class="telephone">
+                    <p>行動電話</p>
+                    <input type="tel" />
+                    <h3>範例:0911222333</h3>
+                </div>
+            </div>
+            <div class="item">
+                <p>需求說明</p>
+                <input type="text" />
+            </div>
         </div>
-        <div class="qustion_list">
-          <div class="gender">
-            <form class="choose">
-              <p>
-                性別 <input type="radio" name="gender" value="male" />先生
-                <input type="radio" name="gender" value="female" />小姐
-              </p>
-            </form>
-            <input type="text" />
-          </div>
-          <div class="email">
-            <p>電子信箱</p>
-            <input type="email" />
-          </div>
-          <div class="phone">
-            <p>連絡電話</p>
-            <input type="tel" />
-            <h3>範例:041122333</h3>
-          </div>
-          <div class="telephone">
-            <p>行動電話</p>
-            <input type="tel" />
-            <h3>範例:0911222333</h3>
-          </div>
-        </div>
-        <div class="item">
-          <p>需求說明</p>
-          <input type="text" />
-        </div>
-      </div>
-      <div class="contact_about">
-        <button>
+        <div class="contact_about">
+            <button>
           確認送出
           <div class="arrow"></div>
         </button>
-      </div>
+        </div>
     </div>
     <!-- footer -->
     <div class="footerpage"></div>
-  </body>
+</body>
+
 </html>
 <script>
-  $(function () {
-    $(".headerpage").load("../layout/header.html");
-    $(".footerpage").load("../layout/footer.html");
-  });
+    $(function() {
+        $(".headerpage").load("../layout/header.html");
+        $(".footerpage").load("../layout/footer.html");
+    });
 </script>

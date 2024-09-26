@@ -1,228 +1,228 @@
 @import "reset";
 @import "method";
 .contact_bg {
-  padding-left: 140px;
-  position: relative;
-  overflow: hidden;
-  @include rwd(1180) {
-    padding-left: 0;
-    margin-top: 80px;
-  }
-  &::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: black;
-    opacity: 0.2;
-  }
-  .contact_bg_img {
-    height: 640px;
-    img {
-      height: 100%;
-      object-fit: cover;
-      vertical-align: middle;
+    padding-left: 140px;
+    position: relative;
+    overflow: hidden;
+    @include rwd(1180) {
+        padding-left: 0;
+        margin-top: 80px;
     }
-  }
-  .title {
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    writing-mode: vertical-lr;
-    color: #fff;
-    h2 {
-      font-size: 20px;
-      position: relative;
-      &::after {
+    &::before {
         content: "";
-        width: 1px;
-        height: 100px;
-        margin-top: 20px;
-        background-color: #fff;
+        width: 100%;
+        height: 100%;
         position: absolute;
+        background-color: black;
+        opacity: 0.2;
+    }
+    .contact_bg_img {
+        height: 640px;
+        img {
+            height: 100%;
+            object-fit: cover;
+            vertical-align: middle;
+        }
+    }
+    .title {
+        position: absolute;
+        top: 15%;
         left: 50%;
-      }
+        writing-mode: vertical-lr;
+        color: #fff;
+        h2 {
+            font-size: 20px;
+            position: relative;
+            &::after {
+                content: "";
+                width: 1px;
+                height: 100px;
+                margin-top: 20px;
+                background-color: #fff;
+                position: absolute;
+                left: 50%;
+            }
+        }
+        h1 {
+            font-size: 55px;
+        }
     }
-    h1 {
-      font-size: 55px;
-    }
-  }
-  .txt {
-    position: absolute;
-    top: 30%;
-    right: 2%;
-    display: flex;
-    flex-direction: column;
-    color: #fff;
-    @include rwd(840) {
-      display: none;
-    }
-    a {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      &:hover {
-        transition: 0.5s;
-        color: #63bedf;
-      }
-    }
-    p {
-      padding-top: 10px;
-      writing-mode: vertical-lr;
-    }
-    span {
-      margin-top: 30px;
-      writing-mode: vertical-lr;
-      position: relative;
-      &::before {
-        content: "";
-        width: 4px;
-        height: 4px;
+    .txt {
         position: absolute;
-        top: -17px;
-        left: 10px;
-        border-radius: 100%;
-        background: #fff;
-        z-index: 1;
-      }
+        top: 30%;
+        right: 2%;
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        @include rwd(840) {
+            display: none;
+        }
+        a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &:hover {
+                transition: 0.5s;
+                color: #63bedf;
+            }
+        }
+        p {
+            padding-top: 10px;
+            writing-mode: vertical-lr;
+        }
+        span {
+            margin-top: 30px;
+            writing-mode: vertical-lr;
+            position: relative;
+            &::before {
+                content: "";
+                width: 4px;
+                height: 4px;
+                position: absolute;
+                top: -17px;
+                left: 10px;
+                border-radius: 100%;
+                background: #fff;
+                z-index: 1;
+            }
+        }
     }
-  }
 }
 
 .qustion_all {
-  padding: 50px 200px 0;
-  @include rwd(1180) {
-    padding: 50px 20px;
-  }
-  .qustion_item {
-    .line {
-      width: 100%;
-      height: 1px;
-      margin: 30px 0 50px;
-      background-color: #737373;
+    padding: 50px 200px 0;
+    @include rwd(1180) {
+        padding: 50px 20px;
     }
-  }
-  .qustion_form {
-    h2 {
-      padding-bottom: 10px;
-    }
-    select {
-      width: 100%;
-      height: 45px;
-      border-radius: 10px;
-      color: #737373;
-      font-size: 16px;
-      option {
-        margin: 0 10px;
-      }
-    }
-    .qustion_list {
-      display: flex;
-      flex-wrap: wrap;
-      p {
-        padding: 20px 0 10px;
-      }
-      .gender,
-      .email,
-      .phone,
-      .telephone {
-        width: 50%;
-        @include rwd(960) {
-          width: 100%;
+    .qustion_item {
+        .line {
+            width: 100%;
+            height: 1px;
+            margin: 30px 0 50px;
+            background-color: #737373;
         }
-        input {
-          width: 100%;
-          height: 45px;
-          border-radius: 10px;
-          border: 1px solid #ccc;
-          color: #737373;
-          font-weight: 500;
-        }
-        h3 {
-          margin-top: 10px;
-          color: #999;
-          font-size: 15px;
-          line-height: 1.5;
-          letter-spacing: 0.02rem;
-        }
-        .choose {
-          input {
-            width: auto;
-            height: auto;
-          }
-        }
-      }
-      .gender,
-      .phone {
-        padding-right: 15px;
-        @include rwd(960) {
-          padding-right: 0;
-        }
-      }
     }
-    .item {
-      p {
-        padding: 20px 0 10px;
-      }
-      input {
-        width: 100%;
-        height: 200px;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-        color: #737373;
-        font-weight: 500;
-      }
-    }
-  }
-  .contact_about {
-    padding-top: 50px;
-    &:hover {
-      button {
-        color: #36af63;
-        border-color: #36af63;
-      }
-      .arrow {
-        background-color: #36af63;
-        transform: translateX(20px);
-        transition: transform 0.5s linear;
-        &::before {
-          background-color: #36af63;
+    .qustion_form {
+        h2 {
+            padding-bottom: 10px;
         }
-      }
+        select {
+            width: 100%;
+            height: 45px;
+            border-radius: 10px;
+            color: #737373;
+            font-size: 16px;
+            option {
+                margin: 0 10px;
+            }
+        }
+        .qustion_list {
+            display: flex;
+            flex-wrap: wrap;
+            p {
+                padding: 20px 0 10px;
+            }
+            .gender,
+            .email,
+            .phone,
+            .telephone {
+                width: 50%;
+                @include rwd(960) {
+                    width: 100%;
+                }
+                input {
+                    width: 100%;
+                    height: 45px;
+                    border-radius: 10px;
+                    border: 1px solid #ccc;
+                    color: #737373;
+                    font-weight: 500;
+                }
+                h3 {
+                    margin-top: 10px;
+                    color: #999;
+                    font-size: 15px;
+                    line-height: 1.5;
+                    letter-spacing: 0.02rem;
+                }
+                .choose {
+                    input {
+                        width: auto;
+                        height: auto;
+                    }
+                }
+            }
+            .gender,
+            .phone {
+                padding-right: 15px;
+                @include rwd(960) {
+                    padding-right: 0;
+                }
+            }
+        }
+        .item {
+            p {
+                padding: 20px 0 10px;
+            }
+            input {
+                width: 100%;
+                height: 200px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                color: #737373;
+                font-weight: 500;
+            }
+        }
     }
-    button {
-      height: 40px;
-      min-width: 165px;
-      padding: 10px;
-      position: relative;
-      color: #191919;
-      background-color: #fff;
-      border: 1px solid #191919;
-      border-radius: 50px;
-      font-size: 15px;
-      font-weight: 400;
-      letter-spacing: 1px;
-      text-align: center;
-      cursor: pointer;
+    .contact_about {
+        padding-top: 50px;
+        &:hover {
+            button {
+                color: #36af63;
+                border-color: #36af63;
+            }
+            .arrow {
+                background-color: #36af63;
+                transform: translateX(20px);
+                transition: transform 0.5s linear;
+                &::before {
+                    background-color: #36af63;
+                }
+            }
+        }
+        button {
+            height: 40px;
+            min-width: 165px;
+            padding: 10px;
+            position: relative;
+            color: #191919;
+            background-color: #fff;
+            border: 1px solid #191919;
+            border-radius: 50px;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .arrow {
+            width: 60px;
+            height: 1px;
+            position: absolute;
+            top: 50%;
+            right: -30px;
+            background-color: #191919;
+            transition: transform 0.5s linear;
+            &::before {
+                content: "";
+                width: 1px;
+                height: 15px;
+                position: absolute;
+                right: 3px;
+                bottom: -1px;
+                background-color: #191919;
+                transform: rotate(135deg);
+            }
+        }
     }
-    .arrow {
-      width: 60px;
-      height: 1px;
-      position: absolute;
-      top: 50%;
-      right: -30px;
-      background-color: #191919;
-      transition: transform 0.5s linear;
-      &::before {
-        content: "";
-        width: 1px;
-        height: 15px;
-        position: absolute;
-        right: 3px;
-        bottom: -1px;
-        background-color: #191919;
-        transform: rotate(135deg);
-      }
-    }
-  }
 }

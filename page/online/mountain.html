@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
@@ -10,224 +11,215 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://web.cdn.openinstall.io/openinstall.js"></script>
-    <script
-      src="https://kit.fontawesome.com/64fccb9e01.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/64fccb9e01.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-1.11.0.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
-    ></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="../../slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery.session@1.0.0/jquery.session.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="all_body">
-      <!-- reservation_logo -->
-      <div class="reservation_logo">
-        <div class="logo">
-          <a href="../../page/reservation.html">
-            <img src="../../img/logo.png" alt="" />
-          </a>
-          <div class="txt">
-            <p>Language</p>
-            <select>
+        <!-- reservation_logo -->
+        <div class="reservation_logo">
+            <div class="logo">
+                <a href="../../page/reservation.html">
+                    <img src="../../img/logo.png" alt="" />
+                </a>
+                <div class="txt">
+                    <p>Language</p>
+                    <select>
               <option>繁體中文</option>
               <option>English</option>
               <option>日本語</option>
               <option>简体中文</option>
             </select>
-          </div>
-          <div class="link">
-            <a href="../../index.html">
-              <div class="website">
-                <img src="../../img/reservation/icon_1.png" alt="" />
-                <p>官網</p>
-              </div>
-            </a>
-            <div class="checkout">
-              <img src="../../img/reservation/icon_1.png" alt="" />
-              <p>結帳</p>
-            </div>
-          </div>
-          <div class="language">
-            <select>
+                </div>
+                <div class="link">
+                    <a href="../../index.html">
+                        <div class="website">
+                            <img src="../../img/reservation/icon_1.png" alt="" />
+                            <p>官網</p>
+                        </div>
+                    </a>
+                    <div class="checkout">
+                        <img src="../../img/reservation/icon_1.png" alt="" />
+                        <p>結帳</p>
+                    </div>
+                </div>
+                <div class="language">
+                    <select>
               <option>繁體中文</option>
               <option>English</option>
               <option>日本語</option>
               <option>简体中文</option>
             </select>
-          </div>
-          <div class="menu">
-            <p>Menu</p>
-          </div>
+                </div>
+                <div class="menu">
+                    <p>Menu</p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="menu_item">
-        <ul>
-          <li>
-            飯店介紹
-            <div class="item_llst">
-              <a href="../../page/reservation.html">
-                <p>關於我們</p>
-              </a>
+        <div class="menu_item">
+            <ul>
+                <li>
+                    飯店介紹
+                    <div class="item_llst">
+                        <a href="../../page/reservation.html">
+                            <p>關於我們</p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    線上訂房
+                    <div class="item_llst">
+                        <a href="../../page/generally.html">
+                            <p>一般訂房</p>
+                        </a>
+                        <a href="../../page/offer.html">
+                            <p>特惠套裝</p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    使用說明
+                    <div class="item_llst">
+                        <a href="../../page/six_steps.html">
+                            <p>訂房六步驟</p>
+                        </a>
+                        <a href="../../page/privacy.html">
+                            <p>隱私權政策</p>
+                        </a>
+                        <a href="../../page/SSL.html">
+                            <p>SSL安全付款機制</p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    會員專區
+                    <div class="item_llst">
+                        <a href="../../page/login.html">
+                            <p>登入</p>
+                        </a>
+                        <a href="../../page/register.html">
+                            <p>註冊會員</p>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <div class="menu_coin">
+                <a href="../../index.html">
+                    <div class="website_item">
+                        <img src="../../img/reservation/icon_1.png" alt="" />
+                        <p>官網</p>
+                    </div>
+                </a>
+                <div class="checkout_item">
+                    <img src="../../img/reservation/icon_1.png" alt="" />
+                    <p>結帳</p>
+                </div>
             </div>
-          </li>
-          <li>
-            線上訂房
-            <div class="item_llst">
-              <a href="../../page/generally.html">
-                <p>一般訂房</p>
-              </a>
-              <a href="../../page/offer.html">
-                <p>特惠套裝</p>
-              </a>
-            </div>
-          </li>
-          <li>
-            使用說明
-            <div class="item_llst">
-              <a href="../../page/six_steps.html">
-                <p>訂房六步驟</p>
-              </a>
-              <a href="../../page/privacy.html">
-                <p>隱私權政策</p>
-              </a>
-              <a href="../../page/SSL.html">
-                <p>SSL安全付款機制</p>
-              </a>
-            </div>
-          </li>
-          <li>
-            會員專區
-            <div class="item_llst">
-              <a href="../../page/login.html">
-                <p>登入</p>
-              </a>
-              <a href="../../page/register.html">
-                <p>註冊會員</p>
-              </a>
-            </div>
-          </li>
-        </ul>
-        <div class="menu_coin">
-          <a href="../../index.html">
-            <div class="website_item">
-              <img src="../../img/reservation/icon_1.png" alt="" />
-              <p>官網</p>
-            </div>
-          </a>
-          <div class="checkout_item">
-            <img src="../../img/reservation/icon_1.png" alt="" />
-            <p>結帳</p>
-          </div>
         </div>
-      </div>
-      <!-- reservation_title -->
-      <div class="reservation_title">
-        <ul>
-          <li class="about">
-            <h2>About Us</h2>
-            <p>飯店介紹</p>
-            <a href="../../page/reservation.html">
-              <div class="about_us">
-                <p>關於我們</p>
-              </div>
-            </a>
-          </li>
-          <li class="reservation">
-            <h2>Reservation</h2>
-            <p>線上訂房</p>
-            <div class="reservation_rooms">
-              <a href="../../page/generally.html">
-                <p>一般訂房</p>
-              </a>
-              <a href="../../page/offer.html">
-                <p>特惠套裝</p>
-              </a>
-            </div>
-          </li>
-          <li class="instruction">
-            <h2>Instruction</h2>
-            <p>使用說明</p>
-            <div class="instruction_rooms">
-              <a href="../../page/six_steps.html">
-                <p>訂房六步驟</p>
-              </a>
-              <a href="../../page/privacy.html">
-                <p>隱私權政策</p>
-              </a>
-              <a href="../../page/SSL.html">
-                <p>SSL安全付款機制</p>
-              </a>
-            </div>
-          </li>
-          <li class="membership">
-            <h2>Membership</h2>
-            <p>會員專區</p>
-            <div class="membership_us">
-              <a href="../../page/login.html">
-                <p>登入</p>
-              </a>
-              <a href="../../page/register.html">
-                <p>註冊會員</p>
-              </a>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <!-- process -->
-      <div class="process">
-        <ul class="process_item">
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-        </ul>
-        <ul class="process_list">
-          <li>選擇房型</li>
-          <li>訂房須知</li>
-          <li>輸入帳單資訊</li>
-          <li>選擇付款方式</li>
-          <li>付款完成</li>
-        </ul>
-      </div>
-      <!-- collection_list -->
-      <div class="collection_list">
-        <ul class="collection_item">
-          <li>
-            <img src="../../img/reservation/mountain/1.jpg" alt="" />
-          </li>
-          <li>
-            <img src="../../img/reservation/mountain/2.jpg" alt="" />
-          </li>
-          <li>
-            <img src="../../img/reservation/mountain/3.jpg" alt="" />
-          </li>
-          <li>
-            <img src="../../img/reservation/mountain/4.jpg" alt="" />
-          </li>
-          <li>
-            <img src="../../img/reservation/mountain/5.jpg" alt="" />
-          </li>
-          <li>
-            <img src="../../img/reservation/mountain/1.jpg" alt="" />
-          </li>
-        </ul>
-      </div>
-      <!-- rooms_item -->
-      <div class="rooms_item">
-        <div class="rooms_name">
-          <p>房間名稱</p>
-          <select>
+        <!-- reservation_title -->
+        <div class="reservation_title">
+            <ul>
+                <li class="about">
+                    <h2>About Us</h2>
+                    <p>飯店介紹</p>
+                    <a href="../../page/reservation.html">
+                        <div class="about_us">
+                            <p>關於我們</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="reservation">
+                    <h2>Reservation</h2>
+                    <p>線上訂房</p>
+                    <div class="reservation_rooms">
+                        <a href="../../page/generally.html">
+                            <p>一般訂房</p>
+                        </a>
+                        <a href="../../page/offer.html">
+                            <p>特惠套裝</p>
+                        </a>
+                    </div>
+                </li>
+                <li class="instruction">
+                    <h2>Instruction</h2>
+                    <p>使用說明</p>
+                    <div class="instruction_rooms">
+                        <a href="../../page/six_steps.html">
+                            <p>訂房六步驟</p>
+                        </a>
+                        <a href="../../page/privacy.html">
+                            <p>隱私權政策</p>
+                        </a>
+                        <a href="../../page/SSL.html">
+                            <p>SSL安全付款機制</p>
+                        </a>
+                    </div>
+                </li>
+                <li class="membership">
+                    <h2>Membership</h2>
+                    <p>會員專區</p>
+                    <div class="membership_us">
+                        <a href="../../page/login.html">
+                            <p>登入</p>
+                        </a>
+                        <a href="../../page/register.html">
+                            <p>註冊會員</p>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- process -->
+        <div class="process">
+            <ul class="process_item">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+            <ul class="process_list">
+                <li>選擇房型</li>
+                <li>訂房須知</li>
+                <li>輸入帳單資訊</li>
+                <li>選擇付款方式</li>
+                <li>付款完成</li>
+            </ul>
+        </div>
+        <!-- collection_list -->
+        <div class="collection_list">
+            <ul class="collection_item">
+                <li>
+                    <img src="../../img/reservation/mountain/1.jpg" alt="" />
+                </li>
+                <li>
+                    <img src="../../img/reservation/mountain/2.jpg" alt="" />
+                </li>
+                <li>
+                    <img src="../../img/reservation/mountain/3.jpg" alt="" />
+                </li>
+                <li>
+                    <img src="../../img/reservation/mountain/4.jpg" alt="" />
+                </li>
+                <li>
+                    <img src="../../img/reservation/mountain/5.jpg" alt="" />
+                </li>
+                <li>
+                    <img src="../../img/reservation/mountain/1.jpg" alt="" />
+                </li>
+            </ul>
+        </div>
+        <!-- rooms_item -->
+        <div class="rooms_item">
+            <div class="rooms_name">
+                <p>房間名稱</p>
+                <select>
             <option>
               <a href="../online/collection.html">山采 雙人房 • 一泊一食</a>
             </option>
@@ -244,10 +236,10 @@
               <a href="../online/linshan.html">臨山 四人房 • 一泊一食</a>
             </option>
           </select>
-        </div>
-        <div class="rooms_number">
-          <p>房間型態 數量</p>
-          <select>
+            </div>
+            <div class="rooms_number">
+                <p>房間型態 數量</p>
+                <select>
             <option>1間</option>
             <option>2間</option>
             <option>3間</option>
@@ -259,493 +251,477 @@
             <option>9間</option>
             <option>10間</option>
           </select>
-        </div>
-      </div>
-      <div class="rooms_calendar">
-        <div class="container">
-          <div class="calendar">
-            <header>
-              <pre class="left">◀</pre>
-              <div class="header-display">
-                <p class="display">""</p>
-              </div>
-              <pre class="right">▶</pre>
-            </header>
-            <div class="week">
-              <div>日</div>
-              <div>一</div>
-              <div>二</div>
-              <div>三</div>
-              <div>四</div>
-              <div>五</div>
-              <div>六</div>
             </div>
-            <div class="days"></div>
-          </div>
-          <div class="display-selected">
-            <p class="selected"></p>
-          </div>
         </div>
-      </div>
-      <!-- collection_day -->
-      <div class="collection_day">
-        <div class="collect_introduction">
-          <h2 class="title">簡介</h2>
+        <div class="rooms_calendar">
+            <div class="container">
+                <div class="calendar">
+                    <header>
+                        <pre class="left">◀</pre>
+                        <div class="header-display">
+                            <p class="display">""</p>
+                        </div>
+                        <pre class="right">▶</pre>
+                    </header>
+                    <div class="week">
+                        <div>日</div>
+                        <div>一</div>
+                        <div>二</div>
+                        <div>三</div>
+                        <div>四</div>
+                        <div>五</div>
+                        <div>六</div>
+                    </div>
+                    <div class="days"></div>
+                </div>
+                <div class="display-selected">
+                    <p class="selected"></p>
+                </div>
+            </div>
         </div>
-        <div class="collect">
-          <div class="collect_rooms">
-            <span>四人房</span>
-          </div>
-          <div class="collect_list">
-            <p>全館唯兩間臨接山稜與海景</p>
-            <p>擁有大片落地窗的陽台客房</p>
-            <p>包含陽光朝食</p>
-          </div>
-          <div class="collect_context">
-            <ul>
-              <li>坪數：13.8坪</li>
-              <li>床型：2張雙人床（寬182cm X長200cm）</li>
-              <li>獨立山景陽台</li>
-              <li>乾濕分離衛浴</li>
-              <li>TOTO免治馬桶</li>
-              <li>OLIVA DEL MEDITERRANEO 沐浴清潔組</li>
-              <li>舞牛森手工香皂</li>
-              <li>房內Mini Bar全招待</li>
-              <li>舞牛森精選濾掛咖啡、迎賓點心</li>
-              <li>高級冰箱、熱水壺、專屬保險箱</li>
-              <li>Free Wifi及寬頻網路服務</li>
-              <li>SONY 55吋4K聯網電視</li>
-            </ul>
-          </div>
-        </div>
-        <div class="rooms_days">
-          <div class="form-row align-items-center">
-            <p>住宿日期</p>
-            <div class="form-group col-md-4 col-4">
-              <select
-                name="meetDayYY"
-                id="meetYear"
-                class="form-control"
-                onchange="setDays(this, meetMonth, meetDay); getDay(); changeYear();"
-              ></select>
-              <span class="mx-md-3 mx-0">/</span>
+        <!-- collection_day -->
+        <div class="collection_day">
+            <div class="collect_introduction">
+                <h2 class="title">簡介</h2>
             </div>
-            <div class="form-group col-md-4 col-4">
-              <select
-                name="meetDayMM"
-                id="meetMonth"
-                class="form-control"
-                onchange="setDays(meetYear, this, meetDay); getDay(); changeMonth();"
-              ></select>
-              <span class="mx-md-3 mx-0">/</span>
+            <div class="collect">
+                <div class="collect_rooms">
+                    <span>四人房</span>
+                </div>
+                <div class="collect_list">
+                    <p>全館唯兩間臨接山稜與海景</p>
+                    <p>擁有大片落地窗的陽台客房</p>
+                    <p>包含陽光朝食</p>
+                </div>
+                <div class="collect_context">
+                    <ul>
+                        <li>坪數：13.8坪</li>
+                        <li>床型：2張雙人床（寬182cm X長200cm）</li>
+                        <li>獨立山景陽台</li>
+                        <li>乾濕分離衛浴</li>
+                        <li>TOTO免治馬桶</li>
+                        <li>OLIVA DEL MEDITERRANEO 沐浴清潔組</li>
+                        <li>舞牛森手工香皂</li>
+                        <li>房內Mini Bar全招待</li>
+                        <li>舞牛森精選濾掛咖啡、迎賓點心</li>
+                        <li>高級冰箱、熱水壺、專屬保險箱</li>
+                        <li>Free Wifi及寬頻網路服務</li>
+                        <li>SONY 55吋4K聯網電視</li>
+                    </ul>
+                </div>
             </div>
-            <div class="form-group col-md-4 col-4">
-              <select
-                name="meetDayDD"
-                id="meetDay"
-                class="form-control"
-                onchange="getDay()"
-              ></select>
-            </div>
-          </div>
-          <div class="middle"></div>
-          <div class="rooms">
-            <p>退房日期</p>
-            <div class="birthday">
-              <select name="menu-birthyear" id="birthyearmenu">
+            <div class="rooms_days">
+                <div class="form-row align-items-center">
+                    <p>住宿日期</p>
+                    <div class="form-group col-md-4 col-4">
+                        <select name="meetDayYY" id="meetYear" class="form-control" onchange="setDays(this, meetMonth, meetDay); getDay(); changeYear();"></select>
+                        <span class="mx-md-3 mx-0">/</span>
+                    </div>
+                    <div class="form-group col-md-4 col-4">
+                        <select name="meetDayMM" id="meetMonth" class="form-control" onchange="setDays(meetYear, this, meetDay); getDay(); changeMonth();"></select>
+                        <span class="mx-md-3 mx-0">/</span>
+                    </div>
+                    <div class="form-group col-md-4 col-4">
+                        <select name="meetDayDD" id="meetDay" class="form-control" onchange="getDay()"></select>
+                    </div>
+                </div>
+                <div class="middle"></div>
+                <div class="rooms">
+                    <p>退房日期</p>
+                    <div class="birthday">
+                        <select name="menu-birthyear" id="birthyearmenu">
+                <option value=""></option>
+              </select> /
+                        <select name="menu-birthmonth" id="birthmonthmenu">
+                <option value=""></option>
+              </select> /
+                        <select name="menu-birthday" id="birthdaymenu">
                 <option value=""></option>
               </select>
-              /
-              <select name="menu-birthmonth" id="birthmonthmenu">
-                <option value=""></option>
-              </select>
-              /
-              <select name="menu-birthday" id="birthdaymenu">
-                <option value=""></option>
-              </select>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class="Next">
+                <a href="../rooms_notice.html">
+                    <p>下一步</p>
+                </a>
+            </div>
         </div>
-        <div class="Next">
-          <a href="../rooms_notice.html">
-            <p>下一步</p>
-          </a>
+        <!-- footer -->
+        <div class="footer">
+            <div class="title">
+                <div class="txt">
+                    <h2>舞牛森度假飯店</h2>
+                    <p>統編 : 83698658</p>
+                    <p>旅館登記字號 : 苗栗縣旅館090號</p>
+                    <p>營業人名稱 : 居森有限公司</p>
+                    <p>電話號碼  : (+886)037783899</p>
+                    <p>苗栗縣通霄鎮南和里165-5號</p>
+                    <p>系統提供:靈知科技© 版權所有 盜用必究</p>
+                </div>
+                <div class="foot">
+                    <img src="../../img/reservation/globaltrust_seal.gif" alt="" />
+                </div>
+            </div>
         </div>
-      </div>
-      <!-- footer -->
-      <div class="footer">
-        <div class="title">
-          <div class="txt">
-            <h2>舞牛森度假飯店</h2>
-            <p>統編 : 83698658</p>
-            <p>旅館登記字號 : 苗栗縣旅館090號</p>
-            <p>營業人名稱 : 居森有限公司</p>
-            <p>電話號碼  : (+886)037783899</p>
-            <p>苗栗縣通霄鎮南和里165-5號</p>
-            <p>系統提供:靈知科技© 版權所有 盜用必究</p>
-          </div>
-          <div class="foot">
-            <img src="../../img/reservation/globaltrust_seal.gif" alt="" />
-          </div>
+        <!-- go_top -->
+        <div class="go_top">
+            <a href="#">
+                <div class="go_top_img">
+                    <img src="../../img/reservation/go_top2.jpg" alt="" />
+                </div>
+            </a>
         </div>
-      </div>
-      <!-- go_top -->
-      <div class="go_top">
-        <a href="#">
-          <div class="go_top_img">
-            <img src="../../img/reservation/go_top2.jpg" alt="" />
-          </div>
-        </a>
-      </div>
     </div>
-  </body>
+</body>
+
 </html>
 <script>
-  function contactFormDate() {
-    if ($(".birthday").length != 0) {
-      /* 填充年份下拉菜单 */
-      $cur_year = new Date().getFullYear();
-      $max_old_year = $cur_year; // 设定最小为一百年前。
-      $max_available_year = $cur_year + 1; // 设定最大为16年前，若为0即为当前年份。
-      var $birthyears = $cur_year;
-      for (var i = $max_old_year; i <= $max_available_year; i++) {
-        $birthyears =
-          $birthyears + '<option value="' + i + '">' + i + "</option>";
-      }
-      $("#birthyearmenu").html($birthyears);
+    function contactFormDate() {
+        if ($(".birthday").length != 0) {
+            /* 填充年份下拉菜单 */
+            $cur_year = new Date().getFullYear();
+            $max_old_year = $cur_year; // 设定最小为一百年前。
+            $max_available_year = $cur_year + 1; // 设定最大为16年前，若为0即为当前年份。
+            var $birthyears = $cur_year;
+            for (var i = $max_old_year; i <= $max_available_year; i++) {
+                $birthyears =
+                    $birthyears + '<option value="' + i + '">' + i + "</option>";
+            }
+            $("#birthyearmenu").html($birthyears);
 
-      /* 填充月份下拉菜单 */
+            /* 填充月份下拉菜单 */
 
-      var $birthmonthes = currentMonth;
-      for (var i = currentMonth; i <= 12; i++) {
-        $birthmonthes =
-          $birthmonthes + '<option value="' + i + '">' + i + "</option>";
-      }
-      $("#birthmonthmenu").html($birthmonthes);
+            var $birthmonthes = currentMonth;
+            for (var i = currentMonth; i <= 12; i++) {
+                $birthmonthes =
+                    $birthmonthes + '<option value="' + i + '">' + i + "</option>";
+            }
+            $("#birthmonthmenu").html($birthmonthes);
 
-      /* 填充日下拉菜单设定默认31天 */
+            /* 填充日下拉菜单设定默认31天 */
 
-      var $birthdays = days;
-      var days = currentDay + 1;
-      for (var i = days; i <= 31; i++) {
-        $birthdays =
-          $birthdays + '<option value="' + i + '">' + i + "</option>";
-      }
-      $("#birthdaymenu").html($birthdays);
+            var $birthdays = days;
+            var days = currentDay + 1;
+            for (var i = days; i <= 31; i++) {
+                $birthdays =
+                    $birthdays + '<option value="' + i + '">' + i + "</option>";
+            }
+            $("#birthdaymenu").html($birthdays);
 
-      /* 以下开始判断每个月具体的日数 */
+            /* 以下开始判断每个月具体的日数 */
 
-      /* 设定每月默认天数 */
-      var month_maxday = new Array();
-      month_maxday[1] = 31;
-      month_maxday[2] = 28;
-      month_maxday[3] = 31;
-      month_maxday[4] = 30;
-      month_maxday[5] = 31;
-      month_maxday[6] = 30;
-      month_maxday[7] = 31;
-      month_maxday[8] = 31;
-      month_maxday[9] = 30;
-      month_maxday[10] = 31;
-      month_maxday[11] = 30;
-      month_maxday[12] = 31;
+            /* 设定每月默认天数 */
+            var month_maxday = new Array();
+            month_maxday[1] = 31;
+            month_maxday[2] = 28;
+            month_maxday[3] = 31;
+            month_maxday[4] = 30;
+            month_maxday[5] = 31;
+            month_maxday[6] = 30;
+            month_maxday[7] = 31;
+            month_maxday[8] = 31;
+            month_maxday[9] = 30;
+            month_maxday[10] = 31;
+            month_maxday[11] = 30;
+            month_maxday[12] = 31;
 
-      /* 判断你是否是闰年 */
-      function isLeapYear(year) {
-        var a = false;
-        if (0 == year % 4 && (year % 100 != 0 || year % 400 == 0)) {
-          a = true;
+            /* 判断你是否是闰年 */
+            function isLeapYear(year) {
+                var a = false;
+                if (0 == year % 4 && (year % 100 != 0 || year % 400 == 0)) {
+                    a = true;
+                }
+                return a;
+            }
+
+            /* 计算2月份具体日数 */
+            function getMonthCount(year, month) {
+                var c = month_maxday[month];
+                if (month == 2 && isLeapYear(year)) {
+                    c++;
+                }
+
+                var $birthdays = 1;
+                for (var i = 1; i <= c; i++) {
+                    $birthdays =
+                        $birthdays + '<option value="' + i + '">' + i + "</option>";
+                }
+                $("#birthdaymenu").html($birthdays);
+            }
+
+            /* 当年/月发生改变时重新设定2月份的天数 */
+
+            $("#birthyearmenu,#birthmonthmenu").on("change", function() {
+                $year = $("#birthyearmenu").val();
+                $month = $("#birthmonthmenu").val();
+                getMonthCount($year, $month);
+            });
         }
-        return a;
-      }
-
-      /* 计算2月份具体日数 */
-      function getMonthCount(year, month) {
-        var c = month_maxday[month];
-        if (month == 2 && isLeapYear(year)) {
-          c++;
-        }
-
-        var $birthdays = 1;
-        for (var i = 1; i <= c; i++) {
-          $birthdays =
-            $birthdays + '<option value="' + i + '">' + i + "</option>";
-        }
-        $("#birthdaymenu").html($birthdays);
-      }
-
-      /* 当年/月发生改变时重新设定2月份的天数 */
-
-      $("#birthyearmenu,#birthmonthmenu").on("change", function () {
-        $year = $("#birthyearmenu").val();
-        $month = $("#birthmonthmenu").val();
-        getMonthCount($year, $month);
-      });
     }
-  }
-  $(function () {
-    /* 触发函数 */
-    contactFormDate();
-  });
-  $(window).scroll(showMenu);
-
-  function showMenu() {
-    if ($(window).scrollTop() > 1) {
-      $(".go_top").addClass("on");
-    } else {
-      $(".go_top").removeClass("on");
-    }
-  }
-
-  $(".menu").on("click", function () {
-    $(".menu_item").toggleClass("on");
-  });
-
-  $(document).ready(function () {
-    $(".collection_item").slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true,
-      cssEase: "linear",
-      fade: true,
-      dots: true,
-      arrows: false,
-      pauseOnFocus: false,
+    $(function() {
+        /* 触发函数 */
+        contactFormDate();
     });
-  });
-  var currentYear = new Date().getFullYear();
-  var currentMonth = new Date().getMonth() + 1;
-  var currentDay = new Date().getDate();
-  var currentWeek = new Date().getDay();
+    $(window).scroll(showMenu);
 
-  // 年份
-  for (i = currentYear; i <= currentYear + 1; i++) {
-    addOption(meetYear, i, i);
-  }
-
-  // 新增月份
-  for (i = currentMonth; i <= 12; i++) {
-    addOption(meetMonth, i, i);
-  }
-
-  // 設定每個月份的天數
-  function setDays(year, month, day) {
-    var monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-    var yea = year.options[year.selectedIndex].text;
-    var mon = month.options[month.selectedIndex].text;
-    var num = monthDays[mon - 1];
-    if (mon == 2 && isLeapYear(yea)) {
-      num++;
+    function showMenu() {
+        if ($(window).scrollTop() > 1) {
+            $(".go_top").addClass("on");
+        } else {
+            $(".go_top").removeClass("on");
+        }
     }
-    for (var j = day.options.length - 1; j >= num; j--) {
-      day.remove(j);
-    }
-    for (var i = day.options.length + 1; i <= num; i++) {
-      addOption(meetDay, i, i);
-    }
-  }
-  // 限定每個月份的天數
-  function currentDays(year, month, day) {
-    var monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-    var yea = year.options[year.selectedIndex].text;
-    var mon = month.options[month.selectedIndex].text;
-    var num = monthDays[mon - 1];
-    if (mon == 2 && isLeapYear(yea)) {
-      num++;
-    }
-    for (var j = currentDay; j >= num; j--) {
-      day.remove(j);
-    }
-    for (var i = currentDay; i <= num; i++) {
-      addOption(meetDay, i, i);
-    }
-  }
 
-  // 判斷是否閏年
-  function isLeapYear(year) {
-    return year % 4 == 0 || (year % 100 == 0 && year % 400 == 0);
-  }
-  // 向select尾部新增option
-  function addOption(selectbox, text, value) {
-    var option = document.createElement("option");
-    option.text = text;
-    option.value = value;
-    selectbox.options.add(option);
-  }
-
-  // 將今天月份設為預設
-  $("select[name=meetDayMM] option").each(function () {
-    if ($(this).text() == currentMonth) $(this).attr("selected", "selected");
-  });
-
-  window.onload = setDays(meetYear, meetMonth, meetDay);
-
-  // 今天日期設為預設
-  $("select[name=meetDayDD] option").each(function () {
-    if ($(this).text() == currentDay) $(this).attr("selected", "selected");
-  });
-
-  // 取得星期並切換選項
-  function getDay() {
-    // 取得選取的 年份 月份 日期
-    var selectYY = $("select[name=meetDayYY] option").filter(":selected").val();
-    var selectMM = $("select[name=meetDayMM] option").filter(":selected").val();
-    var selectDD = $("select[name=meetDayDD] option").filter(":selected").val();
-
-    // 取得選取的月份名稱
-    function getMonthName(selectMM) {
-      return [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December",
-      ][selectMM - 1];
-    }
-    var monthName = getMonthName(selectMM);
-
-    // 取得選取之星期
-    var selectDay = new Date(
-      monthName + " " + selectDD + "," + selectYY + " 23:15:30"
-    );
-    var dayOfWeek = selectDay.getDay();
-    // console.log(dayOfWeek);
-
-    // 6 = Saturday, 0 = Sunday
-    if (dayOfWeek === 6 || dayOfWeek === 0) {
-      $("#weekDaily").attr("class", "form-group col-12 d-none");
-      $("#weekend").attr("class", "form-group col-12 d-block");
-    } else {
-      $("#weekDaily").attr("class", "form-group col-12 d-block");
-      $("#weekend").attr("class", "form-group col-12 d-none");
-    }
-  }
-
-  function changeYear() {
-    var selectYY = $("select[name=meetDayYY] option").filter(":selected").val();
-    // 僅顯示當年度大於今日之月份
-    if (selectYY == currentYear) {
-      $("#meetMonth").find("option").remove().end();
-      for (i = currentMonth; i <= 12; i++) {
-        addOption(meetMonth, i, i);
-      }
-    } else {
-      $("#meetMonth").find("option").remove().end();
-      for (i = 1; i <= 12; i++) {
-        addOption(meetMonth, i, i);
-      }
-    }
-    changeMonth();
-  }
-
-  function changeMonth() {
-    var selectYY = $("select[name=meetDayYY] option").filter(":selected").val();
-    var selectMM = $("select[name=meetDayMM] option").filter(":selected").val();
-    // 僅顯示當年度大於今日之日期
-    if (selectMM == currentMonth && selectYY == currentYear) {
-      $("#meetDay").find("option").remove().end();
-      currentDays(meetYear, meetMonth, meetDay);
-    } else {
-      $("#meetDay").find("option").remove().end();
-      setDays(meetYear, meetMonth, meetDay);
-    }
-  }
-
-  (window.onload = getDay()), changeMonth();
-
-  let display = document.querySelector(".display");
-  let days = document.querySelector(".days");
-  let previous = document.querySelector(".left");
-  let next = document.querySelector(".right");
-  let selected = document.querySelector(".selected");
-  let date = new Date();
-  let year = date.getFullYear();
-  let month = date.getMonth();
-
-  function displayCalendar() {
-    const firstDay = new Date(year, month, 1);
-    const lastDay = new Date(year, month + 1, 0);
-    const firstDayIndex = firstDay.getDay(); //4
-    const numberOfDays = lastDay.getDate(); //31
-
-    let formattedDate = date.toLocaleString("en-US", {
-      month: "long",
-      year: "numeric",
+    $(".menu").on("click", function() {
+        $(".menu_item").toggleClass("on");
     });
 
-    display.innerHTML = `${formattedDate}`;
+    $(document).ready(function() {
+        $(".collection_item").slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            cssEase: "linear",
+            fade: true,
+            dots: true,
+            arrows: false,
+            pauseOnFocus: false,
+        });
+    });
+    var currentYear = new Date().getFullYear();
+    var currentMonth = new Date().getMonth() + 1;
+    var currentDay = new Date().getDate();
+    var currentWeek = new Date().getDay();
 
-    for (let x = 1; x <= firstDayIndex; x++) {
-      const div = document.createElement("div");
-      div.innerHTML += "";
-      days.appendChild(div);
+    // 年份
+    for (i = currentYear; i <= currentYear + 1; i++) {
+        addOption(meetYear, i, i);
     }
 
-    for (let i = 1; i <= numberOfDays; i++) {
-      let div = document.createElement("div");
-      let currentDate = new Date(year, month, i);
-      div.dataset.date = currentDate.toDateString();
-      div.innerHTML += i;
-      days.appendChild(div);
-      if (
-        currentDate.getFullYear() === new Date().getFullYear() &&
-        currentDate.getMonth() === new Date().getMonth() &&
-        currentDate.getDate() === new Date().getDate()
-      ) {
-        div.classList.add("current-date");
-      }
-    }
-  }
-
-  // Call the function to display the calendar
-  displayCalendar();
-
-  previous.addEventListener("click", () => {
-    days.innerHTML = "";
-    selected.innerHTML = "";
-
-    if (month < 0) {
-      month = 11;
-      year = year - 1;
+    // 新增月份
+    for (i = currentMonth; i <= 12; i++) {
+        addOption(meetMonth, i, i);
     }
 
-    month = month - 1;
-    date.setMonth(month);
+    // 設定每個月份的天數
+    function setDays(year, month, day) {
+        var monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        var yea = year.options[year.selectedIndex].text;
+        var mon = month.options[month.selectedIndex].text;
+        var num = monthDays[mon - 1];
+        if (mon == 2 && isLeapYear(yea)) {
+            num++;
+        }
+        for (var j = day.options.length - 1; j >= num; j--) {
+            day.remove(j);
+        }
+        for (var i = day.options.length + 1; i <= num; i++) {
+            addOption(meetDay, i, i);
+        }
+    }
+    // 限定每個月份的天數
+    function currentDays(year, month, day) {
+        var monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        var yea = year.options[year.selectedIndex].text;
+        var mon = month.options[month.selectedIndex].text;
+        var num = monthDays[mon - 1];
+        if (mon == 2 && isLeapYear(yea)) {
+            num++;
+        }
+        for (var j = currentDay; j >= num; j--) {
+            day.remove(j);
+        }
+        for (var i = currentDay; i <= num; i++) {
+            addOption(meetDay, i, i);
+        }
+    }
+
+    // 判斷是否閏年
+    function isLeapYear(year) {
+        return year % 4 == 0 || (year % 100 == 0 && year % 400 == 0);
+    }
+    // 向select尾部新增option
+    function addOption(selectbox, text, value) {
+        var option = document.createElement("option");
+        option.text = text;
+        option.value = value;
+        selectbox.options.add(option);
+    }
+
+    // 將今天月份設為預設
+    $("select[name=meetDayMM] option").each(function() {
+        if ($(this).text() == currentMonth) $(this).attr("selected", "selected");
+    });
+
+    window.onload = setDays(meetYear, meetMonth, meetDay);
+
+    // 今天日期設為預設
+    $("select[name=meetDayDD] option").each(function() {
+        if ($(this).text() == currentDay) $(this).attr("selected", "selected");
+    });
+
+    // 取得星期並切換選項
+    function getDay() {
+        // 取得選取的 年份 月份 日期
+        var selectYY = $("select[name=meetDayYY] option").filter(":selected").val();
+        var selectMM = $("select[name=meetDayMM] option").filter(":selected").val();
+        var selectDD = $("select[name=meetDayDD] option").filter(":selected").val();
+
+        // 取得選取的月份名稱
+        function getMonthName(selectMM) {
+            return [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December",
+            ][selectMM - 1];
+        }
+        var monthName = getMonthName(selectMM);
+
+        // 取得選取之星期
+        var selectDay = new Date(
+            monthName + " " + selectDD + "," + selectYY + " 23:15:30"
+        );
+        var dayOfWeek = selectDay.getDay();
+        // console.log(dayOfWeek);
+
+        // 6 = Saturday, 0 = Sunday
+        if (dayOfWeek === 6 || dayOfWeek === 0) {
+            $("#weekDaily").attr("class", "form-group col-12 d-none");
+            $("#weekend").attr("class", "form-group col-12 d-block");
+        } else {
+            $("#weekDaily").attr("class", "form-group col-12 d-block");
+            $("#weekend").attr("class", "form-group col-12 d-none");
+        }
+    }
+
+    function changeYear() {
+        var selectYY = $("select[name=meetDayYY] option").filter(":selected").val();
+        // 僅顯示當年度大於今日之月份
+        if (selectYY == currentYear) {
+            $("#meetMonth").find("option").remove().end();
+            for (i = currentMonth; i <= 12; i++) {
+                addOption(meetMonth, i, i);
+            }
+        } else {
+            $("#meetMonth").find("option").remove().end();
+            for (i = 1; i <= 12; i++) {
+                addOption(meetMonth, i, i);
+            }
+        }
+        changeMonth();
+    }
+
+    function changeMonth() {
+        var selectYY = $("select[name=meetDayYY] option").filter(":selected").val();
+        var selectMM = $("select[name=meetDayMM] option").filter(":selected").val();
+        // 僅顯示當年度大於今日之日期
+        if (selectMM == currentMonth && selectYY == currentYear) {
+            $("#meetDay").find("option").remove().end();
+            currentDays(meetYear, meetMonth, meetDay);
+        } else {
+            $("#meetDay").find("option").remove().end();
+            setDays(meetYear, meetMonth, meetDay);
+        }
+    }
+
+    (window.onload = getDay()), changeMonth();
+
+    let display = document.querySelector(".display");
+    let days = document.querySelector(".days");
+    let previous = document.querySelector(".left");
+    let next = document.querySelector(".right");
+    let selected = document.querySelector(".selected");
+    let date = new Date();
+    let year = date.getFullYear();
+    let month = date.getMonth();
+
+    function displayCalendar() {
+        const firstDay = new Date(year, month, 1);
+        const lastDay = new Date(year, month + 1, 0);
+        const firstDayIndex = firstDay.getDay(); //4
+        const numberOfDays = lastDay.getDate(); //31
+
+        let formattedDate = date.toLocaleString("en-US", {
+            month: "long",
+            year: "numeric",
+        });
+
+        display.innerHTML = `${formattedDate}`;
+
+        for (let x = 1; x <= firstDayIndex; x++) {
+            const div = document.createElement("div");
+            div.innerHTML += "";
+            days.appendChild(div);
+        }
+
+        for (let i = 1; i <= numberOfDays; i++) {
+            let div = document.createElement("div");
+            let currentDate = new Date(year, month, i);
+            div.dataset.date = currentDate.toDateString();
+            div.innerHTML += i;
+            days.appendChild(div);
+            if (
+                currentDate.getFullYear() === new Date().getFullYear() &&
+                currentDate.getMonth() === new Date().getMonth() &&
+                currentDate.getDate() === new Date().getDate()
+            ) {
+                div.classList.add("current-date");
+            }
+        }
+    }
+
+    // Call the function to display the calendar
     displayCalendar();
-  });
 
-  next.addEventListener("click", () => {
-    days.innerHTML = "";
-    selected.innerHTML = "";
+    previous.addEventListener("click", () => {
+        days.innerHTML = "";
+        selected.innerHTML = "";
 
-    if (month > 11) {
-      month = 0;
-      year = year + 1;
+        if (month < 0) {
+            month = 11;
+            year = year - 1;
+        }
+
+        month = month - 1;
+        date.setMonth(month);
+        displayCalendar();
+    });
+
+    next.addEventListener("click", () => {
+        days.innerHTML = "";
+        selected.innerHTML = "";
+
+        if (month > 11) {
+            month = 0;
+            year = year + 1;
+        }
+
+        month = month + 1;
+        date.setMonth(month);
+
+        displayCalendar();
+        displaySelected();
+    });
+
+    function displaySelected() {
+        const dayElements = document.querySelectorAll(".days div");
+        dayElements.forEach((day) => {
+            day.addEventListener("click", (e) => {
+                const selectedDate = e.target.dataset.date;
+                selected.innerHTML = `Selected Date : ${selectedDate}`;
+            });
+        });
     }
-
-    month = month + 1;
-    date.setMonth(month);
-
-    displayCalendar();
     displaySelected();
-  });
-
-  function displaySelected() {
-    const dayElements = document.querySelectorAll(".days div");
-    dayElements.forEach((day) => {
-      day.addEventListener("click", (e) => {
-        const selectedDate = e.target.dataset.date;
-        selected.innerHTML = `Selected Date : ${selectedDate}`;
-      });
-    });
-  }
-  displaySelected();
-  console.log(currentDay);
+    console.log(currentDay);
 </script>

@@ -1,90 +1,90 @@
 @import "reset";
 @import "method";
 .latest_bg {
-  padding-left: 140px;
-  position: relative;
-  overflow: hidden;
-  @include rwd(1180) {
-    padding-left: 0;
-    margin-top: 80px;
-  }
-  &::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: black;
-    opacity: 0.2;
-  }
-  .latest_bg_img {
-    height: 640px;
-    img {
-      height: 100%;
-      object-fit: cover;
-      vertical-align: middle;
+    padding-left: 140px;
+    position: relative;
+    overflow: hidden;
+    @include rwd(1180) {
+        padding-left: 0;
+        margin-top: 80px;
     }
-  }
-  .title {
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    writing-mode: vertical-lr;
-    color: #fff;
-    h2 {
-      font-size: 20px;
-      position: relative;
-      &::after {
+    &::before {
         content: "";
-        height: 100px;
-        width: 1px;
-        margin-top: 20px;
+        width: 100%;
+        height: 100%;
         position: absolute;
+        background-color: black;
+        opacity: 0.2;
+    }
+    .latest_bg_img {
+        height: 640px;
+        img {
+            height: 100%;
+            object-fit: cover;
+            vertical-align: middle;
+        }
+    }
+    .title {
+        position: absolute;
+        top: 15%;
         left: 50%;
-        background-color: #fff;
-      }
+        writing-mode: vertical-lr;
+        color: #fff;
+        h2 {
+            font-size: 20px;
+            position: relative;
+            &::after {
+                content: "";
+                height: 100px;
+                width: 1px;
+                margin-top: 20px;
+                position: absolute;
+                left: 50%;
+                background-color: #fff;
+            }
+        }
+        h1 {
+            font-size: 55px;
+        }
     }
-    h1 {
-      font-size: 55px;
-    }
-  }
-  .txt {
-    position: absolute;
-    top: 30%;
-    right: 2%;
-    display: flex;
-    flex-direction: column;
-    color: #fff;
-    @include rwd(840) {
-      display: none;
-    }
-    a {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      &:hover {
-        transition: 0.5s;
-        color: #63bedf;
-      }
-    }
-    p {
-      padding-top: 10px;
-      writing-mode: vertical-lr;
-    }
-    span {
-      margin-top: 30px;
-      writing-mode: vertical-lr;
-      position: relative;
-      &::before {
-        content: "";
-        width: 4px;
-        height: 4px;
+    .txt {
         position: absolute;
-        top: -17px;
-        left: 10px;
-        border-radius: 100%;
-        background: #fff;
-        z-index: 1;
-      }
+        top: 30%;
+        right: 2%;
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        @include rwd(840) {
+            display: none;
+        }
+        a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &:hover {
+                transition: 0.5s;
+                color: #63bedf;
+            }
+        }
+        p {
+            padding-top: 10px;
+            writing-mode: vertical-lr;
+        }
+        span {
+            margin-top: 30px;
+            writing-mode: vertical-lr;
+            position: relative;
+            &::before {
+                content: "";
+                width: 4px;
+                height: 4px;
+                position: absolute;
+                top: -17px;
+                left: 10px;
+                border-radius: 100%;
+                background: #fff;
+                z-index: 1;
+            }
+        }
     }
-  }
 }

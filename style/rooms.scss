@@ -2,257 +2,257 @@
 @import "method";
 // rooms_bg
 .rooms_bg {
-  padding-left: 140px;
-  position: relative;
-  overflow: hidden;
-  @include rwd(1180) {
-    padding-left: 0;
-    margin-top: 80px;
-  }
-  &::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: black;
-    opacity: 0.2;
-  }
-  .rooms_bg_img {
-    height: 640px;
-    img {
-      width: 100%;
-      height: 100%;
-      vertical-align: middle;
-      object-fit: cover;
+    padding-left: 140px;
+    position: relative;
+    overflow: hidden;
+    @include rwd(1180) {
+        padding-left: 0;
+        margin-top: 80px;
     }
-  }
-  .title {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    writing-mode: vertical-lr;
-    color: #fff;
-    h2 {
-      font-size: 20px;
-      position: relative;
-      &::after {
+    &::before {
         content: "";
-        height: 100px;
-        width: 1px;
-        margin-top: 20px;
-        background-color: #fff;
+        width: 100%;
+        height: 100%;
         position: absolute;
+        background-color: black;
+        opacity: 0.2;
+    }
+    .rooms_bg_img {
+        height: 640px;
+        img {
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+            object-fit: cover;
+        }
+    }
+    .title {
+        position: absolute;
+        top: 30%;
         left: 50%;
-      }
+        writing-mode: vertical-lr;
+        color: #fff;
+        h2 {
+            font-size: 20px;
+            position: relative;
+            &::after {
+                content: "";
+                height: 100px;
+                width: 1px;
+                margin-top: 20px;
+                background-color: #fff;
+                position: absolute;
+                left: 50%;
+            }
+        }
+        h1 {
+            font-size: 55px;
+        }
     }
-    h1 {
-      font-size: 55px;
-    }
-  }
-  .txt {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 30%;
-    right: 2%;
-    color: #fff;
-    @include rwd(840) {
-      display: none;
-    }
-    a {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      &:hover {
-        transition: 0.5s;
-        color: #63bedf;
-      }
-    }
-    p {
-      padding-top: 10px;
-      writing-mode: vertical-lr;
-    }
-    span {
-      margin-top: 30px;
-      writing-mode: vertical-lr;
-      position: relative;
-      &::before {
-        content: "";
-        width: 4px;
-        height: 4px;
+    .txt {
+        display: flex;
+        flex-direction: column;
         position: absolute;
-        top: -17px;
-        left: 10px;
-        border-radius: 100%;
-        background: #fff;
-        z-index: 1;
-      }
+        top: 30%;
+        right: 2%;
+        color: #fff;
+        @include rwd(840) {
+            display: none;
+        }
+        a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &:hover {
+                transition: 0.5s;
+                color: #63bedf;
+            }
+        }
+        p {
+            padding-top: 10px;
+            writing-mode: vertical-lr;
+        }
+        span {
+            margin-top: 30px;
+            writing-mode: vertical-lr;
+            position: relative;
+            &::before {
+                content: "";
+                width: 4px;
+                height: 4px;
+                position: absolute;
+                top: -17px;
+                left: 10px;
+                border-radius: 100%;
+                background: #fff;
+                z-index: 1;
+            }
+        }
     }
-  }
 }
 
 // rooms_item
 .rooms_item {
-  padding: 30px 0 0 140px;
-  @include rwd(1180) {
-    padding-left: 0;
-  }
-  .wrap {
-    width: 100%;
-    max-width: 1540px;
-    padding: 0 20px;
-    display: flex;
-    flex-wrap: wrap;
-    @include rwd(960) {
-      padding: 0;
+    padding: 30px 0 0 140px;
+    @include rwd(1180) {
+        padding-left: 0;
     }
-    .rooms_list {
-      width: 50%;
-      padding: 0 15px 50px;
-      @include rwd(960) {
+    .wrap {
         width: 100%;
-      }
-      .rooms_img {
-        position: relative;
-        overflow: hidden;
-        border-radius: 15px;
-        cursor: pointer;
-        &::before {
-          content: "Details";
-          padding: 10px 20px;
-          display: none;
-          position: absolute;
-          top: 45%;
-          left: 45%;
-          border: 1px solid #fff;
-          color: #fff;
-          z-index: 2;
-          @include rwd(1400) {
-            left: 40%;
-          }
+        max-width: 1540px;
+        padding: 0 20px;
+        display: flex;
+        flex-wrap: wrap;
+        @include rwd(960) {
+            padding: 0;
         }
-        &::after {
-          content: "";
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          top: 0;
-          left: 0;
-          background-color: #000;
-          opacity: 0.6;
-          display: none;
-        }
-        &:hover {
-          img {
-            transform: scale(1.1);
-            transition: 0.5s;
-          }
-          &::before {
-            display: block;
-            @keyframes ba {
-              from {
-                top: 30%;
-              }
-              to {
-                top: 45%;
-              }
+        .rooms_list {
+            width: 50%;
+            padding: 0 15px 50px;
+            @include rwd(960) {
+                width: 100%;
             }
-            animation: ba 0.5s forwards;
-          }
-          &::after {
-            display: block;
-          }
+            .rooms_img {
+                position: relative;
+                overflow: hidden;
+                border-radius: 15px;
+                cursor: pointer;
+                &::before {
+                    content: "Details";
+                    padding: 10px 20px;
+                    display: none;
+                    position: absolute;
+                    top: 45%;
+                    left: 45%;
+                    border: 1px solid #fff;
+                    color: #fff;
+                    z-index: 2;
+                    @include rwd(1400) {
+                        left: 40%;
+                    }
+                }
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: #000;
+                    opacity: 0.6;
+                    display: none;
+                }
+                &:hover {
+                    img {
+                        transform: scale(1.1);
+                        transition: 0.5s;
+                    }
+                    &::before {
+                        display: block;
+                        @keyframes ba {
+                            from {
+                                top: 30%;
+                            }
+                            to {
+                                top: 45%;
+                            }
+                        }
+                        animation: ba 0.5s forwards;
+                    }
+                    &::after {
+                        display: block;
+                    }
+                }
+            }
+            .txt {
+                padding-top: 30px;
+                font-size: 20px;
+                letter-spacing: 3px;
+                text-align: center;
+                p {
+                    padding-top: 10px;
+                    margin-bottom: 20px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    position: relative;
+                    &:hover {
+                        color: #63bedf;
+                        transition: 0.5s;
+                    }
+                    &::before {
+                        content: "";
+                        width: 20px;
+                        height: 1px;
+                        position: absolute;
+                        top: 0;
+                        left: 48%;
+                        background-color: #c8c8c8;
+                    }
+                }
+                span {
+                    padding: 0 10px;
+                    font-size: 15px;
+                    line-height: 1.8;
+                    letter-spacing: 3px;
+                    color: #404040;
+                    position: relative;
+                    border-left: 1px solid #666;
+                    border-right: 1px solid #666;
+                }
+                h4 {
+                    font-size: 15px;
+                    line-height: 1.8;
+                    letter-spacing: 3px;
+                    color: #404040;
+                }
+                .room_content {
+                    margin-top: 20px;
+                }
+            }
         }
-      }
-      .txt {
-        padding-top: 30px;
-        font-size: 20px;
-        letter-spacing: 3px;
-        text-align: center;
-        p {
-          padding-top: 10px;
-          margin-bottom: 20px;
-          font-weight: bold;
-          cursor: pointer;
-          position: relative;
-          &:hover {
-            color: #63bedf;
-            transition: 0.5s;
-          }
-          &::before {
-            content: "";
-            width: 20px;
-            height: 1px;
-            position: absolute;
-            top: 0;
-            left: 48%;
-            background-color: #c8c8c8;
-          }
-        }
-        span {
-          padding: 0 10px;
-          font-size: 15px;
-          line-height: 1.8;
-          letter-spacing: 3px;
-          color: #404040;
-          position: relative;
-          border-left: 1px solid #666;
-          border-right: 1px solid #666;
-        }
-        h4 {
-          font-size: 15px;
-          line-height: 1.8;
-          letter-spacing: 3px;
-          color: #404040;
-        }
-        .room_content {
-          margin-top: 20px;
-        }
-      }
     }
-  }
 }
 
 .line {
-  width: 80%;
-  height: 1px;
-  margin: 0 160px;
-  background-color: #404040;
-  opacity: 0.2;
+    width: 80%;
+    height: 1px;
+    margin: 0 160px;
+    background-color: #404040;
+    opacity: 0.2;
 }
 
 // page_list_tag
 .page_list_tag {
-  margin: 0 140px;
-  padding-top: 50px;
-  display: flex;
-  justify-content: center;
-  a {
-    width: 32px;
-    height: 30px;
-    padding: 5px 10px;
+    margin: 0 140px;
+    padding-top: 50px;
     display: flex;
     justify-content: center;
-    color: #666;
-    border: 1px solid #c8c8c8;
-    cursor: pointer;
-    & + a {
-      margin-left: 10px;
+    a {
+        width: 32px;
+        height: 30px;
+        padding: 5px 10px;
+        display: flex;
+        justify-content: center;
+        color: #666;
+        border: 1px solid #c8c8c8;
+        cursor: pointer;
+        &+a {
+            margin-left: 10px;
+        }
+        &:hover {
+            border: 1px solid #63bedf;
+            background-color: #63bedf;
+            color: #fff;
+            transition: 0.5s;
+        }
+        &.is_active {
+            background-color: #36af63;
+            border: 1px solid #36af63;
+            color: #fff;
+            &:hover {
+                background-color: #36af63;
+                border: 1px solid #36af63;
+            }
+        }
     }
-    &:hover {
-      border: 1px solid #63bedf;
-      background-color: #63bedf;
-      color: #fff;
-      transition: 0.5s;
-    }
-    &.is_active {
-      background-color: #36af63;
-      border: 1px solid #36af63;
-      color: #fff;
-      &:hover {
-        background-color: #36af63;
-        border: 1px solid #36af63;
-      }
-    }
-  }
 }
