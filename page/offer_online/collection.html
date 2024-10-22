@@ -441,7 +441,7 @@
       $("#birthdaymenu").html($birthdays);
 
       /* 以下开始判断每个月具体的日数 */
-
+      
       /* 设定每月默认天数 */
       var month_maxday = new Array();
       month_maxday[1] = 31;
@@ -488,6 +488,7 @@
       });
     }
   }
+
   $(function () {
     /* 触发函数 */
     contactFormDate();
@@ -732,7 +733,7 @@
     month = month + 1;
     date.setMonth(month);
     displayCalendar();
-    displaySelected();
+    displaySelected(); 
   });
 
   function displaySelected() {

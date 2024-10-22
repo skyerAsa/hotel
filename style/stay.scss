@@ -1,571 +1,571 @@
 @import "reset";
 @import "method";
 .clous_content_bg {
-    padding-left: 140px;
-    position: relative;
-    overflow: hidden;
-    @include rwd(1180) {
-        padding-left: 0;
-        margin-top: 80px;
+  padding-left: 140px;
+  position: relative;
+  overflow: hidden;
+  @include rwd(1180) {
+    padding-left: 0;
+    margin-top: 80px;
+  }
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    opacity: 0.2;
+  }
+  .content_bg {
+    height: 640px;
+    img {
+      width: 100%;
+      height: 100%;
+      vertical-align: middle;
+      object-fit: cover;
     }
-    &::before {
+  }
+  .title {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    writing-mode: vertical-lr;
+    color: #fff;
+    h2 {
+      font-size: 20px;
+      position: relative;
+      &::after {
         content: "";
-        width: 100%;
-        height: 100%;
+        height: 100px;
+        width: 1px;
+        margin-top: 20px;
+        background-color: #fff;
         position: absolute;
-        background-color: black;
-        opacity: 0.2;
+        left: 50%;
+      }
     }
-    .content_bg {
-        height: 640px;
-        img {
-            width: 100%;
-            height: 100%;
-            vertical-align: middle;
-            object-fit: cover;
-        }
+    h1 {
+      font-size: 55px;
     }
-    .title {
+  }
+  .txt {
+    position: absolute;
+    top: 30%;
+    right: 2%;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    @include rwd(840) {
+      display: none;
+    }
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &:hover {
+        transition: 0.5s;
+        color: #63bedf;
+      }
+    }
+    p {
+      padding-top: 10px;
+      writing-mode: vertical-lr;
+    }
+    span {
+      margin-top: 30px;
+      writing-mode: vertical-lr;
+      position: relative;
+      &::before {
+        content: "";
+        width: 4px;
+        height: 4px;
         position: absolute;
-        top: 30%;
-        left: 45%;
-        writing-mode: vertical-lr;
-        color: #fff;
-        h2 {
-            font-size: 20px;
-            position: relative;
-            &::after {
-                content: "";
-                height: 100px;
-                width: 1px;
-                margin-top: 20px;
-                background-color: #fff;
-                position: absolute;
-                left: 50%;
-            }
-        }
-        h1 {
-            font-size: 55px;
-        }
+        top: -17px;
+        left: 10px;
+        border-radius: 100%;
+        background: #fff;
+        z-index: 1;
+      }
     }
-    .txt {
-        position: absolute;
-        top: 30%;
-        right: 2%;
-        display: flex;
-        flex-direction: column;
-        color: #fff;
-        @include rwd(840) {
-            display: none;
-        }
-        a {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            &:hover {
-                transition: 0.5s;
-                color: #63bedf;
-            }
-        }
-        p {
-            padding-top: 10px;
-            writing-mode: vertical-lr;
-        }
-        span {
-            margin-top: 30px;
-            writing-mode: vertical-lr;
-            position: relative;
-            &::before {
-                content: "";
-                width: 4px;
-                height: 4px;
-                position: absolute;
-                top: -17px;
-                left: 10px;
-                border-radius: 100%;
-                background: #fff;
-                z-index: 1;
-            }
-        }
-    }
+  }
 }
 
 // clous_content
 .clous_content {
-    padding-left: 140px;
+  padding-left: 140px;
+  @include rwd(1180) {
+    padding: 0 20px;
+  }
+  .clous_introduce {
+    padding: 40px 0 100px 60px;
+    display: flex;
+    @include rwd(767) {
+      padding-left: 0;
+      display: block;
+    }
+    .clous_txt {
+      width: 50%;
+    }
+  }
+  .clous_carousel {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    @include rwd(767) {
+      width: 100%;
+    }
+    .clous_carousel_b {
+      width: 100%;
+      height: 100%;
+      .slick-list {
+        margin: 0;
+        @include rwd(599) {
+          max-width: none;
+        }
+      }
+      .slick-track {
+        padding-right: 10px;
+        .slick-slide {
+          .clous_carousel_b_img {
+            img {
+              width: 100%;
+              height: 500px;
+              @include rwd(1200) {
+                height: 300px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .clous_carousel_m {
+      width: 100%;
+      .slick-list {
+        margin: 0;
+        @include rwd(599) {
+          max-width: none;
+        }
+      }
+      .slick-track {
+        max-width: 700%;
+        .slick-slide {
+          padding-top: 10px;
+          .clous_carousel_m_img {
+            margin-right: 5px;
+            img {
+              width: 100%;
+              height: 137px;
+              @include rwd(768) {
+                height: 150px;
+              }
+            }
+          }
+          &.slick-current {
+            .clous_carousel_m_img {
+              margin-left: 0;
+            }
+          }
+        }
+        .slick-active {
+          &:last-child {
+            .clous_carousel_m_img {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .clous_item {
+    width: 40%;
+    padding: 0 140px 0 50px;
     @include rwd(1180) {
-        padding: 0 20px;
+      padding-right: 0;
     }
-    .clous_introduce {
-        padding: 40px 0 100px 60px;
-        display: flex;
-        @include rwd(767) {
-            padding-left: 0;
-            display: block;
-        }
-        .clous_txt {
-            width: 50%;
-        }
+    @include rwd(767) {
+      width: 100%;
+      padding-left: 0;
     }
-    .clous_carousel {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        @include rwd(767) {
-            width: 100%;
-        }
-        .clous_carousel_b {
-            width: 100%;
-            height: 100%;
-            .slick-list {
-                margin: 0;
-                @include rwd(599) {
-                    max-width: none;
-                }
-            }
-            .slick-track {
-                padding-right: 10px;
-                .slick-slide {
-                    .clous_carousel_b_img {
-                        img {
-                            width: 100%;
-                            height: 500px;
-                            @include rwd(1200) {
-                                height: 300px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        .clous_carousel_m {
-            width: 100%;
-            .slick-list {
-                margin: 0;
-                @include rwd(599) {
-                    max-width: none;                                  
-                }
-            }
-            .slick-track {
-                max-width: 700%;
-                .slick-slide {
-                    padding-top: 10px;
-                    .clous_carousel_m_img {
-                        margin-right: 5px;
-                        img {
-                            width: 100%;
-                            height: 137px;
-                            @include rwd(768) {
-                                height: 150px;
-                            }
-                        }
-                    }
-                    &.slick-current {
-                        .clous_carousel_m_img {
-                            margin-left: 0;
-                        }
-                    }
-                }
-                .slick-active {
-                    &:last-child {
-                        .clous_carousel_m_img {
-                            margin: 0;
-                        }
-                    }
-                }
-            }
-        }
+    h2 {
+      padding: 60px 0 12px;
+      border-bottom: 1px solid #d6d6d6;
+      color: #191919;
+      font-size: 24px;
+      font-weight: bolder;
     }
-    .clous_item {
-        width: 40%;
-        padding: 0 140px 0 50px;
-        @include rwd(1180) {
-            padding-right: 0;
+    .clous_txt {
+      margin-top: 20px;
+      line-height: 1.6;
+      font-size: 18px;
+      color: #404040;
+      span {
+        margin-left: 20px;
+        padding: 0 10px;
+        white-space: nowrap;
+        border-left: 1px solid #d6d6d6;
+        border-right: 1px solid #d6d6d6;
+      }
+      p {
+        white-space: nowrap;
+        &:first-child {
+          padding-top: 20px;
         }
-        @include rwd(767) {
-            width: 100%;
-            padding-left: 0;
-        }
-        h2 {
-            padding: 60px 0 12px;
-            border-bottom: 1px solid #d6d6d6;
-            color: #191919;
-            font-size: 24px;
-            font-weight: bolder;
-        }
-        .clous_txt {
-            margin-top: 20px;
-            line-height: 1.6;
-            font-size: 18px;
-            color: #404040;
-            span {
-                margin-left: 20px;
-                padding: 0 10px;
-                white-space: nowrap;
-                border-left: 1px solid #d6d6d6;
-                border-right: 1px solid #d6d6d6;
-            }
-            p {
-                white-space: nowrap;
-                &:first-child {
-                    padding-top: 20px;
-                }
-            }
-        }
-        .clous_txt_item {
-            padding-top: 20px;
-        }
+      }
     }
+    .clous_txt_item {
+      padding-top: 20px;
+    }
+  }
 }
 
 .rooms_list {
-    padding: 0 140px;
+  padding: 0 140px;
+  @include rwd(1180) {
+    padding: 0;
+  }
+  ul {
+    padding-left: 60px;
+    display: flex;
+    justify-content: space-between;
     @include rwd(1180) {
-        padding: 0;
+      padding: 0 20px;
     }
-    ul {
-        padding-left: 60px;
-        display: flex;
-        justify-content: space-between;
-        @include rwd(1180) {
-            padding: 0 20px;
-        }
-        li {
-            width: 100%;
-            cursor: pointer;
-            &.on {
-                color: #fff;
-                background-color: #63bedf;
-            }
-            p {
-                padding: 15px 0;
-                border-top: 1px solid #d6d6d6;
-                border-bottom: 1px solid #d6d6d6;
-                text-align: center;
-            }
-        }
+    li {
+      width: 100%;
+      cursor: pointer;
+      &.on {
+        color: #fff;
+        background-color: #63bedf;
+      }
+      p {
+        padding: 15px 0;
+        border-top: 1px solid #d6d6d6;
+        border-bottom: 1px solid #d6d6d6;
+        text-align: center;
+      }
     }
+  }
 }
 
 .rooms_caption {
-    padding: 30px 140px 0 200px;
-    display: none;
-    @include rwd(1180) {
-        padding: 30px 20px 0;
+  padding: 30px 140px 0 200px;
+  display: none;
+  @include rwd(1180) {
+    padding: 30px 20px 0;
+  }
+  &.on {
+    display: block;
+  }
+  ul {
+    padding-left: 30px;
+    li {
+      list-style: disc;
+      line-height: 1.8;
+      color: #404040;
     }
-    &.on {
-        display: block;
+  }
+  .room_icon {
+    padding-top: 50px;
+    line-height: 1.8;
+    color: #404040;
+    p {
+      padding-bottom: 20px;
     }
-    ul {
-        padding-left: 30px;
-        li {
-            list-style: disc;
-            line-height: 1.8;
-            color: #404040;
-        }
+    span {
+      background-color: rgb(194, 224, 244);
+      font-size: 18px;
     }
-    .room_icon {
-        padding-top: 50px;
-        line-height: 1.8;
-        color: #404040;
-        p {
-            padding-bottom: 20px;
-        }
-        span {
-            background-color: rgb(194, 224, 244);
-            font-size: 18px;
-        }
+  }
+  .rooms_item {
+    padding-top: 20px;
+    h2 {
+      width: 100%;
+      max-width: 310px;
+      padding: 10px 0;
+      margin: 20px 0;
+      text-align: center;
+      color: #fff;
+      background-color: #63bedf;
+      border: 1px solid #63bedf;
+      cursor: pointer;
+      &:hover {
+        color: #63bedf;
+        background-color: #fff;
+      }
     }
-    .rooms_item {
-        padding-top: 20px;
-        h2 {
-            width: 100%;
-            max-width: 310px;
-            padding: 10px 0;
-            margin: 20px 0;
-            text-align: center;
-            color: #fff;
-            background-color: #63bedf;
-            border: 1px solid #63bedf;
-            cursor: pointer;
-            &:hover {
-                color: #63bedf;
-                background-color: #fff;
-            }
-        }
-    }
+  }
 }
 
 .rooms_price {
-    padding: 30px 140px 0 200px;
-    text-align: center;
-    display: none;
-    @include rwd(1180) {
-        padding: 30px 20px 0;
+  padding: 30px 140px 0 200px;
+  text-align: center;
+  display: none;
+  @include rwd(1180) {
+    padding: 30px 20px 0;
+  }
+  &.on {
+    display: block;
+  }
+  li {
+    padding-bottom: 20px;
+    h2 {
+      padding-bottom: 5px;
+      font-weight: bolder;
     }
-    &.on {
-        display: block;
+    span {
+      padding: 0 10px;
+      border-left: 1px solid #d6d6d6;
+      border-right: 1px solid #d6d6d6;
     }
-    li {
-        padding-bottom: 20px;
-        h2 {
-            padding-bottom: 5px;
-            font-weight: bolder;
-        }
-        span {
-            padding: 0 10px;
-            border-left: 1px solid #d6d6d6;
-            border-right: 1px solid #d6d6d6;
-        }
-        h3 {
-            padding: 5px 0 10px;
-            border-bottom: 1px solid #d6d6d6;
-        }
-        &:last-child h3 {
-            border-bottom: 0px;
-        }
+    h3 {
+      padding: 5px 0 10px;
+      border-bottom: 1px solid #d6d6d6;
     }
+    &:last-child h3 {
+      border-bottom: 0px;
+    }
+  }
 }
 
 .rooms_notice {
-    padding: 30px 140px 0 240px;
-    line-height: 1.8;
-    color: #404040;
-    display: none;
-    @include rwd(1180) {
-        padding: 30px 20px 0;
+  padding: 30px 140px 0 240px;
+  line-height: 1.8;
+  color: #404040;
+  display: none;
+  @include rwd(1180) {
+    padding: 30px 20px 0;
+  }
+  &.on {
+    display: block;
+  }
+  h3 {
+    padding-top: 20px;
+  }
+  .rooms_tel {
+    padding: 20px 0;
+    span {
+      cursor: pointer;
+      color: #63bedf;
     }
-    &.on {
-        display: block;
+  }
+  .rooms_reserve {
+    padding-left: 30px;
+    li {
+      list-style: decimal;
     }
-    h3 {
-        padding-top: 20px;
+  }
+  .rooms_day_price,
+  .rooms_cancel,
+  .rooms_time,
+  .rooms_need {
+    padding-left: 30px;
+    li {
+      list-style: disc;
     }
-    .rooms_tel {
-        padding: 20px 0;
-        span {
-            cursor: pointer;
-            color: #63bedf;
-        }
-    }
-    .rooms_reserve {
-        padding-left: 30px;
-        li {
-            list-style: decimal;
-        }
-    }
-    .rooms_day_price,
-    .rooms_cancel,
-    .rooms_time,
-    .rooms_need {
-        padding-left: 30px;
-        li {
-            list-style: disc;
-        }
-    }
+  }
 }
 
 .linshan_content_bg {
-    padding-left: 140px;
-    position: relative;
-    overflow: hidden;
-    @include rwd(1180) {
-        padding-left: 0;
-        margin-top: 80px;
-    }
-    &::before {
+  padding-left: 140px;
+  position: relative;
+  overflow: hidden;
+  @include rwd(1180) {
+    padding-left: 0;
+    margin-top: 80px;
+  }
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    opacity: 0.2;
+  }
+  img {
+    height: 640px;
+  }
+  .title {
+    position: absolute;
+    top: 15%;
+    left: 45%;
+    writing-mode: vertical-lr;
+    color: #fff;
+    h2 {
+      font-size: 20px;
+      position: relative;
+      &::after {
         content: "";
-        width: 100%;
-        height: 100%;
+        height: 100px;
+        width: 1px;
+        margin-top: 20px;
+        background-color: #fff;
         position: absolute;
-        background-color: black;
-        opacity: 0.2;
+        left: 50%;
+      }
     }
-    img {
-        height: 640px;
+    h1 {
+      font-size: 55px;
     }
-    .title {
+  }
+  .txt {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 30%;
+    right: 2%;
+    color: #fff;
+    @include rwd(840) {
+      display: none;
+    }
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &:hover {
+        transition: 0.5s;
+        color: #63bedf;
+      }
+    }
+    p {
+      padding-top: 10px;
+      writing-mode: vertical-lr;
+    }
+    span {
+      margin-top: 30px;
+      writing-mode: vertical-lr;
+      position: relative;
+      &::before {
+        content: "";
+        width: 4px;
+        height: 4px;
         position: absolute;
-        top: 15%;
-        left: 45%;
-        writing-mode: vertical-lr;
-        color: #fff;
-        h2 {
-            font-size: 20px;
-            position: relative;
-            &::after {
-                content: "";
-                height: 100px;
-                width: 1px;
-                margin-top: 20px;
-                background-color: #fff;
-                position: absolute;
-                left: 50%;
-            }
-        }
-        h1 {
-            font-size: 55px;
-        }
+        top: -17px;
+        left: 10px;
+        border-radius: 100%;
+        background: #fff;
+        z-index: 1;
+      }
     }
-    .txt {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 30%;
-        right: 2%;
-        color: #fff;
-        @include rwd(840) {
-            display: none;
-        }
-        a {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            &:hover {
-                transition: 0.5s;
-                color: #63bedf;
-            }
-        }
-        p {
-            padding-top: 10px;
-            writing-mode: vertical-lr;
-        }
-        span {
-            margin-top: 30px;
-            writing-mode: vertical-lr;
-            position: relative;
-            &::before {
-                content: "";
-                width: 4px;
-                height: 4px;
-                position: absolute;
-                top: -17px;
-                left: 10px;
-                border-radius: 100%;
-                background: #fff;
-                z-index: 1;
-            }
-        }
-    }
+  }
 }
 
 // linshan_content
 .linshan_content {
-    padding-left: 140px;
+  padding-left: 140px;
+  @include rwd(1180) {
+    padding: 0 20px;
+  }
+  .linshan_introduce {
+    padding: 40px 0 100px 60px;
+    display: flex;
+    @include rwd(767) {
+      padding-left: 0;
+      display: block;
+    }
+    .linshan_txt {
+      width: 50%;
+    }
+  }
+  .linshan_carousel {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    @include rwd(767) {
+      width: 100%;
+    }
+    .linshan_carousel_b {
+      width: 100%;
+      height: 100%;
+      .slick-list {
+        margin: 0;
+        @include rwd(599) {
+          max-width: none;
+        }
+      }
+      .slick-track {
+        padding-right: 10px;
+        .slick-slide {
+          .linshan_carousel_b_img {
+            img {
+              width: 100%;
+              height: 500px;
+              @include rwd(1500) {
+                height: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+    .linshan_carousel_m {
+      width: 100%;
+      .slick-list {
+        margin: 0;
+        @include rwd(599) {
+          max-width: none;
+        }
+      }
+      .slick-track {
+        max-width: 1400%;
+        .slick-slide {
+          padding-top: 10px;
+          margin-left: 5px;
+          .linshan_carousel_m_img {
+            @include rwd(480) {
+              margin-left: 5px;
+            }
+            img {
+              width: 100%;
+              height: 137px;
+            }
+          }
+          &.slick-current {
+            .linshan_carousel_m_img {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .linshan_item {
+    width: 40%;
+    padding: 0 140px 0 50px;
     @include rwd(1180) {
-        padding: 0 20px;
+      padding-right: 0;
     }
-    .linshan_introduce {
-        padding: 40px 0 100px 60px;
-        display: flex;
-        @include rwd(767) {
-            padding-left: 0;
-            display: block;
-        }
-        .linshan_txt {
-            width: 50%;
-        }
+    @include rwd(767) {
+      width: 100%;
+      padding-left: 0;
     }
-    .linshan_carousel {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        @include rwd(767) {
-            width: 100%;
-        }
-        .linshan_carousel_b {
-            width: 100%;
-            height: 100%;
-            .slick-list {
-                margin: 0;
-                @include rwd(599) {
-                    max-width: none;
-                }
-            }
-            .slick-track {
-                padding-right: 10px;
-                .slick-slide {
-                    .linshan_carousel_b_img {
-                        img {
-                            width: 100%;
-                            height: 500px;
-                            @include rwd(1500) {
-                                height: auto;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        .linshan_carousel_m {
-            width: 100%;
-            .slick-list {
-                margin: 0;
-                @include rwd(599) {
-                    max-width: none;
-                }
-            }
-            .slick-track {
-                max-width: 1400%;
-                .slick-slide {
-                    padding-top: 10px;
-                    margin-left: 5px;
-                    .linshan_carousel_m_img {
-                        @include rwd(480) {
-                            margin-left: 5px;
-                        }
-                        img {
-                            width: 100%;
-                            height: 137px;
-                        }
-                    }
-                    &.slick-current {
-                        .linshan_carousel_m_img {
-                            margin-left: 0;
-                        }
-                    }
-                }
-            }
-        }
+    h2 {
+      padding: 60px 0 12px;
+      border-bottom: 1px solid #d6d6d6;
+      color: #191919;
+      font-size: 24px;
+      font-weight: bolder;
     }
-    .linshan_item {
-        width: 40%;
-        padding: 0 140px 0 50px;
-        @include rwd(1180) {
-            padding-right: 0;
+    .linshan_txt {
+      margin-top: 20px;
+      line-height: 1.6;
+      font-size: 18px;
+      color: #404040;
+      span {
+        margin-left: 20px;
+        padding: 0 10px;
+        white-space: nowrap;
+        border-left: 1px solid #d6d6d6;
+        border-right: 1px solid #d6d6d6;
+      }
+      p {
+        white-space: nowrap;
+        &:first-child {
+          padding-top: 20px;
         }
-        @include rwd(767) {
-            width: 100%;
-            padding-left: 0;
-        }
-        h2 {
-            padding: 60px 0 12px;
-            border-bottom: 1px solid #d6d6d6;
-            color: #191919;
-            font-size: 24px;
-            font-weight: bolder;
-        }
-        .linshan_txt {
-            margin-top: 20px;
-            line-height: 1.6;
-            font-size: 18px;
-            color: #404040;
-            span {
-                margin-left: 20px;
-                padding: 0 10px;
-                white-space: nowrap;
-                border-left: 1px solid #d6d6d6;
-                border-right: 1px solid #d6d6d6;
-            }
-            p {
-                white-space: nowrap;
-                &:first-child {
-                    padding-top: 20px;
-                }
-            }
-        }
-        .linshan_txt_item {
-            padding-top: 20px;
-        }
+      }
     }
+    .linshan_txt_item {
+      padding-top: 20px;
+    }
+  }
 }
