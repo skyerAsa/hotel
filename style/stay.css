@@ -333,7 +333,7 @@ img {
   padding-top: 10px;
 }
 .clous_content .clous_carousel .clous_carousel_m .slick-track .slick-slide .clous_carousel_m_img {
-  margin-right: 5px;
+  margin-left: 5px;
 }
 .clous_content .clous_carousel .clous_carousel_m .slick-track .slick-slide .clous_carousel_m_img img {
   width: 100%;
@@ -346,9 +346,6 @@ img {
 }
 .clous_content .clous_carousel .clous_carousel_m .slick-track .slick-slide.slick-current .clous_carousel_m_img {
   margin-left: 0;
-}
-.clous_content .clous_carousel .clous_carousel_m .slick-track .slick-active:last-child .clous_carousel_m_img {
-  margin: 0;
 }
 .clous_content .clous_item {
   width: 40%;
