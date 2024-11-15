@@ -911,6 +911,9 @@ body {
 .collection_day .rooms_days .rooms select {
   height: 19px;
 }
+.collection_day .rooms_days .rooms form {
+  display: flex;
+}
 .collection_day .Next {
   width: 1200px;
   padding-bottom: 100px;
