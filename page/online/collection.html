@@ -390,7 +390,7 @@
 
         //赋月份的下拉框
         for (var i = 1; i < 13; i++)
-        document.reg_testdate.MM.options.add(new Option(" " + i, i));
+            document.reg_testdate.MM.options.add(new Option(" " + i, i));
         document.reg_testdate.YYYY.value = y;
         document.reg_testdate.MM.value = new Date().getMonth() + 1;
         var n = MonHead[new Date().getMonth()];
@@ -588,6 +588,7 @@
             addOption(meetDay, i, i);
         }
     }
+
     // 限定每個月份的天數
     function currentDays(year, month, day) {
         var monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];

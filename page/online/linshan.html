@@ -423,7 +423,7 @@
 
     //赋月份的下拉框
     for (var i = 1; i < 13; i++)
-    document.reg_testdate.MM.options.add(new Option(" " + i, i));
+      document.reg_testdate.MM.options.add(new Option(" " + i, i));
     document.reg_testdate.YYYY.value = y;
     document.reg_testdate.MM.value = new Date().getMonth() + 1;
     var n = MonHead[new Date().getMonth()];
